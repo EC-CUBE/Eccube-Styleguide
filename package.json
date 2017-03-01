@@ -1,0 +1,35 @@
+{
+  "name": "eccube-css",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./public",
+    "start": "run-p dev:*",
+    "dev:build": "run-s build:styleguide:*",
+    "dev:styleguide": "gulp styleguide:server",
+    "dev:open": "open http://localhost:4000",
+    "build:styleguide": "run-s build:styleguide:*",
+    "build:styleguide:clean": "rm -rf ./public/",
+    "build:styleguide:generate": "gulp styleguide:generateOnly",
+    "build:styleguide:applystyles": "gulp styleguide:applystyles",
+    "build:styleguide:htaccess": "cp .htaccess public/.htaccess"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.12.10",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^2.3.2",
+    "normalize.css": "^5.0.0",
+    "npm-run-all": "^4.0.1",
+    "run-sequence": "^1.2.1",
+    "sc5-styleguide": "^1.5.0"
+  }
+}

@@ -1,0 +1,134 @@
+/*
+タイポ
+
+タイポ
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+Styleguide 1.2
+*/
+
+/*
+テキストリンク
+
+テキストリンクのスタイルです。
+
+Markup:
+a(href="#").ec-link さくらのクラウド
+
+Styleguide 1.2.1
+*/
+.ec-link {
+    color: #0092C4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*
+テキスト（太字）
+
+テキストを太くするためのスタイルです。
+
+Markup:
+p.ec-font-bold この季節にぴったりな商品をご用意しました
+
+Styleguide 1.2.2
+*/
+
+.ec-font-bold {
+    font-weight: bold;
+}
+
+/*
+テキスト（グレー）
+
+テキストをグレーにするためのスタイルです。
+
+Markup:
+p.ec-color-grey 青色が美しい職人が仕上げた吹きガラス
+
+Styleguide 1.2.3
+*/
+
+.ec-color-grey {
+    color: #9a947e;
+}
+
+/*
+テキスト（赤）
+
+テキストを赤にするためのスタイルです。
+
+Markup:
+p.ec-color-red ¥ 2,728 税込
+
+Styleguide 1.2.4
+*/
+
+.ec-color-red {
+    color: #DE5D50;
+}
+
+/*
+フォントサイズ
+
+フォントサイズを指定するためのスタイルです。
+
+Markup:
+.ec-font-size さわやかな日差しが過ごしやすい季節
+
+Styleguide 1.2.5
+*/
+
+/*
+テキスト水平位置
+
+テキストをセンタリングするためのスタイルです。
+
+Markup:
+p.ec-text-ac さわやかな日差しが過ごしやすい季節
+
+Styleguide 1.2.6
+*/
+
+.ec-text-ac {
+    text-align: center;
+}
+
+/*
+価格テキスト
+
+価格を表示するテキストです。
+
+価格文字にスペースを取るほか、税込み等の表示を小さくする効果もあります。
+
+spanを用いたインライン要素として利用します。
+
+Markup:
+div(style="color:#DE5D50;font-size:28px")
+    span.ec-price
+      span.ec-price__unit ¥
+      span.ec-price__price 1,280
+      span.ec-price__tax 税込
+
+Styleguide 1.2.7
+*/
+.ec-price{
+    & &__unit{
+        font-size: 1em;
+        font-weight: bold;
+    }
+    & &__price{
+        display: inline-block;
+        padding: 0 .3em;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    & &__tax{
+        font-size: 0.57em;
+    }
+
+}

@@ -1,0 +1,62 @@
+@import "../mixins/media";
+
+/*
+アイキャッチ
+
+トップページ アイキャッチ部に関する Project コンポーネントを定義します。
+
+ex [トップページスライダー直下 アイキャッチ部](http://demo3.ec-cube.net/)
+
+Markup:
+.ec-eyecatchRole
+  +b.ec-grid2
+    +e.cell
+      +b.ec-splitImg
+        +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img01.jpg")
+        +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img02.jpg")
+    +e.cell
+      p 新入荷商品特集
+      p この季節にぴったりな商品をご用意しました
+      p さわやかな日差しが過ごしやすい季節。心地よいくらしのための、お部屋のアクセントになるおすすめのファブリックやグッズをご紹介します。
+      p: a.ec-inlineBtn 一覧を見る
+
+  ul
+    li: img(src='http://demo3.ec-cube.net/template/default/img/top/mv01.jpg')
+
+Styleguide 12.2
+*/
+.ec-eyecatchRole{
+  @include container;
+  text-align: center;
+
+}
+
+/*
+トップページ
+
+アイキャッチで使用する 分割画像レイアウトです。
+
+http://demo3.ec-cube.net/
+
+Markup:
++b.ec-splitImg
+  +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img01.jpg")
+  +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img02.jpg")
+
+Styleguide 12.2.1
+*/
+.ec-splitImg{
+  display: flex;
+  & &__item{
+    width: 50%;
+    padding: 0 8px;
+    @include media_desktop(){
+      padding: 0 16px;
+    }
+    img{
+      width: 100%;
+    }
+
+  }
+
+}

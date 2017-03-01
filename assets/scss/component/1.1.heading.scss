@@ -1,0 +1,87 @@
+@import "../mixins/variables";
+/*
+見出し
+
+ページ内で見出しとして機能する要素のスタイル群です。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+Styleguide 1.1
+*/
+
+/*
+見出し
+
+商品紹介等で利用される、一般的な見出しのスタイルです。
+
+http://demo3.ec-cube.net/products/detail/1
+
+Markup:
+.ec-headingTitle マトリョーシカ
+
+Styleguide 1.1.1
+*/
+
+
+/*
+ページヘッダ
+
+各種ページで用いられるページヘッダのデザインです。
+
+http://demo3.ec-cube.net/help/agreement
+
+Markup:
+.ec-pageHeader
+  h1 利用規約
+
+Styleguide 1.1.2
+*/
+.ec-pageHeader{
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-bottom: 1px dotted #ccc;
+  border-top: 1px solid #ccc;
+  padding: 8px;
+}
+
+
+/*
+サブ見出し
+
+利用規約など、文字主体のページで用いられるサブ見出しです。
+
+http://demo3.ec-cube.net/help/agreement
+
+Markup:
+.ec-heading hoge
+
+Styleguide 1.1.3
+*/
+
+/*
+背景付き見出し
+
+マイページ注文履歴等で用いられる背景付きの見出しです。
+
+http://demo3.ec-cube.net/mypage/favorite
+
+Markup:
+.ec-rectHeading
+  h2 配送情報
+.ec-rectHeading
+  h2 お支払について
+
+Styleguide 1.1.4
+*/
+.ec-rectHeading{
+  h1, h2, h3,
+  h4, h5, h6{
+    background: $clrGray;
+    padding: 8px 12px;
+  }
+
+}

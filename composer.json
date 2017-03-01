@@ -1,0 +1,21 @@
+{
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": [
+		"framework",
+		"laravel"
+	],
+	"license": "MIT",
+	"type": "project",
+	"require": {
+		"guzzlehttp/guzzle": "^6.2"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"npm run build:styleguide"
+		],
+		"post-update-cmd": [
+			"npm run build:styleguide"
+		]
+	}
+}

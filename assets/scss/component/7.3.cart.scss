@@ -1,0 +1,314 @@
+@import "../mixins/variables";
+@import "../mixins/media";
+/*
+カート
+
+ショッピングカートに関するスタイルです。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+
+Styleguide 7.3
+*/
+
+/*
+カートヘッダ
+
+購入完了までの手順や、現在の状態を表示します。
+
+ul 要素を用いたリスト要素としてマークアップします。
+
+http://demo3.ec-cube.net/cart
+
+Markup:
+ul.ec-cartStatus
+  li.ec-cartStatus__item
+    .ec-cartStatus__number 1
+    .ec-cartStatus__label カートの商品
+  li.ec-cartStatus__item
+    .ec-cartStatus__number 2
+    .ec-cartStatus__label ご注文内容確認
+  li.ec-cartStatus__item
+    .ec-cartStatus__number 3
+    .ec-cartStatus__label 完了
+
+Styleguide 7.3.1
+*/
+.ec-cartStatus{
+  & &__item{
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+  }
+  & &__number{
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    background: #525263;
+    color: #fff;
+    top: 0;
+    left: 18px;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    @include media_desktop(){
+      line-height: 42px;
+      width: 42px;
+      height: 42px;
+      font-size: 20px;
+      font-size: 2rem;
+    }
+  }
+}
+
+/*
+カートテーブル(枠)
+
+カート内のアイテムを表示するテーブル枠です。
+
+http://demo3.ec-cube.net/cart
+
+Markup:
+.ec-cartTable
+
+Styleguide 7.3.2
+*/
+.ec-cartTable{
+  display: table;
+  width: 100%;
+}
+
+/*
+カートテーブル(ヘッダ)
+
+カート内のアイテムを表示するテーブルヘッダです。
+スマホでは非表示となります。
+
+http://demo3.ec-cube.net/cart
+
+Markup:
+.ec-cartTable
+  ol.ec-cartHeader
+    li.ec-cartHeader__label 削除
+    li.ec-cartHeader__label 商品内容
+    li.ec-cartHeader__label 数量
+    li.ec-cartHeader__label 小計
+
+Styleguide 7.3.3
+*/
+.ec-cartHeader{
+  background: #F4F3F0;
+  display: table-row;
+  width: 100%;
+  & &__label{
+    display: table-cell;
+    padding: 16px;
+    text-align: center;
+    background: #F4F3F0;
+    overflow-x: hidden;
+    font-weight: bold;
+  }
+}
+/*
+カートテーブル
+
+カート内のアイテムを表示するテーブル行です。
+スマホでは非表示となります。
+
+http://demo3.ec-cube.net/cart
+
+Markup:
+.ec-cartTable
+  ol.ec-cartHeader
+    li.ec-cartHeader__label 削除
+    li.ec-cartHeader__label 商品内容
+    li.ec-cartHeader__label 数量
+    li.ec-cartHeader__label 小計
+  ul.ec-cartRow
+    li.ec-cartRow__delColumn
+      span ☓
+    li.ec-cartRow__contentColumn
+      .ec-cartRow__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701115551_559356b78ba67.jpeg")
+      .ec-cartRow__name アンティークポット
+      .ec-cartRow__unitPrice ¥ 4,320
+      .ec-cartRow__subtotal ¥ 4,320
+    li.ec-cartRow__amountColumn
+      .ec-cartRow__amount 1
+      .ec-cartRow__amountUpDown - +
+    li.ec-cartRow__subtotalColumn
+      .ec-cartRow__sutbtotal ¥ 4,320
+
+
+Styleguide 7.3.4
+*/
+.ec-cartRow{
+  display: table-row;
+  & &__delColumn{
+    display: table-cell;
+    width: 8.3333333%;
+  }
+  & &__contentColumn{
+    display: table-cell;
+  }
+  & &__img{
+    max-width: 100px;
+  }
+
+  & &__amountColumn{
+    display: table-cell;
+    width: 16.66666667%;
+  }
+  & &__subtotalColumn{
+    display: table-cell;
+    width: 16.66666667%;
+  }
+
+}
+
+/*
+カートナビゲーション
+
+http://demo3.ec-cube.net/cart
+
+Markup:
+.ec-cartNavi
+  .ec-cartNavi__icon
+  .ec-cartNavi__badge 1
+  .ec-cartNavi__label
+    | 合計
+    .ec-cartNavi__price ¥1920
+
+Styleguide 7.3.5
+*/
+.ec-cartNavi{
+  border: 1px solid #D9D9D9;
+  width: 256px;
+  position: relative;
+  display: block;
+  height: 44px;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 3;
+  cursor: pointer;
+  & &__icon{
+
+  }
+  & &__badge{
+    position: relative;
+    left: 15px;
+    top: 0;
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #DE5D50;
+    border-radius: 10px;
+  }
+  & &__label{
+    font-size: 12px;
+    position: absolute;
+    right:0;
+    top:0;
+    height: 44px;
+    line-height: 44px;
+    vertical-align: middle;
+    margin-right: 16px;
+  }
+  & &__price{
+    display: inline-block;
+    font-size: 16px;
+
+
+  }
+}
+
+
+/*
+総計
+
+http://demo3.ec-cube.net/cart
+
+Markup:
+.ec-totalBox
+  dl.ec-totalBox__spec
+    dt 小計
+    dd ¥ 9,720
+  dl.ec-totalBox__spec
+    dt 手数料
+    dd ¥ 0
+  dl.ec-totalBox__spec
+    dt 送料
+    dd ¥ 1,000
+  .ec-totalBox__total
+    | 合計
+    span.ec-totalBox__price ¥ 10,720
+    span.ec-totalBox__taxLabel 税込
+  .ec-blockBtn--action 注文する
+
+Styleguide 7.3.6
+*/
+.ec-totalBox{
+  background:#F3F3F3;
+  padding: 16px;
+  & &__spec{
+    position: relative;
+    margin-bottom:8px;
+    dt{
+      position: relative;
+      top:0;
+      left: 0;
+      text-align: left;
+    }
+    dd{
+      position: absolute;
+      top:0;
+      right: 0;
+      text-align: right;
+
+    }
+  }
+  & &__total{
+    border-top: 1px dotted #ccc;
+    text-align: right;
+  }
+  & &__price{
+    font-size: 2em;
+  }
+}
+/*
+警告
+
+カートが空であることを示す警告メッセージです。
+
+http://demo3.ec-cube.net/cart
+
+Markup:
+.ec-emptyCart
+  p 現在カート内に商品はございません。
+
+Styleguide 7.3.7
+*/
+.ec-emptyCart{
+  background-color: #F99;
+  text-align: center;
+  padding: 16px 0;
+  margin: 0;
+  color: #FFF;
+  font-weight: bold;
+}
+

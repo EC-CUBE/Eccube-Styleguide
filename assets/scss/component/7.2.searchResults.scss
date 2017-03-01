@@ -1,0 +1,102 @@
+@import "../mixins/variables";
+
+@mixin pager(){
+}
+/*
+一覧表示
+
+一覧表示
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+
+Styleguide 7.2
+*/
+
+/*
+トピックパス
+
+検索結果で表示されるトピックパスのスタイルです。
+
+http://demo3.ec-cube.net/products/list?category_id=&name=
+
+Markup:
+ol.ec-topicpath
+  li.ec-topicpath__item: a(href="#") 全商品
+  li.ec-topicpath__divider |
+  li.ec-topicpath__item: a(href="#") 生活雑貨
+  li.ec-topicpath__divider |
+  li.ec-topicpath__item--active: a(href="#") キッチン
+
+Styleguide 7.2.1
+*/
+.ec-topicpath{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  list-style: none;
+  overflow: hidden;
+
+  & &__item,
+  & &__divider,
+  & &__item--active{
+    display: inline-block;
+    min-width: 29px;
+    text-align: center;
+    position: relative;
+  }
+  & &__item--active{
+    font-weight: bold;
+  }
+}
+
+/*
+ページャ
+
+検索結果で表示される商品一覧のスタイルです。
+
+http://demo3.ec-cube.net/products/list?category_id=&name=
+
+Markup:
+ul.ec-pager
+  li.ec-pager__item: a(href="#") 前へ
+  li.ec-pager__item: a(href="#") 1
+  li.ec-pager__item--active: a(href="#") 2
+  li.ec-pager__item: a(href="#") 3
+  li.ec-pager__item: a(href="#") 次へ
+
+Styleguide 7.2.2
+*/
+.ec-pager{
+  list-style: none;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 1em 0;
+  text-align: center;
+  & &__item,
+  & &__item--active{
+    display: inline-block;
+    min-width: 29px;
+    padding: 0 3px 0 2px;
+    text-align: center;
+    position: relative;
+    a{
+      color: inherit;
+      display: block;
+      line-height: 1.8;
+      padding: 5px 1em;
+      text-decoration: none;
+    }
+    a:hover{
+      color: inherit;
+    }
+  }
+  & &__item--active {
+    background: $clrGray;
+  }
+  & &__item:hover{
+    background: $clrGray;
+  }
+
+}

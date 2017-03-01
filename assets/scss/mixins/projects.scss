@@ -1,0 +1,9 @@
+
+@mixin borderTop(){
+  border-top: 1px dotted #ccc;
+}
+
+@mixin borderBottom(){
+  border-bottom: 1px dotted #ccc;
+}
+

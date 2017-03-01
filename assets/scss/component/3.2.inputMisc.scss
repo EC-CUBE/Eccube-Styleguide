@@ -1,0 +1,170 @@
+@import "../mixins/forms";
+
+/*
+フォーム部品(その他)
+
+テキスト以外の入力項目に関する要素を定義します。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+
+Styleguide 3.2
+*/
+
+
+
+/*
+フォーム
+
+全てのフォーム要素スタイリングは .ec-input 要素内で反映されます。
+
+http://demo3.ec-cube.net/products/list
+
+Markup:
+.ec-input
+  input(type="checkbox")
+.ec-input
+  input(type="radio")
+
+Styleguide 3.2.1
+*/
+.ec-input{
+  @include forms-reset;
+  @include form-controls;
+}
+
+/*
+ラジオ（水平）
+
+水平に並ぶラジオボタンフィールドです。
+
+各要素をlabelでくくって、コーディングします。
+
+ex [新規会員登録画面](http://demo3.ec-cube.net/entry)
+
+Markup:
+.ec-radio
+  label
+    input(type="radio")
+    span 男性
+  label
+    input(type="radio")
+    span 女性
+
+Styleguide 3.2.2
+*/
+.ec-radio{
+}
+
+/*
+ラジオ(垂直)
+
+垂直に並ぶラジオボタンフィールドです。
+
+各要素をlabelでくくって、コーディングします。
+
+ex [購入画面 お支払方法](http://demo3.ec-cube.net/shopping)
+
+Markup:
+.ec-blockRadio
+  label
+    input(type="radio")
+    span 郵便振替
+  label
+    input(type="radio")
+    span 現金書留
+  label
+    input(type="radio")
+    span 銀行振込
+  label
+    input(type="radio")
+    span 代金引換
+
+Styleguide 3.2.3
+*/
+.ec-blockRadio{
+  label{
+    display: block;
+  }
+}
+/*
+セレクトボックス
+
+数量を表示するための小さなコンポーネントです。
+
+数値表示に最適化するため、数字は右端揃えで表示されます。
+
+ex [新規会員登録画面](http://demo3.ec-cube.net/entry)
+
+Markup:
+.ec-select
+  select
+    option 都道府県を選択
+    option 北海道
+    option 青森県
+    option 岩手県
+    option ...
+.ec-select
+  select
+    option 選択して下さい
+    option 公務員
+    option コンサルタント
+    option コンピュータ関連技術職
+    option コンピュータ関連以外の技術職
+    option ...
+
+Styleguide 3.2.4
+*/
+.ec-select{
+  @extend .ec-input;
+  select{
+    display: inline-block;
+    width: auto;
+  }
+  label{
+    font-weight: bold;
+  }
+}
+/*
+生年月日選択
+
+数量を表示するための小さなコンポーネントです。
+
+数値表示に最適化するため、数字は右端揃えで表示されます。
+
+http://demo3.ec-cube.net/mypage/login
+
+Markup:
+.ec-birth
+  select
+    option ----
+    option 1960
+    option 1961
+    option 1962
+    option ...
+  span /
+  select
+    option --
+    option 01
+    option 02
+    option 03
+    option ...
+  span /
+  select
+    option --
+    option 01
+    option 02
+    option 03
+    option ...
+
+Styleguide 3.2.5
+*/
+.ec-birth{
+  @extend .ec-input;
+  select{
+    display: inline-block;
+    width: auto;
+  }
+}

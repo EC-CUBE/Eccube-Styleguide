@@ -1,0 +1,164 @@
+@import "../mixins/projects";
+/*
+注文詳細
+
+TODO 変更ボタンつける
+
+カート内 注文履歴詳細部に関する Project コンポーネントを定義します。
+
+http://demo3.ec-cube.net/mypage
+(要ログイン → 詳細を見るボタン押下)
+
+Markup:
+include /assets/tmpl/elements/15.2.order.pug
++ec-orderRole
+
+Styleguide 15.2
+*/
+.ec-orderRole{
+  display: flex;
+  & &__detail{
+    width: 66.66666%;
+    padding: 0 16px;
+  }
+  & &__summary{
+    width: 33.33333%;
+    padding: 0 16px;
+  }
+
+}
+
+/*
+注文履歴詳細 オーダ情報
+
+マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
+
+http://demo3.ec-cube.net/mypage
+(要ログイン → 詳細を見るボタン押下)
+
+Markup:
+.ec-orderRole
+  .ec-orderOrder
+    .ec-definitions
+      dt ご注文日時：
+      dd 2017/01/20 12:29:01
+    .ec-definitions
+      dt ご注文番号：
+      dd 544
+    .ec-definitions
+      dt ご注文状況：
+      dd 注文受付
+    .ec-orderOrder__items
+      .ec-imageGrid
+        .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
+        .ec-imageGrid__content
+          p ホーローマグ
+          p ¥ 1,728 x 1
+
+Styleguide 15.2.1
+*/
+.ec-orderOrder{
+  & &__items{
+    @include borderBottom;
+    @include borderTop;
+  }
+}
+
+
+/*
+注文詳細 配送情報
+
+マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
+
+http://demo3.ec-cube.net/mypage
+(要ログイン → 詳細を見るボタン押下)
+
+Markup:
+.ec-orderRole
+  .ec-orderDelivery
+    .ec-rectHeading
+      h2 配送情報
+    .ec-orderDelivery__title お届け先
+    .ec-orderDelivery__items
+      .ec-imageGrid
+        .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
+        .ec-imageGrid__content
+          p ホーローマグ
+          p ¥ 1,728 x 1
+    .ec-orderDelivery__address
+      p 後藤 知宏  (ゴトウ トモヒロ) 様
+      p 〒541-0057　大阪府大阪市中央区北久宝寺町1-4-11
+      p 090-0090-0090
+    .ec-definitions--soft
+      dt 配送方法：
+      dd サンプル業者（＋¥ 1,000）
+    .ec-definitions--soft
+      dt お届け日：
+      dd 指定なし
+    .ec-definitions--soft
+      dt お届け時間：
+      dd 指定なし
+
+Styleguide 15.2.2
+*/
+.ec-orderDelivery{
+  & &__title{
+    font-weight: bold;
+  }
+  & &__items{
+    @include borderBottom;
+    @include borderTop;
+  }
+  & &__address{
+    margin: 10px 0px 18px ;
+    p{
+      margin:0;
+    }
+  }
+
+}
+
+
+/*
+注文履歴詳細 支払情報
+
+マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
+
+http://demo3.ec-cube.net/mypage
+(要ログイン → 詳細を見るボタン押下)
+
+Markup:
+.ec-orderRole
+  .ec-orderPayment
+    .ec-rectHeading
+      h2 お支払方法
+    p 支払方法： 郵便振替
+
+Styleguide 15.2.3
+*/
+.ec-orderPayment{
+
+}
+
+
+/*
+注文履歴詳細 お問い合わせ
+
+マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
+
+http://demo3.ec-cube.net/mypage
+(要ログイン → 詳細を見るボタン押下)
+
+Markup:
+.ec-orderRole
+  .ec-orderConfirm
+    .ec-rectHeading
+      h2 お問い合わせ
+    p 記載なし
+
+Styleguide 15.2.4
+*/
+.ec-orderConfirm{
+
+}
+
