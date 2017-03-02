@@ -6,9 +6,8 @@
 ex [トップページ](http://demo3.ec-cube.net/)
 
 Markup:
-.ec-sliderRole
-  ul
-    li: img(src='http://demo3.ec-cube.net/template/default/img/top/mv01.jpg')
+include /assets/tmpl/elements/12.1.slider.pug
++ec-sliderRole
 
 Styleguide 12.1
 */

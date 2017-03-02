@@ -1,0 +1,20 @@
+mixin ec-eyecatchRole
+    .ec-eyecatchRole
+        +b.ec-grid2
+            +e.cell
+                +b.ec-splitImg
+                    +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img01.jpg")
+                    +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img02.jpg")
+            +e.cell
+                p 新入荷商品特集
+                p この季節にぴったりな商品をご用意しました
+                p さわやかな日差しが過ごしやすい季節。心地よいくらしのための、お部屋のアクセントになるおすすめのファブリックやグッズをご紹介します。
+                p: a.ec-inlineBtn 一覧を見る
+
+        ul
+            li: img(src='http://demo3.ec-cube.net/template/default/img/top/mv01.jpg')
+
+mixin ec-eyecatchTop
+    +b.ec-splitImg
+        +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img01.jpg")
+        +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img02.jpg")
