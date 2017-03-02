@@ -8,20 +8,8 @@
 ex [トップページスライダー直下 アイキャッチ部](http://demo3.ec-cube.net/)
 
 Markup:
-.ec-eyecatchRole
-  +b.ec-grid2
-    +e.cell
-      +b.ec-splitImg
-        +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img01.jpg")
-        +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img02.jpg")
-    +e.cell
-      p 新入荷商品特集
-      p この季節にぴったりな商品をご用意しました
-      p さわやかな日差しが過ごしやすい季節。心地よいくらしのための、お部屋のアクセントになるおすすめのファブリックやグッズをご紹介します。
-      p: a.ec-inlineBtn 一覧を見る
-
-  ul
-    li: img(src='http://demo3.ec-cube.net/template/default/img/top/mv01.jpg')
+include /assets/tmpl/elements/12.2.eyecatch.pug
++ec-eyecatchRole
 
 Styleguide 12.2
 */
@@ -36,12 +24,12 @@ Styleguide 12.2
 
 アイキャッチで使用する 分割画像レイアウトです。
 
-http://demo3.ec-cube.net/
+ex [トップページ](http://demo3.ec-cube.net/)
 
 Markup:
-+b.ec-splitImg
-  +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img01.jpg")
-  +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img02.jpg")
+include /assets/tmpl/elements/12.2.eyecatch.pug
++ec-eyecatchTop
+
 
 Styleguide 12.2.1
 */

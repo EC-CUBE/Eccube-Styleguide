@@ -5,59 +5,13 @@
 
 カート 注文詳細 に関する Project コンポーネントを定義します。
 
-http://demo3.ec-cube.net/shopping
+ex [カートページ](http://demo3.ec-cube.net/shopping)
 
 (カート内に商品がある状態でアクセス)
 
 Markup:
-.ec-cartRole
-  ul.ec-cartStatus
-    li.ec-cartStatus__item
-      .ec-cartStatus__number 1
-      .ec-cartStatus__label カートの商品
-    li.ec-cartStatus__item
-      .ec-cartStatus__number 2
-      .ec-cartStatus__label ご注文内容確認
-    li.ec-cartStatus__item
-      .ec-cartStatus__number 3
-      .ec-cartStatus__label 完了
-  p 商品の合計金額は「¥4,320」です。
-  .ec-cartTable
-    ol.ec-cartHeader
-      li.ec-cartHeader__label 削除
-      li.ec-cartHeader__label 商品内容
-      li.ec-cartHeader__label 数量
-      li.ec-cartHeader__label 小計
-    ul.ec-cartRow
-      li.ec-cartRow__delColumn
-        span ☓
-      li.ec-cartRow__contentColumn
-        .ec-cartRow__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701115551_559356b78ba67.jpeg")
-        .ec-cartRow__name アンティークポット
-        .ec-cartRow__unitPrice ¥ 4,320
-        .ec-cartRow__subtotal ¥ 4,320
-      li.ec-cartRow__amountColumn
-        .ec-cartRow__amount 1
-        .ec-cartRow__amountUpDown - +
-      li.ec-cartRow__subtotalColumn
-        .ec-cartRow__sutbtotal ¥ 4,320
-  .ec-totalBox
-    dl.ec-totalBox__spec
-      dt 小計
-      dd ¥ 9,720
-    dl.ec-totalBox__spec
-      dt 手数料
-      dd ¥ 0
-    dl.ec-totalBox__spec
-      dt 送料
-      dd ¥ 1,000
-    .ec-totalBox__total
-      | 合計
-      span.ec-totalBox__price ¥ 10,720
-      span.ec-totalBox__taxLabel 税込
-    .ec-blockBtn--action 注文する
-
-
+include /assets/tmpl/elements/15.1.cart.pug
++ec-cartRole
 
 Styleguide 15.1
 

@@ -5,29 +5,12 @@
 
 マイページ 注文履歴部に関する Project コンポーネントを定義します。
 
-http://demo3.ec-cube.net/mypage
+ex [マイページ　注文履歴一覧](http://demo3.ec-cube.net/mypage)
 (要ログイン)
 
 Markup:
-.ec-historyRole
-  .ec-historyRole__header
-    .ec-historyListHeader
-      p.ec-historyListHeader__date 2017/01/20 12:38:58
-      dl.ec-definitions
-        dt ご注文番号：
-        dd 544
-      dl.ec-definitions
-        dt ご注文状況：
-        dd 注文受け付け
-      p.ec-historyListHeader__action
-        a.ec-inlineBtn 詳細を見る
-  .ec-historyRole__detail
-    .ec-imageGrid
-      .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
-      .ec-imageGrid__content
-        p ホーローマグ
-        p ¥ 1,728 x 1
-
+include /assets/tmpl/elements/16.1.history.pug
++ec-historyRole
 
 Styleguide 16.1
 */
@@ -47,20 +30,12 @@ Styleguide 16.1
 
 注文履歴一覧で使用するヘッダのコンポーネントを定義します。
 
-http://demo3.ec-cube.net/mypage
+ex [マイページ　注文履歴一覧ヘッダ](http://demo3.ec-cube.net/mypage)
 (要ログイン)
 
 Markup:
-.ec-historyListHeader
-  p.ec-historyListHeader__date 2017/01/20 12:38:58
-  dl.ec-definitions
-    dt ご注文番号：
-    dd 544
-  dl.ec-definitions
-    dt ご注文状況：
-    dd 注文受け付け
-  p.ec-historyListHeader__action
-    a.ec-inlineBtn 詳細を見る
+include /assets/tmpl/elements/16.1.history.pug
++ec-historyHeader
 
 Styleguide 16.1.1
 */
