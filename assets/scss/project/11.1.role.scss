@@ -8,8 +8,8 @@
 ex [商品詳細ページ　コンテナ](http://demo3.ec-cube.net/products/detail/33)
 
 Markup:
-.ec-role
-  p this is inside container
+include /assets/tmpl/elements/11.1.role.pug
++ec-roleRole
 
 Styleguide 11.1
 */
