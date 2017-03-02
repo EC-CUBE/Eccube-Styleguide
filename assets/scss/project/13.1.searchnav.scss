@@ -1,8 +1,8 @@
+@import "../mixins/media";
 /*
 検索ラベル
 
 商品一覧 ヘッダー部 に関する Project コンポーネントを定義します。
-
 
 ex [商品一覧 ヘッダー部](http://demo3.ec-cube.net/products/list)
 
@@ -28,6 +28,7 @@ Styleguide 13.1
 
 */
 .ec-searchnavRole{
+  @include container;
   & &__topicpath{
 
   }
