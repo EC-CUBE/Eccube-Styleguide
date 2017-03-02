@@ -7,17 +7,8 @@
 ex [商品詳細ページ　フッター](http://demo3.ec-cube.net/products/detail/33)
 
 Markup:
-.ec-footerRole
-  .ec-footerRole__inner
-    ul.ec-footerNavi
-      li.ec-footerNavi__link: a(href="") 当サイトについて
-      li.ec-footerNavi__link: a(href="") プライバシーポリシー
-      li.ec-footerNavi__link: a(href="") 特定商取引法に基づく表記
-      li.ec-footerNavi__link: a(href="") お問い合わせ
-    .ec-footerTitle
-      .ec-footerTitle__logo
-        a(href="") EC-CUBE3 DEMO SHOP
-      .ec-footerTitle__copyright copyright (c) EC-CUBE3 DEMO SHOP all rights reserved.
+include /assets/tmpl/elements/11.3.footer.pug
++ec-footerRole
 
 Styleguide 11.3
 */
@@ -49,11 +40,8 @@ ulタグを用いてリスト要素として宣言します。
 ex [商品詳細ページ　フッターナビ(http://demo3.ec-cube.net/products/detail/33)
 
 Markup:
-ul.ec-footerNavi
-  li.ec-footerNavi__link: a(href="") 当サイトについて
-  li.ec-footerNavi__link: a(href="") プライバシーポリシー
-  li.ec-footerNavi__link: a(href="") 特定商取引法に基づく表記
-  li.ec-footerNavi__link: a(href="") お問い合わせ
+include /assets/tmpl/elements/11.3.footer.pug
++ec-footerNav
 
 Styleguide 11.3.1
 */
@@ -79,10 +67,8 @@ ulタグを用いてリスト要素として宣言します。
 ex [商品詳細ページ　フッタータイトル](http://demo3.ec-cube.net/products/detail/33)
 
 Markup:
-.ec-footerTitle
-  .ec-footerTitle__logo
-    a(href="") EC-CUBE3 DEMO SHOP
-  .ec-footerTitle__copyright copyright (c) EC-CUBE3 DEMO SHOP all rights reserved.
+include /assets/tmpl/elements/11.3.footer.pug
++ec-footerTitle
 
 Styleguide 11.3.2
 */

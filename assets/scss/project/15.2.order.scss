@@ -37,23 +37,8 @@ ex [マイページ　オーダ情報](http://demo3.ec-cube.net/mypage)
 (要ログイン → 詳細を見るボタン押下)
 
 Markup:
-.ec-orderRole
-  .ec-orderOrder
-    .ec-definitions
-      dt ご注文日時：
-      dd 2017/01/20 12:29:01
-    .ec-definitions
-      dt ご注文番号：
-      dd 544
-    .ec-definitions
-      dt ご注文状況：
-      dd 注文受付
-    .ec-orderOrder__items
-      .ec-imageGrid
-        .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
-        .ec-imageGrid__content
-          p ホーローマグ
-          p ¥ 1,728 x 1
+include /assets/tmpl/elements/15.2.order.pug
++ec-orderInfo
 
 Styleguide 15.2.1
 */
@@ -74,30 +59,8 @@ ex [マイページ　配送情報](http://demo3.ec-cube.net/mypage)
 (要ログイン → 詳細を見るボタン押下)
 
 Markup:
-.ec-orderRole
-  .ec-orderDelivery
-    .ec-rectHeading
-      h2 配送情報
-    .ec-orderDelivery__title お届け先
-    .ec-orderDelivery__items
-      .ec-imageGrid
-        .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
-        .ec-imageGrid__content
-          p ホーローマグ
-          p ¥ 1,728 x 1
-    .ec-orderDelivery__address
-      p 後藤 知宏  (ゴトウ トモヒロ) 様
-      p 〒541-0057　大阪府大阪市中央区北久宝寺町1-4-11
-      p 090-0090-0090
-    .ec-definitions--soft
-      dt 配送方法：
-      dd サンプル業者（＋¥ 1,000）
-    .ec-definitions--soft
-      dt お届け日：
-      dd 指定なし
-    .ec-definitions--soft
-      dt お届け時間：
-      dd 指定なし
+include /assets/tmpl/elements/15.2.order.pug
++ec-orderDelivery
 
 Styleguide 15.2.2
 */
