@@ -1,0 +1,34 @@
+mixin ec-headerRole
+    +b.ec-headerRole
+        +e.title: +ec-headerTitle
+        +e.cart
+            .ec-cartNavi
+                .ec-cartNavi__icon
+                .ec-cartNavi__badge 1
+                .ec-cartNavi__label
+                    | 合計
+                    .ec-cartNavi__price ¥1920
+        +e.search: +ec-headerSearch
+        +e.navi: +ec-headerNavi
+
+mixin ec-headerTitle
+    +b.ec-headerTitle
+        +e.subtitle
+            | このデモサイトは
+            a(href="") さくらのクラウド
+            | で稼働しています。
+        +e.title: h1 EC-CUBE3 DEMO SHOP
+mixin ec-headerSearch
+    +b.ec-headerSearch
+        +e.subtitle
+            | このデモサイトは
+            a(href="") さくらのクラウド
+            | で稼働しています。
+        +e.title: h1 EC-CUBE3 DEMO SHOP
+mixin ec-headerNavi
+    +b.ec-headerNavi
+        +e.subtitle
+            | このデモサイトは
+            a(href="") さくらのクラウド
+            | で稼働しています。
+        +e.title: h1 EC-CUBE3 DEMO SHOP

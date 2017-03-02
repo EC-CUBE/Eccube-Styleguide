@@ -1,0 +1,39 @@
+@import "../mixins/media";
+/*
+ヘッダー
+
+ヘッダー用のプロジェクトコンポーネントを提供します。
+
+http://demo3.ec-cube.net/products/detail/33
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerRole
+
+Styleguide 11.2
+*/
+.ec-role{
+  @include container;
+}
+
+/*
+ヘッダータイトル
+
+ヘッダー内で使用されるタイトルコンポーネントです。
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerTitle
+
+sg-wrapper:
+<div class="ec-headerRole">
+  <div class="ec-headerRole__title">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 11.2.1
+*/
+.ec-role{
+  @include container;
+}

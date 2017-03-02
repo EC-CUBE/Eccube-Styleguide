@@ -1,0 +1,102 @@
+@import "../mixins/media";
+/*
+フッター
+
+全ページで使用されるフッターのプロジェクトコンポーネントです。
+
+http://demo3.ec-cube.net/products/detail/33
+
+Markup:
+.ec-footerRole
+  .ec-footerRole__inner
+    ul.ec-footerNavi
+      li.ec-footerNavi__link: a(href="") 当サイトについて
+      li.ec-footerNavi__link: a(href="") プライバシーポリシー
+      li.ec-footerNavi__link: a(href="") 特定商取引法に基づく表記
+      li.ec-footerNavi__link: a(href="") お問い合わせ
+    .ec-footerTitle
+      .ec-footerTitle__logo
+        a(href="") EC-CUBE3 DEMO SHOP
+      .ec-footerTitle__copyright copyright (c) EC-CUBE3 DEMO SHOP all rights reserved.
+
+Styleguide 11.3
+*/
+.ec-footerRole{
+  background: #f8f8f8;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 12px;
+  padding-bottom: 24px;
+  margin-top: 36px;
+  @include media_desktop(){
+    padding-top: 32px;
+    margin-top: 80px;
+  }
+  & &__inner{
+    @include container;
+  }
+  .ec-footerTitle{
+    margin-top:80px;
+  }
+}
+
+/*
+フッターナビ
+
+フッタープロジェクトで使用するナビゲーション用のコンポーネントです。
+
+ulタグを用いてリスト要素として宣言します。
+
+http://demo3.ec-cube.net/products/detail/33
+
+Markup:
+ul.ec-footerNavi
+  li.ec-footerNavi__link: a(href="") 当サイトについて
+  li.ec-footerNavi__link: a(href="") プライバシーポリシー
+  li.ec-footerNavi__link: a(href="") 特定商取引法に基づく表記
+  li.ec-footerNavi__link: a(href="") お問い合わせ
+
+Styleguide 11.3.1
+*/
+.ec-footerNavi{
+  list-style: none;
+  text-align: center;
+  & &__link{
+    display: inline-block;
+    margin: 0 8px 8px;
+    a{
+      color: inherit;
+    }
+  }
+}
+
+/*
+フッタータイトル
+
+フッタープロジェクトで使用するタイトル用のコンポーネントです。
+
+ulタグを用いてリスト要素として宣言します。
+
+http://demo3.ec-cube.net/products/detail/33
+
+Markup:
+.ec-footerTitle
+  .ec-footerTitle__logo
+    a(href="") EC-CUBE3 DEMO SHOP
+  .ec-footerTitle__copyright copyright (c) EC-CUBE3 DEMO SHOP all rights reserved.
+
+Styleguide 11.3.2
+*/
+.ec-footerTitle{
+  text-align: center;
+  & &__logo{
+    font-weight: bold;
+    a{
+      font-size: 2em;
+      color: inherit;
+    }
+  }
+  & &__copyright{
+    font-size: .8em
+  }
+}
+
