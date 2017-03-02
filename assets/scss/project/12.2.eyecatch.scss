@@ -30,6 +30,12 @@ Markup:
 include /assets/tmpl/elements/12.2.eyecatch.pug
 +ec-eyecatchTop
 
+sg-wrapper:
+<div class="ec-eyecatchRole">
+  <sg-wrapper-content/>
+</div>
+
+
 
 Styleguide 12.2.1
 */

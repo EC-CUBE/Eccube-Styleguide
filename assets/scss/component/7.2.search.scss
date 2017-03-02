@@ -3,7 +3,7 @@
 @mixin pager(){
 }
 /*
-一覧表示
+検索・一覧表示
 
 一覧表示
 
@@ -23,12 +23,8 @@ Styleguide 7.2
 ex [商品一覧ページ　横並びリスト部分](http://demo3.ec-cube.net/products/list?category_id=&name=)
 
 Markup:
-ol.ec-topicpath
-  li.ec-topicpath__item: a(href="#") 全商品
-  li.ec-topicpath__divider |
-  li.ec-topicpath__item: a(href="#") 生活雑貨
-  li.ec-topicpath__divider |
-  li.ec-topicpath__item--active: a(href="#") キッチン
+include /assets/tmpl/elements/7.2.search.pug
++ec-topicpath
 
 Styleguide 7.2.1
 */
@@ -58,12 +54,13 @@ Styleguide 7.2.1
 ex [商品一覧ページ　ページャ部分](http://demo3.ec-cube.net/products/list?category_id=&name=)
 
 Markup:
-ul.ec-pager
-  li.ec-pager__item: a(href="#") 前へ
-  li.ec-pager__item: a(href="#") 1
-  li.ec-pager__item--active: a(href="#") 2
-  li.ec-pager__item: a(href="#") 3
-  li.ec-pager__item: a(href="#") 次へ
+include /assets/tmpl/elements/7.2.search.pug
++ec-pager
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
 
 Styleguide 7.2.2
 */
@@ -96,6 +93,52 @@ Styleguide 7.2.2
   }
   & &__item:hover{
     background: $clrGray;
+  }
+
+}
+
+/*
+検索ボックス
+
+検索結果で表示される商品一覧のスタイルです。
+
+ex [商品一覧ページ　ページャ部分](http://demo3.ec-cube.net/products/list?category_id=&name=)
+
+Markup:
+include /assets/tmpl/elements/7.2.search.pug
++ec-searchbox
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 7.2.3
+*/
+.ec-searchbox{
+  & &__keyword {
+    height: 50px;
+    padding: 0 50px 0 1em;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    margin-left: 1%;
+
+    input[type="text"]{
+      height: 50px;
+      width: 100%;
+      font-size: 16px;
+      font-size: 1.6rem;
+      border: 0 none;
+      padding: 0.5em 0;
+      box-shadow: none;
+      background: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    input:focus{
+      outline: none;
+    }
   }
 
 }

@@ -12,8 +12,27 @@ include /assets/tmpl/elements/11.2.header.pug
 
 Styleguide 11.2
 */
-.ec-role{
+.ec-headerRole{
   @include container;
+  &::before{
+    display: none;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & &__title{
+    width: 40%;
+  }
+  & &__cart{
+  }
+  & &__search{
+    width: 40%;
+
+  }
+  & &__nav{
+    width: 40%;
+
+  }
 }
 
 /*
@@ -34,6 +53,31 @@ sg-wrapper:
 
 Styleguide 11.2.1
 */
-.ec-role{
-  @include container;
+.ec-headerTitle{
+
+}
+
+/*
+ヘッダーナビ
+
+ヘッダー内で使用されるタイトルコンポーネントです。
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerNav
+
+sg-wrapper:
+<div class="ec-headerRole">
+  <div class="ec-headerRole__title">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 11.2.2
+*/
+.ec-headerNav{
+  & &__item{
+    display: inline-block;
+  }
+
 }

@@ -40,6 +40,8 @@ Twitter Bootstrap デフォルト準拠
   padding-left:  floor((30px / 2));
   padding-right: ceil((30px / 2));
 
+  box-sizing: border-box;
+
   @include clearfix;
   @include commonStyle();
 

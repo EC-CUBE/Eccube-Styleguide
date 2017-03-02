@@ -43,6 +43,13 @@ Markup:
 include /assets/tmpl/elements/11.3.footer.pug
 +ec-footerNav
 
+sg-wrapper:
+<div class="ec-footerRole">
+  <div class="ec-footerRole__inner">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
 Styleguide 11.3.1
 */
 .ec-footerNavi{
@@ -69,6 +76,13 @@ ex [商品詳細ページ　フッタータイトル](http://demo3.ec-cube.net/p
 Markup:
 include /assets/tmpl/elements/11.3.footer.pug
 +ec-footerTitle
+
+sg-wrapper:
+<div class="ec-footerRole">
+  <div class="ec-footerRole__inner">
+    <sg-wrapper-content/>
+  </div>
+</div>
 
 Styleguide 11.3.2
 */

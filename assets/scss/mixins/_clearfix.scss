@@ -11,7 +11,7 @@
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 
 @mixin clearfix() {
-  &:before,
+  //&:before, //to avoid flex effect
   &:after {
     content: " "; // 1
     display: table; // 2

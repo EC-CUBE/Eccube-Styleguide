@@ -23,20 +23,17 @@ ul 要素を用いたリスト要素としてマークアップします。
 ex [カートページ　ヘッダ部分](http://demo3.ec-cube.net/cart)
 
 Markup:
-ul.ec-cartStatus
-  li.ec-cartStatus__item
-    .ec-cartStatus__number 1
-    .ec-cartStatus__label カートの商品
-  li.ec-cartStatus__item
-    .ec-cartStatus__number 2
-    .ec-cartStatus__label ご注文内容確認
-  li.ec-cartStatus__item
-    .ec-cartStatus__number 3
-    .ec-cartStatus__label 完了
+include /assets/tmpl/elements/7.3.cart.pug
++ec-progress
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
 
 Styleguide 7.3.1
 */
-.ec-cartStatus{
+.ec-progress{
   & &__item{
     display: inline-block;
     font-size: 14px;
@@ -69,109 +66,7 @@ Styleguide 7.3.1
   }
 }
 
-/*
-カートテーブル(枠)
 
-カート内のアイテムを表示するテーブル枠です。
-
-ex [カートページ　テーブル部分](http://demo3.ec-cube.net/cart)
-
-Markup:
-.ec-cartTable
-
-Styleguide 7.3.2
-*/
-.ec-cartTable{
-  display: table;
-  width: 100%;
-}
-
-/*
-カートテーブル(ヘッダ)
-
-カート内のアイテムを表示するテーブルヘッダです。
-スマホでは非表示となります。
-
-ex [カートページ　カートテーブルヘッダ部分](http://demo3.ec-cube.net/cart)
-
-Markup:
-.ec-cartTable
-  ol.ec-cartHeader
-    li.ec-cartHeader__label 削除
-    li.ec-cartHeader__label 商品内容
-    li.ec-cartHeader__label 数量
-    li.ec-cartHeader__label 小計
-
-Styleguide 7.3.3
-*/
-.ec-cartHeader{
-  background: #F4F3F0;
-  display: table-row;
-  width: 100%;
-  & &__label{
-    display: table-cell;
-    padding: 16px;
-    text-align: center;
-    background: #F4F3F0;
-    overflow-x: hidden;
-    font-weight: bold;
-  }
-}
-/*
-カートテーブル
-
-カート内のアイテムを表示するテーブル行です。
-スマホでは非表示となります。
-
-ex [カートページ　テーブル部分](http://demo3.ec-cube.net/cart)
-
-Markup:
-.ec-cartTable
-  ol.ec-cartHeader
-    li.ec-cartHeader__label 削除
-    li.ec-cartHeader__label 商品内容
-    li.ec-cartHeader__label 数量
-    li.ec-cartHeader__label 小計
-  ul.ec-cartRow
-    li.ec-cartRow__delColumn
-      span ☓
-    li.ec-cartRow__contentColumn
-      .ec-cartRow__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701115551_559356b78ba67.jpeg")
-      .ec-cartRow__name アンティークポット
-      .ec-cartRow__unitPrice ¥ 4,320
-      .ec-cartRow__subtotal ¥ 4,320
-    li.ec-cartRow__amountColumn
-      .ec-cartRow__amount 1
-      .ec-cartRow__amountUpDown - +
-    li.ec-cartRow__subtotalColumn
-      .ec-cartRow__sutbtotal ¥ 4,320
-
-
-Styleguide 7.3.4
-*/
-.ec-cartRow{
-  display: table-row;
-  & &__delColumn{
-    display: table-cell;
-    width: 8.3333333%;
-  }
-  & &__contentColumn{
-    display: table-cell;
-  }
-  & &__img{
-    max-width: 100px;
-  }
-
-  & &__amountColumn{
-    display: table-cell;
-    width: 16.66666667%;
-  }
-  & &__subtotalColumn{
-    display: table-cell;
-    width: 16.66666667%;
-  }
-
-}
 
 /*
 カートナビゲーション
@@ -185,6 +80,12 @@ Markup:
   .ec-cartNavi__label
     | 合計
     .ec-cartNavi__price ¥1920
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
+
 
 Styleguide 7.3.5
 */
@@ -237,28 +138,14 @@ Styleguide 7.3.5
   }
 }
 
-
 /*
 総計
 
 ex [カートページ　統計部分](http://demo3.ec-cube.net/cart)
 
 Markup:
-.ec-totalBox
-  dl.ec-totalBox__spec
-    dt 小計
-    dd ¥ 9,720
-  dl.ec-totalBox__spec
-    dt 手数料
-    dd ¥ 0
-  dl.ec-totalBox__spec
-    dt 送料
-    dd ¥ 1,000
-  .ec-totalBox__total
-    | 合計
-    span.ec-totalBox__price ¥ 10,720
-    span.ec-totalBox__taxLabel 税込
-  .ec-blockBtn--action 注文する
+include /assets/tmpl/elements/7.3.cart.pug
++ec-totalBox
 
 Styleguide 7.3.6
 */
@@ -290,25 +177,5 @@ Styleguide 7.3.6
     font-size: 2em;
   }
 }
-/*
-警告
 
-カートが空であることを示す警告メッセージです。
-
-ex [カートページ　警告](http://demo3.ec-cube.net/cart)
-
-Markup:
-.ec-emptyCart
-  p 現在カート内に商品はございません。
-
-Styleguide 7.3.7
-*/
-.ec-emptyCart{
-  background-color: #F99;
-  text-align: center;
-  padding: 16px 0;
-  margin: 0;
-  color: #FFF;
-  font-weight: bold;
-}
 
