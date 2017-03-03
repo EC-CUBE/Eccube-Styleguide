@@ -8,10 +8,10 @@ const {src,dest,jade_option} = global;
 gulp.task("pug",() => {
     let options = (jade_option)?jade_option:{
         locals:{},
-        pretty: true
+        pretty: true,
+        basedir: process.cwd()
     };
     let srcPattern = [
-        `${src}assets/tmpl/**/*.jade`,
         `${src}assets/tmpl/**/*.pug`,
         `!${src}assets/tmpl/**/_*`,
     ];
@@ -19,7 +19,7 @@ gulp.task("pug",() => {
         .pipe($.plumber({
             errorHandler: $.notify.onError('<%= error.message %>')
         }))
-        .pipe($.jade(options))
+        .pipe($.pug(options))
         .pipe(gulp.dest(`${dest}/`));
 });
 

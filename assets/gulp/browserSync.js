@@ -3,7 +3,6 @@
 const gulp = require("gulp");
 const $ = require("gulp-load-plugins")();
 
-const php = require("gulp-connect-php");
 const browserSync = require("browser-sync");
 
 const {src,dest} = global;

@@ -7,11 +7,11 @@ global.build = [];
 global.src = "./";
 global.dest = "./public/";
 
-// require("./assets/gulp/jade.js")
-// require("./assets/gulp/sass.js")
+require("./assets/gulp/pug.js")
+require("./assets/gulp/sass.js")
 // require("./frontend/gulp/webpack.js")
 require("./assets/gulp/styleguide.js")
-// require("./assets/gulp/browserSync.js")
+require("./assets/gulp/browserSync.js")
 
 
 gulp.task("watch",global.watch)

@@ -3,15 +3,11 @@
 const gulp = require("gulp");
 const $ = require("gulp-load-plugins")();
 
-const bourbon = require("node-bourbon");
-const neat = require("node-neat");
-
 const {src,dest,scss_option} = global;
 
 gulp.task("sass",()=> {
     let options = (scss_option)?scss_option:{
         sourceMap: true,
-        includePaths: bourbon.with(neat.includePaths)
     };
 
     let srcPattern = [
