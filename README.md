@@ -10,11 +10,19 @@ https://github.com/EC-CUBE/Eccube-Styleguide
 
 ## 作業のはじめ方
 
+スタイルガイド制作
+
 ````
 $ npm i 
 $ npm start
 ````
 
+モック制作
+
+````
+$ npm i 
+$ npm run dev
+````
 
 ## 相談項目
 
