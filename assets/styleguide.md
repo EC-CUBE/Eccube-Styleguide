@@ -1,5 +1,21 @@
 # EC-CUBE 3 Style Guide
 
+EC-CUBE3デモサイト
+
+http://demo3.ec-cube.net/
+
+開発リポジトリ　
+
+https://github.com/EC-CUBE/Eccube-Styleguide
+
+Styleguide On Heorku 
+
+http://eccube3-styleguide.herokuapp.com/
+
+HTML Moc On Heroku 
+
+http://eccube3-styleguide.herokuapp.com/moc/
+
 ## コンポーネント設計について
 
 コンポーネント設計及び CSS の記述方針については FLOCSS ルールを採用していきます。

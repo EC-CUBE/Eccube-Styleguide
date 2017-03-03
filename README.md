@@ -4,9 +4,17 @@ EC-CUBE3デモサイト
 
 http://demo3.ec-cube.net/
 
-作業リポジトリ　
+開発リポジトリ　
 
 https://github.com/EC-CUBE/Eccube-Styleguide
+
+Styleguide On Heorku 
+
+http://eccube3-styleguide.herokuapp.com/
+
+HTML Moc On Heroku 
+
+http://eccube3-styleguide.herokuapp.com/moc/
 
 ## 作業のはじめ方
 
