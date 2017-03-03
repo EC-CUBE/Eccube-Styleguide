@@ -6,11 +6,7 @@ http://demo3.ec-cube.net/
 
 作業リポジトリ　
 
-https://github.com/mikakane/eccube-styleguide
-
-コンポーネント一覧
-
-https://docs.google.com/spreadsheets/d/1tGkvZEaJoY-Mk3qgZx4DqCWMN497GRvqD3axdrrv_ow/edit#gid=1027189335
+https://github.com/EC-CUBE/Eccube-Styleguide
 
 ## 作業のはじめ方
 
