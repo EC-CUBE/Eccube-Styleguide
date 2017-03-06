@@ -1,7 +1,5 @@
 /*
-商品バナー
-
-商品バナー
+商品掲載
 
 sg-wrapper:
 <div class="ec-role">
@@ -20,15 +18,8 @@ TODO レスポンシブ修正
 ex [トップページ　商品紹介部分](http://demo3.ec-cube.net/)
 
 Markup:
-.ec-grid3
-  each item in ["","",""]
-    .ec-grid3__cell
-      .ec-displayB
-        .ec-displayB__img
-          img(src="http://demo3.ec-cube.net/template/default/img/top/img03.jpg")
-        .ec-displayB__catch お気に入りのエスプレッソタイム
-        .ec-displayB__comment コーヒータイムを上質な時間にしてくれる、口当たりのよさとデザイン性を兼ね備えたエスプレッソカップを集めました・・・
-        .ec-displayB__link read more
+include /assets/tmpl/elements/7.1.itembanner.pug
++ec-displayB
 
 Styleguide 7.1.1
 */
@@ -53,15 +44,8 @@ TODO レスポンシブ修正
 ex [トップページ　商品紹介部分](http://demo3.ec-cube.net/)
 
 Markup:
-.ec-grid4
-  each item in ["","","",""]
-    .ec-grid4__cell
-      .ec-displayC
-        .ec-displayC__img
-          img(src="http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg")
-        .ec-displayC__catch 足の透かし模様が美しいミニテーブル
-        .ec-displayC__title ミニテーブル
-        .ec-displayC__price--sp ¥ 1,785
+include /assets/tmpl/elements/7.1.itembanner.pug
++ec-displayC
 
 Styleguide 7.1.2
 */
@@ -90,12 +74,8 @@ TODO レスポンシブ修正
 ex [トップページ　商品紹介部分](http://demo3.ec-cube.net/)
 
 Markup:
-.ec-grid6
-  each item in ["","","","","",""]
-    .ec-grid6__cell
-      .ec-displayD
-        .ec-displayD__img
-          img(src="http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg")
+include /assets/tmpl/elements/7.1.itembanner.pug
++ec-displayD
 
 Styleguide 7.1.3
 */
@@ -109,14 +89,8 @@ TODO レスポンシブ修正
 ex [トップページ　商品紹介部分](http://demo3.ec-cube.net/)
 
 Markup:
-.ec-grid4
-  each item in ["","","",""]
-    .ec-grid4__cell
-      .ec-shelf
-        .ec-shelf__img
-          img(src="http://demo3.ec-cube.net/upload/save_image/0701122303_55935d17278d6.jpeg")
-        .ec-shelf__title ミニサボテン
-        .ec-shelf__price ¥ 876
+include /assets/tmpl/elements/7.1.itembanner.pug
++ec-shelf
 
 
 Styleguide 7.1.4

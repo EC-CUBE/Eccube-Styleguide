@@ -26,18 +26,22 @@ Styleguide 15.1
   }
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
 
   & &__progress{
     width: 100%;
     text-align: center;
   }
   & &__cart{
+    margin: 0 10%;
 
   }
-  & &__summary{
+  & &__actions{
+    text-align: right;
+    width:  20%;
+    margin-left: 10%;
 
   }
-
 }
 
 

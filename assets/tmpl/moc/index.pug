@@ -1,10 +1,23 @@
-extends ./_layout.pug
+extends /assets/tmpl/moc/guest/_layout.pug
 
-include ../elements/_12.1.slider.pug
-include ../elements/_12.2.eyecatch.pug
+include /assets/tmpl/elements/7.1.itembanner.pug
+include /assets/tmpl/elements/8.1.info.pug
+include /assets/tmpl/elements/12.1.slider.pug
+include /assets/tmpl/elements/12.2.eyecatch.pug
 
 block content
     +ec-sliderRole
     +ec-eyecatchRole
+    .ec-role
+        +ec-displayB
+        +ec-displayC
+    .ec-role
+        +b.ec-grid3
+           +e.cell2: +ec-news
+           +e.cell
+            +ec-banner
+    .ec-role
+        +ec-displayD
+        +ec-displayD
 
 

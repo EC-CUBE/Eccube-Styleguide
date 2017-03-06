@@ -1,0 +1,15 @@
+extends /assets/tmpl/moc/guest/_layout.pug
+
+include /assets/tmpl/elements/6.3.login.pug
+include /assets/tmpl/elements/15.1.cart.pug
+
+block content
+    .ec-role
+        .ec-pageHeader
+            h1 ログイン
+    .ec-role
+        .ec-grid3
+            .ec-grid3__cell2: +ec-login
+            .ec-grid3__cell: +ec-guest
+
+

@@ -8,11 +8,11 @@ ex [商品詳細ページ](http://demo3.ec-cube.net/products/detail/18)
 
 Markup:
 include /assets/tmpl/elements/14.1.product.pug
-+ec-productSec
++ec-productRole
 
 Styleguide 14.1
 */
-.ec-productSec{
+.ec-productRole{
   & &__price{
     padding: 14px 0;
     border-bottom: 1px dotted #ccc;;

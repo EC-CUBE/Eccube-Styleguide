@@ -6,8 +6,10 @@ mixin ec-cartRole
             +ec-progress
         +e.cart
             +ec-cartTable
-        +e.summary
-            +ec-totalBox
+        +e.actions
+            +e.total 合計： ￥1,296
+            a(href="/moc/guest/cart2").ec-blockBtn--action レジに進む
+            a(href="").ec-blockBtn--cancel お買い物を続ける
 
 
 mixin ec-cartTable

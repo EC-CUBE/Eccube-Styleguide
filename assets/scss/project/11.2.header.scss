@@ -33,6 +33,10 @@ Styleguide 11.2
     width: 40%;
 
   }
+  & &__itemnav{
+    width: 100%;
+
+  }
 }
 
 /*
@@ -78,6 +82,38 @@ Styleguide 11.2.2
 .ec-headerNav{
   & &__item{
     display: inline-block;
+  }
+
+}
+/*
+カテゴリナビ
+
+カテゴリ一覧として使用します。
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-itemNav
+p hogogeddd
+
+sg-wrapper:
+<div class="ec-headerRole">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 11.2.3
+*/
+.ec-itemNav{
+  margin-top: 16px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  list-style: none;
+  padding: 16px;
+  border-bottom: 1px solid #D9D9D9;
+  border-top: 1px solid #D9D9D9;
+  & &__item{
+    display: inline-block;
+    padding: 0 16px;
   }
 
 }

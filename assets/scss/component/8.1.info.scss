@@ -1,0 +1,96 @@
+/*
+お知らせ
+
+新着情報やバナーなどの掲載項目を紹介していきます。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 8.1
+*/
+
+/*
+新着情報
+
+新着情報
+
+ex [トップページ　新着情報部分](http://demo3.ec-cube.net/)
+
+Markup:
+include /assets/tmpl/elements/8.1.info.pug
++ec-news
+
+Styleguide 8.1.1
+*/
+.ec-news {
+  background: #F8F8F8;
+  & &__title{
+    font-weight: bold;
+    padding: 16px;
+  }
+  & &__items{
+    list-style: none;
+    padding: 16px;
+    border-top: 1px solid #ccc;
+  }
+}
+/*
+折りたたみ項目
+
+新着情報
+
+ex [トップページ　新着情報部分](http://demo3.ec-cube.net/)
+
+Markup:
+include /assets/tmpl/elements/8.1.info.pug
++ec-newsline
+
+Styleguide 8.1.2
+*/
+.ec-newsline {
+  display: flex;
+  flex-wrap:wrap;
+  & &__date{
+    width: 20%;
+  }
+  & &__comment{
+    width: 70%;
+  }
+  & &__close{
+    width: 10%;
+  }
+  & &__description{
+    width: 100%;
+    display: none;
+  }
+
+  &.is_active &__description{
+    display: block;
+  }
+
+
+
+
+}
+
+
+/*
+バナー
+
+バナー形式でお知ら情報を伝える際の背景つきボックスです。
+
+ex [トップページ　新着情報部分](http://demo3.ec-cube.net/)
+
+Markup:
+include /assets/tmpl/elements/8.1.info.pug
++ec-banner
+
+Styleguide 8.1.3
+*/
+.ec-banner{
+  padding: 16px;
+  background: #F8F8F8;
+  text-align: center;
+}

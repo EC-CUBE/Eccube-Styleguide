@@ -6,7 +6,7 @@
 sg-wrapper:
 <div class="ec-role">
   <sg-wrapper-content/>
-
+</div>
 
 Styleguide 6.1
 */
@@ -17,10 +17,20 @@ Styleguide 6.1
 http://demo3.ec-cube.net/mypage
 
 Markup:
-.ec-grid hoge
+include /assets/tmpl/elements/6.3.login.pug
++ec-login
 
 Styleguide 6.1.1
 */
+.ec-login{
+  background: #F3F4F4;
+  padding: 0 13%;
+  box-sizing: border-box;
+  & &__icon{
+    font-size: 90px;
+    text-align: center;
+  }
+}
 
 /*
 ゲスト購入
@@ -28,7 +38,22 @@ Styleguide 6.1.1
 http://demo3.ec-cube.net/mypage
 
 Markup:
-.ec-grid hoge
+include /assets/tmpl/elements/6.3.login.pug
++ec-guest
 
 Styleguide 6.1.2
 */
+.ec-guest{
+  background: #F3F4F4;
+  display: table;
+  padding: 13%;
+  box-sizing: border-box;
+  & &__inner{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  & &__icon{
+    font-size: 90px;
+    text-align: center;
+  }
+}

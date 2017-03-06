@@ -1,5 +1,5 @@
-mixin ec-productSec
-    .ec-productSec
+mixin ec-productRole
+    .ec-productRole
         .ec-grid2
             .ec-grid2__cell
                 .ec-productSec__img
@@ -19,7 +19,7 @@ mixin ec-productSec
                     .ec-productSec__title
                         label 数量
                         input(type=text)
-                    div: .ec-blockBtn--action カートに入れる
-                    div: .ec-blockBtn--cancel お気に入りに追加
+                    div: a(href="/moc/guest/cart1").ec-blockBtn--action カートに入れる
+                    div: a(href="/moc/guest/login").ec-blockBtn--cancel お気に入りに追加
                     .ec-productSec__title 匂いにも菌にも強い、天然の木を使ったカッティングボード。
 

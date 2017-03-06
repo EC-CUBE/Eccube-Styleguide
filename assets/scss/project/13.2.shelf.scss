@@ -17,6 +17,7 @@ Styleguide 13.2
 
 */
 .ec-shelfRole{
+  @include container;
 }
 
 /*
@@ -42,6 +43,9 @@ Styleguide 13.2.1
   & &__item{
     width: 50%;
     padding: 0 8px;
+    img{
+      width: 100%;
+    }
     @include media_desktop(){
       width: 25%;
       padding: 0 16px;

@@ -63,13 +63,15 @@ Twitter Bootstrap デフォルト準拠
   color: #525263;
   -webkit-text-size-adjust: 100%;
 
-  a { color: #0092C4;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  a:hover,
-  a:focus,
-  a:active { color: #33A8D0;text-decoration: none; outline: none;}
+  //a {
+    //color: #0092C4;
+    //color: #A092C4;
+    //text-decoration: none;
+    //cursor: pointer;
+  //}
+  //a:hover,
+  //a:focus,
+  //a:active { color: #33A8D0;text-decoration: none; outline: none;}
 
 
   textarea { /* for chrome fontsize bug */
