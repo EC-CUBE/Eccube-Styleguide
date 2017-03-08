@@ -97,7 +97,7 @@ Styleguide 7.2.2
 
 検索結果で表示される商品一覧のスタイルです。
 
-ex [商品一覧ページ　ページャ部分](http://demo3.ec-cube.net/products/list?category_id=&name=)
+ex [商品一覧ページ　検索ボックス部分](http://demo3.ec-cube.net/products/list?category_id=&name=)
 
 Markup:
 include /assets/tmpl/elements/7.2.search.pug
@@ -117,7 +117,6 @@ Styleguide 7.2.3
       height: 50px;
       width: 100%;
       font-size: 16px;
-      font-size: 1.6rem;
       border: 0 none;
       padding: 0.5em 0;
       box-shadow: none;
