@@ -20,6 +20,11 @@
   }
 }
 
+@mixin gridStyle(){
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid rgba(86,61,124,.2);
+  height:50px;
+}
 /*
 グリッド
 
@@ -58,9 +63,11 @@ Styleguide 5.1.1
   @include row;
   & &__cell{
     @include makeSmColumn(6);
+    @include gridStyle();
   }
   & &__cell2{
     @include makeSmColumn(12);
+    @include gridStyle();
   }
 }
 /*
@@ -80,12 +87,15 @@ Styleguide 5.1.2
   @include row;
   & &__cell{
     @include makeSmColumn(4);
+    @include gridStyle();
   }
-  & &__cell2{
+  & &__cell2 {
     @include makeSmColumn(8);
+    @include gridStyle();
   }
-  & &__cell3{
+  & &__cell3 {
     @include makeSmColumn(12);
+    @include gridStyle();
   }
 }
 
@@ -107,6 +117,7 @@ Styleguide 5.1.3
   @include row;
   & &__cell{
     @include makeSmColumn(3);
+    @include gridStyle();
   }
 }
 
@@ -139,12 +150,15 @@ Styleguide 5.1.4
   @include row;
   & &__cell{
     @include makeSmColumn(2);
+    @include gridStyle();
   }
   & &__cell2{
     @include makeSmColumn(4);
+    @include gridStyle();
   }
   & &__cell3{
     @include makeSmColumn(6);
+    @include gridStyle();
   }
 }
 
@@ -166,6 +180,7 @@ Styleguide 5.1.5
   & &__cell{
     @include makeSmColumn(10);
     margin-left: percentage((1 / 12));
+    @include gridStyle();
   }
 }
 
@@ -188,6 +203,7 @@ Styleguide 5.1.6
   & &__cell{
     @include makeSmColumn(8);
     margin-left: percentage((2 / 12));
+    @include gridStyle();
   }
 }
 /*
@@ -208,6 +224,7 @@ Styleguide 5.1.7
   & &__cell{
     @include makeSmColumn(6);
     margin-left: percentage((3 / 12));
+    @include gridStyle();
   }
 }
 /*
@@ -228,5 +245,6 @@ Styleguide 5.1.8
   & &__cell{
     @include makeSmColumn(4);
     margin-left: percentage((4 / 12));
+    @include gridStyle();
   }
 }
