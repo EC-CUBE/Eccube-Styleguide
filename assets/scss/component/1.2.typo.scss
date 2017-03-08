@@ -1,6 +1,8 @@
 /*
 文字装飾
 
+文字装飾をするためのスタイル群です。
+
 sg-wrapper:
 <div class="ec-role">
   <sg-wrapper-content/>
@@ -63,11 +65,15 @@ Styleguide 1.2.3
 
 Markup:
 p.ec-color-red ¥ 2,728 税込
+p.ec-color-accent ¥ 2,728 税込
 
 Styleguide 1.2.4
 */
 
 .ec-color-red {
+    color: #DE5D50;
+}
+.ec-color-accent{
     color: #DE5D50;
 }
 
@@ -77,10 +83,35 @@ Styleguide 1.2.4
 フォントサイズを指定するためのスタイルです。
 
 Markup:
-.ec-font-size さわやかな日差しが過ごしやすい季節
+.ec-font-size-1 さわやかな日差しが過ごしやすい季節
+.ec-font-size-2 さわやかな日差しが過ごしやすい季節
+.ec-font-size-3 さわやかな日差しが過ごしやすい季節
+.ec-font-size-4 さわやかな日差しが過ごしやすい季節
+.ec-font-size-5 さわやかな日差しが過ごしやすい季節
+.ec-font-size-6 さわやかな日差しが過ごしやすい季節
+
 
 Styleguide 1.2.5
 */
+
+.ec-font-size-1{
+    font-size:12px;
+}
+.ec-font-size-2{
+    font-size:14px;
+}
+.ec-font-size-3{
+    font-size:16px;
+}
+.ec-font-size-4{
+    font-size:20px;
+}
+.ec-font-size-5{
+    font-size:32px;
+}
+.ec-font-size-6{
+    font-size:40px;
+}
 
 /*
 テキスト水平位置

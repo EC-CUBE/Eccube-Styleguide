@@ -24,7 +24,12 @@ Markup:
 
 Styleguide 1.1.1
 */
-
+.ec-headingTitle{
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: normal;
+  color: #525263;
+}
 
 /*
 ページヘッダ
@@ -39,13 +44,12 @@ Markup:
 
 Styleguide 1.1.2
 */
-.ec-pageHeader{
-  margin: 0 0 8px;
-  font-size: 16px;
-  font-size: 1.6rem;
+.ec-pageHeader h1{
+  padding: 16px 0 12px;
+  margin: 0 16px 48px;
+  font-size: 32px;
   font-weight: bold;
-  border-bottom: 1px dotted #ccc;
-  padding: 8px;
+  border-bottom: 1px solid #ccc;
 }
 
 
@@ -57,10 +61,14 @@ Styleguide 1.1.2
 ex [利用規約ページ サブ見出し部分](http://demo3.ec-cube.net/help/agreement)
 
 Markup:
-.ec-heading hoge
+.ec-heading 第1条 (会員)
 
 Styleguide 1.1.3
 */
+
+.ec-heading{
+  margin: 16px 0;
+}
 
 /*
 背景付き見出し

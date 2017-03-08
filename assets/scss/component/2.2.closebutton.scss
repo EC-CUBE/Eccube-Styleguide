@@ -8,7 +8,7 @@ sg-wrapper:
   <sg-wrapper-content/>
 
 
-Styleguide 2.3
+Styleguide 2.2
 */
 
 /*
@@ -23,7 +23,7 @@ include /assets/tmpl/elements/4.1.icon.pug
 +b.A.ec-closeBtn
   +e.icon: +svg-cross
 
-Styleguide 2.3.9
+Styleguide 2.2.1
 */
 .ec-closeBtn{
   & &__icon{
@@ -59,9 +59,8 @@ Markup:
 include /assets/tmpl/elements/4.1.icon.pug
 +b.A.ec-closeBtn--circle
   +e.icon: +svg-cross
-p hoge
 
-Styleguide 2.3.10
+Styleguide 2.2.2
 */
 
 .ec-closeBtn--circle{

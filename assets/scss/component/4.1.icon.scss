@@ -4,15 +4,15 @@
 
 デフォルトテンプレートのアイコンは SVGを使用して定義されます。
 
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
 Markup:
 include /assets/tmpl/elements/4.1.icon.pug
 div(style="font-size:2em")
   +icon-all
 
-
-sg-wrapper:
-<div class="ec-role">
-  <sg-wrapper-content/>
 
 Styleguide 4.1
 */
@@ -20,7 +20,7 @@ Styleguide 4.1
 /*
 SVG アイコン
 
-ほげほげ
+SVGを使用してアイコンを表示させます。
 
 ex [お問い合わせページ　アイコン部分](http://demo3.ec-cube.net/contact)
 

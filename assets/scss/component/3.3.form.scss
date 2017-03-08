@@ -35,13 +35,14 @@ Markup:
     dt
       label.ec-label お名前
     dd
-      .ec-halfInput
+      .ec-input
         input(type="text")
 
 Styleguide 3.3.2
 */
 .ec-label{
-  font-weight: bold;
+  display: block;
+  padding:12px;
 }
 .ec-required{
   color: #DE5D50;
@@ -52,6 +53,8 @@ Styleguide 3.3.2
 /*
 必須ラベル
 
+必須文字を表示するラベル要素です。
+
 ex [お問い合わせページ　必須ラベル部分](http://demo3.ec-cube.net/contact)
 
 Markup:
@@ -59,11 +62,20 @@ Markup:
   dl
     dt
       label.ec-label お名前
-      span.ec-required 必須
+        span.ec-required 必須
     dd
-      .ec-halfInput
+      .ec-input
         input(type="text")
 
 Styleguide 3.3.3
 */
 
+.ec-label{
+  display: block;
+  padding:12px;
+}
+.ec-required{
+  color: #DE5D50;
+  margin-left: 1em;
+  font-size: 12px;
+}
