@@ -20,7 +20,7 @@ Styleguide 3.1
 
 全てのフォーム要素スタイリングは .ec-input 要素内で反映されます。
 
-[会員情報編集画面　フォーム部分](http://demo3.ec-cube.net/mypage/change)
+ex [会員情報編集画面　フォーム部分](http://demo3.ec-cube.net/mypage/change)
 
 Markup:
 .ec-input
@@ -48,7 +48,7 @@ Styleguide 3.1.1
 
 入力フォームを半分で用意したいときにも利用可能です。
 
-[会員情報編集画面　フォーム部分](http://demo3.ec-cube.net/mypage/change)
+ex [会員情報編集画面　フォーム部分](http://demo3.ec-cube.net/mypage/change)
 
 Markup:
 p.ec-halfInput
@@ -119,6 +119,11 @@ Styleguide 3.1.4
     max-width: 5em;
     font-size: 16px;
   }
+  span{
+    display: inline-block;
+    padding: 0 5px 0 3px;
+    margin-left:5px;
+  }
 }
 /*
 電話番号ボタン
@@ -151,17 +156,7 @@ Styleguide 3.1.5
   span{
     display: inline-block;
     padding: 0 5px 0 3px;
+    margin-left:5px;
   }
 }
-
-/*
-フォーム(text小)
-
-http://demo3.ec-cube.net/entry
-
-Markup:
-.ec-input hoge
-
-Styleguide 3.1.6
-*/
 

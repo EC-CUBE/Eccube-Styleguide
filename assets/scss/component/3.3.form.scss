@@ -52,6 +52,8 @@ Styleguide 3.3.2
 /*
 必須ラベル
 
+必須文字を表示するラベル要素です。
+
 ex [お問い合わせページ　必須ラベル部分](http://demo3.ec-cube.net/contact)
 
 Markup:
@@ -67,3 +69,11 @@ Markup:
 Styleguide 3.3.3
 */
 
+.ec-label{
+  font-weight: bold;
+}
+.ec-required{
+  color: #DE5D50;
+  margin-left: 1em;
+  font-size: 12px;
+}
