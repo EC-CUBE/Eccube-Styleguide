@@ -18,12 +18,14 @@ gulp.task("sass",()=> {
         .pipe($.plumber({
             errorHandler: $.notify.onError('<%= error.message %>')
         }))
+        .pipe($.sourcemaps.init())
         .pipe($.sass(options))
         .pipe($.pleeease({
             autoprefixer:true,
             minifier: true,
             mqpacker: true
         }))
+        .pipe($.sourcemaps.write())
         .pipe(gulp.dest(`${dest}assets/css/`));
 });
 

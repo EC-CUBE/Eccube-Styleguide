@@ -2,32 +2,5 @@ extends /assets/tmpl/moc/guest/_layout.pug
 
 
 block content
-    .ec-role
-        .ec-pageHeader
-            h1 新規会員登録
-        +b.ec-off1Grid
-            +e.cell
-                .ec-borderedDefs
-                    dl
-                        dt
-                            label.ec-label お名前
-                        dd
-                            .ec-halfInput
-                                input(type="text")
-                .ec-borderedDefs
-                    dl
-                        dt
-                            label.ec-label お名前
-                        dd
-                            .ec-halfInput
-                                input(type="text")
-                .ec-borderedDefs
-                    dl
-                        dt
-                            label.ec-label お名前
-                        dd
-                            .ec-halfInput
-                                input(type="text")
-
-
-
+    include /assets/tmpl/elements/19.1.register.pug
+    +ec-registerRole

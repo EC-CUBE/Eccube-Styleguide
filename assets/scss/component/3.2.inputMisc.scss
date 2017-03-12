@@ -1,5 +1,5 @@
 @import "../mixins/forms";
-
+@import "./3.1.inputText";
 /*
 フォーム部品(その他)
 
@@ -30,10 +30,6 @@ Markup:
 
 Styleguide 3.2.1
 */
-.ec-input{
-  @include forms-reset;
-  @include form-controls;
-}
 
 /*
 ラジオ（水平）

@@ -1,3 +1,4 @@
+@import "../mixins/media";
 @import "../mixins/projects";
 
 /*
@@ -15,6 +16,9 @@ include /assets/tmpl/elements/16.1.history.pug
 Styleguide 16.1
 */
 .ec-historyRole{
+  @include container;
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
   display: flex;
   & &__header{
     width: 33.3333%;

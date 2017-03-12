@@ -15,6 +15,7 @@ Styleguide 13.1
 */
 .ec-searchnavRole{
   @include container;
+  margin-bottom: 36px;
   & &__topicpath{
 
   }

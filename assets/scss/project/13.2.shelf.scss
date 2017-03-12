@@ -1,4 +1,5 @@
 @import "../mixins/media";
+@import "../mixins/projects";
 /*
 商品一覧
 
@@ -36,10 +37,13 @@ Styleguide 13.2.1
 
 */
 .ec-shelfGrid{
+  @include reset_link;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   list-style: none;
+  margin-left: -16px;
+  margin-right: -16px;
   & &__item{
     width: 50%;
     padding: 0 8px;

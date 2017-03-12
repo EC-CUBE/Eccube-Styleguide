@@ -1,0 +1,15 @@
+extends /assets/tmpl/moc/guest/_layout.pug
+
+
+block content
+    include /assets/tmpl/elements/13.1.searchnav.pug
+    +ec-searchnavRole
+    include /assets/tmpl/elements/13.2.shelf.pug
+    +b.ec-shelfRole
+        +ec-shelfGrid
+    include /assets/tmpl/elements/13.3.pager.pug
+    +ec-pagerRole
+
+
+
+

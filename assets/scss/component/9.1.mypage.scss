@@ -1,3 +1,4 @@
+@import "../mixins/projects";
 /*
 マイページ
 
@@ -31,11 +32,13 @@ ul.ec-navlist
 Styleguide 9.1.1
 */
 .ec-navlist{
+  @include reset_link;
   border-color: #D0D0D0;
   border-style: solid;
   border-width: 1px 0 0 1px;
   list-style: none;
   display: flex;
+  padding: 0;
   & &__item{
     width: 50%;
     border-color: #D0D0D0;
@@ -44,4 +47,24 @@ Styleguide 9.1.1
     text-align: center;
     padding: 16px;
   }
+}
+
+/*
+Welcome メッセージ
+
+マイページで表示するログイン名の表示コンポーネントです。
+
+ex [マイページ　メニューリスト下部分](http://demo3.ec-cube.net/mypage)
+
+Markup:
+.ec-welcomeMsg ようこそ ／ 球部 太郎 様
+
+Styleguide 9.1.2
+*/
+.ec-welcomeMsg{
+  text-align: center;
+  margin: 1em 0;
+  padding: 1em 0 ;
+  @include borderBottom;
+
 }
