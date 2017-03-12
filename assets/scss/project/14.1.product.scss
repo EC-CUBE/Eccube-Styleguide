@@ -1,3 +1,4 @@
+@import "../mixins/media";
 /*
 商品詳細
 
@@ -9,11 +10,15 @@ ex [商品詳細ページ](http://demo3.ec-cube.net/products/detail/18)
 Markup:
 include /assets/tmpl/elements/14.1.product.pug
 +ec-productRole
+p hogedd
 
 Styleguide 14.1
 */
 .ec-productRole{
+  @include container;
   & &__price{
+    color: #DE5D50;
+    font-size: 28px;
     padding: 14px 0;
     border-bottom: 1px dotted #ccc;;
   }
@@ -24,8 +29,22 @@ Styleguide 14.1
   & &__category{
     padding: 14px 0;
     border-bottom: 1px dotted #ccc;;
+    ul{
+      list-style: none;
+      padding:0;
+      margin: 0;
+    }
+  }
+  & &__actions{
+    padding: 14px 0;
+  }
+  & &__btn{
+    width: 60%;
+    padding: 10px 0;
   }
 }
+
+
 
 
 

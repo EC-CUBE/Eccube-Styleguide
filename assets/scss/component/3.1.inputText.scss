@@ -18,21 +18,16 @@ Styleguide 3.1
 /*
 フォーム
 
-全てのフォーム要素スタイリングは .ec-input 要素内で反映されます。
+`.ec-input` 要素は全ての入力項目に関する標準的なコンポーネントクラスです。
+
 
 ex [会員情報編集画面　フォーム部分](http://demo3.ec-cube.net/mypage/change)
 
 Markup:
-.ec-input
+p.ec-input
   input(type="number")
-.ec-input
-  input(type="text")
-.ec-input
-  input(type="checkbox")
-.ec-input
-  input(type="radio")
-.ec-input
-  input(type="radio")
+p.ec-input
+  textarea(rows="6")
 
 Styleguide 3.1.1
 */

@@ -1,4 +1,5 @@
 @import "../mixins/media";
+@import "../mixins/projects";
 /*
 ヘッダー
 
@@ -9,6 +10,7 @@ ex [商品詳細ページ　ヘッダー](http://demo3.ec-cube.net/products/deta
 Markup:
 include /assets/tmpl/elements/11.2.header.pug
 +ec-headerRole
+p hogedd
 
 Styleguide 11.2
 */
@@ -22,19 +24,24 @@ Styleguide 11.2
   justify-content: space-between;
   & &__title{
     width: 40%;
+    @include reset_link;
   }
   & &__cart{
+    @include reset_link;
   }
   & &__search{
     width: 40%;
+    @include reset_link;
 
   }
   & &__nav{
     width: 40%;
+    @include reset_link;
 
   }
   & &__itemnav{
     width: 100%;
+    @include reset_link;
 
   }
 }
@@ -50,7 +57,7 @@ include /assets/tmpl/elements/11.2.header.pug
 
 sg-wrapper:
 <div class="ec-headerRole">
-  <div class="ec-headerRole__title">
+  <div class="ec-headerRole__search">
     <sg-wrapper-content/>
   </div>
 </div>
@@ -62,13 +69,13 @@ Styleguide 11.2.1
 }
 
 /*
-ヘッダーナビ
+検索ボックス
 
-ヘッダー内で使用されるタイトルコンポーネントです。
+ヘッダー内で使用される商品検索コンポーネントです。
 
 Markup:
 include /assets/tmpl/elements/11.2.header.pug
-+ec-headerNav
++ec-headerSearch
 
 sg-wrapper:
 <div class="ec-headerRole">
@@ -79,11 +86,87 @@ sg-wrapper:
 
 Styleguide 11.2.2
 */
+.ec-headerSearch{
+  @include clearfix;
+  & &__category {
+    float: left;
+    select{
+      width: auto;
+      max-width: 180px;
+      height: 50px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-size: 1.6rem;
+      padding: 0.5em 1em;
+      border-radius: 0;
+      box-shadow: none;
+      box-sizing: border-box;
+    }
+  }
+  & &__keyword{
+    float: left;
+    height: 50px;
+    padding: 0 50px 0 1em;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    margin-left: 1%;
+    input[type="search"]{
+      height: 50px;
+      width: 100%;
+      font-size: 16px;
+      font-size: 1.6rem;
+      border: 0 none;
+      padding: 0.5em 0;
+      box-shadow: none;
+      background: none;
+      box-sizing: border-box;
+    }
+  }
+  & &__keywordBtn{
+    border: 0;
+    background: none;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    display: block;
+    font-size: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+
+}
+/*
+ナビゲーション
+
+ヘッダー内で使用されるナビゲーションコンポーネントです。
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerNav
+
+sg-wrapper:
+<div class="ec-headerRole">
+  <div class="ec-headerRole__nav">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 11.2.3
+*/
 .ec-headerNav{
   & &__item{
     display: inline-block;
+    font-size: 14px;
+    line-height: 50px;
+    svg{
+      font-size: 30px;
+    }
+    span{
+      font-size: 14px;
+    }
   }
-
 }
 /*
 カテゴリナビ
@@ -93,14 +176,15 @@ Styleguide 11.2.2
 Markup:
 include /assets/tmpl/elements/11.2.header.pug
 +ec-itemNav
-p hogogeddd
 
 sg-wrapper:
 <div class="ec-headerRole">
-  <sg-wrapper-content/>
+  <div class="ec-headerRole__itemnav">
+    <sg-wrapper-content/>
+  </div>
 </div>
 
-Styleguide 11.2.3
+Styleguide 11.2.4
 */
 .ec-itemNav{
   margin-top: 16px;
