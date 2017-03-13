@@ -7,31 +7,31 @@ mixin ec-registerRole
                 .ec-borderedDefs
                     dl
                         dt
-                            span.ec-label お名前
-                            span.ec-required 必須
+                            label.ec-label お名前
+                                span.ec-required 必須
+                        dd
+                            .ec-halfInput
+                                input(type="text" placeholder="姓")
+                                input(type="text" placeholder="名")
+                    dl
+                        dt
+                            label.ec-label お名前(フリガナ)
+                                span.ec-required 必須
+                        dd
+                            .ec-halfInput
+                                input(type="text" placeholder="セイ")
+                                input(type="text" placeholder="メイ")
+                    dl
+                        dt
+                            label.ec-label 会社名
+                                span.ec-required 必須
                         dd
                             .ec-halfInput
                                 input(type="text")
-                                input(type="text")
                     dl
                         dt
-                            span.ec-label お名前(フリガナ)
-                            span.ec-required 必須
-                        dd
-                            .ec-halfInput
-                                input(type="text")
-                                input(type="text")
-                    dl
-                        dt
-                            span.ec-label 会社名
-                            span.ec-required 必須
-                        dd
-                            .ec-halfInput
-                                input(type="text")
-                    dl
-                        dt
-                            span.ec-label 住所
-                            span.ec-required 必須
+                            label.ec-label 住所
+                                span.ec-required 必須
                         dd
                             .ec-zipInput
                                 span 〒
@@ -40,8 +40,8 @@ mixin ec-registerRole
                                 input(type="text")
                     dl
                         dt
-                            span.ec-label 電話番号
-                            span.ec-required 必須
+                            label.ec-label 電話番号
+                                span.ec-required 必須
                         dd
                             .ec-telInput
                                 input(type="text")
@@ -61,8 +61,8 @@ mixin ec-registerRole
                                 input(type="text")
                     dl
                         dt
-                            span.ec-label メールアドレス
-                            span.ec-required 必須
+                            label.ec-label メールアドレス
+                                span.ec-required 必須
                         dd
                             .ec-input
                                 input(type="text")
@@ -70,8 +70,8 @@ mixin ec-registerRole
                                 input(type="text")
                     dl
                         dt
-                            span.ec-label パスワード
-                            span.ec-required 必須
+                            label.ec-label パスワード
+                                span.ec-required 必須
                         dd
                             .ec-input
                                 input(type="text")
@@ -79,8 +79,8 @@ mixin ec-registerRole
                                 input(type="text")
                     dl
                         dt
-                            span.ec-label 生年月日
-                            span.ec-required 必須
+                            label.ec-label 生年月日
+                                span.ec-required 必須
                         dd
                             .ec-birth
                                 select
@@ -105,8 +105,8 @@ mixin ec-registerRole
                                     option ...
                     dl
                         dt
-                            span.ec-label 性別
-                            span.ec-required 必須
+                            label.ec-label 性別
+                                span.ec-required 必須
                         dd
                             .ec-radio
                                 label
@@ -117,8 +117,8 @@ mixin ec-registerRole
                                     span 女性
                     dl
                         dt
-                            span.ec-label 職業
-                            span.ec-required 必須
+                            label.ec-label 職業
+                                span.ec-required 必須
                         dd
                             .ec-select
                                 select
@@ -134,3 +134,72 @@ mixin ec-registerRole
                             p 利用規約に同意してお進みください。
                             .ec-blockBtn--action 同意する
                             .ec-blockBtn--cancel 同意しない
+mixin ec-contactRole
+    .ec-contactRole
+        .ec-pageHeader
+            h1 お問い合わせ
+        +b.ec-off1Grid
+            +b.
+            +e.
+            +e.cell
+                p 内容によっては回答をさしあげるのにお時間をいただくこともございます。
+                    br
+                    | また、休業日は翌営業日以降の対応となりますのでご了承ください。
+                .ec-borderedDefs
+                    dl
+                        dt
+                            label.ec-label お名前
+                                span.ec-required 必須
+                        dd
+                            .ec-halfInput
+                                input(type="text" placeholder="性")
+                                input(type="text" placeholder="名")
+                    dl
+                        dt
+                            label.ec-label お名前(フリガナ)
+                                span.ec-required 必須
+                        dd
+                            .ec-halfInput
+                                input(type="text" placeholder="セイ")
+                                input(type="text" placeholder="メイ")
+                    dl
+                        dt
+                            label.ec-label 住所
+                        dd
+                            .ec-zipInput
+                                span 〒
+                                input(type="text")
+                                span -
+                                input(type="text")
+                    dl
+                        dt
+                            label.ec-label 電話番号
+                        dd
+                            .ec-telInput
+                                input(type="text")
+                                span -
+                                input(type="text")
+                                span -
+                                input(type="text")
+                    dl
+                        dt
+                            label.ec-label メールアドレス
+                                span.ec-required 必須
+                        dd
+                            .ec-input
+                                input(type="text")
+                            .ec-input
+                                input(type="text")
+                    dl
+                        dt
+                            label.ec-label お問い合わせ内容
+                              span.ec-required 必須
+                        dd
+                            .ec-input
+                                input(type="text")
+                                p ご注文に関するお問い合わせには、必ず「ご注文番号」をご記入くださいますようお願いいたします。
+
+                .ec-RegisterRole__actions
+                    .ec-off4Grid
+                        .ec-off4Grid__cell
+                            .ec-blockBtn--action 確認ページへ

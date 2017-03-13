@@ -1,31 +1,15 @@
 /*
-フォームレイアウト
+フォームラベル
+
+フォームのラベルに関する要素を定義します。
 
 Styleguide 3.3
-*/
-
-/*
-フォームレイアウト
-
-ex [お問い合わせページ](http://demo3.ec-cube.net/contact)
-
-Markup:
-.ec-complex hoge
-
-sg-wrapper:
-<div class="ec-role">
-  <sg-wrapper-content/>
-
-
-Styleguide 3.3.1
 */
 
 /*
 ラベル
 
 フォーム要素で利用するラベル要素です。
-
-必須要素には .ec-required クラスを使用します。
 
 ex [お問い合わせページ　ラベル部分](http://demo3.ec-cube.net/contact)
 
@@ -38,16 +22,12 @@ Markup:
       .ec-input
         input(type="text")
 
-Styleguide 3.3.2
+Styleguide 3.3.1
 */
 .ec-label{
   display: block;
   padding:12px;
-}
-.ec-required{
-  color: #DE5D50;
-  margin-left: 1em;
-  font-size: 12px;
+  font-weight: bold;
 }
 
 /*
@@ -67,15 +47,12 @@ Markup:
       .ec-input
         input(type="text")
 
-Styleguide 3.3.3
+Styleguide 3.3.2
 */
 
-.ec-label{
-  display: block;
-  padding:12px;
-}
 .ec-required{
   color: #DE5D50;
   margin-left: 1em;
   font-size: 12px;
+  font-weight: normal;
 }
