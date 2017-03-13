@@ -47,7 +47,7 @@ Styleguide 1.1.2
 .ec-pageHeader h1{
   padding: 16px 0 12px;
   margin: 0 16px 48px;
-  margin-ßtop:30px;
+  margin-top:30px;
   font-size: 32px;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
@@ -93,4 +93,24 @@ Styleguide 1.1.4
     padding: 8px 12px;
   }
 
+}
+
+
+/*
+サブ見出し(太字)
+
+文字主体のページで用いられるサブ見出しの太字のスタイルです。
+
+ex [プライバシーポリシー サブ見出し部分](http://demo3.ec-cube.net/help/privacy)
+
+Markup:
+.ec-heading-bold 個人情報の定義
+
+Styleguide 1.1.5
+*/
+
+.ec-heading-bold {
+  margin: 16px 0;
+  font-size: 18px;
+  font-weight: bold;
 }
