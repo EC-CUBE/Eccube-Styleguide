@@ -12,6 +12,12 @@ mixin ec-cartRole
             a(href="").ec-blockBtn--cancel お買い物を続ける
 
 
+mixin ec-cartEmptyRole
+    +b.ec-cartRole
+        +e.progress
+            +ec-progress
+
+
 mixin ec-cartTable
     .ec-cartTable
         +ec-cartHeader
