@@ -1,0 +1,20 @@
+extends /assets/tmpl/moc/guest/_layout.pug
+
+include /assets/tmpl/elements/9.1.mypage.pug
+include /assets/tmpl/elements/19.1.register.pug
+block content
+    .ec-role
+        .ec-pageHeader
+            h1 マイページ/会員情報編集(完了)
+
+        +ec-navlist
+        +ec-welcomeMsg
+    .ec-role
+        +b.ec-userEditCompleteRole
+            .ec-off4Grid
+                .ec-off4Grid__cell
+                    +e.P.__title 会員登録内容の変更が完了いたしました
+                    +e.P.__description 今後ともご愛顧賜りますようよろしくお願い申し上げます。
+
+        .ec-off4Grid__cell
+            p.ec-blockBtn--cancel トップページへ
