@@ -31,9 +31,9 @@ gulp.task("server",()=> {
         }
     })
 
-    return gulp.watch(`${dest}/**/*`, () => {
-        setTimeout(function(){
-            browserSync.reload();
-        },500);
-    });
+    // return gulp.watch(`${dest}/**/*`, () => {
+    //     setTimeout(function(){
+    //         browserSync.reload();
+    //     },500);
+    // });
 });
