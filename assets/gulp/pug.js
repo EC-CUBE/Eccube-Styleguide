@@ -14,6 +14,7 @@ gulp.task("pug",() => {
     let srcPattern = [
         `${src}assets/tmpl/**/*.pug`,
         `!${src}assets/tmpl/**/_*`,
+        `!${src}assets/tmpl/elements/**/*`,
     ];
     return gulp.src(srcPattern)
         .pipe($.plumber({
