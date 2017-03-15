@@ -6,9 +6,9 @@ block content
     .ec-pageHeader
       h1 新規会員登録（完了）
   +b.ec-contactCompleteRole
-    .ec-off4Grid
-      .ec-off4Grid__cell
-        +e.P.__title 会員登録ありがとうございます
+    .ec-off3Grid.ec-text-ac
+      .ec-off3Grid__cell
+        +e.P.__title.ec-font-size-5.ec-font-bold 会員登録ありがとうございます
         +e.P.__description 現在仮会員の状態です。
           br
           | ご入力いただいたメールアドレス宛てに、ご連絡が届いておりますので、
@@ -17,5 +17,7 @@ block content
           br
           | 今後ともご愛顧賜りますようよろしくお願い申し上げます。
 
-  .ec-off4Grid__cell
-          p.ec-blockBtn--cancel トップページへ
+      .ec-off3Grid__cell
+        .ec-off4Grid
+          .ec-off4Grid__cell
+            p.ec-blockBtn--cancel トップページへ
