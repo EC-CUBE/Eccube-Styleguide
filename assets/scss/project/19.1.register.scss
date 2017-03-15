@@ -18,3 +18,23 @@ Styleguide 19.1
   @include container;
 
 }
+
+/*
+お問い合わせ
+
+お問い合わせ に関する Project コンポーネントを定義します。
+
+ex [お問い合わせ](http://demo3.ec-cube.net/contact)
+
+Markup:
+include /assets/tmpl/elements/19.1.register.pug
++ec-contactRole
+p hoge
+
+Styleguide 19.2
+
+*/
+.ec-contactRole{
+  @include container;
+
+}

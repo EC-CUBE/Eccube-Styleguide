@@ -1,0 +1,19 @@
+extends /assets/tmpl/moc/guest/_layout
+
+
+block content
+  .ec-role
+    .ec-pageHeader
+      h1 お問い合わせ完了
+  +b.ec-contactCompleteRole
+    .ec-off4Grid
+      .ec-off4Grid__cell
+        +e.P.__title お問い合わせ内容の送信が完了いたしました。
+        +e.P.__description 万一、ご回答メールが届かない場合は、トラブルの可能性もありますので
+          br
+          | 大変お手数ではございますがもう一度お問い合わせいただくか、お電話にてお問い合わせください。
+          br
+          | 今後ともご愛顧賜りますようよろしくお願い申し上げます。
+
+  .ec-off4Grid__cell
+          p.ec-blockBtn--cancel トップページへ

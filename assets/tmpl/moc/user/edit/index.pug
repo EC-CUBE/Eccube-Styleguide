@@ -1,0 +1,15 @@
+extends /assets/tmpl/moc/guest/_layout.pug
+
+include /assets/tmpl/elements/9.1.mypage.pug
+include /assets/tmpl/elements/19.1.register.pug
+block content
+    .ec-role
+        .ec-pageHeader
+            h1 マイページ/会員情報編集
+
+        +ec-navlist
+        +ec-welcomeMsg
+    .ec-role
+        +ec-editRole
+
+

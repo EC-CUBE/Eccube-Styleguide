@@ -1,18 +1,15 @@
 extends /assets/tmpl/moc/guest/_layout.pug
 
+include /assets/tmpl/elements/9.1.mypage.pug
 include /assets/tmpl/elements/16.1.history.pug
 
 block content
     .ec-role
         .ec-pageHeader
             h1 マイページ/ご注文履歴
-        ul.ec-navlist
-            li.ec-navlist__item: a(href="#") ご注文履歴
-            li.ec-navlist__item: a(href="#") お気に入り一覧
-            li.ec-navlist__item: a(href="#") 会員情報編集
-            li.ec-navlist__item: a(href="#") お届け先編集
-            li.ec-navlist__item: a(href="#") 退会手続き
-        .ec-welcomeMsg ようこそ ／ 球部 太郎 様
+
+        +ec-navlist
+        +ec-welcomeMsg
     .ec-role
         p
             strong ３件

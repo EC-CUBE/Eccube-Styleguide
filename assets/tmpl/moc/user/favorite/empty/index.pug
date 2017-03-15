@@ -1,0 +1,13 @@
+extends /assets/tmpl/moc/guest/_layout.pug
+
+include /assets/tmpl/elements/9.1.mypage.pug
+
+block content
+    .ec-role
+        .ec-pageHeader
+            h1 マイページ/お気に入り一覧
+        +ec-navlist
+        +ec-welcomeMsg
+    .ec-role
+        p お気に入りが登録されていません。
+

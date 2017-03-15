@@ -22,12 +22,8 @@ ul を利用したリスト要素で記述します。
 ex [マイページ　メニューリスト部分](http://demo3.ec-cube.net/mypage)
 
 Markup:
-ul.ec-navlist
-  li.ec-navlist__item: a(href="#") ご注文履歴
-  li.ec-navlist__item: a(href="#") お気に入り一覧
-  li.ec-navlist__item: a(href="#") 会員情報編集
-  li.ec-navlist__item: a(href="#") お届け先編集
-  li.ec-navlist__item: a(href="#") 退会手続き
+include /assets/tmpl/elements/9.1.mypage.pug
++ec-navlist
 
 Styleguide 9.1.1
 */
@@ -57,7 +53,8 @@ Welcome メッセージ
 ex [マイページ　メニューリスト下部分](http://demo3.ec-cube.net/mypage)
 
 Markup:
-.ec-welcomeMsg ようこそ ／ 球部 太郎 様
+include /assets/tmpl/elements/9.1.mypage.pug
++ec-welcomeMsg
 
 Styleguide 9.1.2
 */
