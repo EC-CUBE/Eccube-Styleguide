@@ -8,3 +8,14 @@ mixin ec-navlist
 
 mixin ec-welcomeMsg
     .ec-welcomeMsg ようこそ ／ 球部 太郎 様
+
+mixin ec-favorite
+    +b.UL.ec-favorite
+        +e.LI.__item
+            include /assets/tmpl/elements/4.1.icon.pug
+            +b.A.ec-closeBtn--circle(href="#")
+                +e.icon: +svg-cross
+            a(href="/moc/guest/item")
+                img(src="http://demo3.ec-cube.net/upload/save_image/0701121449_55935b2959277.jpeg")
+                p オランダ木靴の置物
+                p ¥ 2,700
