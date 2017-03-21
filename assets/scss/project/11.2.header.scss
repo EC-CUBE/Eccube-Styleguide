@@ -66,10 +66,18 @@ Styleguide 11.2.1
 */
 .ec-headerTitle{
   & &__title {
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
     a{
+      display: inline-block;
+      margin-bottom: 20px;
       text-decoration: none;
       font-size: 40px;
+      font-weight: bold;
       color: #000;
+
       &:hover {
         color: #666;
       }
@@ -77,6 +85,8 @@ Styleguide 11.2.1
   }
   & &__subtitle {
     a {
+      display: inline-block;
+      margin-bottom: 10px;
       color: #0092C4;
       text-decoration: none;
       cursor: pointer;

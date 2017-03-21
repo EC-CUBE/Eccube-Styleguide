@@ -4,15 +4,12 @@ extends /assets/tmpl/moc/guest/_layout
 block content
   .ec-role
     .ec-pageHeader
-      h1 お問い合わせ完了
-  +b.ec-contactCompleteRole
-    .ec-off4Grid
-      .ec-off4Grid__cell
-        +e.P.__title パスワード発行メールの送信 完了
-        +e.P.__description ご登録メールアドレスにパスワードを再発行するためのメールを送信いたしました。
+      h1 パスワード発行メールの送信 完了
+  +b.ec-forgetCompleteRole
+    .ec-off3Grid
+      .ec-off3Grid__cell
+        +e.P.title.ec-font-size-4.ec-font-bold パスワード再発行メールの送信が完了しました。
+        +e.P.description ご登録メールアドレスにパスワードを再発行するためのメールを送信いたしました。
            br
            | メールの内容をご確認いただきますよう、お願いいたします。
-        +e.P.__description ※メールが届かない場合はメールアドレスをご確認の上、再度お試しください。
-
-  .ec-off4Grid__cell
-          p.ec-blockBtn--cancel トップページへ
+        +e.P.description ※メールが届かない場合はメールアドレスをご確認の上、再度お試しください。
