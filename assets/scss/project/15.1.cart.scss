@@ -33,14 +33,27 @@ Styleguide 15.1
     text-align: center;
   }
   & &__cart{
+    width: 100%;
     margin: 0 10%;
 
   }
   & &__actions{
     text-align: right;
     width:  20%;
-    margin-left: 10%;
+    margin-right: 10%;
+  }
+  & &__total{
+    padding: 30px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  & &__totalAmount{
+    color: #de5d50;
+    font-size: 24px;
+  }
 
+  .ec-blockBtn--action {
+    margin-bottom: 16px;
   }
 }
 
@@ -127,22 +140,116 @@ Styleguide 15.1.4
 .ec-cartRow{
   display: table-row;
   & &__delColumn{
+    border-bottom: 1px dotted #ccc;
+    text-align: center;
     display: table-cell;
     width: 8.3333333%;
   }
   & &__contentColumn{
+    border-bottom: 1px dotted #ccc;
+    padding: 10px 0;
     display: table-cell;
   }
   & &__img{
+    display: inline-block;
+    border-bottom: 1px dotted #ccc;
     max-width: 100px;
   }
-
+  & &__summary{
+    margin-left: 20px;
+    display: inline-block;
+    font-weight: bold;
+    vertical-align: middle;
+    .ec-cartRow__name {
+      margin-bottom: 5px;
+    }
+  }
   & &__amountColumn{
     display: table-cell;
+    border-bottom: 1px dotted #ccc;
+    vertical-align: middle;
+    text-align: center;
     width: 16.66666667%;
+
+    .ec-cartRow__amount {
+      margin-bottom: 10px;
+    }
+
+    .ec-cartRow__amountUpButton {
+      margin: 0 2px;
+      display: inline-block;
+      border: 2px solid #c9c9c9;
+      border-radius: 50%;
+      width: 30px;
+      min-width: 30px;
+      max-width: 30px;
+      height: 30px;
+      cursor: pointer;
+      line-height: 40px;
+      vertical-align: middle;
+      position: relative;
+      text-align: center;
+      background: #fff;
+
+      .ec-cartRow__amountDownButton__icon {
+        display: block;
+        margin-top: -0.7em;
+        margin-left: -0.4em;
+        width: .8em;
+        height: .8em;
+        font-size: 20px;
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        svg{
+          overflow: hidden;
+          fill: #525263;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .ec-cartRow__amountDownButton {
+      margin: 0 2px;
+      display: inline-block;
+      border: 2px solid #c9c9c9;
+      border-radius: 50%;
+      width: 30px;
+      min-width: 30px;
+      max-width: 30px;
+      height: 30px;
+      cursor: pointer;
+      line-height: 40px;
+      vertical-align: middle;
+      position: relative;
+      text-align: center;
+      background: #fff;
+
+      .ec-cartRow__amountDownButton__icon {
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        margin-top: -0.7em;
+        margin-left: -0.4em;
+        display: block;
+        width: .8em;
+        height: .8em;
+        font-size: 20px;
+        svg{
+          overflow: hidden;
+          fill: #525263;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
   }
   & &__subtotalColumn{
     display: table-cell;
+    border-bottom: 1px dotted #ccc;
+    text-align: center;
     width: 16.66666667%;
   }
 
