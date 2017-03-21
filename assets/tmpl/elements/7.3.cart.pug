@@ -30,3 +30,15 @@ mixin ec-progress
         +e.LI.item
             +e.number 4
             +e.label 完了
+mixin ec-userProgress
+    +b.UL.ec-progress
+
+        +e.LI.item.is-complete
+            +e.number 1
+            +e.label カートの商品
+        +e.LI.item
+            +e.number 2
+            +e.label ご注文内容確認
+        +e.LI.item
+            +e.number 3
+            +e.label 完了

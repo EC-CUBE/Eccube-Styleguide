@@ -2,8 +2,11 @@ extends /assets/tmpl/moc/guest/_layout.pug
 
 include /assets/tmpl/elements/14.1.product.pug
 include /assets/tmpl/elements/15.1.cart.pug
+include /assets/tmpl/elements/10.1.alert.pug
 
 block content
-    +ec-cartRole
-
-
+    .ec-role
+        .ec-pageHeader
+            h1 ショッピングカート
+    +ec-cartUserEmptyRole
+    +ec-alert-warning
