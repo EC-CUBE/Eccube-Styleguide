@@ -3,8 +3,19 @@ mixin ec-navlist
         +e.LI.__item: a(href="/moc/user/mypage/") ご注文履歴
         +e.LI.__item: a(href="/moc/user/favorite/") お気に入り一覧
         +e.LI.__item: a(href="/moc/user/edit/") 会員情報編集
-        +e.LI.__item: a(href="#") お届け先編集
+        +e.LI.__item: a(href="/moc/user/address/addresses/") お届け先編集
         +e.LI.__item: a(href="/moc/user/withdraw/") 退会手続き
 
 mixin ec-welcomeMsg
     .ec-welcomeMsg ようこそ ／ 球部 太郎 様
+
+mixin ec-favorite
+    +b.UL.ec-favorite
+        +e.LI.__item
+            include /assets/tmpl/elements/4.1.icon.pug
+            +b.A.ec-closeBtn--circle(href="#")
+                +e.icon: +svg-cross
+            a(href="/moc/guest/item")
+                img(src="http://demo3.ec-cube.net/upload/save_image/0701121449_55935b2959277.jpeg")
+                p オランダ木靴の置物
+                p ¥ 2,700

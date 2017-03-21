@@ -84,13 +84,14 @@ Styleguide 2.2.2
 
   & &__icon{
     position: absolute;
-    top: 50%;
+    top: 28%;
     left: 50%;
     margin-top: -.5em;
     margin-left: -.5em;
     display: block;
     width: 1em;
     height: 1em;
+    font-size: 20px;
     svg{
       overflow: hidden;
       fill: #FFF;

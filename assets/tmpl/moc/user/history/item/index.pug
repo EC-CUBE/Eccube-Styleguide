@@ -1,17 +1,14 @@
 extends /assets/tmpl/moc/guest/_layout.pug
 
-include /assets/tmpl/elements/6.3.login.pug
-include /assets/tmpl/elements/15.1.cart.pug
-include /assets/tmpl/elements/15.2.order.pug
-
 block content
     .ec-role
         .ec-pageHeader
-            h1 お客様情報の入力
-    +b.ec-cartRole
-        +e.progress
-            +ec-progress
-    +ec-orderRole
+            h1 マイページ/ご注文履歴詳細
+        include /assets/tmpl/elements/9.1.mypage.pug
+        +ec-navlist
+        +ec-welcomeMsg
+    include /assets/tmpl/elements/16.2.historyDetail.pug
+    +ec-historyDetailRole
 
 
 

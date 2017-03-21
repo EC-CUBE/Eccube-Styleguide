@@ -1,0 +1,47 @@
+@import "../mixins/projects";
+/*
+
+アラート
+
+アラート表示したい場合に使用するスタイルです。TODO
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+Styleguide 10.1
+*/
+
+/*
+アラート
+
+アラート。TODO
+
+ex [マイページ　カート](http://demo3.ec-cube.net/cart)
+
+Markup:
+include /assets/tmpl/elements/10.1.alert.pug
++ec-alert-warning
+
+Styleguide 10.1.1
+*/
+
+.ec-alert-warning {
+  padding: 10px;
+  text-align: center;
+  background: #F99;
+
+  & &__icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    fill: #fff;
+  }
+  & &__text {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+}
