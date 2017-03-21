@@ -34,10 +34,11 @@ sg-wrapper:
 Styleguide 7.3.1
 */
 .ec-progress{
+  margin: 0 auto;
+  margin-bottom: 16px;
+  padding: 0;
   display: table;
   table-layout: fixed;
-  margin: 0 auto;
-  padding: 0;
   width: 100%;
   max-width: 600px;
   list-style: none;
