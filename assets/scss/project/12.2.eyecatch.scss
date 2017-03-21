@@ -15,7 +15,15 @@ Styleguide 12.2
 */
 .ec-eyecatchRole{
   @include container;
+  margin-bottom: 24px;
   text-align: center;
+  & &__intro {
+
+  }
+  & &__introTitle {
+       font-size: 32px;
+       font-weight: bold;
+  }
 
 }
 

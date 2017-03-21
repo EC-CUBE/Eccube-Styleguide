@@ -16,6 +16,7 @@ Styleguide 11.2
 */
 .ec-headerRole{
   @include container;
+  padding-top: 15px;
   &::before{
     display: none;
   }
@@ -24,7 +25,6 @@ Styleguide 11.2
   justify-content: space-between;
   & &__title{
     width: 40%;
-    @include reset_link;
   }
   & &__cart{
     @include reset_link;
@@ -65,7 +65,23 @@ sg-wrapper:
 Styleguide 11.2.1
 */
 .ec-headerTitle{
-
+  & &__title {
+    a{
+      text-decoration: none;
+      font-size: 40px;
+      color: #000;
+      &:hover {
+        color: #666;
+      }
+    }
+  }
+  & &__subtitle {
+    a {
+      color: #0092C4;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
 }
 
 /*
@@ -156,7 +172,9 @@ sg-wrapper:
 Styleguide 11.2.3
 */
 .ec-headerNav{
+  text-align: right;
   & &__item{
+    margin-right: 20px;
     display: inline-block;
     font-size: 14px;
     line-height: 50px;
@@ -187,7 +205,7 @@ sg-wrapper:
 Styleguide 11.2.4
 */
 .ec-itemNav{
-  margin-top: 16px;
+  margin: 30px 0;
   text-align: center;
   width: 100%;
   display: block;
@@ -198,6 +216,7 @@ Styleguide 11.2.4
   & &__item{
     display: inline-block;
     padding: 0 16px;
+    font-weight: bold;
   }
 
 }

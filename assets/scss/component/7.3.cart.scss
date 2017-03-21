@@ -105,12 +105,8 @@ Styleguide 7.3.1
 ex [カートページ　ナビゲーション部分](http://demo3.ec-cube.net/cart)
 
 Markup:
-.ec-cartNavi
-  .ec-cartNavi__icon
-  .ec-cartNavi__badge 1
-  .ec-cartNavi__label
-    | 合計
-    .ec-cartNavi__price ¥1920
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerCart
 
 sg-wrapper:
 <div class="ec-role">
@@ -131,17 +127,23 @@ Styleguide 7.3.5
   z-index: 3;
   cursor: pointer;
   & &__icon{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 8px;
+    left: 8px;
+    fill: #525263;
 
   }
   & &__badge{
     position: relative;
     left: 15px;
-    top: 0;
+    top: -4px;
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
     font-size: 10px;
-    font-size: 1rem;
     font-weight: 700;
     line-height: 1;
     color: #fff;
