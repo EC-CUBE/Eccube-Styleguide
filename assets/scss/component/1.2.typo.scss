@@ -162,3 +162,34 @@ Styleguide 1.2.7
     }
 
 }
+
+/*
+テキストの位置
+
+テキストや、入れ子にしたインライン要素を
+「左揃え」「中央揃え」「右揃え」に設定することができます。
+
+Markup:
+h3 左揃え
+p.text-left
+  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt praesentium repellat sapiente suscipit, unde veniam! Doloribus error, expedita id impedit iusto qui sint totam? Aspernatur error facere possimus quam quos?
+br
+h3 中央揃え
+p.text-center
+  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt praesentium repellat sapiente suscipit, unde veniam! Doloribus error, expedita id impedit iusto qui sint totam? Aspernatur error facere possimus quam quos?
+br
+h3 右揃え
+p.text-right
+  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt praesentium repellat sapiente suscipit, unde veniam! Doloribus error, expedita id impedit iusto qui sint totam? Aspernatur error facere possimus quam quos?
+
+Styleguide 1.2.8
+*/
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}

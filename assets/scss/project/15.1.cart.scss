@@ -278,3 +278,19 @@ Styleguide 15.1.7
   font-weight: bold;
 }
 
+
+
+/*
+警告
+
+カートが空であることを示す警告メッセージです。
+
+ex [カートページ　警告](http://demo3.ec-cube.net/cart)
+
+Markup:
+.ec-emptyCart
+  p 現在カート内に商品はございません。
+
+Styleguide 15.1.8
+*/
+
