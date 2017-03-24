@@ -7,12 +7,10 @@ include /assets/tmpl/elements/15.2.order.pug
 block content
     .ec-role
         .ec-pageHeader
-            h1 お客様情報の入力
+            h1 ご注文内容のご確認へ
     +b.ec-cartRole
         +e.progress
-            +ec-progress
-    include /assets/tmpl/elements/16.2.historyDetail.pug
-    +ec-historyDetailRole
-
-
+            +ec-userProgress
+    include /assets/tmpl/elements/15.2.order.pug
+    +ec-orderRole
 

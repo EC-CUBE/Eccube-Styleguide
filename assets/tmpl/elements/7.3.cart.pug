@@ -2,7 +2,7 @@ mixin ec-totalBox
     .ec-totalBox
         dl.ec-totalBox__spec
             dt 小計
-            dd ¥ 9,720
+            dd.ec-totalBox__specTotal ¥ 9,720
         dl.ec-totalBox__spec
             dt 手数料
             dd ¥ 0
@@ -13,7 +13,8 @@ mixin ec-totalBox
             | 合計
             span.ec-totalBox__price ¥ 10,720
             span.ec-totalBox__taxLabel 税込
-        .ec-blockBtn--action 注文する
+        .ec-totalBox__btn
+            .ec-blockBtn--action 注文する
 
 mixin ec-progress
     +b.UL.ec-progress

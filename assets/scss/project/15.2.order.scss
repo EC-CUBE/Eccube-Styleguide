@@ -1,14 +1,11 @@
 @import "../mixins/media";
 @import "../mixins/projects";
 /*
-注文詳細
+注文内容確認
 
-TODO 変更ボタンつける
+カート内 注文内容確認に関する Project コンポーネントを定義します。
 
-カート内 注文履歴詳細部に関する Project コンポーネントを定義します。
-
-ex [マイページ　注文詳細](http://demo3.ec-cube.net/mypage)
-(要ログイン → 詳細を見るボタン押下)
+ex [マイページ　注文詳細](http://demo3.ec-cube.net/shopping)
 
 Markup:
 include /assets/tmpl/elements/15.2.order.pug
@@ -18,6 +15,7 @@ Styleguide 15.2
 */
 .ec-orderRole{
   @include container;
+  margin-top: 20px;
   display: flex;
   & &__detail{
     width: 66.66666%;
@@ -26,6 +24,9 @@ Styleguide 15.2
   & &__summary{
     width: 33.33333%;
     padding: 0 16px;
+  }
+  .ec-borderedList {
+    margin-bottom: 20px;
   }
 
 }
@@ -45,9 +46,31 @@ include /assets/tmpl/elements/15.2.order.pug
 Styleguide 15.2.1
 */
 .ec-orderOrder{
+  margin-bottom: 30px;
   & &__items{
     @include borderBottom;
     @include borderTop;
+  }
+}
+
+/*
+注文履歴詳細 お客様情報
+
+マイページ 注文詳細部に関する Project コンポーネントを定義します。
+
+ex [マイページ　オーダ情報](http://demo3.ec-cube.net/mypage)
+(要ログイン → 詳細を見るボタン押下)
+
+Markup:
+include /assets/tmpl/elements/15.2.order.pug
++ec-orderAccount
+
+Styleguide 15.2.2
+*/
+.ec-orderAccount{
+  margin-bottom: 30px;
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -64,11 +87,20 @@ Markup:
 include /assets/tmpl/elements/15.2.order.pug
 +ec-orderDelivery
 
-Styleguide 15.2.2
+Styleguide 15.2.3
 */
 .ec-orderDelivery{
   & &__title{
+    padding: 16px 0 17px;
     font-weight: bold;
+    font-size: 18px;
+    position: relative;
+  }
+  & &__change{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top:0;
   }
   & &__items{
     @include borderBottom;
@@ -99,7 +131,7 @@ Markup:
       h2 お支払方法
     p 支払方法： 郵便振替
 
-Styleguide 15.2.3
+Styleguide 15.2.4
 */
 .ec-orderPayment{
 
@@ -121,9 +153,14 @@ Markup:
       h2 お問い合わせ
     p 記載なし
 
-Styleguide 15.2.4
+Styleguide 15.2.5
 */
 .ec-orderConfirm{
+  .ec-input {
+    textarea {
+      height: 96px;
+    }
+  }
 
 }
 
