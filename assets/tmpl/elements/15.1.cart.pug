@@ -4,6 +4,10 @@ mixin ec-cartRole
     +b.ec-cartRole
         +e.progress
             +ec-progress
+        +e.totalText
+            p 商品の合計金額は「
+                span.ec-font-bold ¥ 1,296
+                | 」です。
         +e.cart
             +ec-cartTable
         +e.actions
@@ -15,9 +19,10 @@ mixin ec-cartUserRole
     +b.ec-cartRole
         +e.progress
             +ec-userProgress
-        p 商品の合計金額は「
-            span.ec-font-bold ¥ 12,960
-            | 」です。
+        +e.totalText
+            p 商品の合計金額は「
+                span.ec-font-bold ¥ 1,296
+                | 」です。
         +e.cart
             +ec-cartTable
         +e.actions
