@@ -132,13 +132,14 @@ Markup:
 Styleguide 1.1.6
 */
 .ec-reportHeading{
+  width: 100%;
+  margin: 20px 0 30px;
+  padding: 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
   h1, h2, h3,
-  h4, h5, h6{
-    width: 100%;
-    margin: 20px 0 30px;
-    padding: 0;
-    text-align: center;
-    font-size: 32px;
+  h4, h5, h6,p {
     font-weight: bold;
   }
 }

@@ -26,12 +26,13 @@ mixin ec-withdrawConfirmRole
                 p.ec-blockBtn--cancel はい、退会します
 
 mixin ec-withdrawCompleteRole
-    +b.ec-withdrawCompleteRole
-        .ec-off4Grid
-            .ec-off4Grid__cell
-                +e.P.__title 退会が完了しました
-                +e.P.__description ご利用いただき誠にありがとうございました。
-                    br
-                    | またのご来店をお待ちしております。
-            .ec-off4Grid__cell
-                p.ec-blockBtn--cancel トップページへ
+    .ec-role
+        +b.ec-withdrawCompleteRole
+            .ec-off4Grid
+                .ec-off4Grid__cell
+                    .ec-reportHeading 退会が完了いたしました
+                    p.ec-reportDescription ご利用いただき誠にありがとうございました。
+                        br
+                        | またのご来店をお待ちしております。
+                .ec-off4Grid__cell
+                    p.ec-blockBtn--cancel トップページへ
