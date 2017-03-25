@@ -193,3 +193,29 @@ Styleguide 1.2.8
 .text-right {
     text-align: right;
 }
+
+/*
+テキストの位置
+
+ユーザが行った操作に対する、完了報告やエラー表示のページで使用されるテキストのスタイルです。TODO テキストを変更
+
+ex [注文完了](http://demo3.ec-cube.net/shopping/complete)
+
+Markup:
+.ec-rectHeading
+  h2 ご注文ありがとうございました
+p.ec-reportDescription
+      | ただいま、ご注文の確認メールをお送りさせていただきました。
+      br
+      | 万一、ご確認メールが届かない場合は、トラブルの可能性もありますので大変お手数ではございますがもう一度お問い合わせいただくか、お電話にてお問い合わせくださいませ。
+      br
+      | 今後ともご愛顧賜りますようよろしくお願い申し上げます。
+
+
+Styleguide 1.2.9
+*/
+.ec-reportDescription {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.4;
+}

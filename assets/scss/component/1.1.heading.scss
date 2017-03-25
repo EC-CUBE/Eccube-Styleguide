@@ -118,3 +118,27 @@ Styleguide 1.1.5
 
 }
 
+
+/*
+サブ見出し TODO 文言を修正
+
+ユーザが行った操作に対する、完了報告やエラー表示のページで使用される見出しのスタイルです。TODO テキストを変更
+
+ex [注文完了](http://demo3.ec-cube.net/shopping/complete)
+
+Markup:
+.ec-rectHeading
+  h2 ご注文ありがとうございました
+
+Styleguide 1.1.6
+*/
+.ec-reportHeading{
+  h1, h2, h3,
+  h4, h5, h6{
+    margin: 20px 0 30px;
+    padding: 0;
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+

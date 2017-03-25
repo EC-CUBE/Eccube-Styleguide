@@ -22,7 +22,7 @@ $btn-border-radius-base: 0px;
 @mixin _btn($color, $background, $border){
   display: inline-block;
   margin-bottom: 0; // For input.btn
-  font-weight: normal;
+  font-weight: bold;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
