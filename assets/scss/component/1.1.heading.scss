@@ -45,9 +45,8 @@ Markup:
 Styleguide 1.1.2
 */
 .ec-pageHeader h1{
+  margin: 50px 16px 48px;
   padding: 0 0 12px;
-  margin: 0 16px 48px;
-  margin-top:20px;
   font-size: 32px;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
@@ -127,7 +126,7 @@ Styleguide 1.1.5
 ex [注文完了](http://demo3.ec-cube.net/shopping/complete)
 
 Markup:
-.ec-rectHeading
+.ec-reportHeading
   h2 ご注文ありがとうございました
 
 Styleguide 1.1.6
@@ -135,8 +134,10 @@ Styleguide 1.1.6
 .ec-reportHeading{
   h1, h2, h3,
   h4, h5, h6{
+    width: 100%;
     margin: 20px 0 30px;
     padding: 0;
+    text-align: center;
     font-size: 32px;
     font-weight: bold;
   }

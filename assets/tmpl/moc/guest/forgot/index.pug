@@ -2,24 +2,5 @@ extends /assets/tmpl/moc/guest/_layout
 
 
 block content
-  .ec-role
-    .ec-pageHeader
-      h1 パスワードの再発行
-    +b.ec-forget
-      .ec-off1Grid
-        +e.cell
-          .ec-forget__intro
-            p ご登録時のメールアドレスを入力して「次へ」ボタンをクリックしてください。
-            p ※新しくパスワードを発行いたしますので、お忘れになったパスワードはご利用できなくなります。
-        +e.form
-          .ec-borderedDefs
-            dl
-              dt
-                label.ec-label メールアドレス
-                  span.ec-required 必須
-              dd
-                .ec-input
-                  input(type='text')
-      .ec-off4Grid
-        .ec-off4Grid__cell
-          .ec-blockBtn--action 次のページへ
+  include /assets/tmpl/elements/18.1.password.pug
+  +ec-passwordRole
