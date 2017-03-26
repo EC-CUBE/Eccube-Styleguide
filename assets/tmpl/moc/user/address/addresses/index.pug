@@ -10,9 +10,11 @@ block content
         +ec-welcomeMsg
     .ec-role
         p
-            span.ec-font-bold 5件
+            span.ec-font-bold 4件
             | のお届け先があります。
     .ec-role
         include /assets/tmpl/elements/17.1.address.pug
-        +ec-addressRole
-        +ec-addressList
+        .ec-off1Grid
+            .ec-off1Grid__cell
+                +ec-addressRole
+                +ec-addressList

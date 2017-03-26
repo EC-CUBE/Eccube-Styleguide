@@ -14,6 +14,7 @@ Styleguide 12.1
 */
 .ec-sliderRole{
   @include container;
+  margin-bottom: 24px;
   ul{
     padding: 0;
     list-style: none;

@@ -23,4 +23,22 @@ Styleguide 21.1
     margin-bottom: 16px;
     font-size: 16px;
   }
+}/*
+退会手続き実行確認
+
+退会手続き実行確認で使用するページコンポーネントです。
+
+ex [退会手続き　退会手続きへボタン→押下](http://demo3.ec-cube.net/mypage/withdraw)
+
+Markup:
+include /assets/tmpl/elements/21.1.withdraw.pug
++ec-withdrawConfirm
+
+Styleguide 21.1.2
+
+*/
+.ec-withdrawConfirmRole {
+  & &__cancel {
+    margin-bottom: 20px;
+  }
 }

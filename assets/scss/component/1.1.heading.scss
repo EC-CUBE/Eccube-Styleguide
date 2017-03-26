@@ -45,9 +45,8 @@ Markup:
 Styleguide 1.1.2
 */
 .ec-pageHeader h1{
-  padding: 16px 0 12px;
-  margin: 0 16px 48px;
-  margin-top:30px;
+  margin: 50px 16px 48px;
+  padding: 0 0 12px;
   font-size: 32px;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
@@ -112,7 +111,36 @@ Styleguide 1.1.5
   h4, h5, h6{
     background: $clrGray;
     padding: 8px 12px;
+    font-size: 20px;
+    font-weight: bold;
   }
 
+}
+
+
+/*
+サブ見出し TODO 文言を修正
+
+ユーザが行った操作に対する、完了報告やエラー表示のページで使用される見出しのスタイルです。TODO テキストを変更
+
+ex [注文完了](http://demo3.ec-cube.net/shopping/complete)
+
+Markup:
+.ec-reportHeading
+  h2 ご注文ありがとうございました
+
+Styleguide 1.1.6
+*/
+.ec-reportHeading{
+  width: 100%;
+  margin: 20px 0 30px;
+  padding: 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  h1, h2, h3,
+  h4, h5, h6,p {
+    font-weight: bold;
+  }
 }
 

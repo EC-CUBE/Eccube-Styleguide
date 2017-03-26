@@ -1,0 +1,24 @@
+extends /assets/tmpl/moc/guest/_layout
+
+block content
+  .ec-role
+    .ec-pageHeader
+      h1 ご注文完了
+  +b.ec-cartCompleteRole
+    include /assets/tmpl/elements/15.1.cart.pug
+    +ec-cartUserEmptyRole
+    .ec-off3Grid.ec-text-ac
+      .ec-off3Grid__cell
+        .ec-reportHeading
+          h2 ご注文ありがとうございました
+        p.ec-reportDescription
+          | ただいま、ご注文の確認メールをお送りさせていただきました。
+          br
+          | 万一、ご確認メールが届かない場合は、トラブルの可能性もありますので大変お手数ではございますがもう一度お問い合わせいただくか、お電話にてお問い合わせくださいませ。
+          br
+          | 今後ともご愛顧賜りますようよろしくお願い申し上げます。
+
+      .ec-off3Grid__cell
+        .ec-off4Grid
+          .ec-off4Grid__cell
+            p.ec-blockBtn--cancel トップページへ

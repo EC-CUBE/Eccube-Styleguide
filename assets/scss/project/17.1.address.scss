@@ -21,6 +21,11 @@ Styleguide 17.1
   & &__item{
     border-top: 1px dotted #ccc;
   }
+  & &__actions{
+    margin-top: 32px;
+    padding-bottom:20px;
+    border-bottom: 1px dotted #ccc;
+  }
 
 }
 
@@ -43,6 +48,7 @@ Styleguide 17.1.1
     display: table;
     width: 100%;
     position: relative;
+    border-bottom: 1px dotted #ccc;
   }
   & &__remove{
     display: table-cell;
@@ -59,7 +65,7 @@ Styleguide 17.1.1
   & &__action{
     position: absolute;
     vertical-align: middle;
-    top: 0;
+    top: 27px;
     right: 0;
   }
 

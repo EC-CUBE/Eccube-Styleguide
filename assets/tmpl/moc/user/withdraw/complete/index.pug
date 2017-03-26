@@ -1,13 +1,11 @@
 extends /assets/tmpl/moc/guest/_layout.pug
 
 include /assets/tmpl/elements/9.1.mypage.pug
-include /assets/tmpl/elements/21.1.withdraw.pug
 
 block content
     .ec-role
         .ec-pageHeader
             h1 マイページ/退会手続き
-        +ec-navlist
-        +ec-welcomeMsg
-    +ec-withdrawCompleteRole
+    include /assets/tmpl/elements/21.1.withdraw.pug
+    +ec-withdrawComplete
 
