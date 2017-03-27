@@ -16,8 +16,12 @@ Styleguide 19.1
 */
 .ec-registerRole{
   @include container;
-  padding-top:20px;
-
+  & &__actions {
+    padding-top:20px;
+  }
+  .ec-blockBtn--action {
+    margin-bottom: 16px;
+  }
 }
 
 /*
@@ -37,5 +41,8 @@ Styleguide 19.2
 */
 .ec-contactRole{
   @include container;
+  & &__actions {
+    padding-top:20px;
+  }
 
 }
