@@ -1,5 +1,5 @@
 @import "../mixins/forms";
-
+@import "../mixins/media";
 /*
 フォーム部品(テキスト)
 
@@ -65,8 +65,12 @@ Styleguide 3.1.2
   @extend .ec-input;
   input[type='text']{
     display: inline-block;
-    width: 45%;
-    margin-left: 15px;
+    width: 49%;
+    margin-left: 0;
+    @include media_desktop {
+      margin-left: 15px;
+      width: 45%;
+    }
   }
 }
 
@@ -129,8 +133,11 @@ Styleguide 3.1.4
     display: inline-block;
     width: auto;
     text-align: right;
-    max-width: 5em;
+    max-width: 4em;
     font-size: 16px;
+    @include media_desktop {
+      max-width: 5em;
+    }
   }
   span{
     display: inline-block;

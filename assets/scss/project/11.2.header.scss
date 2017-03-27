@@ -24,7 +24,7 @@ Styleguide 11.2
   flex-wrap: wrap;
   justify-content: space-between;
   & &__title{
-    width: 60%;
+    width: 75%;
   }
   & &__cart{
     display: none;
@@ -51,7 +51,7 @@ Styleguide 11.2
   }
   & &__navSP{
     display: block;
-    width: 40%;
+    width: 25%;
     text-align: right;
     @include media_desktop {
       display: none;
@@ -64,7 +64,6 @@ Styleguide 11.2
       width: 100%;
       @include reset_link;
     }
-
   }
 }
 
@@ -231,6 +230,9 @@ Styleguide 11.2.3
     display: inline-block;
     width: 40%;
     text-align: center;
+  }
+  & &__item:nth-of-type(2){
+    margin-left: 5px;
   }
   .ec-cartNaviSP{
     display: inline-block;

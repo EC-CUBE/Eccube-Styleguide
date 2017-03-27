@@ -18,6 +18,10 @@ Styleguide 19.1
   @include container;
   & &__actions {
     padding-top:20px;
+    text-align: center;
+    @include media_desktop {
+      text-align: left;
+    }
   }
   .ec-blockBtn--action {
     margin-bottom: 16px;
