@@ -37,3 +37,9 @@ gulp.task("server",()=> {
     //     },500);
     // });
 });
+
+gulp.task("server:reload",()=>{
+    browserSync.reload();
+})
+
+global.watch.push("server")

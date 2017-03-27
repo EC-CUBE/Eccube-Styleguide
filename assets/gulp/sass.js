@@ -2,6 +2,7 @@
 
 const gulp = require("gulp");
 const $ = require("gulp-load-plugins")();
+const runSequence = require("run-sequence");
 
 const {src,dest,scss_option} = global;
 
@@ -33,7 +34,9 @@ gulp.task("sass:watch",()=>{
     let target = [
         `${src}assets/scss/**/*.scss`,
     ];
-    return gulp.watch(target,["sass"])
+    return gulp.watch(target,()=>{
+        runSequence("sass","server:reload")
+    })
 });
 
 global.watch.push("sass:watch")

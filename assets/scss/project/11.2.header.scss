@@ -10,7 +10,7 @@ ex [商品詳細ページ　ヘッダー](http://demo3.ec-cube.net/products/deta
 Markup:
 include /assets/tmpl/elements/11.2.header.pug
 +ec-headerRole
-p hogedd
+p hoge
 
 Styleguide 11.2
 */
@@ -24,24 +24,38 @@ Styleguide 11.2
   flex-wrap: wrap;
   justify-content: space-between;
   & &__title{
-    width: 40%;
+    width: 60%;
   }
   & &__cart{
-    @include reset_link;
+    display: none;
+    @include media_desktop(){
+      display: block;
+      @include reset_link;
+    }
   }
   & &__search{
-    width: 40%;
-    @include reset_link;
-
+    display: none;
+    @include media_desktop(){
+      display: block;
+      width: 50%;
+      @include reset_link;
+    }
   }
   & &__nav{
-    width: 40%;
-    @include reset_link;
-
+    display: none;
+    @include media_desktop(){
+      display: block;
+      width: 50%;
+      @include reset_link;
+    }
   }
   & &__itemnav{
-    width: 100%;
-    @include reset_link;
+    display: none;
+    @include media_desktop(){
+      display: block;
+      width: 100%;
+      @include reset_link;
+    }
 
   }
 }
@@ -74,7 +88,10 @@ Styleguide 11.2.1
       display: inline-block;
       margin-bottom: 30px;
       text-decoration: none;
-      font-size: 40px;
+      font-size: 20px;
+      @include media_desktop(){
+        font-size: 40px;
+      }
       font-weight: bold;
       color: #000;
 
@@ -84,9 +101,13 @@ Styleguide 11.2.1
     }
   }
   & &__subtitle {
+    font-size: 10px;
+    @include media_desktop(){
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
     a {
       display: inline-block;
-      margin-bottom: 10px;
       color: #0092C4;
       text-decoration: none;
       cursor: pointer;

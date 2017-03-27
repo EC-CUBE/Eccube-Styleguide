@@ -1,3 +1,5 @@
+@import "../mixins/media";
+
 /*
 商品掲載
 
@@ -77,8 +79,17 @@ Styleguide 7.1.2
 */
 
 .ec-displayC{
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 24px;
+  & &__cell{
+    width: 50%;
+    padding: 8px;
+    @include media_desktop(){
+      width: 25%;
+    }
+
+  }
   &:hover {
     text-decoration: none;
     img{
@@ -86,18 +97,32 @@ Styleguide 7.1.2
     }
   }
   & &__img{
+    display: block;
+    width: 100%;
     margin-bottom: 15px;
   }
   & &__catch{
+    display: block;
+    width: 100%;
     font-weight: bold;
     color: #9a947e;
   }
   & &__title{
+    display: block;
+    width: 100%;
+    color: #525263;
+  }
+  & &__price{
+    display: block;
+    width: 100%;
+    font-weight: bold;
     color: #525263;
   }
   & &__price--sp{
+    display: block;
+    width: 100%;
     font-weight: bold;
-    color: red;
+    color: #DE5D50;
   }
 }
 

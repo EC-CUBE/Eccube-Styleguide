@@ -1,0 +1,73 @@
+@import "../mixins/media";
+@import "../mixins/projects";
+/*
+ヘッダー
+
+ヘッダー用のプロジェクトコンポーネントを提供します。
+
+ex [商品詳細ページ　ヘッダー](http://demo3.ec-cube.net/products/detail/33)
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerRole
+p hoge
+
+Styleguide 11.4
+*/
+.ec-spmenuRole{
+  background: #F6F6F6;
+  position: fixed;
+  top:0;
+  width: 260px;
+  height:100vh;
+  right:0;
+}
+
+.ec-spmenuSearch{
+  padding: 16px 8px;;
+  background: #EBEBEB;
+  select{
+    width: 100% !important;
+  }
+}
+
+.ec-spmenuNavi{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
+  & &__item{
+    color: inherit;
+    display: block;
+    padding:0 10px;
+    height: 50px;
+    border-bottom: 1px solid #e8e8e8;
+    line-height: 50px;
+    font-size: 30px;
+
+  }
+}
+
+.ec-spmenuItemNavi{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
+  & &__item{
+    color: inherit;
+    display: block;
+    padding:0 10px;
+    height: 50px;
+    border-bottom: 1px solid #e8e8e8;
+    line-height: 50px;
+    font-weight: bold;
+  }
+}
+
+.ec-spmenuContainerRole{
+}
+
+.ec-spmenuContainerRole.active{
+  transform: translateX(-260px);
+}
+

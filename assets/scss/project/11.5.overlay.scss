@@ -1,0 +1,25 @@
+@import "../mixins/media";
+@import "../mixins/projects";
+/*
+ヘッダー
+
+ヘッダー用のプロジェクトコンポーネントを提供します。
+
+ex [商品詳細ページ　ヘッダー](http://demo3.ec-cube.net/products/detail/33)
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerRole
+p hoge
+
+Styleguide 11.5
+*/
+.ec-overlayRole{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+

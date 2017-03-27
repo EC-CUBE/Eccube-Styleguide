@@ -10,15 +10,35 @@ mixin ec-displayB
                     .ec-displayB__link read more
 
 mixin ec-displayC
-    .ec-grid4
-        each item in ["","","",""]
-            .ec-grid4__cell
-                a(href="/moc/guest/item/").ec-displayC
-                    .ec-displayC__img
-                        img(src="http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg")
-                    .ec-displayC__catch 足の透かし模様が美しいミニテーブル
-                    .ec-displayC__title ミニテーブル
-                    .ec-displayC__price--sp ¥ 1,785
+    +b.ec-displayC
+        +e.cell
+            a(href="/moc/guest/item/").ec-displayC
+                +e.img
+                    img(src="http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg")
+                +e.catch 足の透かし模様が美しいミニテーブル
+                +e.title ミニテーブル
+                +e.price ¥ 1,785
+        +e.cell
+            a(href="/moc/guest/item/").ec-displayC
+                +e.img
+                    img(src="http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg")
+                +e.catch 足の透かし模様が美しいミニテーブル
+                +e.title ミニテーブル
+                +e.price ¥ 1,785
+        +e.cell
+            a(href="/moc/guest/item/").ec-displayC
+                +e.img
+                    img(src="http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg")
+                +e.catch 足の透かし模様が美しいミニテーブル
+                +e.title ミニテーブル
+                +e.price--sp ¥ 1,785
+        +e.cell
+            a(href="/moc/guest/item/").ec-displayC
+                +e.img
+                    img(src="http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg")
+                +e.catch 足の透かし模様が美しいミニテーブル
+                +e.title ミニテーブル
+                +e.price ¥ 1,785
 
 mixin ec-displayD
     .ec-grid6
