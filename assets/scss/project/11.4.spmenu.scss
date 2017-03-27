@@ -21,6 +21,9 @@ Styleguide 11.4
   width: 260px;
   height:100vh;
   right:0;
+  @include media_desktop(){
+    display: none;
+  }
 }
 
 .ec-spmenuSearch{
