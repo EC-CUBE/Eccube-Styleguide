@@ -99,7 +99,15 @@ mixin ec-headerUserNav
 mixin ec-itemNav
   +b.UL.ec-itemNav
     +e.LI.item: a(href="/moc/guest/search") 新入荷
-    +e.LI.item: a(href="/moc/guest/search") キッチンツール
+    +e.LI.item
+      a(href="/moc/guest/search") キッチンツール
+      ul.ec-itemNavAccordion
+        li.ec-itemNavAccordion__item
+          a(href="") キッチン小物
+        li.ec-itemNavAccordion__item
+          a(href="") 調理器具
+        li.ec-itemNavAccordion__item
+          a(href="") 食器
     +e.LI.item: a(href="/moc/guest/search") インテリア
     +e.LI.item: a(href="/moc/guest/search") 照明
     +e.LI.item: a(href="/moc/guest/search") 雑貨・小物
