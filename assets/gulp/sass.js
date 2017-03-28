@@ -34,9 +34,10 @@ gulp.task("sass:watch",()=>{
     let target = [
         `${src}assets/scss/**/*.scss`,
     ];
-    return gulp.watch(target,()=>{
-        runSequence("sass","server:reload")
-    })
+    return gulp.watch(target,["sass"])
+    // return gulp.watch(target,()=>{
+    //     runSequence("sass","server:reload")
+    // })
 });
 
 global.watch.push("sass:watch")

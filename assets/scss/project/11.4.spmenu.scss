@@ -27,6 +27,10 @@ Styleguide 11.4
   }
 }
 
+.ec-spmenuRole.active{
+  display: block;
+}
+
 .ec-spmenuSearch{
   padding: 16px 8px;;
   background: #EBEBEB;
@@ -67,11 +71,3 @@ Styleguide 11.4
     font-weight: bold;
   }
 }
-
-.ec-spmenuContainerRole{
-}
-
-.ec-spmenuContainerRole.active{
-  transform: translateX(-260px);
-}
-

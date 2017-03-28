@@ -12,11 +12,22 @@ html(lang="ja")
         link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
         link(rel="stylesheet", href="/assets/css/style.css")
     body
-        .ec-spmenuContainerRole
-            +ec-headerRole
-            block content
-            +ec-footerRole
-            script(src="https://code.jquery.com/jquery-2.2.4.min.js")
-            script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
-        +ec-spmenuRole
+        +b.ec-layoutRole
+            +e.header
+                +ec-headerRole
+            +e.contentTop
+            +e.contents
+                block slideLeft
+                +e.main
+                    +e.mainTop
+                    block content
+                    +e.mainBottom
+                block slideRight
+            +e.contentBottom
+            +e.footer
+                +ec-footerRole
         .ec-overlayRole
+        +ec-spmenuRole
+        script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        script(src="/assets/js/script.js")

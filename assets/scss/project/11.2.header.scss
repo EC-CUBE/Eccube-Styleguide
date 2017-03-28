@@ -263,11 +263,12 @@ Styleguide 11.2.3
       right: -10px;
     }
   }
-  .nav-trigger {
+  & &__itemMenu {
     display: block;
     position: relative;
     width: 25px;
     height: 15px;
+    cursor: pointer;
     span {
       display: inline-block;
       transition: all .4s;

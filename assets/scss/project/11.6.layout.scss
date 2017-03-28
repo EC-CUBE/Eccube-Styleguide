@@ -1,0 +1,44 @@
+@import "../mixins/media";
+@import "../mixins/projects";
+/*
+ヘッダー
+
+ヘッダー用のプロジェクトコンポーネントを提供します。
+
+ex [商品詳細ページ　ヘッダー](http://demo3.ec-cube.net/products/detail/33)
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerRole
+p hoge
+
+Styleguide 11.6
+*/
+
+
+.ec-layoutRole{
+  @include container;
+
+  & &__contents{
+    display: flex;
+    flex-wrap: nowrap;
+
+  }
+  & &__main{
+    width: 100%;
+
+
+  }
+  & &__left,
+  & &__right{
+    display: none;
+    @include media_desktop(){
+      width: 20%;
+    }
+  }
+}
+
+.ec-layoutRole.active{
+  transform: translateX(-260px);
+}
+

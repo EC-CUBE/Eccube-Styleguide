@@ -35,5 +35,5 @@ gulp.task("pug:watch",()=>{
     })
 });
 
-global.watch.push("pug:watch")
+// global.watch.push("pug:watch")
 global.build.push("pug")
