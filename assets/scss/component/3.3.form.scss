@@ -29,8 +29,10 @@ Styleguide 3.3.1
   display: block;
   padding: 5px 0 ;
   font-weight: bold;
+  margin-bottom: 0;
   @include media_desktop {
     padding: 12px;
+    margin-bottom: 5px;
   }
 }
 
