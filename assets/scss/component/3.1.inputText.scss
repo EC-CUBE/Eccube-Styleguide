@@ -1,3 +1,4 @@
+@import "../mixins/variables";
 @import "../mixins/forms";
 @import "../mixins/media";
 /*
@@ -40,6 +41,38 @@ Styleguide 3.1.1
   }
   p {
     line-height: 1.4;
+  }
+  .errorMail {
+    display: none;
+  }
+  .errorPassword {
+    display: none;
+  }
+  .errorPassword2 {
+    display: none;
+  }
+}
+.error.ec-input {
+  input{
+    margin-bottom: 5px;
+    border-color: #CF3F34;
+    background: #FDF1F0;
+  }
+  @mixin  errortext {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: $clrRed;
+  }
+  .errorMail {
+    @include errortext;
+  }
+  .errorPassword {
+    @include errortext;
+  }
+  .errorPassword2 {
+    @include errortext;
   }
 }
 
