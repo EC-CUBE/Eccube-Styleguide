@@ -1,23 +1,23 @@
 extends /assets/tmpl/moc/guest/_layout
 
-
 block content
   .ec-role
     .ec-pageHeader
       h1 新規会員登録（完了）
-  +b.ec-contactCompleteRole
-    .ec-off3Grid.ec-text-ac
-      .ec-off3Grid__cell
-        +e.P.__title.ec-font-size-5.ec-font-bold 会員登録ありがとうございます
-        +e.P.__description 現在仮会員の状態です。
-          br
-          | ご入力いただいたメールアドレス宛てに、ご連絡が届いておりますので、
-          br
-          |本会員登録になった上でお買い物をお楽しみください。
-          br
-          | 今後ともご愛顧賜りますようよろしくお願い申し上げます。
-
+  .ec-role
+    +b.ec-registerCompleteRole
+      .ec-off3Grid.ec-text-ac
+        .ec-off3Grid__cell
+          .ec-reportHeading
+            h2 会員登録ありがとうございます
+          p.ec-reportDescription 現在仮会員の状態です。
+            br
+            | ご入力いただいたメールアドレス宛てに、ご連絡が届いておりますので、
+            br
+            | 本会員登録になった上でお買い物をお楽しみください。
+            br
+            | 今後ともご愛顧賜りますようよろしくお願い申し上げます。
       .ec-off3Grid__cell
         .ec-off4Grid
           .ec-off4Grid__cell
-            p.ec-blockBtn--cancel トップページへ
+            a.ec-blockBtn--cancel(href="/moc/") トップページへ

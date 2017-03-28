@@ -55,7 +55,7 @@ Styleguide 1.1.2
   @include media_desktop {
     border-top: none;
     border-bottom: 1px solid #ccc;
-    margin: 50px 16px 48px;
+    margin: 10px 16px 48px;
     padding: 8px;
     font-size: 32px;
     font-weight: bold;
@@ -149,8 +149,11 @@ Styleguide 1.1.6
   margin: 20px 0 30px;
   padding: 0;
   text-align: center;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
+  @include media_desktop {
+    font-size: 32px;
+  }
   h1, h2, h3,
   h4, h5, h6,p {
     font-weight: bold;
