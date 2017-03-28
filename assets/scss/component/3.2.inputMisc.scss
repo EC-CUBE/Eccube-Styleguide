@@ -58,6 +58,7 @@ Styleguide 3.2.2
   }
   input{
     margin-right: 10px;
+    margin-bottom: 10px;
   }
 
 }
@@ -185,8 +186,11 @@ Styleguide 3.2.5
   select{
     display: inline-block;
     width: auto;
-    margin: 0 8px;
+    margin: 0 0 10px;
     background-color: rgb(248, 248, 248);
+    @include media_desktop{
+      margin: 0 8px 10px;
+    }
   }
   span{
     margin-left:5px;

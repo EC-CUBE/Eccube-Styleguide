@@ -37,8 +37,8 @@ Twitter Bootstrap デフォルト準拠
 @mixin container(){
   margin-right: auto;
   margin-left: auto;
-  padding-left:  floor((30px / 2));
-  padding-right: ceil((30px / 2));
+  padding-left:  floor((20px / 2));
+  padding-right: ceil((20px / 2));
 
   box-sizing: border-box;
 

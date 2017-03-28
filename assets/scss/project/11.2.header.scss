@@ -24,7 +24,7 @@ Styleguide 11.2
   flex-wrap: wrap;
   justify-content: space-between;
   & &__title{
-    width: 60%;
+    width: 75%;
   }
   & &__cart{
     display: none;
@@ -49,6 +49,14 @@ Styleguide 11.2
       @include reset_link;
     }
   }
+  & &__navSP{
+    display: block;
+    width: 25%;
+    text-align: right;
+    @include media_desktop {
+      display: none;
+    }
+  }
   & &__itemnav{
     display: none;
     @include media_desktop(){
@@ -56,7 +64,6 @@ Styleguide 11.2
       width: 100%;
       @include reset_link;
     }
-
   }
 }
 
@@ -205,18 +212,84 @@ Styleguide 11.2.3
 .ec-headerNav{
   text-align: right;
   & &__item{
-    margin-right: 20px;
+    margin-left: 10px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 28px;
     line-height: 50px;
-    svg{
-      font-size: 30px;
-    }
     span{
       font-size: 14px;
     }
   }
 }
+.ec-headerNavSP {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  text-align: right;
+  & &__item{
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+  }
+  & &__item:nth-of-type(2){
+    margin-left: 5px;
+  }
+  .ec-cartNaviSP{
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    .ec-cartNaviSP__icon{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      fill: #525263;
+    }
+    .ec-cartNaviSP__badge{
+      display: inline-block;
+      padding: 3px 7px;
+      min-width: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      background: #DE5D50;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      right: -10px;
+    }
+  }
+  .nav-trigger {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 15px;
+    span {
+      display: inline-block;
+      transition: all .4s;
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #525263;
+    }
+    span:nth-of-type(1) {
+      top: 0;
+    }
+    span:nth-of-type(2) {
+      top: 6px;
+    }
+    span:nth-of-type(3) {
+      bottom: 0;
+    }
+  }
+}
+
 /*
 カテゴリナビ
 

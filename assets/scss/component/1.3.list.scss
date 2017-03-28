@@ -1,3 +1,5 @@
+@import "../mixins/media";
+
 /*
 リスト
 
@@ -34,24 +36,23 @@ dl.ec-definitions--soft
 Styleguide 1.3.1
 */
 .ec-definitions {
-    margin:5px;
-    display: block;
-    & dt,dd {
-        display: inline-block;
-        margin: 0;
-    }
-    & dt {
-        font-weight: bold;
-    }
+  margin: 5px;
+  display: block;
+  & dt, dd {
+    display: inline-block;
+    margin: 0;
+  }
+  & dt {
+    font-weight: bold;
+  }
 }
 
 .ec-definitions--soft {
-    @extend .ec-definitions;
-    & dt {
-        font-weight: normal;
-    }
+  @extend .ec-definitions;
+  & dt {
+    font-weight: normal;
+  }
 }
-
 
 /*
 下線つき定義リスト
@@ -78,47 +79,67 @@ Styleguide 1.3.2
 */
 
 .ec-borderedDefs {
+  width: 100%;
+  border-top: 1px dotted #ccc;
+  dl {
+    display: flex;
+    border-bottom: 1px dotted #ccc;
+    margin: 0;
+    flex-wrap: wrap;
+    @include media_desktop {
+      flex-wrap: nowrap;
+    }
+  }
+  dt, dd {
+    padding: 0;
+    @include media_desktop {
+      padding: 16px;
+    }
+  }
+
+  dt {
+    font-weight: normal;
     width: 100%;
-    border-top: 1px dotted #ccc;
-    dl{
-        display: flex;
-        border-bottom: 1px dotted #ccc;
-        margin:0;
+    @include media_desktop {
+      width: 30%;
     }
-    dt,dd {
-        padding: 16px;
-    }
+  }
 
-    dt {
-        width: 30%;
-        font-weight: normal;
+  dd {
+    padding: 0;
+    width: 100%;
+    line-height: 0;
+    @include media_desktop {
+      width: 70%;
+      padding: 18px 16px;
     }
-
-    dd {
-        width: 70%;
-        padding: 18px 16px;
-        line-height: 0;
-    }
+  }
 }
 
 .ec-list-chilled {
-    display: table-row;
-    border: 0 none;
-    padding: 8px 0;
+  display: table-row;
+  border: 0 none;
+  padding: 8px 0;
 
-    dt,dd {
-        display: table-cell;
-        border-bottom: 1px dotted #ccc;
-        padding: 16px 0;
+  dt, dd {
+    display: table-cell;
+    border-bottom: 1px dotted #ccc;
+    padding: 0;
+    @include media_desktop {
+      padding: 16px 0;
     }
+  }
 
-    dt {
-        width: 30%;
-    }
+  dt {
+    width: 30%;
+  }
 
-    dd {
-        padding: 16px;
+  dd {
+    padding: 0;
+    @include media_desktop {
+      padding: 16px;
     }
+  }
 }
 
 /*
@@ -138,33 +159,33 @@ Styleguide 1.3.3
 */
 
 .ec-borderedList {
-    width: 100%;
-    border-top: 1px dotted #ccc;
-    list-style: none;
-    padding: 0;
-    li{
-        border-bottom: 1px dotted #ccc;
-    }
+  width: 100%;
+  border-top: 1px dotted #ccc;
+  list-style: none;
+  padding: 0;
+  li {
+    border-bottom: 1px dotted #ccc;
+  }
 }
 
 .ec-list-chilled {
-    display: table-row;
-    border: 0 none;
-    padding: 8px 0;
+  display: table-row;
+  border: 0 none;
+  padding: 8px 0;
 
-    dt,dd {
-        display: table-cell;
-        border-bottom: 1px dotted #ccc;
-        padding: 16px 0;
-    }
+  dt, dd {
+    display: table-cell;
+    border-bottom: 1px dotted #ccc;
+    padding: 16px 0;
+  }
 
-    dt {
-        width: 30%;
-    }
+  dt {
+    width: 30%;
+  }
 
-    dd {
-        padding: 16px;
-    }
+  dd {
+    padding: 16px;
+  }
 }
 
 /*
@@ -187,23 +208,23 @@ Styleguide 1.3.4
 */
 
 .ec-list-flat {
-    list-style: none;
-    overflow: hidden;
-    padding: 0 0.7em;
-    li {
-        float: left;
-        &:after {
-            content: "｜";
-        }
-        &:last-child{
-            &:after {
-                content: '';
-            }
-        }
+  list-style: none;
+  overflow: hidden;
+  padding: 0 0.7em;
+  li {
+    float: left;
+    &:after {
+      content: "｜";
     }
-    a {
-        float: left;
-        display: inline-block;
+    &:last-child {
+      &:after {
+        content: '';
+      }
     }
+  }
+  a {
+    float: left;
+    display: inline-block;
+  }
 
 }

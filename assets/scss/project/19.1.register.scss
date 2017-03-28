@@ -16,7 +16,16 @@ Styleguide 19.1
 */
 .ec-registerRole{
   @include container;
-
+  & &__actions {
+    padding-top:20px;
+    text-align: center;
+    @include media_desktop {
+      text-align: left;
+    }
+  }
+  .ec-blockBtn--action {
+    margin-bottom: 16px;
+  }
 }
 
 /*
@@ -36,5 +45,8 @@ Styleguide 19.2
 */
 .ec-contactRole{
   @include container;
+  & &__actions {
+    padding-top:20px;
+  }
 
 }

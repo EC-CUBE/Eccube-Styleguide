@@ -162,10 +162,16 @@ Markup:
 Styleguide 5.1.5
 */
 .ec-off1Grid{
-  @include row;
+  margin: 0;
+  @include media_desktop {
+    @include row;
+  }
   & &__cell{
-    @include makeSmColumn(10);
-    margin-left: percentage((1 / 12));
+    margin: 0;
+    @include media_desktop {
+      @include makeSmColumn(10);
+      margin-left: percentage((1 / 12));
+    }
   }
 }
 
@@ -227,6 +233,9 @@ Styleguide 5.1.8
   @include row;
   & &__cell{
     @include makeSmColumn(4);
-    margin-left: percentage((4 / 12));
+    margin-left: 0;
+    @include media_desktop {
+      margin-left: percentage((4 / 12));
+    }
   }
 }

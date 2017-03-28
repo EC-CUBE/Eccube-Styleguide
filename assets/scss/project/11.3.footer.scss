@@ -26,9 +26,6 @@ Styleguide 11.3
   & &__inner{
     @include container;
   }
-  .ec-footerTitle{
-    margin-top:80px;
-  }
 }
 
 /*
@@ -56,6 +53,7 @@ Styleguide 11.3.1
 .ec-footerNavi{
   list-style: none;
   text-align: center;
+  padding: 0;
   & &__link{
     display: inline-block;
     margin: 0 8px 8px;
@@ -88,16 +86,26 @@ sg-wrapper:
 Styleguide 11.3.2
 */
 .ec-footerTitle{
+  margin-top:20px;
   text-align: center;
+  @include media_desktop {
+    margin-top:80px;
+  }
   & &__logo{
     font-weight: bold;
     a{
-      font-size: 2em;
+      font-size: 16px;
       color: inherit;
+      @include media_desktop {
+        font-size: 2em;
+      }
     }
   }
   & &__copyright{
-    font-size: .8em
+    font-size: 10px;
+    @include media_desktop {
+      font-size: .8em;
+    }
   }
 }
 
