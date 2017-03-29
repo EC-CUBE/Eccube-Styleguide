@@ -81,19 +81,20 @@ Styleguide 7.1.2
 .ec-displayC{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 24px;
   & &__cell{
-    width: 50%;
-    padding: 8px;
+    width: 47%;
     @include media_desktop(){
-      width: 25%;
+      width: 23%;
     }
-
-  }
-  &:hover {
-    text-decoration: none;
-    img{
-      opacity: .8;
+    &:hover {
+      a {
+        text-decoration: none;
+      }
+      img{
+        opacity: .8;
+      }
     }
   }
   & &__img{
@@ -143,10 +144,29 @@ include /assets/tmpl/elements/7.1.itembanner.pug
 Styleguide 7.1.3
 */
 .ec-displayD{
-  & &__img {
-    margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & &__cell{
+    width: 30%;
+    margin-bottom: 8px;
+    @include media_desktop(){
+      width: 14%;
+      margin-bottom: 16px;
+    }
+    &:hover {
+      text-decoration: none;
+      img{
+        opacity: .8;
+      }
+    }
+  }
+  & &__img{
+    display: block;
+    width: 100%;
   }
 }
+
 
 /*
 商品アイテム（商品一覧）
