@@ -10,7 +10,83 @@ html(lang="ja")
         meta(name="viewport", content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no")
         title= pageTitle
         link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        link(rel="stylesheet", href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
         link(rel="stylesheet", href="/assets/css/style.css")
+        style.
+            .slick-slider {
+                margin-bottom: 30px;
+            }
+
+            .slick-dots {
+                position: absolute;
+                bottom: -45px;
+                display: block;
+                width: 100%;
+                padding: 0;
+                list-style: none;
+                text-align: center;
+            }
+
+            .slick-dots li {
+                position: relative;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin: 0 5px;
+                padding: 0;
+
+                cursor: pointer;
+            }
+
+            .slick-dots li button {
+                font-size: 0;
+                line-height: 0;
+                display: block;
+                width: 20px;
+                height: 20px;
+                padding: 5px;
+                cursor: pointer;
+                color: transparent;
+                border: 0;
+                outline: none;
+                background: transparent;
+            }
+
+            .slick-dots li button:hover,
+            .slick-dots li button:focus {
+                outline: none;
+            }
+
+            .slick-dots li button:hover:before,
+            .slick-dots li button:focus:before {
+                opacity: 1;
+            }
+
+            .slick-dots li button:before {
+                content: " ";
+                line-height: 20px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 12px;
+                height: 12px;
+                text-align: center;
+                opacity: .25;
+                background-color: black;
+                border-radius: 50%;
+
+            }
+
+            .slick-dots li.slick-active button:before {
+                opacity: .75;
+                background-color: black;
+            }
+
+            .slick-dots li button.thumbnail img {
+                width: 0;
+                height: 0;
+            }
+
     body
         +b.ec-layoutRole
             +e.header
@@ -30,5 +106,6 @@ html(lang="ja")
         .ec-overlayRole
         +ec-spmenuRole
         script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+        script(src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
         script(src="/assets/js/script.js")
