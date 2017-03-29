@@ -22,11 +22,14 @@ a(href="#").ec-link さくらのクラウド
 Styleguide 1.2.1
 */
 .ec-link {
-    color: #0092C4;
+  color: #0092C4;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: #33A8D0;
     text-decoration: none;
-    cursor: pointer;
+  }
 }
-
 
 /*
 テキスト（太字）
@@ -40,7 +43,7 @@ Styleguide 1.2.2
 */
 
 .ec-font-bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /*
@@ -55,7 +58,7 @@ Styleguide 1.2.3
 */
 
 .ec-color-grey {
-    color: #9a947e;
+  color: #9a947e;
 }
 
 /*
@@ -71,10 +74,11 @@ Styleguide 1.2.4
 */
 
 .ec-color-red {
-    color: #DE5D50;
+  color: #DE5D50;
 }
-.ec-color-accent{
-    color: #DE5D50;
+
+.ec-color-accent {
+  color: #DE5D50;
 }
 
 /*
@@ -94,23 +98,28 @@ Markup:
 Styleguide 1.2.5
 */
 
-.ec-font-size-1{
-    font-size:12px;
+.ec-font-size-1 {
+  font-size: 12px;
 }
-.ec-font-size-2{
-    font-size:14px;
+
+.ec-font-size-2 {
+  font-size: 14px;
 }
-.ec-font-size-3{
-    font-size:16px;
+
+.ec-font-size-3 {
+  font-size: 16px;
 }
-.ec-font-size-4{
-    font-size:20px;
+
+.ec-font-size-4 {
+  font-size: 20px;
 }
-.ec-font-size-5{
-    font-size:32px;
+
+.ec-font-size-5 {
+  font-size: 32px;
 }
-.ec-font-size-6{
-    font-size:40px;
+
+.ec-font-size-6 {
+  font-size: 40px;
 }
 
 /*
@@ -125,7 +134,7 @@ Styleguide 1.2.6
 */
 
 .ec-text-ac {
-    text-align: center;
+  text-align: center;
 }
 
 /*
@@ -146,20 +155,20 @@ div(style="color:#DE5D50;font-size:28px")
 
 Styleguide 1.2.7
 */
-.ec-price{
-    & &__unit{
-        font-size: 1em;
-        font-weight: bold;
-    }
-    & &__price{
-        display: inline-block;
-        padding: 0 .3em;
-        font-size: 1em;
-        font-weight: bold;
-    }
-    & &__tax{
-        font-size: 0.57em;
-    }
+.ec-price {
+  & &__unit {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  & &__price {
+    display: inline-block;
+    padding: 0 .3em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  & &__tax {
+    font-size: 0.57em;
+  }
 
 }
 
@@ -185,13 +194,15 @@ p.text-right
 Styleguide 1.2.8
 */
 .text-left {
-    text-align: left;
+  text-align: left;
 }
+
 .text-center {
-    text-align: center;
+  text-align: center;
 }
+
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 
 /*
@@ -215,8 +226,8 @@ p.ec-reportDescription
 Styleguide 1.2.9
 */
 .ec-reportDescription {
-    margin-bottom: 32px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.4;
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.4;
 }
