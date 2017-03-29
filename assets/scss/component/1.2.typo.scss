@@ -1,3 +1,4 @@
+@import "../mixins/media";
 /*
 文字装飾
 
@@ -157,17 +158,26 @@ Styleguide 1.2.7
 */
 .ec-price {
   & &__unit {
-    font-size: 1em;
+    font-size: 18px;
     font-weight: bold;
+    @include media_desktop{
+      font-size: 1em;
+    }
   }
   & &__price {
     display: inline-block;
     padding: 0 .3em;
-    font-size: 1em;
+    font-size: 18px;
     font-weight: bold;
+    @include media_desktop{
+      font-size: 1em;
+    }
   }
   & &__tax {
-    font-size: 0.57em;
+    font-size: 10px;
+    @include media_desktop{
+      font-size: 0.57em;
+    }
   }
 
 }
