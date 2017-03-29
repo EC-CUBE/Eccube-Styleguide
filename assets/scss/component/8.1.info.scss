@@ -1,3 +1,4 @@
+@import "../mixins/media";
 /*
 お知らせ
 
@@ -33,8 +34,8 @@ Styleguide 8.1.1
     font-size: 24px;
   }
   & &__items{
+    padding: 0;
     list-style: none;
-    padding: 16px;
     border-top: 1px solid #ccc;
   }
 }
@@ -54,14 +55,31 @@ Styleguide 8.1.2
 .ec-newsline {
   display: flex;
   flex-wrap:wrap;
+  overflow: hidden;
+  padding: 0 16px;
+  & &__info{
+    width: 100%;
+    padding: 16px 0;
+  }
   & &__date{
-    width: 20%;
+    display: inline-block;
+    width: 100%;
+    @include media_desktop {
+      width: 15%;
+    }
   }
   & &__comment{
-    width: 76%;
+    display: inline-block;
+    width: 88%;
+    @include media_desktop {
+      width: 80%;
+    }
   }
   & &__close{
+    display: inline-block;
+    text-align: right;
     .ec-closeBtn--circle {
+      display: inline-block;
       width: 25px;
       height: 25px;
       min-width: 25px;
@@ -73,11 +91,14 @@ Styleguide 8.1.2
   }
   & &__description{
     width: 100%;
-    display: none;
+    height: 0;
+    transition: all .2s ease-out;
   }
 
   &.is_active &__description{
-    display: block;
+    height: auto;
+    transition: all .2s ease-out;
+    padding-bottom: 16px;
   }
 }
 
