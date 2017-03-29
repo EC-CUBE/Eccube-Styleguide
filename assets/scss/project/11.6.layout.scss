@@ -17,22 +17,22 @@ Styleguide 11.6
 
 
 .ec-layoutRole{
-  @include container;
+  width: 100%;
 
   & &__contents{
+    @include container;
     display: flex;
     flex-wrap: nowrap;
 
   }
   & &__main{
     width: 100%;
-
-
   }
   & &__left,
   & &__right{
     display: none;
     @include media_desktop(){
+      display: block;
       width: 20%;
     }
   }
