@@ -1,4 +1,5 @@
 @import "../mixins/media";
+@import "../mixins/clearfix";
 /*
 お知らせ
 
@@ -60,22 +61,19 @@ Styleguide 8.1.2
   & &__info{
     width: 100%;
     padding: 16px 0;
+    @include clearfix;
   }
   & &__date{
     display: inline-block;
-    width: 100%;
-    @include media_desktop {
-      width: 15%;
-    }
+    margin-right: 10px;
+    float: left;
   }
   & &__comment{
     display: inline-block;
-    width: 88%;
-    @include media_desktop {
-      width: 80%;
-    }
+    float: left;
   }
   & &__close{
+    float: right;
     display: inline-block;
     text-align: right;
     .ec-closeBtn--circle {
