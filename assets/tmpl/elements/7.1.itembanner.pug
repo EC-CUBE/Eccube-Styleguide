@@ -41,10 +41,10 @@ mixin ec-displayC
                 +e.price ¥ 1,785
 
 mixin ec-displayD
-    .ec-grid6
+    +b.ec-displayD
         each item in ["","","","","",""]
-            .ec-grid6__cell
-                a(href="/moc/guest/item/").ec-displayD
+            +e.cell
+                a(href="/moc/guest/item/")
                     .ec-displayD__img
                         img(src="http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg")
 
