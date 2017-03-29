@@ -39,14 +39,18 @@ Styleguide 13.2.1
 .ec-shelfGrid{
   @include reset_link;
   display: flex;
+  margin-left: 0;
+  margin-right: 0;
   flex-wrap: wrap;
   padding: 0;
   list-style: none;
-  margin-left: -16px;
-  margin-right: -16px;
+
+  @include media_desktop {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
   & &__item{
     margin-bottom: 30px;
-    padding: 0 8px;
     width: 50%;
     img{
       margin-bottom: 15px;
@@ -55,6 +59,18 @@ Styleguide 13.2.1
     @include media_desktop(){
       padding: 0 16px;
       width: 25%;
+    }
+  }
+  & &__item:nth-child(odd){
+    padding-right: 8px;
+    @include media_desktop(){
+      padding: 0 16px;
+    }
+  }
+  & &__item:nth-child(even){
+    padding-left: 8px;
+    @include media_desktop(){
+      padding: 0 16px;
     }
   }
 }

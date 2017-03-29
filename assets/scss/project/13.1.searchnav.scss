@@ -15,12 +15,15 @@ Styleguide 13.1
 
 */
 .ec-searchnavRole{
-  @include container;
   margin-bottom: 0;
   padding: 0;
+  @include media_desktop {
+    @include container;
+  }
   & &__topicpath{
   }
   & &__infos{
+    @include container;
     display: flex;
     border-top: 0;
     margin-bottom: 16px;

@@ -15,17 +15,7 @@ p hogedd
 Styleguide 14.1
 */
 .ec-productRole{
-  .ec-grid2 {
-    margin: 0;
-  }
-  .ec-grid2__cell {
-    padding:0;
-  }
-  .ec-grid2__cell:nth-of-type(2) {
-    @include media_desktop{
-      padding-left: 30px;
-    }
-  }
+  @include container;
   & &__img {
     margin-bottom: 20px;
     @include media_desktop {
