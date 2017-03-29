@@ -1,3 +1,4 @@
+@import "../mixins/media";
 @import "../mixins/variables";
 
 @mixin pager(){
@@ -30,9 +31,17 @@ include /assets/tmpl/elements/7.2.search.pug
 Styleguide 7.2.1
 */
 .ec-topicpath{
-  padding: 1em 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px dotted #ccc;
+  padding: 10px;
   list-style: none;
   overflow: hidden;
+  font-size: 12px;
+  @include media_desktop {
+    padding: 1em 0;
+    border: 0;
+    font-size: 16px;
+  }
 
   & &__item,
   & &__divider,

@@ -1,9 +1,12 @@
 extends /assets/tmpl/moc/guest/_layout.pug
 
 
+block pageHeader
+    include /assets/tmpl/elements/13.1.searchnav.pug
+    +ec-searchnavRole__topicpath
 block content
     include /assets/tmpl/elements/13.1.searchnav.pug
-    +ec-searchnavRole
+    +ec-searchnavRole__info
     include /assets/tmpl/elements/13.2.shelf.pug
     +b.ec-shelfRole
         +ec-shelfGrid

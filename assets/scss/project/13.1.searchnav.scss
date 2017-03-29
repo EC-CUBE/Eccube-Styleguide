@@ -15,23 +15,41 @@ Styleguide 13.1
 */
 .ec-searchnavRole{
   @include container;
-  margin-bottom: 36px;
+  margin-bottom: 0;
+  padding: 0;
+  @include media_desktop {
+    margin-bottom: 36px;
+  }
   & &__topicpath{
-
   }
   & &__infos{
     display: flex;
-    border-top: 1px solid #ccc;;
-    padding-top: 16px;
+    border-top: 0;
+    margin-bottom: 16px;
+    padding-top: 5px;
+    flex-direction:column;
+    @include media_desktop {
+      border-top: 1px solid #ccc;
+      padding-top: 16px;
+      flex-direction:row;
+    }
   }
 
   & &__counter{
-    width: 50%;
+    margin-bottom: 16px;
+    width: 100%;
+    @include media_desktop {
+      margin-bottom: 0;
+      width: 50%;
+    }
   }
 
   & &__actions{
     text-align: right;
-    width: 50%;
+    width: 100%;
+    @include media_desktop {
+      width: 50%;
+    }
   }
 
 
