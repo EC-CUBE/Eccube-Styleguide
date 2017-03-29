@@ -8,7 +8,8 @@ ex [商品一覧 ヘッダー部](http://demo3.ec-cube.net/products/list)
 
 Markup:
 include /assets/tmpl/elements/13.1.searchnav.pug
-+ec-searchnavRole
++ec-searchnavRole__topicpath
++ec-searchnavRole__info
 
 Styleguide 13.1
 
@@ -17,9 +18,6 @@ Styleguide 13.1
   @include container;
   margin-bottom: 0;
   padding: 0;
-  @include media_desktop {
-    margin-bottom: 36px;
-  }
   & &__topicpath{
   }
   & &__infos{

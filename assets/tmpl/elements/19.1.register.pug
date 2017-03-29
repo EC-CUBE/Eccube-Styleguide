@@ -155,10 +155,10 @@ mixin ec-registerRole
           .ec-off4Grid
             .ec-off4Grid__cell
               p
-                a(href="") 利用規約
+                a.ec-link(href="/moc/guest/agreement/") 利用規約
                 span に同意してお進みください。
-              .ec-blockBtn--action 同意する
-              .ec-blockBtn--cancel 同意しない
+              a.ec-blockBtn--action(href="/moc/guest/register/error/") 同意する
+              a.ec-blockBtn--cancel(href="/moc/") 同意しない
 mixin ec-registerErrorRole
   .ec-registerRole
     .ec-pageHeader
@@ -316,10 +316,10 @@ mixin ec-registerErrorRole
           .ec-off4Grid
             .ec-off4Grid__cell
               p
-                a(href="") 利用規約
+                a.ec-link(href="") 利用規約
                 span に同意してお進みください。
-              .ec-blockBtn--action 同意する
-              .ec-blockBtn--cancel 同意しない
+              a.ec-blockBtn--action(href="/moc/guest/register/confirm/") 同意する
+              a.ec-blockBtn--cancel(href="/moc/") 同意しない
 mixin ec-registerConfirmRole
   .ec-registerRole
     .ec-pageHeader
@@ -379,8 +379,8 @@ mixin ec-registerConfirmRole
         .ec-registerRole__actions
           .ec-off4Grid
             .ec-off4Grid__cell
-              .ec-blockBtn--action 会員登録をする
-              .ec-blockBtn--cancel 戻る
+              a.ec-blockBtn--action(href="/moc/guest/register/complete/") 会員登録をする
+              a.ec-blockBtn--cancel(href="/moc/") 戻る
 
 mixin ec-editRole
   .ec-editRole
