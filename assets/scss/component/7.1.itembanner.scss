@@ -81,12 +81,12 @@ Styleguide 7.1.2
 .ec-displayC{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 24px;
   & &__cell{
-    width: 50%;
-    padding: 8px;
+    width: 47%;
     @include media_desktop(){
-      width: 25%;
+      width: 23%;
     }
 
   }
