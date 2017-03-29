@@ -37,16 +37,17 @@ Twitter Bootstrap デフォルト準拠
 @mixin container(){
   margin-right: auto;
   margin-left: auto;
-  padding-left:  floor((20px / 2));
-  padding-right: ceil((20px / 2));
-
+  padding-left:  floor((10px / 2));
+  padding-right: ceil((10px / 2));
   box-sizing: border-box;
-
   @include clearfix;
   @include commonStyle();
-
   width: 100%;
   max-width: 1150px;
+  @include media_desktop {
+    padding-left:  floor((20px / 2));
+    padding-right: ceil((20px / 2));
+  }
 
   //@media (min-width: $desktop) {
   //  width: 720 + 30px;
