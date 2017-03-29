@@ -16,19 +16,46 @@ Styleguide 14.1
 */
 .ec-productRole{
   @include container;
+  .ec-grid2__cell {
+    padding:0;
+
+  }
+  .ec-grid2__cell:nth-of-type(2) {
+    @include media_desktop{
+      padding-left: 30px;
+    }
+  }
+  & &__img {
+    margin-bottom: 20px;
+    @include media_desktop {
+      margin-bottom: 0;
+    }
+  }
+  & &__title {
+    .ec-headingTitle {
+      font-size: 20px;
+      @include media_desktop{
+        font-size: 32px;
+      }
+    }
+  }
   & &__price{
     color: #DE5D50;
     font-size: 28px;
-    padding: 14px 0;
-    border-bottom: 1px dotted #ccc;;
+    padding: 0;
+    border-bottom: 0;
+    @include media_desktop {
+      padding: 14px 0;
+      border-bottom: 1px dotted #ccc;
+    }
   }
   & &__code{
     padding: 14px 0;
-    border-bottom: 1px dotted #ccc;;
+    border-bottom: 1px dotted #ccc;
   }
   & &__category{
     padding: 14px 0;
-    border-bottom: 1px dotted #ccc;;
+    border-bottom: 1px dotted #ccc;
     ul{
       list-style: none;
       padding:0;
@@ -39,9 +66,13 @@ Styleguide 14.1
     padding: 14px 0;
   }
   & &__btn{
-    width: 60%;
+    width: 100%;
     padding: 10px 0;
+    @include media_desktop {
+      width: 60%;
+    }
   }
+
 }
 
 
