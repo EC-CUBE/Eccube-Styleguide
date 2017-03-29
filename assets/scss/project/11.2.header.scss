@@ -93,10 +93,11 @@ Styleguide 11.2.1
     }
     a{
       display: inline-block;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       text-decoration: none;
       font-size: 20px;
       @include media_desktop(){
+        margin-bottom: 30px;
         font-size: 40px;
       }
       font-weight: bold;

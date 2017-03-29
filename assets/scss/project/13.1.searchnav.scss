@@ -16,6 +16,7 @@ Styleguide 13.1
 .ec-searchnavRole{
   @include container;
   margin-bottom: 0;
+  padding: 0;
   @include media_desktop {
     margin-bottom: 36px;
   }
@@ -23,11 +24,13 @@ Styleguide 13.1
   }
   & &__infos{
     display: flex;
-    border-top: 1px solid #ccc;
+    border-top: 0;
     margin-bottom: 16px;
-    padding-top: 16px;
+    padding-top: 5px;
     flex-direction:column;
     @include media_desktop {
+      border-top: 1px solid #ccc;
+      padding-top: 16px;
       flex-direction:row;
     }
   }

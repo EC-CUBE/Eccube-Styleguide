@@ -18,6 +18,12 @@ Styleguide 11.6
 
 .ec-layoutRole{
   width: 100%;
+  & &__contentTop {
+    padding: 0;
+    @include media_desktop {
+      @include container;
+    }
+  }
 
   & &__contents{
     @include container;
