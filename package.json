@@ -8,7 +8,7 @@
     "start": "run-p dev:styleguide:*",
     "dev:styleguide:build": "run-s build:styleguide:*",
     "dev:styleguide:styleguide": "gulp styleguide:server",
-    "dev:styleguide:open": "open http://localhost:4000",
+    "dev:styleguide:open": "open http://localhost:4000 || start http://localhost:4000",
     "dev": "run-s dev:moc:build dev:moc:dev",
     "dev:moc:build": "gulp sass",
     "dev:moc:dev": "gulp",
@@ -18,6 +18,7 @@
     "build:styleguide:applystyles": "gulp styleguide:applystyles",
     "build:styleguide:htaccess": "cp .htaccess public/.htaccess",
     "build:moc": "run-s build:moc:*",
+    "build:moc:webpack": "webpack",
     "build:moc:sass": "gulp sass",
     "build:moc:pug": "gulp pug"
   },
@@ -37,6 +38,7 @@
     "normalize.css": "^5.0.0",
     "npm-run-all": "^4.0.1",
     "run-sequence": "^1.2.1",
-    "sc5-styleguide": "^1.5.0"
+    "sc5-styleguide": "^1.5.0",
+    "webpack": "^2.3.2"
   }
 }
