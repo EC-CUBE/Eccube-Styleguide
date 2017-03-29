@@ -45,14 +45,16 @@ Styleguide 13.2.1
   margin-left: -16px;
   margin-right: -16px;
   & &__item{
-    width: 50%;
+    margin-bottom: 30px;
     padding: 0 8px;
+    width: 50%;
     img{
+      margin-bottom: 15px;
       width: 100%;
     }
     @include media_desktop(){
-      width: 25%;
       padding: 0 16px;
+      width: 25%;
     }
   }
 }
