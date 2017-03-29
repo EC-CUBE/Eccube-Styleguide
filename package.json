@@ -8,7 +8,7 @@
     "start": "run-p dev:styleguide:*",
     "dev:styleguide:build": "run-s build:styleguide:*",
     "dev:styleguide:styleguide": "gulp styleguide:server",
-    "dev:styleguide:open": "open http://localhost:4000",
+    "dev:styleguide:open": "open http://localhost:4000 || start http://localhost:4000",
     "dev": "run-s dev:moc:build dev:moc:dev",
     "dev:moc:build": "gulp sass",
     "dev:moc:dev": "gulp",
