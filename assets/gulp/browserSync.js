@@ -35,8 +35,7 @@ const pugMiddleWare = (req, res, next) => {
             compileDebug: true,
             doctype: "html"
         });
-        res.write(new Buffer(content));
-        next();
+        res.end(new Buffer(content));
     }catch (e){
         console.log(e)
         return next();
