@@ -20,7 +20,7 @@ $(function(){
     })
 })
 
-// Slick Slide
+// Slick Slide★
 // TODO FIX CLASS NAME
 $(function(){
     $('.main_visual').slick({
