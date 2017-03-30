@@ -143,16 +143,26 @@ include /assets/tmpl/elements/7.1.itembanner.pug
 
 Styleguide 7.1.3
 */
-.ec-displayD{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+.ec-displayD {
+  margin-left:  calc(16px / -2);
+  margin-right: calc(16px / -2);
+  @include media_desktop(){
+    margin-left:  calc(30px / -2);
+    margin-right: calc(30px / -2);
+  }
+
   & &__cell{
-    width: 30%;
+    width: percentage((1/ 3));
     margin-bottom: 8px;
+    float: left;
+    padding-left:  (16px / 2);
+    padding-right: (16px / 2);
     @include media_desktop(){
-      width: 14%;
+      width: percentage((1/ 6));
       margin-bottom: 16px;
+      padding-left:  (30px / 2);
+      padding-right: (30px / 2);
     }
     &:hover {
       text-decoration: none;
