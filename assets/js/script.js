@@ -9,7 +9,6 @@ $(function(){
 $(function(){
 
     $(".ec-headerRole__cart").on("click",function(){
-        $(".ec-cartNaviNull").toggleClass("is_active")
         $(".ec-headerRole__cart").toggleClass("is_active")
     })
 
