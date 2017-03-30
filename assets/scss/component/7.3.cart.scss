@@ -1,5 +1,6 @@
 @import "../mixins/variables";
 @import "../mixins/media";
+@import "../mixins/animation";
 /*
 カート
 
@@ -128,19 +129,24 @@ Styleguide 7.3.5
   z-index: 3;
   cursor: pointer;
   & &__icon{
-    display: inline-block;
     width: 30px;
     height: 30px;
     position: relative;
     top: 8px;
     left: 8px;
     fill: #525263;
-
+    @include fadeIn(inline-block,150ms);
+  }
+  & &__iconClose {
+    width: 0;
+    height: 0;
+    fill: #525263;
+    @include fadeOut;
   }
   & &__badge{
     position: relative;
-    left: 15px;
-    top: -4px;
+    left: 45px;
+    top: -27px;
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
@@ -153,6 +159,7 @@ Styleguide 7.3.5
     vertical-align: baseline;
     background-color: #DE5D50;
     border-radius: 10px;
+    @include fadeIn(inline-block);
   }
   & &__label{
     font-size: 12px;
@@ -167,9 +174,50 @@ Styleguide 7.3.5
   & &__price{
     display: inline-block;
     font-size: 16px;
-
-
   }
+}
+.is_active {
+  .ec-cartNavi__icon{
+    @include fadeOut;
+  }
+  .ec-cartNavi__badge{
+    display: none;
+  }
+  .ec-cartNavi__iconClose {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    @include fadeIn(inline-block,300ms);
+  }
+}
+
+.ec-cartNaviNull {
+  min-width: 256px;
+  text-align: center;
+  background: #f3f3f3;
+  box-sizing: border-box;
+  padding: 16px;
+  z-index: 3;
+  position: absolute;
+  @include fadeOut;
+  & &__message {
+    border: 1px solid #D9D9D9;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #F99;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.is_active.ec-cartNaviNull {
+  @include fadeIn;
+  display: block;
 }
 
 /*
@@ -233,4 +281,20 @@ Styleguide 7.3.6
   }
 }
 
+@keyframes show{
+  1000%{
+    opacity: 0;
+  }
+  0%{
+    opacity: 1;
+  }
+}
 
+@keyframes hidden{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

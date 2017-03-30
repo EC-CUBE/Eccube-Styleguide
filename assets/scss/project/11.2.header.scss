@@ -237,13 +237,15 @@ Styleguide 11.2.3
   }
 }
 .ec-headerNavSP {
+  margin-right: 10px;
   width: 100%;
   height: auto;
   vertical-align: top;
   text-align: right;
   & &__item{
     display: inline-block;
-    width: 30%;
+    margin-right: 10px;
+    width: auto;
     text-align: center;
   }
   & &__item:nth-of-type(2){
