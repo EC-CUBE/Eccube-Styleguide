@@ -1,5 +1,6 @@
 @import "../mixins/media";
 @import "../mixins/projects";
+@import "../mixins/clearfix";
 /*
 ヘッダー
 
@@ -17,6 +18,12 @@ Styleguide 11.2
 .ec-headerRole{
   @include container;
   padding-top: 15px;
+  &:after {
+    display: none;
+  }
+  @include media_desktop {
+    @include clearfix;
+  }
   &::before{
     display: none;
   }
@@ -24,12 +31,18 @@ Styleguide 11.2
   flex-wrap: wrap;
   justify-content: space-between;
   & &__title{
-    width: 75%;
+    //width: 75%;
+    float: none;
+    @include media_desktop() {
+      float: left;
+    }
   }
   & &__cart{
     display: none;
+    float:none;
     @include media_desktop(){
       display: block;
+      float:right;
       @include reset_link;
     }
   }
@@ -230,7 +243,7 @@ Styleguide 11.2.3
   text-align: right;
   & &__item{
     display: inline-block;
-    width: 40%;
+    width: 30%;
     text-align: center;
   }
   & &__item:nth-of-type(2){
@@ -325,14 +338,14 @@ Styleguide 11.2.4
     display: inline-block;
     font-weight: bold;
     @include reset_link;
-    padding: 16px;
-    height: 55px;
+    &:hover {
+      background: #fafafa;
+    }
     a {
       display: inline-block;
       margin-top: 0;
-      &:hover {
-        background: #fafafa;
-      }
+      padding: 16px;
+      height: 55px;
     }
     &:hover > .ec-itemNavAccordion {
       overflow: visible;

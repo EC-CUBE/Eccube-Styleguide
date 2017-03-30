@@ -73,9 +73,8 @@ gulp.task("server",()=> {
             middleware: [pugMiddleWare],
             baseDir:"public",
             index: "index.html",
-            open: false
-
-        }
+        },
+        open: "external",F
     })
     return gulp.watch([
         `${dest}/**/*`,

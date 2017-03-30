@@ -15,20 +15,23 @@ p hoge
 Styleguide 11.4
 */
 .ec-drawerRole{
-  display: none;
+  display: block;
   background: #F6F6F6;
   position: fixed;
   top:0;
   width: 260px;
   height:100vh;
   right:0;
+  z-index: -1;
+  transition: z-index 0ms 1ms;
   @include media_desktop(){
     display: none;
   }
 }
 
 .ec-drawerRole.is_active{
-  display: block;
+  z-index: 1;
+  transition: z-index 0ms 300ms;
   @include media_desktop(){
     display: none;
   }
@@ -75,11 +78,16 @@ Styleguide 11.4.1
     .ec-itemNav__item{
       display: block;
       text-align: left;
-      padding:0 10px;
-      height: 50px;
       border-bottom: 1px solid #e8e8e8;
       line-height: 50px;
       font-weight: bold;
+      a {
+        padding:0 10px;
+        height: 50px;
+      }
+    }
+    .ec-itemNavAccordion {
+      display: none;
     }
   }
 }
