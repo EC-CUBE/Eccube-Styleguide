@@ -74,7 +74,7 @@ gulp.task("server",()=> {
             baseDir:"public",
             index: "index.html",
         },
-        open: "external",F
+        open: "external",
     })
     return gulp.watch([
         `${dest}/**/*`,
