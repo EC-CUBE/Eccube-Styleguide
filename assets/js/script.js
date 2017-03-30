@@ -8,7 +8,7 @@ $(function(){
 })
 $(function(){
 
-    $(".ec-headerRole__cart").on("click",function(){
+    $(".ec-cartNavi").on("click",function(){
         $(".ec-headerRole__cart").toggleClass("is_active")
     })
 
