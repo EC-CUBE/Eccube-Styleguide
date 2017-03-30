@@ -215,9 +215,11 @@ Styleguide 7.3.5
   }
 }
 
-.is_active.ec-cartNaviNull {
-  @include fadeIn;
-  display: block;
+.is_active {
+  .ec-cartNaviNull {
+    @include fadeIn;
+    display: block;
+  }
 }
 
 /*
@@ -278,23 +280,5 @@ Styleguide 7.3.6
       font-size: 16px;
       font-weight: bold;
     }
-  }
-}
-
-@keyframes show{
-  1000%{
-    opacity: 0;
-  }
-  0%{
-    opacity: 1;
-  }
-}
-
-@keyframes hidden{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
   }
 }
