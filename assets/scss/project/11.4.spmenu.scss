@@ -14,7 +14,7 @@ p hoge
 
 Styleguide 11.4
 */
-.ec-spmenuRole{
+.ec-drawerRole{
   display: none;
   background: #F6F6F6;
   position: fixed;
@@ -27,47 +27,59 @@ Styleguide 11.4
   }
 }
 
-.ec-spmenuRole.active{
+.ec-drawerRole.is_active{
   display: block;
-}
-
-.ec-spmenuSearch{
-  padding: 16px 8px;;
-  background: #EBEBEB;
-  select{
-    width: 100% !important;
+  @include media_desktop(){
+    display: none;
   }
 }
 
-.ec-spmenuNavi{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 1em;
-  & &__item{
-    color: inherit;
-    display: block;
-    padding:0 10px;
-    height: 50px;
-    border-bottom: 1px solid #e8e8e8;
-    line-height: 50px;
-    font-size: 30px;
+/*
+ドロワー内における検索ボックスの表示
+
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
+.ec-drawerRole
+p hoge
+
+Styleguide 11.4.1
+*/
+.ec-drawerRole{
+  & .ec-headerSearch{
+    padding: 16px 8px;;
+    background: #EBEBEB;
+    color: #636378;
+    select{
+      width: 100% !important;
+    }
+  }
+}
+.ec-drawerRole{
+  .ec-headerNav{
+    .ec-headerNav__item{
+      text-align: left;
+      display: block;
+      padding:0 10px;
+      height: 50px;
+      border-bottom: 1px solid #e8e8e8;
+      line-height: 50px;
+      font-size: 30px;
+    }
 
   }
 }
 
-.ec-spmenuItemNavi{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 1em;
-  & &__item{
-    color: inherit;
-    display: block;
-    padding:0 10px;
-    height: 50px;
-    border-bottom: 1px solid #e8e8e8;
-    line-height: 50px;
-    font-weight: bold;
+.ec-drawerRole{
+  .ec-itemNav{
+    .ec-itemNav__item{
+      display: block;
+      text-align: left;
+      padding:0 10px;
+      height: 50px;
+      border-bottom: 1px solid #e8e8e8;
+      line-height: 50px;
+      font-weight: bold;
+    }
   }
 }

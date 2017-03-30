@@ -1,8 +1,8 @@
 $(function(){
 
     $(".ec-headerNavSP__itemMenu").on("click",function(){
-        $(".ec-layoutRole").toggleClass("active")
-        $(".ec-spmenuRole").toggleClass("active")
+        $(".ec-layoutRole").toggleClass("is_active")
+        $(".ec-drawerRole").toggleClass("is_active")
     })
 
 })
@@ -13,7 +13,15 @@ $(function(){
     })
 })
 
+$(function(){
+    $(".is_inDrawer").each(function(){
+        var html = $(this).html();
+        $(html).appendTo(".ec-drawerRole")
+    })
+})
+
 // Slick Slide
+// TODO FIX CLASS NAME
 $(function(){
     $('.main_visual').slick({
         dots: true,

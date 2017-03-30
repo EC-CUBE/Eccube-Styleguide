@@ -14,8 +14,6 @@ p hoge
 
 Styleguide 11.6
 */
-
-
 .ec-layoutRole{
   width: 100%;
   & &__contentTop {
@@ -42,5 +40,8 @@ Styleguide 11.6
 
 .ec-layoutRole.is_active{
   transform: translateX(-260px);
+  @include media_desktop(){
+    transform: translateX(0px);
+  }
 }
 

@@ -217,6 +217,7 @@ Styleguide 11.2.3
     display: inline-block;
     font-size: 28px;
     line-height: 50px;
+    @include reset_link;
     span{
       font-size: 14px;
     }
@@ -323,11 +324,12 @@ Styleguide 11.2.4
   & &__item {
     display: inline-block;
     font-weight: bold;
+    @include reset_link;
+    padding: 16px;
+    height: 55px;
     a {
       display: inline-block;
       margin-top: 0;
-      padding: 16px;
-      height: 55px;
       &:hover {
         background: #fafafa;
       }

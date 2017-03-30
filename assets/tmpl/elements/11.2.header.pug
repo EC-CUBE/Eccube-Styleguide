@@ -4,10 +4,10 @@ mixin ec-headerRole
   +b.ec-headerRole
     +e.title: +ec-headerTitle
     +e.cart: +ec-headerCart
-    +e.search: +ec-headerSearch
-    +e.nav: +ec-headerNav
+    +e.search.is_inDrawer: +ec-headerSearch
+    +e.nav.is_inDrawer: +ec-headerNav
     +e.navSP: +ec-headerNavSP
-    +e.itemnav: +ec-itemNav
+    +e.itemnav.is_inDrawer: +ec-itemNav
 
 mixin ec-headerTitle
   +b.ec-headerTitle
@@ -16,6 +16,7 @@ mixin ec-headerTitle
       a(href="#") さくらのクラウド
       | で稼働しています。
     +e.title: h1: a(href="/moc/") EC-CUBE3 STYLEGUIDE
+
 mixin ec-headerCart
   .ec-cartNavi
     .ec-cartNavi__icon
@@ -25,6 +26,7 @@ mixin ec-headerCart
     .ec-cartNavi__label
       | 合計
       .ec-cartNavi__price ¥1920
+
 mixin ec-headerSearch
   +b.ec-headerSearch
     +e.category
