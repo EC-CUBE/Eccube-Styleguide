@@ -1,4 +1,5 @@
 @import "../mixins/media";
+@import "../mixins/animation";
 @import "../mixins/projects";
 /*
 ヘッダー
@@ -14,11 +15,22 @@ include /assets/tmpl/elements/11.2.header.pug
 Styleguide 11.5
 */
 .ec-overlayRole{
-  display: none;
   position: absolute;
   width: 100%;
   height: 100vh;
-  top: 0;
+  top: 77px;
   left: 0;
+  opacity: 0;
+  background: transparent;
+  transform: translateX(0);
+  transition: all .3s;
+  @include fadeOut();
+}
+.have_curtain .ec-overlayRole {
+  opacity: 1;
+  background: rgba(0,0,0, 0.5);
+  transform: translateX(-260px);
+  transition: all .3s;
+  @include fadeIn();
 }
 

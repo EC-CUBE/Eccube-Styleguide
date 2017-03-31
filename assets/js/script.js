@@ -1,13 +1,19 @@
 $(function(){
-
     $(".ec-headerNavSP__itemMenu").on("click",function(){
         $(".ec-layoutRole").toggleClass("is_active")
         $(".ec-drawerRole").toggleClass("is_active")
+        $("body").toggleClass("have_curtain")
     })
-
 })
 $(function(){
+    $(".ec-overlayRole").on("click",function(){
+        $("body").removeClass("have_curtain")
+        $(".ec-layoutRole").removeClass("is_active")
+        $(".ec-drawerRole").removeClass("is_active")
+    })
+})
 
+$(function(){
     $(".ec-cartNavi").on("click",function(){
         $(".ec-headerRole__cart").toggleClass("is_active")
     })
