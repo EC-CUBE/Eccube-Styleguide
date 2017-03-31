@@ -3,27 +3,21 @@
 @import "../mixins/media";
 
 @mixin row{
+  display: block;
   margin: 0;
-  @include clearfix;
   @include media_desktop {
-    //margin-left:  ceil((30px / -2));
-    //margin-right: floor((30px / -2));
+    display: flex;
   }
 }
 
 @mixin makeSmColumn($columns){
   position: relative;
   min-height: 1px;
-  //padding-left: 0;
-  //padding-right: 0;
 
   @media (min-width: $desktop) {
-    float: left;
     width: percentage(($columns/ 12));
   }
   @include media_desktop{
-    //padding-left:  (30px / 2);
-    //padding-right: (30px / 2);
   }
 
 }
