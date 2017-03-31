@@ -17,9 +17,17 @@ Styleguide 14.1
 .ec-productRole{
   @include container;
   & &__img {
+    margin-right: 0;
     margin-bottom: 20px;
     @include media_desktop {
+      margin-right: 16px;
       margin-bottom: 0;
+    }
+  }
+  & &__profile {
+    margin-left: 0;
+    @include media_desktop {
+      margin-left: 16px;
     }
   }
   & &__title {
