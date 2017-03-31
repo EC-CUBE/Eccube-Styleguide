@@ -135,18 +135,21 @@ Styleguide 7.3.5
     top: 8px;
     left: 8px;
     fill: #525263;
-    @include fadeIn(inline-block,150ms);
+    @include fadeIn(inline-block,200ms);
   }
   & &__iconClose {
-    width: 0;
-    height: 0;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
     fill: #525263;
-    @include fadeOut;
+    @include fadeOut(200ms);
   }
   & &__badge{
     position: relative;
-    left: 45px;
-    top: -27px;
+    left: 13px;
+    top: -6px;
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
@@ -184,12 +187,8 @@ Styleguide 7.3.5
     display: none;
   }
   .ec-cartNavi__iconClose {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    @include fadeIn(inline-block,300ms);
+
+    @include fadeIn(inline-block,200ms);
   }
 }
 
