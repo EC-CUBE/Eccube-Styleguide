@@ -1,13 +1,13 @@
 mixin ec-displayB
-    .ec-grid3
-        each item in ["","",""]
-            .ec-grid3__cell
-                a(href="/moc/guest/item/").ec-displayB
-                    .ec-displayB__img
-                        img(src="http://demo3.ec-cube.net/template/default/img/top/img03.jpg")
-                    .ec-displayB__catch お気に入りのエスプレッソタイム
-                    .ec-displayB__comment.ec-font-size-1 コーヒータイムを上質な時間にしてくれる、口当たりのよさとデザイン性を兼ね備えたエスプレッソカップを集めました・・・
-                    .ec-displayB__link read more
+        +b.ec-displayB
+            each item in ["","",""]
+                +e.cell
+                    a(href="/moc/guest/item/")
+                        +e.__img
+                            img(src="http://demo3.ec-cube.net/template/default/img/top/img03.jpg")
+                        +e.__catch お気に入りのエスプレッソタイム
+                        +e.__comment.ec-font-size-1 コーヒータイムを上質な時間にしてくれる、口当たりのよさとデザイン性を兼ね備えたエスプレッソカップを集めました・・・
+                        +e.__link read more
 
 mixin ec-displayC
     +b.ec-displayC

@@ -18,7 +18,8 @@ Styleguide 12.2
   margin-bottom: 30px;
   text-align: center;
   & &__intro {
-
+    box-sizing: border-box;
+    padding: 0 16px;
   }
   & &__introTitle {
     margin-top: 10px;
