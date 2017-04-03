@@ -17,6 +17,9 @@ Styleguide 15.2
   @include container;
   margin-top: 20px;
   display: flex;
+  .ec-inlineBtn {
+    font-weight: normal;
+  }
   & &__detail{
     width: 66.66666%;
     padding: 0 16px;
@@ -72,6 +75,17 @@ Styleguide 15.2.2
   p {
     margin-bottom: 0;
   }
+  & &__change{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top:0;
+  }
+  & &__account {
+    margin-bottom: 16px;
+    position: relative;
+  }
+
 }
 
 
@@ -111,6 +125,8 @@ Styleguide 15.2.3
     p{
       margin:0;
     }
+  }
+  & &__edit{
   }
 
 }
