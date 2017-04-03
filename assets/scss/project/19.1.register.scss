@@ -27,6 +27,9 @@ Styleguide 19.1
     margin-bottom: 16px;
   }
 }
+.ec-registerCompleteRole {
+  @include container;
+}
 
 /*
 お問い合わせ
@@ -49,4 +52,16 @@ Styleguide 19.2
     padding-top:20px;
   }
 
+}
+.ec-contactConfirmRole {
+  @include container;
+  & &__actions {
+    padding-top:20px;
+  }
+  .ec-blockBtn--action {
+    margin-bottom: 16px;
+  }
+}
+.ec-contactCompleteRole {
+  @include container;
 }
