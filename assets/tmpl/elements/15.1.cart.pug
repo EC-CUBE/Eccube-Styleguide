@@ -11,7 +11,8 @@ mixin ec-cartRole
         +e.cart
             +ec-cartTable
         +e.actions
-            +e.total 合計： ￥1,296
+            +e.total 合計：
+                +e.SPAN.totalAmount ￥1,296
             a(href="/moc/guest/cart2").ec-blockBtn--action レジに進む
             a(href="").ec-blockBtn--cancel お買い物を続ける
 
@@ -66,8 +67,10 @@ mixin ec-cartRow
             .ec-cartRow__summary
                 .ec-cartRow__name アンティークポット
                 .ec-cartRow__unitPrice ¥ 4,320
+                .ec-cartRow__sutbtotalSP 小計：¥ 4,320
         li.ec-cartRow__amountColumn
             .ec-cartRow__amount 1
+            .ec-cartRow__amountSP 数量：1
             .ec-cartRow__amountUpDown
                 a.ec-cartRow__amountUpButton(href="#")
                     span.ec-cartRow__amountDownButton__icon
