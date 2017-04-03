@@ -37,21 +37,21 @@ Styleguide 7.1.1
   @include media_desktop {
     flex-direction:row;
   }
-  &:hover {
-    text-decoration: none;
-    img{
-      opacity: .8;
-    }
-    a {
-      text-decoration: none;
-    }
-  }
   & &__cell {
     width: 100%;
     margin-bottom: 16px;
     @include media_desktop {
       width: 32%;
       margin-bottom: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      img{
+        opacity: .8;
+      }
+      a {
+        text-decoration: none;
+      }
     }
   }
   & &__img {
