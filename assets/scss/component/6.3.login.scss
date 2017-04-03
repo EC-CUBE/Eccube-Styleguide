@@ -1,3 +1,4 @@
+@import "../mixins/media";
 /*
 ログイン
 
@@ -23,12 +24,34 @@ include /assets/tmpl/elements/6.3.login.pug
 Styleguide 6.1.1
 */
 .ec-login{
+  margin: 0 16px 20px;
+  padding: 20px 13%;
+  height: auto;
   background: #F3F4F4;
-  padding: 0 13%;
   box-sizing: border-box;
+  @include media_desktop {
+    margin: 0 16px;
+    height: 430px;
+  }
   & &__icon{
     font-size: 90px;
     text-align: center;
+  }
+  & &__input {
+    margin-bottom: 40px;
+    .ec-checkbox {
+      span {
+        margin-left: 5px;
+        font-weight:normal;
+      }
+    }
+  }
+  & &__link {
+    margin-top: 5px;
+    margin-left: 0;
+    @include media_desktop {
+      margin-left: 20px;
+    }
   }
 }
 
@@ -44,16 +67,25 @@ include /assets/tmpl/elements/6.3.login.pug
 Styleguide 6.1.2
 */
 .ec-guest{
-  background: #F3F4F4;
   display: table;
+  margin: 0 16px;
   padding: 13%;
+  height: auto;
   box-sizing: border-box;
+  background: #F3F4F4;
+  @include media_desktop {
+    height: 430px;
+  }
   & &__inner{
     display: table-cell;
     vertical-align: middle;
+    text-align: center;
+    p {
+      margin-bottom: 16px;
+    }
   }
   & &__icon{
-    font-size: 90px;
+    font-size: 70px;
     text-align: center;
   }
 }
