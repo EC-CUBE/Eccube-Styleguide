@@ -19,6 +19,7 @@ Styleguide 16.1
   @include container;
   border-top: 1px solid #ccc;
   padding-top: 1em;
+  padding-bottom: 16px;
   display: flex;
   & &__header{
     width: 33.3333%;
@@ -47,6 +48,9 @@ Styleguide 16.1.1
   & &__date{
     font-weight: bold;
     font-size: 1.2em;
+  }
+  & &__action{
+    margin : 16px 0;
   }
 }
 
