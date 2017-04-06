@@ -55,8 +55,9 @@ Styleguide 5.2.1
   display: table;
   & &__img{
     display: table-cell;
-    padding: 0 16px;
-    width: 131px;
+    padding: 16px;
+    width: 110px;
+
     img{
       width: 100%;
     }
