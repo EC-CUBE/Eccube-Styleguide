@@ -1,4 +1,5 @@
 @import "../mixins/media";
+@import "../mixins/clearfix";
 @import "../mixins/projects";
 /*
 注文内容確認
@@ -42,6 +43,10 @@ Styleguide 15.2
   }
   .ec-borderedList {
     margin-bottom: 20px;
+    border-top: 1px dotted #ccc;
+    @include media_desktop {
+      border-top: none;
+    }
   }
 
 }
@@ -87,15 +92,14 @@ Styleguide 15.2.2
   p {
     margin-bottom: 0;
   }
+  @include clearfix;
   & &__change{
     display: inline-block;
-    position: absolute;
-    right: 0;
-    top:0;
+    margin-left: 10px;
+    float: right;
   }
   & &__account {
     margin-bottom: 16px;
-    position: relative;
   }
 
 }
@@ -184,6 +188,10 @@ Markup:
 Styleguide 15.2.5
 */
 .ec-orderConfirm{
+  margin-bottom: 20px;
+  @include media_desktop {
+    margin-bottom: 0;
+  }
   .ec-input {
     textarea {
       height: 96px;
