@@ -12,12 +12,10 @@
 	},
 	"scripts": {
 		"post-install-cmd": [
-			"npm run build:styleguide",
-			"npm run build:moc"
+			"npm run build"
 		],
 		"post-update-cmd": [
-			"npm run build:styleguide",
-			"npm run build:moc"
+			"npm run build"
 		]
 	}
 }
