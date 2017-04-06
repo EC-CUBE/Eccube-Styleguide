@@ -88,6 +88,7 @@ Styleguide 6.1.1
   height: auto;
   box-sizing: border-box;
   background: #F3F4F4;
+
   @include media_desktop {
     height: 430px;
     margin: 0 16px;
