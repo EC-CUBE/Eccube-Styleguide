@@ -2,8 +2,9 @@ include ./4.1.icon.pug
 
 mixin ec-headerRole
   +b.ec-headerRole
-    +e.title: +ec-headerTitle
-    +e.cart: +ec-headerCart
+    +e.top
+      +e.title: +ec-headerTitle
+      +e.cart: +ec-headerCart
     +e.search.is_inDrawer: +ec-headerSearch
     +e.nav.is_inDrawer: +ec-headerNav
     +e.navSP: +ec-headerNavSP

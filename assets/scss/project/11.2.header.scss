@@ -30,6 +30,13 @@ Styleguide 11.2
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  & &__top{
+    width: auto;
+    @include media_desktop {
+      width: 100%;
+      @include clearfix;
+    }
+  }
   & &__title{
     //width: 75%;
     float: none;
