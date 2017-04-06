@@ -24,7 +24,7 @@ include /assets/tmpl/elements/6.3.login.pug
 Styleguide 6.1.1
 */
 .ec-login{
-  margin: 0 16px 20px;
+  margin: 0 0 20px;
   padding: 20px 13%;
   height: auto;
   background: #F3F4F4;
@@ -53,28 +53,44 @@ Styleguide 6.1.1
       margin-left: 20px;
     }
   }
+  & &__error {
+    display: none;
+    color: $clrRed;
+  }
+
+}
+.ec-login.is_active {
+  @include media_desktop {
+    height: 500px;
+  }
+}
+.is_active {
+  .ec-login__error{
+    display: block;
+  }
 }
 
-/*
-ゲスト購入
+  /*
+  ゲスト購入
 
-http://demo3.ec-cube.net/mypage
+  http://demo3.ec-cube.net/mypage
 
-Markup:
-include /assets/tmpl/elements/6.3.login.pug
-+ec-guest
+  Markup:
+  include /assets/tmpl/elements/6.3.login.pug
+  +ec-guest
 
-Styleguide 6.1.2
-*/
+  Styleguide 6.1.2
+  */
 .ec-guest{
   display: table;
-  margin: 0 16px;
+  margin: 0;
   padding: 13%;
   height: auto;
   box-sizing: border-box;
   background: #F3F4F4;
   @include media_desktop {
     height: 430px;
+    margin: 0 16px;
   }
   & &__inner{
     display: table-cell;

@@ -194,8 +194,11 @@ Styleguide 5.1.6
 .ec-off2Grid{
   @include row;
   & &__cell{
-    @include makeSmColumn(8);
-    margin-left: percentage((2 / 12));
+    margin: 0;
+    @include media_desktop {
+      @include makeSmColumn(8);
+      margin-left: percentage((2 / 12));
+    }
   }
 }
 /*
@@ -214,9 +217,9 @@ Styleguide 5.1.7
 .ec-off3Grid{
   @include row;
   & &__cell{
-    @include makeSmColumn(6);
-    margin-left: 0;
+    margin: 0;
     @include media_desktop {
+      @include makeSmColumn(6);
       margin-left: percentage((3 / 12));
     }
   }
@@ -237,9 +240,9 @@ Styleguide 5.1.8
 .ec-off4Grid{
   @include row;
   & &__cell{
-    @include makeSmColumn(4);
-    margin-left: 0;
+    margin: 0;
     @include media_desktop {
+      @include makeSmColumn(4);
       margin-left: percentage((4 / 12));
     }
   }
