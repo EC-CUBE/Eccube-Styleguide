@@ -36,13 +36,19 @@ Styleguide 7.3.1
 */
 .ec-progress{
   margin: 0 auto;
-  margin-bottom: 30px;
-  padding: 0;
+  margin-bottom: 0;
+  padding: 8px 0 16px;
   display: table;
   table-layout: fixed;
   width: 100%;
   max-width: 600px;
   list-style: none;
+  border-bottom: 1px dotted #ccc;
+  @include media_desktop {
+    margin-bottom: 30px;
+    padding: 0;
+    border: none;
+  }
 
   & &__item{
     display:table-cell;
@@ -88,6 +94,9 @@ Styleguide 7.3.1
       height: 42px;
       font-size: 20px;
     }
+  }
+  & &__label {
+    font-size: 12px;
   }
   .is-complete {
     .ec-progress__number {

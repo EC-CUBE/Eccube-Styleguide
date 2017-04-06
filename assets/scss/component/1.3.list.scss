@@ -165,9 +165,12 @@ Styleguide 1.3.3
 
 .ec-borderedList {
   width: 100%;
-  border-top: 1px dotted #ccc;
+  border-top: 0;
   list-style: none;
   padding: 0;
+  @include media_desktop {
+    border-top: 1px dotted #ccc;
+  }
   li {
     border-bottom: 1px dotted #ccc;
   }

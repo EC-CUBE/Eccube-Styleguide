@@ -8,19 +8,26 @@ mixin ec-orderRole
             .ec-imageGrid__content
               p ホーローマグ
               p ¥ 1,728 x 1
+                span 小計：¥ 9,180
           li: .ec-imageGrid
             .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
             .ec-imageGrid__content
               p ホーローマグ
               p ¥ 1,728 x 1
+                span 小計：¥ 9,180
         .ec-inlineBtn 数量を変更または削除する
       +b.ec-orderAccount
         .ec-rectHeading
           h2 お客様情報
         +e.account
-          p 後藤 知宏 様
-          p 〒541-0057　大阪府大阪市中央区北久宝寺町1-4-11
-          p 090-0090-0090
+          +e.change
+            a.ec-inlineBtn 変更
+          p 球部 太郎 様
+          p 〒123-1234　東京都千代田区神田神保町1-3-5
+          p 000-0000-0000
+        +e.account
+          p eccube-sample@sample.com
+          p ECCUBE株式会社
       .ec-orderDelivery
         .ec-rectHeading
           h2 配送情報
@@ -34,15 +41,17 @@ mixin ec-orderRole
               .ec-imageGrid__content
                 p ホーローマグ
                 p ¥ 1,728 x 1
+                  span 小計：¥ 9,180
             li: .ec-imageGrid
               .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
               .ec-imageGrid__content
                 p ホーローマグ
                 p ¥ 1,728 x 1
+                  span 小計：¥ 9,180
         .ec-orderDelivery__address
-          p 後藤 知宏  (ゴトウ トモヒロ) 様
-          p 〒541-0057　大阪府大阪市中央区北久宝寺町1-4-11
-          p 090-0090-0090
+          p 球部 太郎  (キューブ タロウ) 様
+          p 〒123-1234 東京都千代田区神田神保町1-3-5
+          p 000-0000-0000
         .ec-orderDelivery__actions
           .ec-selects
             .ec-select
