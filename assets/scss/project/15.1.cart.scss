@@ -142,6 +142,9 @@ Styleguide 15.1.3
     font-weight: bold;
   }
 }
+.ec-cartCompleteRole {
+  @include container;
+}
 /*
 カート内商品
 
