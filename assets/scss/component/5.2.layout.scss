@@ -64,6 +64,12 @@ Styleguide 5.2.1
   & &__content{
     vertical-align: middle;
     display: table-cell;
+    span {
+      margin-left: 10px;
+    }
+    p {
+      margin-bottom: 0;
+    }
   }
 }
 

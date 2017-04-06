@@ -15,18 +15,30 @@ Styleguide 15.2
 */
 .ec-orderRole{
   @include container;
-  margin-top: 20px;
   display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  @include media_desktop {
+    margin-top: 20px;
+    flex-direction: row;
+  }
   .ec-inlineBtn {
     font-weight: normal;
   }
   & &__detail{
-    width: 66.66666%;
-    padding: 0 16px;
+    padding: 0;
+    width: 100%;
+    @include media_desktop {
+      padding: 0 16px;
+      width: 66.66666%;
+    }
   }
   & &__summary{
-    width: 33.33333%;
-    padding: 0 16px;
+    width: 100%;
+    @include media_desktop {
+      width: 33.33333%;
+      padding: 0 16px;
+    }
   }
   .ec-borderedList {
     margin-bottom: 20px;
