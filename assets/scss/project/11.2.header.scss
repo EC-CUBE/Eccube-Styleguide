@@ -30,6 +30,13 @@ Styleguide 11.2
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  & &__top{
+    width: auto;
+    @include media_desktop {
+      width: 100%;
+      @include clearfix;
+    }
+  }
   & &__title{
     //width: 75%;
     float: none;
@@ -50,7 +57,7 @@ Styleguide 11.2
     display: none;
     @include media_desktop(){
       display: block;
-      width: 50%;
+      width: 370px;
       @include reset_link;
     }
   }
@@ -173,9 +180,9 @@ Styleguide 11.2.2
     }
   }
   & &__keyword{
-    float: left;
+    float: right;
     height: 50px;
-    padding: 0 50px 0 1em;
+    padding: 0 20px 0 1em;
     border-bottom: 1px solid #ccc;
     position: relative;
     margin-left: 1%;

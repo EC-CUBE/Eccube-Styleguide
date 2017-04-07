@@ -17,15 +17,34 @@ Styleguide 16.1
 */
 .ec-historyRole{
   @include container;
-  border-top: 1px solid #ccc;
-  padding-top: 1em;
-  padding-bottom: 16px;
-  display: flex;
+
+  & &__contents{
+    padding-top: 1em;
+    padding-bottom: 16px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    @include media_desktop {
+      flex-direction: row;
+    }
+  }
   & &__header{
-    width: 33.3333%;
+    width: 100%;
+    @include media_desktop {
+      width: 33.3333%;
+    }
   }
   & &__detail{
-    width: 66.6666%;
+    @include borderTop;
+    width: 100%;
+
+    .ec-imageGrid:nth-of-type(1) {
+      border-top: none;
+    }
+    @include media_desktop {
+      width: 66.6666%;
+      border-top: none;
+    }
   }
 
 }
@@ -47,10 +66,21 @@ Styleguide 16.1.1
 .ec-historyListHeader{
   & &__date{
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 16px;
+    @include media_desktop {
+      font-weight: bold;
+      font-size: 20px;
+    }
   }
   & &__action{
     margin : 16px 0;
+    a {
+      font-size: 12px;
+      font-weight: normal;
+      @include media_desktop {
+        font-size: 14px;
+      }
+    }
   }
 }
 
