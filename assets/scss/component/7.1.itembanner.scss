@@ -41,7 +41,7 @@ Styleguide 7.1.1
     width: 100%;
     margin-bottom: 16px;
     @include media_desktop {
-      width: 32%;
+      width: 31.4466%;
       margin-bottom: 0;
     }
     &:hover {
@@ -102,7 +102,7 @@ Styleguide 7.1.2
   & &__cell{
     width: 47%;
     @include media_desktop(){
-      width: 23%;
+      width: 22.8775%;
     }
     &:hover {
       a {
@@ -173,7 +173,7 @@ Styleguide 7.1.3
     width: 30%;
     margin-bottom: 8px;
     @include media_desktop(){
-      width: 14%;
+      width: 14.3083%;
       margin-bottom: 16px;
     }
     &:hover {

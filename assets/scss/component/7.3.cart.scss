@@ -36,18 +36,15 @@ Styleguide 7.3.1
 */
 .ec-progress{
   margin: 0 auto;
-  margin-bottom: 0;
   padding: 8px 0 16px;
   display: table;
   table-layout: fixed;
   width: 100%;
   max-width: 600px;
   list-style: none;
-  border-bottom: 1px dotted #ccc;
   @include media_desktop {
     margin-bottom: 30px;
     padding: 0;
-    border: none;
   }
 
   & &__item{
@@ -274,14 +271,20 @@ Styleguide 7.3.6
   }
   & &__price{
     margin-left: 16px;
-    font-size: 24px;
+    font-size: 16px;
     font-weight:bold;
     color: $clrRed;
+    @include media_desktop {
+      font-size: 24px;
+    }
   }
   & &__taxLabel {
     margin-left: 8px;
     color: $clrRed;
-    font-size: 14px;
+    font-size: 12px;
+    @include media_desktop {
+      font-size: 14px;
+    }
   }
   & &__btn {
     .ec-blockBtn--action {

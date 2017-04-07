@@ -7,11 +7,20 @@ include /assets/tmpl/elements/15.2.order.pug
 block content
     .ec-role
         .ec-pageHeader
-            h1 お客様情報の入力
+            h1 ご注文完了
     +b.ec-cartRole
         +e.progress
             +ec-progress
-    +ec-orderRole
-
-
-
+    +b.ec-cartCompleteRole
+        .ec-off3Grid.ec-text-ac
+            .ec-off3Grid__cell
+                .ec-reportHeading
+                    h2 ご注文ありがとうございました
+                p.ec-reportDescription ただいま、ご注文の確認メールをお送りさせていただきました。
+                    br
+                    | 万一、ご確認メールが届かない場合は、トラブルの可能性もありますので大変お手数ではございますがもう一度お問い合わせいただくか、お電話にてお問い合わせくださいませ。
+                    br
+                    | 今後ともご愛顧賜りますようよろしくお願い申し上げます。
+                .ec-off4Grid
+                    .ec-off4Grid__cell
+                        a.ec-blockBtn--cancel(href="/moc/") トップページへ

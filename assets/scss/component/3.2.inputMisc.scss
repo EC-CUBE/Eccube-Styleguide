@@ -150,6 +150,20 @@ Styleguide 3.2.4
     font-weight: bold;
   }
 }
+.ec-select__delivery {
+  display: block;
+  margin-right: 16px;
+  @include media_desktop {
+    display: inline-block;
+  }
+}
+.ec-select__time {
+  display: block;
+  @include media_desktop {
+    display: inline-block;
+  }
+}
+
 /*
 生年月日選択
 

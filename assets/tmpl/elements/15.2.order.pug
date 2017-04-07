@@ -8,20 +8,21 @@ mixin ec-orderRole
             .ec-imageGrid__content
               p ホーローマグ
               p ¥ 1,728 x 1
-                span 小計：¥ 9,180
+                span.ec-imageGrid__contentTotal 小計：¥ 9,180
           li: .ec-imageGrid
             .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
             .ec-imageGrid__content
               p ホーローマグ
               p ¥ 1,728 x 1
-                span 小計：¥ 9,180
+                span.ec-imageGrid__contentTotal 小計：¥ 9,180
         .ec-inlineBtn 数量を変更または削除する
       +b.ec-orderAccount
         .ec-rectHeading
           h2 お客様情報
+
+        +e.change
+          a.ec-inlineBtn 変更
         +e.account
-          +e.change
-            a.ec-inlineBtn 変更
           p 球部 太郎 様
           p 〒123-1234　東京都千代田区神田神保町1-3-5
           p 000-0000-0000
@@ -58,10 +59,11 @@ mixin ec-orderRole
               label 配送方法
               select
                 option サンプル業者
-            .ec-select
+            .ec-select.ec-select__delivery
               label 配送方法
               select
                 option 指定なし
+            .ec-select.ec-select__time
               label お届け時間
               select
                 option 指定なし
