@@ -8,6 +8,12 @@ EC-CUBE3デモサイト
 
 [https://github.com/EC-CUBE/Eccube-Styleguide](https://github.com/EC-CUBE/Eccube-Styleguide)
 
+## 確認環境[master]
+
+`master`ブランチにマージされた内容はこちらで確認できます。
+
+master ブランチは最新のタグリリース内容を保持するブランチです。
+
 Styleguide On Heorku 
 
 [http://eccube3-styleguide.herokuapp.com/](http://eccube3-styleguide.herokuapp.com/)
@@ -16,35 +22,66 @@ HTML Moc On Heroku
 
 [http://eccube3-styleguide.herokuapp.com/moc/](http://eccube3-styleguide.herokuapp.com/moc/)
 
+## 確認環境[dev]
 
-## 作業のはじめ方
+`dev`ブランチにマージされた内容はこちらで確認できます。
 
-スタイルガイド制作
+dev ブランチは開発作業中の内容を取り込む ブランチです。
+
+Styleguide On Heorku 
+
+[http://eccube3-styleguide-dev.herokuapp.com/](http://eccube3-styleguide.herokuapp.com/)
+
+HTML Moc On Heroku 
+
+[http://eccube3-styleguide-dev.herokuapp.com/moc/](http://eccube3-styleguide.herokuapp.com/moc/)
+
+モックページの実装状況等は、Project ページを確認してください。
+
+https://github.com/EC-CUBE/Eccube-Styleguide/projects
+
+## リリース作業の進め方
+
+リリースに関するタスク管理は、全てissueで管理します。
+
+issue は dev等ブランチにマージされたタイミングで close します。
+
+dev / master ブランチにUPされたタイミングで上記確認環境にDeployされますので、確認が可能です。
+
+
+### タグのリリース
+
+dev 宛のPRは全て Squash マージで行います。
+
+dev -> master へのPR を以てリリースとし、マージとともにリリースタグを発行します。
+
+
+
+
+
+## 作業環境の構築
+
+必要モジュールのインストール
 
 ````
 $ npm i 
+````
+
+ビルド
+
+````
+$ npm run build
+````
+
+スタイルガイド制作用開発サーバの起動
+
+````
 $ npm start
 ````
 
-モック制作
+モック制作用開発サーバの起動
 
 ````
 $ npm i 
 $ npm run dev
-````
-
-
-````
-$("input").eq(2).val("後藤");
-$("input").eq(3).val("知宏");
-$("input").eq(4).val("ゴトウ");
-$("input").eq(5).val("トモヒロ");
-$("input").eq(7).val("541");
-$("input").eq(8).val("0057");
-$("#zip-search").click();
-$("input").eq(11).val("090")
-$("input").eq(12).val("9090")
-$("input").eq(13).val("9090")
-$("input").eq(14).val("t.goto@chatbox-inc.com")
-$("input").eq(15).val("t.goto@chatbox-inc.com")
 ````
