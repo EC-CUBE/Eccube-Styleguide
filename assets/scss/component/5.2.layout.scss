@@ -56,7 +56,11 @@ Styleguide 5.2.1
   & &__img{
     display: table-cell;
     padding: 0 16px;
-    width: 131px;
+    min-width: 100px;
+    width:20%;
+    @include media_desktop {
+      width: 131px;
+    }
     img{
       width: 100%;
     }

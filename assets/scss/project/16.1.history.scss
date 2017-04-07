@@ -20,12 +20,23 @@ Styleguide 16.1
   border-top: 1px solid #ccc;
   padding-top: 1em;
   padding-bottom: 16px;
-  display: flex;
+  display: block;
+  @include media_desktop {
+    display: flex;
+  }
   & &__header{
-    width: 33.3333%;
+    @include media_desktop {
+      width: 33.3333%;
+    }
   }
   & &__detail{
-    width: 66.6666%;
+    @include media_desktop {
+      width: 66.6666%;
+      border:none;
+    }
+    width: 100%;
+    border-top: 0.1px dotted #ccc;
+    padding: 10px 0;
   }
 
 }
