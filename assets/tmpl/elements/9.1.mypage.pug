@@ -1,21 +1,35 @@
 mixin ec-navlist
-    +b.UL.ec-navlist
-        +e.LI.__item.active: a(href="/moc/user/mypage/") ご注文履歴
-        +e.LI.__item: a(href="/moc/user/favorite/") お気に入り一覧
-        +e.LI.__item: a(href="/moc/user/edit/") 会員情報編集
-        +e.LI.__item: a(href="/moc/user/address/addresses/") お届け先編集
-        +e.LI.__item: a(href="/moc/user/withdraw/") 退会手続き
+    +b.ec-navlistRole
+        +e.UL.navlist
+            +e.LI.__item.active: a(href="/moc/user/mypage/") ご注文履歴
+            +e.LI.__item: a(href="/moc/user/favorite/") お気に入り一覧
+            +e.LI.__item: a(href="/moc/user/edit/") 会員情報編集
+            +e.LI.__item: a(href="/moc/user/address/addresses/") お届け先編集
+            +e.LI.__item: a(href="/moc/user/withdraw/") 退会手続き
 
 mixin ec-welcomeMsg
     .ec-welcomeMsg ようこそ ／ 球部 太郎 様
 
 mixin ec-favorite
-    +b.UL.ec-favorite
-        +e.LI.__item
-            include /assets/tmpl/elements/4.1.icon.pug
-            +b.A.ec-closeBtn--circle(href="#")
-                +e.icon: +svg-cross
-            a(href="/moc/guest/item")
-                img(src="http://demo3.ec-cube.net/upload/save_image/0701121449_55935b2959277.jpeg")
-                p オランダ木靴の置物
-                p.ec-font-bold ¥ 2,700
+    +b.ec-favoriteRole
+        +e.header
+            p
+                span.ec-font-bold 6件
+                | のお気に入りがあります。
+        +e.detail
+            +e.UL.itemList
+                - for (var x = 0; x < 6; x++)
+                    +e.LI.item
+                        include /assets/tmpl/elements/4.1.icon.pug
+                        +b.A.ec-closeBtn--circle(href="#")
+                            +e.icon: +svg-cross
+                        +e.A.itemThumb(href="/moc/guest/item")
+                            img(src="http://demo3.ec-cube.net/upload/save_image/0701111215_55934c7f8bb8e.jpeg")
+                        +e.P.itemTitle デザインフォトフレーム
+                        +e.P.itemPrice ¥ 4,320
+                +e.LI.item
+                +e.LI.item
+mixin ec-favoriteEmpty
+    +b.ec-favoriteRole
+        +e.header
+            p お気に入りが登録されていません。
