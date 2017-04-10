@@ -22,7 +22,7 @@ Styleguide 19.3
 }
 .ec-blockBtn--action {
   margin-bottom: 10px;
-  @included media_desktop {
+  @include media_desktop {
   margin-bottom: 16px;
   }
 }
