@@ -16,6 +16,7 @@ Styleguide 21.1
 .ec-withdrawRole{
   @include container;
   text-align: center;
+  padding: 0 16px;
   & &__title{
     margin-bottom: 16px;
     font-weight: bold;

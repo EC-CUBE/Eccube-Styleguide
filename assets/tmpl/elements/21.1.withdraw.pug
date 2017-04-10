@@ -10,7 +10,7 @@ mixin ec-withdrawRole
                 +e.P.__description 会員を退会された場合には、現在保存されている購入履歴やお届け先等の情報は、すべて削除されますがよろしいでしょうか？
         .ec-off4Grid
             .ec-off4Grid__cell
-                p.ec-blockBtn--cancel 会員退会手続きへ
+                a.ec-blockBtn--cancel(href="/moc/user/withdraw/confirm") 会員退会手続きへ
 
 mixin ec-withdrawConfirm
     .ec-role
@@ -25,8 +25,8 @@ mixin ec-withdrawConfirm
                     p.ec-reportDescription 退会手続きが完了した時点で、現在保存されている購入履歴やお届け先等の情報は、すべて削除されますのでご注意ください。
             .ec-off4Grid
                 .ec-off4Grid__cell
-                    +e.P.cancel.ec-blockBtn--cancel いいえ、退会しません
-                    p.ec-blockBtn はい、退会します
+                    +e.A.cancel.ec-blockBtn--cancel(href="/moc/user/withdraw") いいえ、退会しません
+                    A.ec-blockBtn(href="/moc/user/withdraw/complete/") はい、退会します
 
 mixin ec-withdrawComplete
     .ec-role
