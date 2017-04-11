@@ -617,3 +617,87 @@ mixin ec-registerAddress
           .ec-off4Grid
             .ec-off4Grid__cell
               .ec-blockBtn--cancel 登録する
+
+mixin ec-registerErrorAddress
+  .ec-editRole
+    +b.ec-off1Grid
+      +e.cell
+        .ec-borderedDefs
+          dl
+            dt
+              label.ec-label お名前
+                span.ec-required 必須
+            dd
+              .ec-halfInput
+                input(type="text" placeholder="姓")
+                input(type="text" placeholder="名")
+          dl
+            dt
+              label.ec-label お名前(フリガナ)
+                span.ec-required 必須
+            dd
+              .ec-halfInput
+                input(type="text" placeholder="セイ")
+                input(type="text" placeholder="メイ")
+          dl
+            dt
+              label.ec-label 会社名
+                span.ec-required 必須
+            dd
+              .ec-halfInput
+                input(type="text")
+          dl
+            dt
+              label.ec-label 住所
+                span.ec-required 必須
+            dd
+              .ec-zipInput
+                span 〒
+                input(type="text")
+                span -
+                input(type="text")
+              .ec-select
+                select
+                  option 都道府県を選択
+                  option 北海道
+                  option 青森県
+                  option 岩手県
+                  option ...
+              .ec-select
+                select
+                  option 選択して下さい
+                  option 公務員
+                  option コンサルタント
+                  option コンピュータ関連技術職
+                  option コンピュータ関連以外の技術職
+                  option ...
+              .ec-input
+                input(type="text")
+              .ec-input
+                input(type="text")
+          dl
+            dt
+              label.ec-label 電話番号
+                span.ec-required 必須
+            dd
+              .ec-telInput
+                input(type="text")
+                span -
+                input(type="text")
+                span -
+                input(type="text")
+          dl
+            dt
+              span.ec-label FAX番号
+            dd
+              .ec-telInput
+                input(type="text")
+                span -
+                input(type="text")
+                span -
+                input(type="text")
+
+        .ec-RegisterRole__actions
+          .ec-off4Grid
+            .ec-off4Grid__cell
+              .ec-blockBtn--cancel 登録する
