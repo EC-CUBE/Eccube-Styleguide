@@ -20,7 +20,10 @@ Styleguide 22.1
   & &__title{
     margin-bottom: 16px;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 24px;
+    @include media_desktop(){
+      font-size: 32px;
+    }
   }
   & &__description{
     margin-bottom: 32px;
