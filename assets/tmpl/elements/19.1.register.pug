@@ -579,14 +579,6 @@ mixin ec-registerAddress
                   option 青森県
                   option 岩手県
                   option ...
-              .ec-select
-                select
-                  option 選択して下さい
-                  option 公務員
-                  option コンサルタント
-                  option コンピュータ関連技術職
-                  option コンピュータ関連以外の技術職
-                  option ...
               .ec-input
                 input(type="text")
               .ec-input
@@ -631,6 +623,8 @@ mixin ec-registerErrorAddress
               .ec-halfInput
                 input(type="text" placeholder="姓")
                 input(type="text" placeholder="名")
+              p.ec-color-red 入力されていません。
+              p.ec-color-red 入力されていません。
           dl
             dt
               label.ec-label お名前(フリガナ)
@@ -639,6 +633,8 @@ mixin ec-registerErrorAddress
               .ec-halfInput
                 input(type="text" placeholder="セイ")
                 input(type="text" placeholder="メイ")
+              p.ec-color-red 入力されていません。
+              p.ec-color-red 入力されていません。
           dl
             dt
               label.ec-label 会社名
@@ -651,30 +647,27 @@ mixin ec-registerErrorAddress
               label.ec-label 住所
                 span.ec-required 必須
             dd
-              .ec-zipInput
+              .ec-zipInput.error
                 span 〒
                 input(type="text")
                 span -
                 input(type="text")
-              .ec-select
+              p.ec-color-red 入力されていません。
+              p.ec-color-red 入力されていません。
+              .ec-select.error
                 select
                   option 都道府県を選択
                   option 北海道
                   option 青森県
                   option 岩手県
                   option ...
-              .ec-select
-                select
-                  option 選択して下さい
-                  option 公務員
-                  option コンサルタント
-                  option コンピュータ関連技術職
-                  option コンピュータ関連以外の技術職
-                  option ...
-              .ec-input
+              .ec-input.error
                 input(type="text")
-              .ec-input
+              .ec-input.error
                 input(type="text")
+              p.ec-color-red 入力されていません。
+              p.ec-color-red 入力されていません。
+              p.ec-color-red 入力されていません。
           dl
             dt
               label.ec-label 電話番号
