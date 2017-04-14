@@ -1,3 +1,4 @@
+@import "../mixins/variables";
 /*
 アイコンボタン
 
@@ -29,7 +30,7 @@ Styleguide 2.2.1
   & &__icon{
     svg{
       overflow: hidden;
-      fill: #B8BEC4;
+      fill: $clrRightGray;
       margin-right: 5px;
       position: relative;
       top: -1px;
