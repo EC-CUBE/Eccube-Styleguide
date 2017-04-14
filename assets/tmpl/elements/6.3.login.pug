@@ -60,7 +60,8 @@ mixin ec-guest
     +b.ec-guest
         +e.inner
             p 会員登録をせずに購入手続きをされたい方は、下記よりお進みください。
-            a(href="/moc/guest/cart3").ec-blockBtn--cancel ゲスト購入
+            +e.actions
+                a(href="/moc/guest/cart3").ec-blockBtn--cancel ゲスト購入
 
 
 

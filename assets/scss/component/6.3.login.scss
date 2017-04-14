@@ -1,4 +1,5 @@
 @import "../mixins/media";
+@import "../mixins/projects";
 /*
 ログイン
 
@@ -46,6 +47,10 @@ Styleguide 6.1.1
       }
     }
   }
+  & &__actions {
+    color: #fff;
+    @include reset_link();
+  }
   & &__link {
     margin-top: 5px;
     margin-left: 0;
@@ -57,7 +62,6 @@ Styleguide 6.1.1
     display: none;
     color: $clrRed;
   }
-
 }
 .ec-login.is_active {
   @include media_desktop {
@@ -70,17 +74,18 @@ Styleguide 6.1.1
   }
 }
 
-  /*
-  ゲスト購入
+/*
+ゲスト購入
 
-  http://demo3.ec-cube.net/mypage
+http://demo3.ec-cube.net/mypage
 
-  Markup:
-  include /assets/tmpl/elements/6.3.login.pug
-  +ec-guest
+Markup:
+include /assets/tmpl/elements/6.3.login.pug
++ec-guest
+hoge
 
-  Styleguide 6.1.2
-  */
+Styleguide 6.1.2
+*/
 .ec-guest{
   display: table;
   margin: 0;
@@ -100,6 +105,13 @@ Styleguide 6.1.1
     p {
       margin-bottom: 16px;
     }
+  }
+  & &__actions {
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    @include reset_link();
   }
   & &__icon{
     font-size: 70px;
