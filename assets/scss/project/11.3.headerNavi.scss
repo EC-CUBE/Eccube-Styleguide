@@ -1,0 +1,149 @@
+@import "../mixins/media";
+@import "../mixins/projects";
+@import "../mixins/clearfix";
+
+.ec-headerNaviRole{
+  @include container;
+  @include clearfix;
+  & &__search{
+    display: none;
+    @include media_desktop(){
+      display: block;
+      float: left;
+      width: 370px;
+      @include reset_link;
+    }
+  }
+  & &__nav{
+    display: none;
+    @include media_desktop(){
+      display: block;
+      float: right;
+      width: 50%;
+      @include reset_link;
+    }
+  }
+
+}
+
+/*
+検索ボックス
+
+ヘッダー内で使用される商品検索コンポーネントです。
+
+Markup:
+include /assets/tmpl/elements/11.3.headerNavi.pug
++ec-headerSearch
+
+sg-wrapper:
+<div class="ec-headerRole">
+  <div class="ec-headerRole__title">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 11.3.1
+*/
+.ec-headerSearch{
+  @include clearfix;
+  & &__category {
+    float: none;
+    @include media_desktop {
+      float: left;
+    }
+    .ec-select {
+      margin-bottom: 6px;
+    }
+    select{
+      width: auto;
+      max-width: 100%;
+      height: 50px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-size: 1.6rem;
+      padding: 0.5em 1em;
+      border-radius: 0;
+      box-shadow: none;
+      box-sizing: border-box;
+      @include media_desktop {
+        max-width: 180px;
+      }
+    }
+  }
+  & &__keyword{
+    float: none;
+    height: 50px;
+    padding: 0 40px 0 18px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    margin-left: 2%;
+    color: $clrDarkGray;
+    @include media_desktop {
+      float: left;
+    }
+    input[type="search"]{
+      height: 50px;
+      width: 100%;
+      font-size: 16px;
+      font-size: 1.6rem;
+      border: 0 none;
+      padding: 0.5em 0;
+      box-shadow: none;
+      background: none;
+      box-sizing: border-box;
+    }
+    .ec-icon {
+      svg {
+        fill: #636378;
+      }
+    }
+  }
+  & &__keywordBtn{
+    border: 0;
+    background: none;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    display: block;
+    font-size: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+
+}
+/*
+ナビゲーション
+
+ヘッダー内で使用されるナビゲーションコンポーネントです。
+
+Markup:
+include /assets/tmpl/elements/11.3.headerNavi.pug
++ec-headerNav
+
+sg-wrapper:
+<div class="ec-headerRole">
+  <div class="ec-headerRole__nav">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 11.3.2
+*/
+.ec-headerNav{
+  text-align: right;
+  & &__item{
+    margin-left: 0;
+    display: inline-block;
+    font-size: 28px;
+    line-height: 50px;
+    @include media_desktop {
+      margin-left: 10px;
+    }
+    @include reset_link;
+    span{
+      font-size: 14px;
+    }
+  }
+}

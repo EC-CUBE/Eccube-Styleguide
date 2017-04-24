@@ -1,5 +1,6 @@
 @import "../mixins/media";
 @import "../mixins/variables";
+@import "../mixins/projects";
 
 @mixin pager(){
 }
@@ -43,6 +44,9 @@ Styleguide 7.2.1
     font-size: 16px;
   }
 
+  & &__item {
+    @include reset_link();
+  }
   & &__item,
   & &__divider,
   & &__item--active{
@@ -53,6 +57,7 @@ Styleguide 7.2.1
   }
   & &__item--active{
     font-weight: bold;
+    @include reset_link();
   }
 }
 
@@ -82,6 +87,7 @@ Styleguide 7.2.2
     padding: 0 3px 0 2px;
     text-align: center;
     position: relative;
+    @include reset_link();
     a{
       color: inherit;
       display: block;

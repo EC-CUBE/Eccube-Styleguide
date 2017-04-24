@@ -1,6 +1,7 @@
 @import "../mixins/variables";
 @import "../mixins/media";
 @import "../mixins/animation";
+@import "../mixins/projects";
 /*
 カート
 
@@ -199,6 +200,7 @@ Styleguide 7.3.5
 }
 
 .ec-cartNaviNull {
+  display: none;
   min-width: 256px;
   text-align: center;
   background: #f3f3f3;
@@ -287,6 +289,8 @@ Styleguide 7.3.6
     }
   }
   & &__btn {
+    @include reset_link();
+    color: #fff;
     .ec-blockBtn--action {
       font-size: 16px;
       font-weight: bold;

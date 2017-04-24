@@ -80,7 +80,7 @@ gulp.task("server",()=> {
         `${dest}/**/*`,
         `${src}/assets/tmpl/**/*`
     ], (e) => {
-        console.log(e)
+        // console.log(e)
         setTimeout(function(){
             browserSync.reload();
         },500);
