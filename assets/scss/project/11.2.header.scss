@@ -18,6 +18,7 @@ Styleguide 11.2
 .ec-headerRole{
   @include container;
   padding-top: 15px;
+  position: relative;
   &:after {
     display: none;
   }
@@ -30,59 +31,35 @@ Styleguide 11.2
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  & &__top{
-    width: auto;
-    @include media_desktop {
-      width: 100%;
-      @include clearfix;
-    }
+  width: auto;
+  @include media_desktop {
+    width: 100%;
+    @include clearfix;
   }
   & &__title{
-    //width: 75%;
-    float: none;
+    width: 100%;
     @include media_desktop() {
-      float: left;
     }
   }
   & &__cart{
     display: none;
-    float:none;
+    position: absolute;
+    top:15px;
+    right: 0;
     @include media_desktop(){
       display: block;
-      float:right;
-      @include reset_link;
-    }
-  }
-  & &__search{
-    display: none;
-    @include media_desktop(){
-      display: block;
-      width: 370px;
-      @include reset_link;
-    }
-  }
-  & &__nav{
-    display: none;
-    @include media_desktop(){
-      display: block;
-      width: 50%;
       @include reset_link;
     }
   }
   & &__navSP{
     display: block;
+    position: absolute;
+    top:15px;
+    right:10px;
     width: 25%;
     text-align: right;
     @include media_desktop {
       display: none;
-    }
-  }
-  & &__itemnav{
-    display: none;
-    @include media_desktop(){
-      display: block;
-      width: 100%;
-      @include reset_link;
     }
   }
 }
@@ -144,106 +121,7 @@ Styleguide 11.2.1
   }
 }
 
-/*
-検索ボックス
 
-ヘッダー内で使用される商品検索コンポーネントです。
-
-Markup:
-include /assets/tmpl/elements/11.2.header.pug
-+ec-headerSearch
-
-sg-wrapper:
-<div class="ec-headerRole">
-  <div class="ec-headerRole__title">
-    <sg-wrapper-content/>
-  </div>
-</div>
-
-Styleguide 11.2.2
-*/
-.ec-headerSearch{
-  @include clearfix;
-  & &__category {
-    float: left;
-    select{
-      width: auto;
-      max-width: 180px;
-      height: 50px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-      font-size: 1.6rem;
-      padding: 0.5em 1em;
-      border-radius: 0;
-      box-shadow: none;
-      box-sizing: border-box;
-    }
-  }
-  & &__keyword{
-    float: right;
-    height: 50px;
-    padding: 0 20px 0 1em;
-    border-bottom: 1px solid #ccc;
-    position: relative;
-    margin-left: 1%;
-    input[type="search"]{
-      height: 50px;
-      width: 100%;
-      font-size: 16px;
-      font-size: 1.6rem;
-      border: 0 none;
-      padding: 0.5em 0;
-      box-shadow: none;
-      background: none;
-      box-sizing: border-box;
-    }
-  }
-  & &__keywordBtn{
-    border: 0;
-    background: none;
-    position: absolute;
-    right: 0;
-    top: 6px;
-    display: block;
-    font-size: 25px;
-    overflow: hidden;
-    white-space: nowrap;
-    z-index: 1;
-  }
-
-
-}
-/*
-ナビゲーション
-
-ヘッダー内で使用されるナビゲーションコンポーネントです。
-
-Markup:
-include /assets/tmpl/elements/11.2.header.pug
-+ec-headerNav
-
-sg-wrapper:
-<div class="ec-headerRole">
-  <div class="ec-headerRole__nav">
-    <sg-wrapper-content/>
-  </div>
-</div>
-
-Styleguide 11.2.3
-*/
-.ec-headerNav{
-  text-align: right;
-  & &__item{
-    margin-left: 10px;
-    display: inline-block;
-    font-size: 28px;
-    line-height: 50px;
-    @include reset_link;
-    span{
-      font-size: 14px;
-    }
-  }
-}
 .ec-headerNavSP {
   margin-right: 10px;
   width: 100%;
@@ -337,84 +215,3 @@ Styleguide 11.2.3
   }
 }
 
-/*
-カテゴリナビ
-
-カテゴリ一覧として使用します。
-
-Markup:
-include /assets/tmpl/elements/11.2.header.pug
-+ec-itemNav
-
-sg-wrapper:
-<div class="ec-headerRole">
-  <div class="ec-headerRole__itemnav">
-    <sg-wrapper-content/>
-  </div>
-</div>
-
-Styleguide 11.2.4
-*/
-.ec-itemNav {
-  display: block;
-  border-bottom: 1px solid #D9D9D9;
-  border-top: 1px solid #D9D9D9;
-  margin: 20px 0 30px;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  list-style: none;
-  position: relative;
-  & &__item {
-    display: inline-block;
-    font-weight: bold;
-    @include reset_link;
-    &:hover {
-      background: #fafafa;
-    }
-    a {
-      display: inline-block;
-      margin-top: 0;
-      padding: 16px;
-      height: 55px;
-    }
-    &:hover > .ec-itemNavAccordion {
-      overflow: visible;
-      height: 50px;
-      transition:all .2s ease-out;
-      .ec-itemNavAccordion__item {
-        height: 50px;
-        transition:all .2s ease-out;
-      }
-    }
-  }
-  .ec-itemNavAccordion {
-    z-index: 1000;
-    position: absolute;
-    padding: 0;
-    height: 0;
-    overflow: hidden;
-    transition:all .2s ease-out;
-    .ec-itemNavAccordion__item {
-      border-bottom: 1px solid #ccc;
-      list-style: none;
-      height: 0;
-      transition:all .2s ease-out;
-      a {
-       list-style: none;
-       border-top: 1px solid #E8E8E8;
-       border-bottom: 1px solid #E8E8E8;
-       margin-top: 0;
-       padding: 15px 10px;
-       min-width: 200px;
-       width: 100%;
-       text-align: left;
-       background: #fff;
-       transition:all .5s ease-out;
-       &:hover {
-         background: #fafafa;
-       }
-      }
-    }
-  }
-}
