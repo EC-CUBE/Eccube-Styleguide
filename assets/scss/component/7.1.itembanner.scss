@@ -1,5 +1,5 @@
 @import "../mixins/media";
-
+@import "../mixins/projects";
 /*
 商品掲載
 
@@ -40,6 +40,7 @@ Styleguide 7.1.1
   & &__cell {
     width: 100%;
     margin-bottom: 16px;
+    @include reset_link();
     @include media_desktop {
       width: 31.4466%;
       margin-bottom: 0;
@@ -90,6 +91,7 @@ ex [トップページ　商品紹介部分](http://demo3.ec-cube.net/)
 Markup:
 include /assets/tmpl/elements/7.1.itembanner.pug
 +ec-displayC
+p hoge
 
 Styleguide 7.1.2
 */
@@ -101,6 +103,7 @@ Styleguide 7.1.2
   margin-bottom: 24px;
   & &__cell{
     width: 47%;
+    @include reset_link();
     @include media_desktop(){
       width: 22.8775%;
     }
@@ -172,6 +175,7 @@ Styleguide 7.1.3
   & &__cell{
     width: 30%;
     margin-bottom: 8px;
+    @include reset_link();
     @include media_desktop(){
       width: 14.3083%;
       margin-bottom: 16px;

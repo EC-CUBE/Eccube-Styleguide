@@ -11,7 +11,6 @@ ex [商品詳細ページ　ヘッダー](http://demo3.ec-cube.net/products/deta
 Markup:
 include /assets/tmpl/elements/11.2.header.pug
 +ec-headerRole
-p hoge
 
 Styleguide 11.2
 */
@@ -121,7 +120,127 @@ Styleguide 11.2.1
   }
 }
 
+/*
+検索ボックス
 
+ヘッダー内で使用される商品検索コンポーネントです。
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerSearch
+
+sg-wrapper:
+<div class="ec-headerRole">
+  <div class="ec-headerRole__title">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 11.2.2
+*/
+.ec-headerSearch{
+  @include clearfix;
+  & &__category {
+    float: none;
+    @include media_desktop {
+      float: left;
+    }
+    .ec-select {
+      margin-bottom: 6px;
+    }
+    select{
+      width: auto;
+      max-width: 100%;
+      height: 50px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-size: 1.6rem;
+      padding: 0.5em 1em;
+      border-radius: 0;
+      box-shadow: none;
+      box-sizing: border-box;
+      @include media_desktop {
+        max-width: 180px;
+      }
+    }
+  }
+  & &__keyword{
+    float: none;
+    height: 50px;
+    padding: 0 40px 0 18px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    margin-left: 2%;
+    color: $clrDarkGray;
+    @include media_desktop {
+      float: left;
+    }
+    input[type="search"]{
+      height: 50px;
+      width: 100%;
+      font-size: 16px;
+      font-size: 1.6rem;
+      border: 0 none;
+      padding: 0.5em 0;
+      box-shadow: none;
+      background: none;
+      box-sizing: border-box;
+    }
+    .ec-icon {
+      svg {
+        fill: #636378;
+      }
+    }
+  }
+  & &__keywordBtn{
+    border: 0;
+    background: none;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    display: block;
+    font-size: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+
+}
+/*
+ナビゲーション
+
+ヘッダー内で使用されるナビゲーションコンポーネントです。
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-headerNav
+
+sg-wrapper:
+<div class="ec-headerRole">
+  <div class="ec-headerRole__nav">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 11.2.3
+*/
+.ec-headerNav{
+  text-align: right;
+  & &__item{
+    margin-left: 0;
+    display: inline-block;
+    font-size: 28px;
+    line-height: 50px;
+    @include media_desktop {
+      margin-left: 10px;
+    }
+    @include reset_link;
+    span{
+      font-size: 14px;
+    }
+  }
+}
 .ec-headerNavSP {
   margin-right: 10px;
   width: 100%;
@@ -146,7 +265,7 @@ Styleguide 11.2.1
       display: inline-block;
       width: 30px;
       height: 30px;
-      fill: #525263;
+      color: $clrDarkGray;
     }
     .ec-cartNaviSP__badge{
       display: inline-block;
@@ -215,3 +334,88 @@ Styleguide 11.2.1
   }
 }
 
+/*
+カテゴリナビ
+
+カテゴリ一覧として使用します。
+
+Markup:
+include /assets/tmpl/elements/11.2.header.pug
++ec-itemNav
+
+sg-wrapper:
+<div class="ec-headerRole">
+  <div class="ec-headerRole__itemnav">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 11.2.4
+*/
+.ec-itemNav {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  position: relative;
+  @include media_desktop {
+    margin: 20px 0 30px;
+    border-bottom: 1px solid #D9D9D9;
+    border-top: 1px solid #D9D9D9;
+  }
+  & &__item {
+    display: inline-block;
+    font-weight: bold;
+    @include reset_link;
+    &:hover {
+      background: #fafafa;
+    }
+    a {
+      display: inline-block;
+      margin-top: 0;
+      padding: 16px;
+      height: 55px;
+    }
+    &:hover > .ec-itemNavAccordion {
+      overflow: visible;
+      height: 50px;
+      transition:all .2s ease-out;
+      .ec-itemNavAccordion__item {
+        height: 50px;
+        transition:all .2s ease-out;
+      }
+    }
+  }
+  .ec-itemNavAccordion {
+    z-index: 1000;
+    position: absolute;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition:all .2s ease-out;
+    .ec-itemNavAccordion__item {
+      border-bottom: 1px solid #ccc;
+      list-style: none;
+      height: 0;
+      transition:all .2s ease-out;
+      a {
+       list-style: none;
+       border-top: 1px solid #E8E8E8;
+       border-bottom: 1px solid #E8E8E8;
+       margin-top: 0;
+       padding: 15px 10px;
+       min-width: 200px;
+       width: 100%;
+       text-align: left;
+       background: #fff;
+       transition:all .5s ease-out;
+       &:hover {
+         background: #fafafa;
+       }
+      }
+    }
+  }
+}

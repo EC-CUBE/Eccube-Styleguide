@@ -50,7 +50,7 @@ Styleguide 11.5.1
 */
 .ec-drawerRole{
   & .ec-headerSearch{
-    padding: 16px 8px;;
+    padding: 16px 8px 26px;
     background: #EBEBEB;
     color: #636378;
     select{
@@ -63,11 +63,15 @@ Styleguide 11.5.1
     .ec-headerNav__item{
       text-align: left;
       display: block;
-      padding:0 10px;
-      height: 50px;
+      padding-left: 10px;
+      height: 60px;
       border-bottom: 1px solid #e8e8e8;
       line-height: 50px;
       font-size: 30px;
+      @include media_desktop {
+        padding:0 10px;
+        height: 50px;
+      }
     }
 
   }
