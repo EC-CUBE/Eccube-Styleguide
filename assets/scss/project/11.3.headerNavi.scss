@@ -47,10 +47,16 @@ Styleguide 11.3.1
 .ec-headerSearch{
   @include clearfix;
   & &__category {
-    float: left;
+    float: none;
+    @include media_desktop {
+      float: left;
+    }
+    .ec-select {
+      margin-bottom: 6px;
+    }
     select{
       width: auto;
-      max-width: 180px;
+      max-width: 100%;
       height: 50px;
       border: 1px solid #ccc;
       font-size: 16px;
@@ -59,15 +65,22 @@ Styleguide 11.3.1
       border-radius: 0;
       box-shadow: none;
       box-sizing: border-box;
+      @include media_desktop {
+        max-width: 180px;
+      }
     }
   }
   & &__keyword{
-    float: right;
+    float: none;
     height: 50px;
-    padding: 0 20px 0 1em;
+    padding: 0 40px 0 18px;
     border-bottom: 1px solid #ccc;
     position: relative;
-    margin-left: 1%;
+    margin-left: 2%;
+    color: $clrDarkGray;
+    @include media_desktop {
+      float: left;
+    }
     input[type="search"]{
       height: 50px;
       width: 100%;
@@ -78,6 +91,11 @@ Styleguide 11.3.1
       box-shadow: none;
       background: none;
       box-sizing: border-box;
+    }
+    .ec-icon {
+      svg {
+        fill: #636378;
+      }
     }
   }
   & &__keywordBtn{
@@ -116,10 +134,13 @@ Styleguide 11.3.2
 .ec-headerNav{
   text-align: right;
   & &__item{
-    margin-left: 10px;
+    margin-left: 0;
     display: inline-block;
     font-size: 28px;
     line-height: 50px;
+    @include media_desktop {
+      margin-left: 10px;
+    }
     @include reset_link;
     span{
       font-size: 14px;
