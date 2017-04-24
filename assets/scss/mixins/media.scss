@@ -64,7 +64,7 @@ Twitter Bootstrap デフォルト準拠
   @include clearfix;
   @include commonStyle();
   width: 100%;
-  max-width: 1150px;
+  //max-width: 1150px;
   @include media_desktop {
     padding-left:  26px;
     padding-right: 26px;

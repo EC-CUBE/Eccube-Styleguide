@@ -29,7 +29,10 @@ html(lang="ja")
             +e.contentTop
                 block pageHeader
             +e.contents
-                +e.mainWithColumn
+                .ec-layoutRole__left
+                    .ec-role
+                        +ec-itemNav
+                +e.mainBetweenColumn
                     +ec-sliderRole
                     +ec-eyecatchRole
                     .ec-role

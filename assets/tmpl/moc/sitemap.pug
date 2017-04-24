@@ -1,0 +1,17 @@
+extends /assets/tmpl/moc/guest/_layout.pug
+
+include /assets/tmpl/elements/7.1.itembanner.pug
+include /assets/tmpl/elements/8.1.info.pug
+include /assets/tmpl/elements/12.1.slider.pug
+include /assets/tmpl/elements/12.2.eyecatch.pug
+
+block content
+    .ec-role
+        ul
+            li: a(href="/moc/layout/leftmenu.html") 左メニューレイアウト
+            li: a(href="/moc/layout/rightmenu.html") 右メニューレイアウト
+            li: a(href="/moc/layout/bothmenu.html") 両メニューレイアウト
+        ul
+            li: a(href="https://github.com/EC-CUBE/Eccube-Styleguide") Github リポジトリ
+
+
