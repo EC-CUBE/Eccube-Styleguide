@@ -247,3 +247,64 @@ Styleguide 5.1.8
     }
   }
 }
+
+/*
+グリッドオプション
+
+グリッドのセルに対して「左寄せ」「中央寄せ」「右寄せ」のオプションを付与することができます。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+Styleguide 5.1.9
+*/
+
+/*
+グリッドセルの左寄せ
+
+.ec-gridに.ec-grid--leftを付与すると内包してるセルを左寄せにすることができます。
+
+Markup:
+.ec-grid4.ec-grid--left
+  .ec-grid4__cell(style="background-color: rgba(86,61,124,.15);border: 1px solid rgba(86,61,124,.2);height:50px;") ec-grid4__cell
+  .ec-grid4__cell(style="background-color: rgba(86,61,124,.15);border: 1px solid rgba(86,61,124,.2);height:50px;") ec-grid4__cell
+  .ec-grid4__cell(style="background-color: rgba(86,61,124,.15);border: 1px solid rgba(86,61,124,.2);height:50px;") ec-grid4__cell
+
+Styleguide 5.1.10
+*/
+.ec-grid--left {
+  justify-content: flex-start;
+}
+/*
+グリッドセルの右寄せ
+
+.ec-gridに.ec-grid--leftを付与すると内包してるセルを左寄せにすることができます。
+
+Markup:
+.ec-grid4.ec-grid--right
+  .ec-grid4__cell(style="background-color: rgba(86,61,124,.15);border: 1px solid rgba(86,61,124,.2);height:50px;") ec-grid4__cell
+  .ec-grid4__cell(style="background-color: rgba(86,61,124,.15);border: 1px solid rgba(86,61,124,.2);height:50px;") ec-grid4__cell
+  .ec-grid4__cell(style="background-color: rgba(86,61,124,.15);border: 1px solid rgba(86,61,124,.2);height:50px;") ec-grid4__cell
+
+Styleguide 5.1.11
+*/
+.ec-grid--right {
+  justify-content: flex-end;
+}
+/*
+グリッドセルの中央寄せ
+
+.ec-gridに.ec-grid--leftを付与すると内包してるセルを左寄せにすることができます。
+
+Markup:
+.ec-grid4.ec-grid--center
+  .ec-grid4__cell(style="background-color: rgba(86,61,124,.15);border: 1px solid rgba(86,61,124,.2);height:50px;") ec-grid4__cell
+  .ec-grid4__cell(style="background-color: rgba(86,61,124,.15);border: 1px solid rgba(86,61,124,.2);height:50px;") ec-grid4__cell
+  .ec-grid4__cell(style="background-color: rgba(86,61,124,.15);border: 1px solid rgba(86,61,124,.2);height:50px;") ec-grid4__cell
+
+Styleguide 5.1.12
+*/
+.ec-grid--center {
+  justify-content: center
+}
