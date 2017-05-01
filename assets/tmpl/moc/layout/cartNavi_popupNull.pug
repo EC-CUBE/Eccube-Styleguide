@@ -1,0 +1,54 @@
+include /node_modules/bemto.pug/bemto.pug
+include /assets/tmpl/elements/11.2.header.pug
+include /assets/tmpl/elements/11.3.headerNavi.pug
+include /assets/tmpl/elements/11.4.categoryNavi.pug
+include /assets/tmpl/elements/11.8.footer.pug
+include /assets/tmpl/elements/7.1.itembanner.pug
+include /assets/tmpl/elements/8.1.info.pug
+include /assets/tmpl/elements/12.1.slider.pug
+include /assets/tmpl/elements/12.2.eyecatch.pug
+
+doctype html
+html(lang="ja")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no")
+        title= pageTitle
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        link(rel="stylesheet", href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
+        link(rel="stylesheet", href="/assets/css/style.css")
+        style
+            include ../guest/slick.css
+    body
+        +b.ec-layoutRole
+            +e.header
+                +b.ec-headerRole
+                    +e.title: +ec-headerTitle
+                    +e.cart: +ec-headerCartNull
+                    +e.navSP: +ec-headerNavSP
+                +ec-headerNaviRole
+                +ec-cateoryNaviRole
+            +e.contents
+                +e.main
+                    +ec-sliderRole
+                        +ec-eyecatchRole
+                        .ec-role
+                            +ec-displayB
+                            +ec-displayC
+                        .ec-role
+                            +b.ec-grid3
+                                +e.cell3: +ec-news
+                                +e.cell
+                                    +ec-banner
+                        .ec-role
+                            +ec-displayD
+                            +ec-displayD
+            +e.contentBottom
+            +e.footer
+                +ec-footerRole
+        .ec-overlayRole
+        .ec-drawerRole
+        script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+        script(src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        script(src="/assets/js/script.js")
