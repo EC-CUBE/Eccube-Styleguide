@@ -17,7 +17,11 @@ $(function(){
     $(".ec-cartNavi").on("click",function(){
         $(".ec-headerRole__cart").toggleClass("is_active")
     })
-
+})
+$(function(){
+    $(".ec-cartNavi--cancel").on("click",function(){
+        $(".ec-headerRole__cart").toggleClass("is_active")
+    })
 })
 
 $(function(){
