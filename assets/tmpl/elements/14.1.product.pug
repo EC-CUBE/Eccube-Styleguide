@@ -4,10 +4,19 @@ mixin ec-productRole
             .ec-grid2__cell
                 +e.img
                     img(src="http://demo3.ec-cube.net/upload/save_image/0701115935_5593579758957.jpeg")
+                +e.img
+                    img(src="http://demo3.ec-cube.net/upload/save_image/0701115935_5593579758957.jpeg")
             .ec-grid2__cell
                 +e.profile
                     +e.title
                         h2.ec-headingTitle カッティングボード
+                    +e.UL.tags
+                        +e.LI.tag 新商品
+                        +e.LI.tag 限定品
+                    +e.priceRegular
+                        +e.SPAN.priceRegularPrice 通常価格：¥ 21,600 ～ ¥ 32,400
+                        +e.SPAN.priceRegularTax 税込
+
                     +e.price
                         +b.ec-price
                             +e.SPAN.unit ¥
@@ -23,6 +32,11 @@ mixin ec-productRole
                                 span ＞
                                 a(href="") 調理器具
                     +e.actions
+                        .ec-select
+                            select
+                                option 選択して下さい
+                                option 120mm
+                                option 170mm
                         .ec-numberInput
                             span 数量
                             input(type="number",value="1")
@@ -30,3 +44,4 @@ mixin ec-productRole
                     +e.btn: a(href="/moc/guest/login").ec-blockBtn--cancel お気に入りに追加
                     +e.description 匂いにも菌にも強い、天然の木を使ったカッティングボード。
 
+        +e.description 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。

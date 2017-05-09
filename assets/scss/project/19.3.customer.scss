@@ -19,13 +19,14 @@ Styleguide 19.3
   & &__actions {
     padding-top:20px;
   }
-}
-.ec-blockBtn--action {
-  margin-bottom: 10px;
-  @include media_desktop {
-  margin-bottom: 16px;
+  .ec-blockBtn--action {
+    margin-bottom: 10px;
+    @include media_desktop {
+      margin-bottom: 16px;
+    }
   }
 }
+
 .ec-contactConfirmRole {
   @include container;
   & &__actions {
