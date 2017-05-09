@@ -53,9 +53,16 @@ $(function(){
 // TODO FIX CLASS NAME
 $(function(){
     $('.item_visual').slick({
-        dots: true,
+        dots: false,
         arrows: false,
-    });
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    dots: true
+                }
+            }]
+    })
 });
 $(function(){
     $('.item_nav').slick({//サムネイル画像
@@ -64,5 +71,5 @@ $(function(){
         slidesToShow: 3,
         focusOnSelect: true,
         asNavFor: '.item_visual',//スライダー部分の要素を記述
-    });
+    })
 });
