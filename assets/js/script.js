@@ -47,3 +47,22 @@ $(function(){
         speed: 300
     });
 });
+
+
+// Slick Slide
+// TODO FIX CLASS NAME
+$(function(){
+    $('.item_visual').slick({
+        dots: true,
+        arrows: false,
+    });
+});
+$(function(){
+    $('.item_nav').slick({//サムネイル画像
+        dots: false,
+        arrows:false,
+        slidesToShow: 3,
+        focusOnSelect: true,
+        asNavFor: '.item_visual',//スライダー部分の要素を記述
+    });
+});
