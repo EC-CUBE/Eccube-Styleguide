@@ -239,7 +239,8 @@ Styleguide 7.3.5
 ex [カートページ　ナビゲーション部分](http://demo3.ec-cube.net/cart)
 
 Markup:
-div(style="height:350px;")//スタイルガイド都合上、高さをもたせるため設置(mocでは不要)
+div(style="height:350px;")
+  // 上記のdivはスタイルガイド都合上、高さをもたせるため設置(mocでは不要)
   .is_active
     .ec-cartNavi
       .ec-cartNavi__icon
@@ -329,7 +330,8 @@ Styleguide 7.3.6
 ex [カートページ　ナビゲーション部分](http://demo3.ec-cube.net/cart)
 
 Markup:
-div(style="height:170px;")//スタイルガイド都合上、高さをもたせるため設置(mocでは不要)
+div(style="height:170px;")
+  // 上記のdivはスタイルガイド都合上、高さをもたせるため設置(mocでは不要)
   .is_active
     .ec-cartNavi
       .ec-cartNavi__icon
