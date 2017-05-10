@@ -1,4 +1,5 @@
-mixin ec-productRole
+include 12.1.slider.pug
+mixin ec-productSimpleRole
     +b.ec-productRole
         .ec-grid2
             .ec-grid2__cell
@@ -30,3 +31,48 @@ mixin ec-productRole
                     +e.btn: a(href="/moc/guest/login").ec-blockBtn--cancel お気に入りに追加
                     +e.description 匂いにも菌にも強い、天然の木を使ったカッティングボード。
 
+
+mixin ec-productRole
+    +b.ec-productRole
+        .ec-grid2
+            .ec-grid2__cell
+                +ec-sliderItemRole
+            .ec-grid2__cell
+                +e.profile
+                    +e.title
+                        h2.ec-headingTitle カッティングボード
+                    +e.UL.tags
+                        +e.LI.tag 新商品
+                        +e.LI.tag 限定品
+                    +e.priceRegular
+                        +e.SPAN.priceRegularPrice 通常価格：¥ 21,600 ～ ¥ 32,400
+                        +e.SPAN.priceRegularTax 税込
+
+                    +e.price
+                        +b.ec-price
+                            +e.SPAN.unit ¥
+                            +e.SPAN.price 4,860
+                            +e.SPAN.tax 税込
+                    +e.code 商品コード： s_0009
+                    +e.category
+                        div 関連カテゴリ
+                        ul
+                            li: a(href="") キッチンツール
+                            li
+                                a(href="") キッチンツール
+                                span ＞
+                                a(href="") 調理器具
+                    +e.actions
+                        .ec-select
+                            select
+                                option 選択して下さい
+                                option 120mm
+                                option 170mm
+                        .ec-numberInput
+                            span 数量
+                            input(type="number",value="1")
+                    +e.btn: a(href="/moc/guest/cart1").ec-blockBtn--action カートに入れる
+                    +e.btn: a(href="/moc/guest/login").ec-blockBtn--cancel お気に入りに追加
+                    +e.description 匂いにも菌にも強い、天然の木を使ったカッティングボード。
+
+        +e.description 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。 温かみのある商品です。 青色が美しい職人が仕上げた吹きガラスのガラス瓶。
