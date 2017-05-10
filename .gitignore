@@ -1,3 +1,4 @@
 /node_modules
 /public
 !/public/assets/js/script.js
+.idea/
