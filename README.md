@@ -30,11 +30,11 @@ dev ブランチは開発作業中の内容を取り込む ブランチです。
 
 Styleguide On Heorku 
 
-[http://eccube3-styleguide-dev.herokuapp.com/](http://eccube3-styleguide.herokuapp.com/)
+[http://eccube3-styleguide-dev.herokuapp.com/](http://eccube3-styleguide-dev.herokuapp.com/)
 
 HTML Moc On Heroku 
 
-[http://eccube3-styleguide-dev.herokuapp.com/moc/](http://eccube3-styleguide.herokuapp.com/moc/)
+[http://eccube3-styleguide-dev.herokuapp.com/moc/](http://eccube3-styleguide-dev.herokuapp.com/moc/)
 
 モックページの実装状況等は、Project ページを確認してください。
 
