@@ -200,3 +200,92 @@ Styleguide 15.2.5
 
 }
 
+
+/*
+お届け先の複数指定
+
+お届け先の複数指定に関するコンポーネントを定義します。
+
+ex [マイページ　お届け先の複数指定](http://demo3.ec-cube.net/shopping/shipping_multiple)
+(商品購入画面 → 「お届け先を追加する」を押下)
+
+Markup:
+include /assets/tmpl/elements/15.2.order.pug
++ec-orderAddAddress
+
+Styleguide 15.2.6
+*/
+.ec-AddAddress  {
+  margin: 0;
+  @include media_desktop {
+    margin: 0 10%;
+  }
+
+  & &__info {
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 16px;
+  }
+  & &__add {
+    border-top: 1px solid #f4f4f4;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  & &__item {
+    display: table;
+    padding:16px;
+    background: #f4f4f4;
+    margin-bottom: 16px;
+  }
+  & &__itemThumb {
+    display: table-cell;
+    min-width: 160px;
+    width: 20%;
+    img {
+      width: 100%;
+    }
+  }
+  & &__itemtContent {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 16px;
+    font-size:16px;
+  }
+  & &__itemtTitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  & &__itemtSize {
+    margin-bottom: 10px;
+  }
+  & &__itemtPrice {
+
+  }
+  & &__itemtNumber {
+
+  }
+  & &__select {
+
+  }
+  & &__selectAddress {
+    display: inline-block;
+    label {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+  & &__selectNumber {
+    display: inline-block;
+    margin-left: 30px;
+    label {
+      font-size: 16px;
+      font-weight: normal;
+    }
+    input {
+      display: inline-block;
+      margin-left: 10px;
+      width: 80px;
+    }
+  }
+}
+
