@@ -66,6 +66,22 @@ Styleguide 9.1.1
 }
 
 /*
+マイページ（お気に入り機能無効）
+
+マイページで表示するメニューリストです。
+
+ul を利用したリスト要素で記述します。
+
+ex [マイページ　メニューリスト部分](http://demo3.ec-cube.net/mypage)
+
+Markup:
+include /assets/tmpl/elements/9.1.mypage.pug
++ec-navlist_noFavorite
+
+Styleguide 9.1.2
+*/
+
+/*
 Welcome メッセージ
 
 マイページで表示するログイン名の表示コンポーネントです。
@@ -76,7 +92,7 @@ Markup:
 include /assets/tmpl/elements/9.1.mypage.pug
 +ec-welcomeMsg
 
-Styleguide 9.1.2
+Styleguide 9.1.3
 */
 .ec-welcomeMsg{
   @include mypageContainer;
@@ -98,7 +114,7 @@ Markup:
 include /assets/tmpl/elements/9.1.mypage.pug
 +ec-favorite
 
-Styleguide 9.1.3
+Styleguide 9.1.4
 */
 .ec-favoriteRole{
   & &__header {

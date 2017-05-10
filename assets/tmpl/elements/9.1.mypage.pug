@@ -7,6 +7,14 @@ mixin ec-navlist
             +e.LI.__item: a(href="/moc/user/address/addresses/") お届け先編集
             +e.LI.__item: a(href="/moc/user/withdraw/") 退会手続き
 
+mixin ec-navlist_noFavorite
+    +b.ec-navlistRole
+        +e.UL.navlist
+            +e.LI.__item.active: a(href="/moc/user/mypage/") ご注文履歴
+            +e.LI.__item: a(href="/moc/user/edit/") 会員情報編集
+            +e.LI.__item: a(href="/moc/user/address/addresses/") お届け先編集
+            +e.LI.__item: a(href="/moc/user/withdraw/") 退会手続き
+
 mixin ec-welcomeMsg
     .ec-welcomeMsg ようこそ ／ 球部 太郎 様
 

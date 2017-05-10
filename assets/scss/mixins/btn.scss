@@ -33,6 +33,7 @@ $btn-border-radius-base: 0px;
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
   padding: 10px 16px;
+  text-decoration: none;
 
   &,
   &:active,

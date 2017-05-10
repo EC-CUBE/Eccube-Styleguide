@@ -68,7 +68,7 @@ mixin ec-orderRole
               select
                 option 指定なし
         .ec-orderDelivery__edit
-          a.ec-inlineBtn お届け先を追加する
+          a.ec-inlineBtn(href="/moc/guest/cart4/add_address/") お届け先を追加する
       .ec-orderPayment
         .ec-rectHeading
           h2 お支払方法
@@ -113,6 +113,7 @@ mixin ec-orderAccount
         p 後藤 知宏 様
         p 〒541-0057　大阪府大阪市中央区北久宝寺町1-4-11
         p 090-0090-0090
+
 mixin ec-orderDelivery
   .ec-orderRole
     .ec-orderDelivery
@@ -142,3 +143,37 @@ mixin ec-orderDelivery
         dt お届け時間：
         dd 指定なし
     .ec-cart
+
+mixin ec-orderAddAddress
+  +b.ec-AddAddress
+    +e.info
+      p 各商品のお届け先を選択してください。(※数量の合計は、カゴの中の数量と合わせてください。)
+    +e.add
+      +e.item
+        +e.itemThumb
+          img(src="http://demo3.ec-cube.net/upload/save_image/0701121841_55935c114e715.jpeg")
+        +e.itemtContent
+          +e.itemtTitle 木製食器
+          +e.itemtSize 120mm
+          +e.itemtPrice 小計：¥14,400
+          +e.itemtNumber 数量：1
+      +e.select
+        +e.selectAddress
+          .ec-select
+            label お届け先
+            select
+              option 球部　東京都千代田区神田神保町1-3-5
+              option 球部　大阪府大阪市
+
+        +e.selectNumber
+          .ec-input
+            label 数量
+            input(type='number')
+
+      +e.btn
+        a.ec-inlineBtn(href="#") お届け先追加
+    +e.actions
+      .ec-off4Grid
+        .ec-off4Grid__cell
+          a.ec-blockBtn--action(href="/moc/guest/cart4/") 選択したお届け先に送る
+          a.ec-blockBtn--cancel(href="/moc/guest/cart3/") 戻る

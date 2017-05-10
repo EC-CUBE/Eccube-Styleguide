@@ -335,21 +335,26 @@ Styleguide 15.1.4
 /*
 アラート
 
-カートが空であることを示す警告メッセージです。
+カート内の商品に問題があることを示す警告メッセージです。
 
 ex [マイページ　カート](http://demo3.ec-cube.net/cart)
 
 Markup:
 include /assets/tmpl/elements/15.1.cart.pug
-+ec-alert-warning
+.ec-cartRole
+  .ec-cartRole__cart
+    +ec-alert-warning
 
 Styleguide 15.1.5
 */
 
 .ec-alert-warning {
+  width: 100%;
   padding: 10px;
   text-align: center;
   background: #F99;
+  margin-bottom: 20px;
+
 
   & &__icon {
     display: inline-block;
@@ -357,13 +362,33 @@ Styleguide 15.1.5
     height: 20px;
     color: #fff;
     fill: #fff;
+    position: absolute;
+    left: -30px;
   }
   & &__text {
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
+    position: relative;
   }
 }
 
 
+
+
+/*
+アラート(空)
+
+カートが空であることを示す警告メッセージです。
+
+ex [マイページ　カート](http://demo3.ec-cube.net/cart)
+
+Markup:
+include /assets/tmpl/elements/15.1.cart.pug
+.ec-off3Grid
+        .ec-off3Grid__cell
+            +ec-alert-warningEnpty
+
+Styleguide 15.1.6
+*/

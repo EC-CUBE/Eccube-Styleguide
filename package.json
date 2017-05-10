@@ -39,7 +39,7 @@
     "normalize.css": "^5.0.0",
     "npm-run-all": "^4.0.1",
     "run-sequence": "^1.2.1",
-    "sc5-styleguide": "^1.5.0",
+    "sc5-styleguide": "1.5.0",
     "webpack": "^2.3.2"
   }
 }
