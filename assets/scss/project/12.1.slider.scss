@@ -19,5 +19,34 @@ Styleguide 12.1
     padding: 0;
     list-style: none;
   }
+}
+.ec-sliderItemRole{
+  @include container;
+  margin-bottom: 24px;
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+  .item_nav {
+    display: none;
+    @include media_desktop {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
 
+  }
+  .slideThumb{
+    margin-bottom: 25px;
+    opacity: .8;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    img {
+      width: 80%;
+    }
+  }
 }
