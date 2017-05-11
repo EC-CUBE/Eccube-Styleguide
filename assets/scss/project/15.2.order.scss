@@ -216,7 +216,7 @@ include /assets/tmpl/elements/15.2.order.pug
 Styleguide 15.2.6
 */
 .ec-AddAddress  {
-  margin: 0;
+  padding: 0 10px;
   @include media_desktop {
     margin: 0 10%;
   }
@@ -273,6 +273,12 @@ Styleguide 15.2.6
       font-size: 16px;
       font-weight: normal;
     }
+    select {
+      min-width: 100%;
+      @include media_desktop {
+        min-width: 350px;
+      }
+    }
   }
   & &__selectNumber {
     display: inline-block;
@@ -285,6 +291,11 @@ Styleguide 15.2.6
       display: inline-block;
       margin-left: 10px;
       width: 80px;
+    }
+  }
+  & &__actions {
+    .ec-blockBtn--action {
+      margin-bottom: 8px;
     }
   }
 }
