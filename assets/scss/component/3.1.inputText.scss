@@ -43,13 +43,7 @@ Styleguide 3.1.1
   p {
     line-height: 1.4;
   }
-  .errorMail {
-    display: none;
-  }
-  .errorPassword {
-    display: none;
-  }
-  .errorPassword2 {
+  .ec-errorMessage {
     display: none;
   }
 }
@@ -66,13 +60,7 @@ Styleguide 3.1.1
     font-weight: bold;
     color: $clrRed;
   }
-  .errorMail {
-    @include errortext;
-  }
-  .errorPassword {
-    @include errortext;
-  }
-  .errorPassword2 {
+  .ec-errorMessage {
     @include errortext;
   }
 }
@@ -104,6 +92,11 @@ Styleguide 3.1.2
     @include media_desktop {
       margin-left: 15px;
       width: 45%;
+    }
+  }
+  input[type='text']:first-child{
+    @include media_desktop {
+      margin-left: 0;
     }
   }
 }

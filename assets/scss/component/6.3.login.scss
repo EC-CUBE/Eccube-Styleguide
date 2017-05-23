@@ -58,7 +58,7 @@ Styleguide 6.1.1
       margin-left: 20px;
     }
   }
-  & &__error {
+  .ec-errorMessage {
     display: none;
     color: $clrRed;
   }
@@ -69,7 +69,7 @@ Styleguide 6.1.1
   }
 }
 .is_active {
-  .ec-login__error{
+  .ec-errorMessage{
     display: block;
   }
 }
