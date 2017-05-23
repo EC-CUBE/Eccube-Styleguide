@@ -36,9 +36,12 @@ Styleguide 3.1.1
   @include forms-reset;
   @include form-controls;
   input{
-    margin-bottom: 16px;
     height: 40px;
     font-family: Roboto, "游ゴシック", YuGothic, "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+    margin-bottom: 10px;
+    @include media_desktop {
+      margin-bottom: 16px;
+    }
   }
   p {
     line-height: 1.4;
@@ -87,17 +90,15 @@ Styleguide 3.1.2
   @extend .ec-input;
   input[type='text']{
     display: inline-block;
-    width: 49%;
-    margin-left: 0;
+    width: 47%;
+    margin-left: 2%;
     @include media_desktop {
       margin-left: 15px;
       width: 45%;
     }
   }
   input[type='text']:first-child{
-    @include media_desktop {
-      margin-left: 0;
-    }
+    margin-left: 0;
   }
 }
 
