@@ -78,7 +78,7 @@ mixin ec-customerRole
             dd
               .ec-input
                 input(type="text")
-                p.errorMail 同じメールアドレスを入力してください。
+                p.ec-errorMessage 同じメールアドレスを入力してください。
               .ec-input
                 input(type="text" placeholder="確認のためもう一度入力してください")
 
@@ -168,7 +168,7 @@ mixin ec-customerErrorRole
             dd
               .ec-input.error
                 input(type="text")
-                p.errorMail 同じメールアドレスを入力してください。
+                p.ec-errorMessage 同じメールアドレスを入力してください。
               .ec-input
                 input(type="text" placeholder="確認のためもう一度入力してください")
         .ec-RegisterRole__actions
