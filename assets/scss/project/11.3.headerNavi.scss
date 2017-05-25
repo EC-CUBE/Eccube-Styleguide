@@ -65,10 +65,10 @@ Styleguide 11.3.1
       border-radius: 0;
       box-shadow: none;
       box-sizing: border-box;
+      -webkit-appearance: menulist;
+      appearance: menulist;
       @include media_desktop {
         max-width: 180px;
-        -webkit-appearance: menulist;
-        appearance: menulist;
       }
     }
   }
