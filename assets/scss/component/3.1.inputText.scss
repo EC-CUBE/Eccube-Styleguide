@@ -47,7 +47,10 @@ Styleguide 3.1.1
     line-height: 1.4;
   }
   .ec-errorMessage {
-    display: none;
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: $clrRed;
   }
 }
 .error.ec-input {
@@ -55,16 +58,6 @@ Styleguide 3.1.1
     margin-bottom: 5px;
     border-color: #CF3F34;
     background: #FDF1F0;
-  }
-  @mixin  errortext {
-    display: block;
-    margin-bottom: 25px;
-    font-size: 12px;
-    font-weight: bold;
-    color: $clrRed;
-  }
-  .ec-errorMessage {
-    @include errortext;
   }
 }
 

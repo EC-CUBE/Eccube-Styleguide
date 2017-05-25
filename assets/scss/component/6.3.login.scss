@@ -59,18 +59,12 @@ Styleguide 6.1.1
     }
   }
   .ec-errorMessage {
-    display: none;
     color: $clrRed;
   }
 }
-.ec-login.is_active {
+.ec-login.error {
   @include media_desktop {
     height: 500px;
-  }
-}
-.is_active {
-  .ec-errorMessage{
-    display: block;
   }
 }
 
