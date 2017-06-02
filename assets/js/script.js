@@ -31,6 +31,13 @@ $(function(){
 })
 
 $(function(){
+    $(".ec-orderMail__link").on("click",function(){
+        $(this).parents(".ec-orderMail").toggleClass("is-active")
+
+    })
+})
+
+$(function(){
     $(".is_inDrawer").each(function(){
         var html = $(this).html();
         $(html).appendTo(".ec-drawerRole")
