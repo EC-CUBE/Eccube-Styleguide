@@ -10,6 +10,12 @@ body {
 a {
   text-decoration: none;
 }
+
+pre {
+  background-color: transparent;
+  border: none;
+  padding: 16px 0;
+}
 @import "component/1.1.heading";
 @import "component/1.2.typo";
 @import "component/1.3.list";
