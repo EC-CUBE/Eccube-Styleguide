@@ -32,7 +32,12 @@ $(function(){
 
 $(function(){
     $(".ec-orderMail__link").on("click",function(){
-        $(this).parents(".ec-orderMail").toggleClass("is-active")
+        $(".ec-orderMail__body").slideToggle();
+    })
+})
+$(function(){
+    $(".ec-orderMail__close").on("click",function(){
+        $(".ec-orderMail__body").slideToggle();
 
     })
 })

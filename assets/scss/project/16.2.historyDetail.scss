@@ -41,17 +41,6 @@ Styleguide 16.2.5
   & &__body{
     display: none;
   }
-  & &__close{
-    display: none;
-  }
-  & &__item.is-active{
-    & &__body{
-      display: block;
-    }
-    &__close{
-      display: block;
-    }
-  }
 }
 
 
@@ -74,20 +63,35 @@ Styleguide 16.2.6
 .ec-orderMail{
   padding-bottom: 10px;
   @include borderBottom();
+  margin-bottom: 16px;
   & &__time{
     margin: 0;
   }
   & &__body{
     display: none;
   }
+  & &__time {
+    margin-bottom: 4px;
+  }
+  & &__link {
+    a {
+      color: #0092C4;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #33A8D0;
+    }
+  }
   & &__close{
-    display: none;
-  }
-  &.is-active &__body{
-    display: block;
-  }
-  &.is-active &__close{
-    display: block;
+    a {
+      color: #0092C4;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #33A8D0;
+    }
   }
 }
 
