@@ -20,7 +20,6 @@ pre {
 @import "component/1.2.typo";
 @import "component/1.3.list";
 @import "component/2.1.buttonsize";
-//@import "component/2.2.buttoncolor";//削除
 @import "component/2.2.closebutton.scss";
 @import "component/3.1.inputText";
 @import "component/3.2.inputMisc";
@@ -28,9 +27,7 @@ pre {
 @import "component/4.1.icon";
 @import "component/5.1.grid";
 @import "component/5.2.layout";
-@import "component/6.1.header";
-@import "component/6.2.footer";
-@import "component/6.3.login";
+@import "component/6.1.login";
 @import "component/7.1.itembanner";
 @import "component/7.2.search";
 @import "component/7.3.cart";
@@ -39,12 +36,7 @@ pre {
 @import "component/9.1.mypage";
 @import "project/11.1.role";
 @import "project/11.2.header";
-@import "project/11.3.headerNavi";
-@import "project/11.4.categoryList";
-@import "project/11.5.spmenu";
-@import "project/11.6.overlay";
-@import "project/11.7.layout";
-@import "project/11.8.footer";
+@import "project/11.3.footer";
 @import "project/12.1.slider";
 @import "project/12.2.eyecatch";
 @import "project/13.1.searchnav";
