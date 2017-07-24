@@ -86,23 +86,23 @@ Styleguide 1.3.2
     display: flex;
     border-bottom: 1px dotted #ccc;
     margin: 0;
-    padding: 8px 0;
+    padding: 10px 0 0;
     flex-wrap: wrap;
     @include media_desktop {
       flex-wrap: nowrap;
+      padding: 15px 0 4px;
     }
   }
   dt, dd {
     padding: 0;
-    @include media_desktop {
-      padding: 0 16px;
-    }
   }
 
   dt {
     font-weight: normal;
     width: 100%;
+    padding-top: 0;
     @include media_desktop {
+      padding-top: 14px;
       width: 30%;
     }
   }

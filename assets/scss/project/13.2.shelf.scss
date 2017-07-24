@@ -75,3 +75,58 @@ Styleguide 13.2.1
   }
 }
 
+/*
+商品一覧グリッド
+
+商品一覧 で使用するグリッドコンポーネントです。
+
+SP版２列、PC版４列の特殊グリッドを構成します。
+商品のあまりはセンタリングされ、中央に表示されます。
+
+Markup:
+include /assets/tmpl/elements/13.2.shelf.pug
++b.ec-shelfRole
+  +ec-shelfGrid
+
+Styleguide 13.2.2
+
+*/
+.ec-shelfGridCenter{
+  @include reset_link;
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+
+  @include media_desktop {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  & &__item{
+    margin-bottom: 30px;
+    width: 50%;
+    img{
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    @include media_desktop(){
+      padding: 0 16px;
+      width: 25%;
+    }
+  }
+  & &__item:nth-child(odd){
+    padding-right: 8px;
+    @include media_desktop(){
+      padding: 0 16px;
+    }
+  }
+  & &__item:nth-child(even){
+    padding-left: 8px;
+    @include media_desktop(){
+      padding: 0 16px;
+    }
+  }
+}

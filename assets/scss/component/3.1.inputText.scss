@@ -36,21 +36,21 @@ Styleguide 3.1.1
   @include forms-reset;
   @include form-controls;
   input{
-    margin-bottom: 16px;
     height: 40px;
     font-family: Roboto, "游ゴシック", YuGothic, "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+    margin-bottom: 10px;
+    @include media_desktop {
+      margin-bottom: 16px;
+    }
   }
   p {
     line-height: 1.4;
   }
-  .errorMail {
-    display: none;
-  }
-  .errorPassword {
-    display: none;
-  }
-  .errorPassword2 {
-    display: none;
+  .ec-errorMessage {
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: $clrRed;
   }
 }
 .error.ec-input {
@@ -58,22 +58,6 @@ Styleguide 3.1.1
     margin-bottom: 5px;
     border-color: #CF3F34;
     background: #FDF1F0;
-  }
-  @mixin  errortext {
-    display: block;
-    margin-bottom: 25px;
-    font-size: 12px;
-    font-weight: bold;
-    color: $clrRed;
-  }
-  .errorMail {
-    @include errortext;
-  }
-  .errorPassword {
-    @include errortext;
-  }
-  .errorPassword2 {
-    @include errortext;
   }
 }
 
@@ -99,12 +83,15 @@ Styleguide 3.1.2
   @extend .ec-input;
   input[type='text']{
     display: inline-block;
-    width: 49%;
-    margin-left: 0;
+    width: 47%;
+    margin-left: 2%;
     @include media_desktop {
       margin-left: 15px;
       width: 45%;
     }
+  }
+  input[type='text']:first-child{
+    margin-left: 0;
   }
 }
 

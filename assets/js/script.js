@@ -31,11 +31,30 @@ $(function(){
 })
 
 $(function(){
+    $(".ec-orderMail__link").on("click",function(){
+        $(".ec-orderMail__body").slideToggle();
+    })
+})
+$(function(){
+    $(".ec-orderMail__close").on("click",function(){
+        $(".ec-orderMail__body").slideToggle();
+
+    })
+})
+
+$(function(){
     $(".is_inDrawer").each(function(){
         var html = $(this).html();
         $(html).appendTo(".ec-drawerRole")
     })
 })
+
+$(function(){
+    $(".ec-blockTopBtn").on("click",function(){
+        $("html,body").animate({"scrollTop":0},500);
+    })
+})
+
 
 // Slick Slide
 // TODO FIX CLASS NAME
