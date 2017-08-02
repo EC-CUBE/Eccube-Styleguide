@@ -20,15 +20,15 @@ Styleguide 2.2
 ex [ログイン画面　☓ボタン部分](http://demo3.ec-cube.net/mypage/login)
 
 Markup:
-include /assets/tmpl/elements/4.1.icon.pug
-+b.A.ec-closeBtn
-  +e.icon: +svg-cross
+a.ec-closeBtn
+  .ec-icon
+    img(src='/moc/icon/cross.svg', alt='')
 
 Styleguide 2.2.1
 */
 .ec-closeBtn{
-  & &__icon{
-    svg{
+  .ec-icon {
+    img {
       overflow: hidden;
       fill: $clrRightGray;
       margin-right: 5px;
@@ -38,9 +38,6 @@ Styleguide 2.2.1
       width: 1em;
       height: 1em;
       vertical-align: middle;
-      .icon-with-bg{
-        fill: #FFF;
-      }
     }
   }
 }
