@@ -13,10 +13,9 @@ mixin ec-login
                 label
                     input(type="checkbox")
                     span 次回から自動的にログインする
-        +e.error
-            p ログインできませんでした。
-                br
-                | 入力内容に誤りがないかご確認ください。
+        p.ec-errorMessage ログインできませんでした。
+            br
+            | 入力内容に誤りがないかご確認ください。
         .ec-grid2
             .ec-grid2__cell
                 +e.actions
@@ -28,7 +27,7 @@ mixin ec-login
                     a(href="/moc/guest/register").ec-link 新規会員登録
 
 mixin ec-loginError
-    +b.ec-login.is_active
+    +b.ec-login.error
         +e.icon
             .ec-icon
                 svg(viewbox='0 0 360 360')
@@ -42,10 +41,9 @@ mixin ec-loginError
                 label
                     input(type="checkbox")
                     span 次回から自動的にログインする
-        +e.error
-            p ログインできませんでした。
-                br
-                | 入力内容に誤りがないかご確認ください。
+        p.ec-errorMessage ログインできませんでした。
+            br
+            | 入力内容に誤りがないかご確認ください。
         .ec-grid2
             .ec-grid2__cell
                 +e.actions

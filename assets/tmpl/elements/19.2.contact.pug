@@ -11,7 +11,7 @@ mixin ec-contactRole
           dl
             dt
               label.ec-label お名前
-                span.ec-required 必須
+              span.ec-required 必須
             dd
               .ec-halfInput
                 input(type="text" placeholder="性")
@@ -19,7 +19,7 @@ mixin ec-contactRole
           dl
             dt
               label.ec-label お名前(フリガナ)
-                span.ec-required 必須
+              span.ec-required 必須
             dd
               .ec-halfInput
                 input(type="text" placeholder="セイ")
@@ -66,15 +66,15 @@ mixin ec-contactRole
           dl
             dt
               label.ec-label メールアドレス
-                span.ec-required 必須
+              span.ec-required 必須
             dd
               .ec-input
                 input(type="text")
-                p.errorMail 有効なメールアドレスではありません。
+                p.ec-errorMessage 有効なメールアドレスではありません。
           dl
             dt
               label.ec-label お問い合わせ内容
-                span.ec-required 必須
+              span.ec-required 必須
             dd
               .ec-input
                 input(type="text")
@@ -100,7 +100,7 @@ mixin ec-contactErrorRole
           dl
             dt
               label.ec-label お名前
-                span.ec-required 必須
+              span.ec-required 必須
             dd
               .ec-halfInput
                 input(type="text" placeholder="性")
@@ -108,7 +108,7 @@ mixin ec-contactErrorRole
           dl
             dt
               label.ec-label お名前(フリガナ)
-                span.ec-required 必須
+              span.ec-required 必須
             dd
               .ec-halfInput
                 input(type="text" placeholder="セイ")
@@ -155,15 +155,15 @@ mixin ec-contactErrorRole
           dl
             dt
               label.ec-label メールアドレス
-                span.ec-required 必須
+              span.ec-required 必須
             dd
               .ec-input.error
                 input(type="text")
-                p.errorMail 有効なメールアドレスではありません。
+                p.ec-errorMessage 有効なメールアドレスではありません。
           dl
             dt
               label.ec-label お問い合わせ内容
-                span.ec-required 必須
+              span.ec-required 必須
             dd
               .ec-input
                 input(type="text")

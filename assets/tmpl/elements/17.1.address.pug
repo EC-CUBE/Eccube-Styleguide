@@ -1,7 +1,7 @@
 mixin ec-addressRole
     .ec-addressRole
         .ec-addressRole__actions
-            a.ec-inlineBtn 新規お届け先を追加する
+            a(href="/moc/user/address/new/").ec-inlineBtn 新規お届け先を追加する
 
 mixin ec-addressListOnly
     .ec-addressList
@@ -12,7 +12,7 @@ mixin ec-addressListOnly
                 div 〒541-0057　大阪府大阪市中央区北久宝寺町1-4-11
                 div 090-0000-0000
             .ec-addressList__action
-                a.ec-inlineBtn(href="#") 変更
+                a.ec-inlineBtn(href="/moc/user/address/edit/") 変更
 mixin ec-addressList
     .ec-addressList
         each item in ["","","",""]
@@ -26,4 +26,4 @@ mixin ec-addressList
                     div 〒541-0057　大阪府大阪市中央区北久宝寺町1-4-11
                     div 090-0000-0000
                 .ec-addressList__action
-                    a.ec-inlineBtn(href="#") 変更
+                    a.ec-inlineBtn(href="/moc/user/address/edit/") 変更

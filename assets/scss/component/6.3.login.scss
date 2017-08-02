@@ -58,19 +58,13 @@ Styleguide 6.1.1
       margin-left: 20px;
     }
   }
-  & &__error {
-    display: none;
+  .ec-errorMessage {
     color: $clrRed;
   }
 }
-.ec-login.is_active {
+.ec-login.error {
   @include media_desktop {
     height: 500px;
-  }
-}
-.is_active {
-  .ec-login__error{
-    display: block;
   }
 }
 
