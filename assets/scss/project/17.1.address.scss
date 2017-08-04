@@ -51,6 +51,8 @@ Styleguide 17.1.1
     border-bottom: 1px dotted #ccc;
   }
   & &__remove{
+    width: 1em;
+    height: 1em;
     display: table-cell;
     vertical-align: middle;
     padding: 16px;
