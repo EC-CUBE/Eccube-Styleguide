@@ -135,16 +135,14 @@ Styleguide 7.3.5
   white-space: nowrap;
   z-index: 3;
   cursor: pointer;
-  .ec-icon {
-    img {
-      width: 30px;
-      height: 30px;
-      position: relative;
-      top: 8px;
-      left: 8px;
-      fill: #525263;
-      @include fadeIn(inline-block,200ms);
-    }
+  & &__icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 8px;
+    left: 8px;
+    fill: #525263;
+    @include fadeIn(inline-block,200ms);
   }
   & &__iconClose {
     width: 25px;
@@ -157,8 +155,8 @@ Styleguide 7.3.5
   }
   & &__badge{
     position: relative;
-    left: 45px;
-    top: -25px;
+    left: 10px;
+    top: -3px;
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;

@@ -54,9 +54,12 @@ ex [ログイン画面　☓ボタン部分](http://demo3.ec-cube.net/mypage/log
 ex [お届け先編集画面　☓ボタン部分](http://demo3.ec-cube.net/mypage/delivery)
 
 Markup:
-include /assets/tmpl/elements/4.1.icon.pug
-+b.A.ec-closeBtn--circle
-  +e.icon: +svg-cross
+//include /assets/tmpl/elements/4.1.icon.pug
+//+b.A.ec-closeBtn--circle
+//  +e.icon: +svg-cross
+a.ec-closeBtn--circle
+  .ec-icon
+    img(src='/moc/icon/cross-white.svg', alt='')
 
 Styleguide 2.2.2
 */

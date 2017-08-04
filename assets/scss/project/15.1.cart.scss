@@ -19,7 +19,6 @@ Styleguide 15.1
 */
 .ec-cartRole{
   @include container;
-
   &::before{
     display: none;
   }
@@ -179,7 +178,7 @@ Styleguide 15.1.4
       width: 8.3333333%;
     }
     .ec-icon {
-      svg {
+      img {
         width: 1.5em;
         height: 1.5em;
         @include media_desktop {
@@ -187,6 +186,14 @@ Styleguide 15.1.4
           height: 1em;
         }
       }
+      //svg {
+      //  width: 1.5em;
+      //  height: 1.5em;
+      //  @include media_desktop {
+      //    width: 1em;
+      //    height: 1em;
+      //  }
+      //}
     }
   }
   & &__contentColumn{
