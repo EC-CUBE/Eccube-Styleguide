@@ -30,7 +30,8 @@ mixin ec-favorite
                     +e.LI.item
                         include /assets/tmpl/elements/4.1.icon.pug
                         +b.A.ec-closeBtn--circle(href="#")
-                            +e.icon: +svg-cross
+                            +e.icon.ec-icon
+                                img(src='/moc/icon/cross-white.svg', alt='')
                         +e.A.itemThumb(href="/moc/guest/item")
                             img(src="http://demo3.ec-cube.net/upload/save_image/0701111215_55934c7f8bb8e.jpeg")
                         +e.P.itemTitle デザインフォトフレーム
