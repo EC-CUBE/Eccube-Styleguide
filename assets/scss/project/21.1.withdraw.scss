@@ -26,6 +26,12 @@ Styleguide 21.1
     margin-bottom: 32px;
     font-size: 16px;
   }
+  .ec-icon {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
 }/*
 退会手続き実行確認
 
@@ -43,5 +49,11 @@ Styleguide 21.1.2
 .ec-withdrawConfirmRole {
   & &__cancel {
     margin-bottom: 20px;
+  }
+  .ec-icon {
+    img {
+      width: 100px;
+      height: 100px;
+    }
   }
 }

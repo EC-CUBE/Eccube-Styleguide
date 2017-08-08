@@ -35,9 +35,13 @@ Styleguide 6.1.1
     margin: 0 16px;
     height: 430px;
   }
-  & &__icon{
-    font-size: 90px;
+  & &__icon {
     text-align: center;
+  }
+  .ec-icon{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
   }
   & &__input {
     margin-bottom: 40px;

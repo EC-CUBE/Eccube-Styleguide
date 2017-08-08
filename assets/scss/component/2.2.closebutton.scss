@@ -83,7 +83,7 @@ Styleguide 2.2.2
   position: relative;
   text-align: center;
 
-  & &__icon{
+  .ec-icon{
     position: absolute;
     top: 28%;
     left: 50%;
@@ -93,15 +93,5 @@ Styleguide 2.2.2
     width: 1em;
     height: 1em;
     font-size: 20px;
-    svg{
-      overflow: hidden;
-      fill: #FFF;
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      .icon-with-bg{
-        fill: #FFF;
-      }
-    }
   }
 }
