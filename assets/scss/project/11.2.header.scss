@@ -317,6 +317,10 @@ Styleguide 11.2.3
     span{
       font-size: 14px;
     }
+    .ec-icon {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -391,9 +395,8 @@ Styleguide 11.2.4
       box-sizing: border-box;
     }
     .ec-icon {
-      svg {
-        fill: #636378;
-      }
+      width: 25px;
+      height: 25px;
     }
   }
   & &__keywordBtn{
