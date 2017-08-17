@@ -1,5 +1,3 @@
-include ./4.1.icon.pug
-
 mixin ec-headerNaviRole
   +b.ec-headerNaviRole
     +e.search.is_inDrawer: +ec-headerSearch
@@ -33,6 +31,19 @@ mixin ec-headerNav
       a(href="/moc/guest/login").ec-icon
         img(src='/moc/icon/login.svg', alt='')
         span ログイン
+
+mixin ec-headerNavSP
+  +b.ec-headerNavSP
+    +e.item
+      .ec-cartNaviSP
+        a(href="/moc/guest/cart1").ec-cartNaviSP__icon.ec-icon--colored
+          img(src='/moc/icon/cart-dark.svg', alt='')
+        .ec-cartNaviSP__badge 1
+    +e.item
+      +e.A.itemMenu()
+        span
+        span
+        span
 
 mixin ec-headerUserNav
   +b.ec-headerUserNav
