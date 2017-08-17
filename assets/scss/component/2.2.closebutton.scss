@@ -8,7 +8,6 @@ sg-wrapper:
 <div class="ec-role">
   <sg-wrapper-content/>
 
-
 Styleguide 2.2
 */
 
@@ -22,21 +21,20 @@ ex [ログイン画面　☓ボタン部分](http://demo3.ec-cube.net/mypage/log
 Markup:
 a.ec-closeBtn
   .ec-icon
-    img(src='/moc/icon/cross.svg', alt='')
+    img(src='/moc/icon/cross.svg', alt='close')
 
 Styleguide 2.2.1
 */
 .ec-closeBtn{
   .ec-icon {
     img {
-      overflow: hidden;
-      fill: $clrRightGray;
-      margin-right: 5px;
-      position: relative;
-      top: -1px;
+      //overflow: hidden;
       display: inline-block;
+      margin-right: 5px;
       width: 1em;
       height: 1em;
+      position: relative;
+      top: -1px;
       vertical-align: middle;
     }
   }
@@ -54,12 +52,9 @@ ex [ログイン画面　☓ボタン部分](http://demo3.ec-cube.net/mypage/log
 ex [お届け先編集画面　☓ボタン部分](http://demo3.ec-cube.net/mypage/delivery)
 
 Markup:
-//include /assets/tmpl/elements/4.1.icon.pug
-//+b.A.ec-closeBtn--circle
-//  +e.icon: +svg-cross
 a.ec-closeBtn--circle
   .ec-icon
-    img(src='/moc/icon/cross-white.svg', alt='')
+    img(src='/moc/icon/cross-white.svg', alt='close')
 
 Styleguide 2.2.2
 */
@@ -83,15 +78,14 @@ Styleguide 2.2.2
   position: relative;
   text-align: center;
 
-  .ec-icon{
-    position: absolute;
-    top: 28%;
-    left: 50%;
+  .ec-icon img{
+    display: block;
     margin-top: -.5em;
     margin-left: -.5em;
-    display: block;
     width: 1em;
     height: 1em;
-    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
 }

@@ -94,9 +94,7 @@ Styleguide 8.1.2
       height: 25px;
       min-width: 25px;
       min-height: 25px;
-    }
-    .ec-closeBtn--circle__icon {
-      top: 20%;
+
     }
   }
   & &__description{
@@ -109,6 +107,9 @@ Styleguide 8.1.2
     height: auto;
     transition: all .2s ease-out;
     padding-bottom: 16px;
+  }
+  &.is_active .ec-icon img {
+    transform: rotateX(180deg);
   }
 }
 
