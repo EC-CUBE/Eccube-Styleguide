@@ -27,7 +27,7 @@ Styleguide 6.1.1
 */
 .ec-login{
   margin: 0 0 20px;
-  padding: 20px 13%;
+  padding: 30px 13% 20px;
   height: auto;
   background: #F3F4F4;
   box-sizing: border-box;
@@ -39,9 +39,12 @@ Styleguide 6.1.1
     text-align: center;
   }
   .ec-icon{
-    width: 60px;
-    height: 60px;
-    display: inline-block;
+    margin-bottom: 10px;
+    img {
+      width: 90px;
+      height: 90px;
+      display: inline-block;
+    }
   }
   & &__input {
     margin-bottom: 40px;

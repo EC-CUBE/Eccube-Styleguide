@@ -181,17 +181,19 @@ Styleguide 3.1.4
     font-size: 13px;
     position: relative;
     top: -6px;
-  img{
+  .ec-icon img{
       width: 1em;
       height: 1em;
       position: relative;
       left: 3px;
-      top: 2px;
+      top: 3px;
     }
   }
   span {
     margin-left: 8px;
     display: inline-block;
+    color: #0092C4;
+    vertical-align: 3px;
   }
 }
 .ec-zipAuto {
