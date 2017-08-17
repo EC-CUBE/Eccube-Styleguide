@@ -141,7 +141,6 @@ Styleguide 7.3.5
     position: relative;
     top: 8px;
     left: 8px;
-    fill: #525263;
     @include fadeIn(inline-block,200ms);
   }
   & &__iconClose {
@@ -150,13 +149,12 @@ Styleguide 7.3.5
     position: absolute;
     top: 8px;
     left: 8px;
-    fill: #525263;
     @include fadeOut(200ms);
   }
   & &__badge{
     position: relative;
     left: 10px;
-    top: -3px;
+    top: 6px;
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
@@ -244,9 +242,9 @@ div(style="height:350px;")
   .is_active
     .ec-cartNavi
       .ec-cartNavi__icon
-        img(src='/moc/icon/cart-dark.svg', alt='')
+        img(src='/moc/icon/cart-dark.svg', alt='close')
       .ec-cartNavi__iconClose
-        img(src='/moc/icon/cross-dark.svg', alt='')
+        img(src='/moc/icon/cross-dark.svg', alt='close')
       .ec-cartNavi__badge 1
       .ec-cartNavi__label
         | 合計
@@ -333,9 +331,9 @@ div(style="height:170px;")
   .is_active
     .ec-cartNavi
       .ec-cartNavi__icon
-        img(src='/moc/icon/cart-dark.svg', alt='')
+        img(src='/moc/icon/cart-dark.svg', alt='cart')
       .ec-cartNavi__iconClose
-        img(src='/moc/icon/cross-dark.svg', alt='')
+        img(src='/moc/icon/cross-dark.svg', alt='close')
       .ec-cartNavi__badge 1
       .ec-cartNavi__label
         | 合計

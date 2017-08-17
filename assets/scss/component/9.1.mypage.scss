@@ -145,6 +145,10 @@ Styleguide 9.1.4
       position: absolute;
       right: 10px;
       top: 10px;
+      .ec-icon img{
+        width: 1em;
+        height: 1em;
+      }
     }
   }
   & &__itemThumb {

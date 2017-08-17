@@ -3,7 +3,7 @@ mixin ec-alert-warning
     +b.ec-alert-warning
         +e.text
             +e.icon
-                img(src='/moc/icon/exclamation-white.svg', alt='')
+                img(src='/moc/icon/exclamation-white.svg')
             | 選択された商品(ガラステーブル)の在庫が不足しております。
             br
             | 一度に在庫数を超える購入はできません。
@@ -12,7 +12,7 @@ mixin ec-alert-warningEnpty
     +b.ec-alert-warning
         +e.text
             +e.icon
-                img(src='/moc/icon/exclamation-white.svg', alt='')
+                img(src='/moc/icon/exclamation-white.svg')
             | 現在カート内に商品はございません。
 
 mixin ec-cartRole
@@ -75,7 +75,7 @@ mixin ec-cartRow
     ul.ec-cartRow
         li.ec-cartRow__delColumn
             a.ec-icon
-                img(src='/moc/icon/cross.svg', alt='')
+                img(src='/moc/icon/cross.svg', alt='delete')
         li.ec-cartRow__contentColumn
             .ec-cartRow__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701115551_559356b78ba67.jpeg")
             .ec-cartRow__summary
@@ -87,10 +87,10 @@ mixin ec-cartRow
             .ec-cartRow__amountSP 数量：1
             .ec-cartRow__amountUpDown
                 a.ec-cartRow__amountUpButton(href="#")
-                    span.ec-cartRow__amountDownButton__icon
-                        img(src='/moc/icon/minus-dark.svg', alt='')
+                    span.ec-cartRow__amountUpButton__icon
+                        img(src='/moc/icon/minus-dark.svg', alt='increase')
                 a.ec-cartRow__amountDownButton(href="#")
                     span.ec-cartRow__amountDownButton__icon
-                        img(src='/moc/icon/plus-dark.svg', alt='')
+                        img(src='/moc/icon/plus-dark.svg', alt='reduce')
         li.ec-cartRow__subtotalColumn
             .ec-cartRow__sutbtotal ¥ 4,320
