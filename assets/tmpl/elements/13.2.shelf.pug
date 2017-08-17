@@ -3,5 +3,13 @@ mixin ec-shelfGrid
         -for (var x = 0; x < 20; x++)
             +e.LI.item: a(href="/moc/guest/item")
                 img(src="http://demo3.ec-cube.net/upload/save_image/0701121841_55935c114e715.jpeg")
-                p クラフトノート
-                p ¥ 1,296
+                +e.P.title クラフトノート
+                +e.P.plice ¥ 1,296
+
+mixin ec-shelfGridCenter
+    +b.UL.ec-shelfGridCenter
+        -for (var x = 0; x < 20; x++)
+            +e.LI.item: a(href="/moc/guest/item")
+                img(src="http://demo3.ec-cube.net/upload/save_image/0701121841_55935c114e715.jpeg")
+                +e.P.title クラフトノート
+                +e.P.plice ¥ 1,296
