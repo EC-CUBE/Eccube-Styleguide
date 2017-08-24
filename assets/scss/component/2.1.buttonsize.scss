@@ -2,7 +2,7 @@
 /*
 ボタンサイズ
 
-ボタンサイズ
+通常のボタンボタン要素の幅を変更する
 
 sg-wrapper:
 <div class="ec-role">
@@ -66,34 +66,4 @@ Styleguide 2.1.2
 }
 .ec-blockBtn--cancel{
   @include blockBtn-cancel
-}
-
-/*
-ページトップボタン
-
-ページトップボタンを表示します
-
-ex [商品詳細ページ　カートボタン部分](http://demo3.ec-cube.net/products/detail/30)
-
-Markup:
-.ec-blockTopBtn
-
-Styleguide 2.1.3
-*/
-.ec-blockTopBtn{
-  position: fixed;
-  width:120px;
-  height: 40px;
-  right:30px;
-  bottom: 30px;
-  cursor: pointer;
-  color: #FFFFFF;
-  text-align: center;
-  line-height: 40px;
-  opacity: 0.8;
-  background-color: #9da3a9;
-
-  &:after{
-    content: "ページトップへ";
-  }
 }

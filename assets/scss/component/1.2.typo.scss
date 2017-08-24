@@ -216,14 +216,14 @@ Styleguide 1.2.8
 }
 
 /*
-テキストの位置
+メッセージテキスト
 
-ユーザが行った操作に対する、完了報告やエラー表示のページで使用されるテキストのスタイルです。TODO テキストを変更
+ユーザが行った操作に対する、完了報告やエラー表示のページで使用されるテキストのスタイルです。
 
-ex [注文完了](http://demo3.ec-cube.net/shopping/complete)
+ex [注文完了 （ログイン後、カートに商品を入れ注文完了まで行う）](http://demo3.ec-cube.net/shopping/)
 
 Markup:
-.ec-rectHeading
+.ec-reportHeading
   h2 ご注文ありがとうございました
 p.ec-reportDescription
       | ただいま、ご注文の確認メールをお送りさせていただきました。

@@ -4,32 +4,13 @@
 /*
 フォーム部品(その他)
 
-テキスト以外の入力項目に関する要素を定義します。
+フォーム部品でテキストの入力以外の動作要素を定義します。
 
 sg-wrapper:
 <div class="ec-role">
   <sg-wrapper-content/>
 
-
 Styleguide 3.2
-*/
-
-
-
-/*
-フォーム
-
-全てのフォーム要素スタイリングは .ec-input 要素内で反映されます。
-
-http://demo3.ec-cube.net/products/list
-
-Markup:
-.ec-input
-  input(type="checkbox")
-.ec-input
-  input(type="radio")
-
-Styleguide 3.2.1
 */
 
 /*

@@ -2,7 +2,7 @@
 /*
 アイコンボタン
 
-閉じる、などで利用されるSVGアイコンを用いたアイコンボタンです。
+SVGアイコンを用いたアイコンボタンです。
 
 sg-wrapper:
 <div class="ec-role">
@@ -26,6 +26,7 @@ a.ec-closeBtn
 Styleguide 2.2.1
 */
 .ec-closeBtn{
+  cursor: pointer;
   .ec-icon {
     img {
       //overflow: hidden;
