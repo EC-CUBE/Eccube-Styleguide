@@ -79,9 +79,14 @@ $ npm run build
 $ npm start
 ````
 
+スタイルガイドのpug
+
+````
+pugcache.jsonファイルごと削除
+````
+
 モック制作用開発サーバの起動
 
 ````
-$ npm i 
 $ npm run dev
 ````
