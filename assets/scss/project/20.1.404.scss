@@ -21,6 +21,7 @@ Styleguide 20.1
   height: 100vh;
   background-color: #f2f2f2;
   text-align: center;
+  box-sizing: border-box;
   & &__icon{
     img {
       width: 1em;

@@ -7,8 +7,6 @@
 
 SP版２列、PC版４列の特殊グリッドを構成します。
 
-ex [商品一覧 商品掲載部](http://demo3.ec-cube.net/products/list)
-
 Markup:
 include /assets/tmpl/elements/13.2.shelf.pug
 +b.ec-shelfRole
@@ -82,7 +80,7 @@ Styleguide 13.2.1
 }
 
 /*
-商品一覧グリッド
+13.2.2 商品一覧グリッド（中央寄せ）
 
 商品一覧 で使用するグリッドコンポーネントです。
 
