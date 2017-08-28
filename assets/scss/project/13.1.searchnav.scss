@@ -20,8 +20,6 @@ Styleguide 13.1
   @include media_desktop {
     @include container;
   }
-  & &__topicpath{
-  }
   & &__infos{
     @include container;
     display: flex;
