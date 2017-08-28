@@ -4,7 +4,7 @@
 /*
 マイページ
 
-マイページで利用される
+マイページで利用するためのスタイルガイド群です。
 
 sg-wrapper:
 <div class="ec-role">
@@ -56,6 +56,9 @@ Styleguide 9.1.1
       padding: 16px;
       width: 100%;
       display: inline-block;
+      &:hover{
+        background: #f5f7f8;
+      }
     }
   }
   .active {
