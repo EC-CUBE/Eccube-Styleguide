@@ -20,7 +20,6 @@ Styleguide 7.2
 /*
 トピックパス
 
-TODO deprecated
 検索結果で表示されるトピックパスのスタイルです。
 
 ex [商品一覧ページ　横並びリスト部分](http://demo3.ec-cube.net/products/list?category_id=&name=)
@@ -38,6 +37,8 @@ Styleguide 7.2.1
   list-style: none;
   overflow: hidden;
   font-size: 12px;
+  color: #0092C4;
+  letter-spacing: -.4em;
   @include media_desktop {
     padding: 1em 0;
     border: 0;
@@ -47,13 +48,17 @@ Styleguide 7.2.1
   & &__item {
     @include reset_link();
   }
+  & &__divider{
+    color: #000;
+  }
   & &__item,
   & &__divider,
   & &__item--active{
     display: inline-block;
-    min-width: 29px;
+    min-width: 16px;
     text-align: center;
     position: relative;
+    letter-spacing: initial;
   }
   & &__item--active{
     font-weight: bold;
