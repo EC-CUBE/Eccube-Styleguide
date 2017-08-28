@@ -50,6 +50,15 @@ Styleguide 21.1.2
   & &__cancel {
     margin-bottom: 20px;
   }
+  & &__title{
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  & &__description{
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
   .ec-icon {
     img {
       width: 100px;
