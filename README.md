@@ -91,8 +91,8 @@ pugcache.jsonファイルごと削除
 $ npm run dev
 ````
 
-アイコンが表示されない場合
+アイコンを表示させる
 
 ```
-$ npm run build:moc:icon
+$ npm run build:moc
 ```

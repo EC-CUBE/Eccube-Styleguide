@@ -28,6 +28,8 @@ Styleguide 13.1
     padding-top: 5px;
     flex-direction:column;
     @include media_desktop {
+      padding-left: 0;
+      padding-right: 0;
       border-top: 1px solid #ccc;
       padding-top: 16px;
       flex-direction:row;

@@ -154,9 +154,9 @@ Styleguide 7.3.5
     @include fadeOut(200ms);
   }
   & &__badge{
-    position: relative;
-    left: 10px;
-    top: 6px;
+    position: absolute;
+    left: 45px;
+    top: 13px;
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;

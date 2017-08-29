@@ -93,7 +93,7 @@ Styleguide 11.2
     @include clearfix;
   }
   & &__title{
-    width: 70%;
+    width: 73%;
     @include media_desktop() {
       width: 100%;
     }
@@ -112,7 +112,7 @@ Styleguide 11.2
     display: block;
     position: absolute;
     top:15px;
-    width: 30%;
+    width: 27%;
     right: 0px;
     text-align: right;
     @include media_desktop {

@@ -78,16 +78,15 @@ Styleguide 15.1
 
 
 /*
-カート
+カート商品表示枠（テーブルヘッダ）
 
-カート内のアイテムを表示するテーブル枠です。
+カート内の商品をを表示するテーブル枠です。
 
-ex [カートページ　テーブル部分](http://demo3.ec-cube.net/cart)
-
-(カート内に商品がある状態でアクセス)
+ex [カートページ　テーブル部分(カート内に商品がある状態でアクセス)](http://demo3.ec-cube.net/cart)
 
 Markup:
-.ec-cartTable
+include /assets/tmpl/elements/15.1.cart.pug
++ec-cartTable
 
 sg-wrapper:
 <div class="ec-cartRole">
@@ -107,14 +106,13 @@ Styleguide 15.1.2
 
 
 /*
-カート商品表示枠
+カート商品表示枠（テーブルヘッダ）
 
-カート内のアイテムを表示するテーブルヘッダです。
+カート内の商品を表示するテーブルのヘッダです。
 スマホでは非表示となります。
 
-ex [カートページ　カートテーブルヘッダ部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　カートテーブルヘッダ部分(カート内に商品がある状態でアクセス)](http://demo3.ec-cube.net/cart)
 
-(カート内に商品がある状態でアクセス)
 
 Markup:
 include /assets/tmpl/elements/15.1.cart.pug
