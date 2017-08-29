@@ -61,7 +61,20 @@ ex [トップページ　折りたたみ項目部分](http://demo3.ec-cube.net/)
 
 Markup:
 include /assets/tmpl/elements/8.1.info.pug
-+ec-newsline
++b.ec-news
+        +e.title 新着情報
+        +e.UL.items
+            +e.LI.item
+                +b.ec-newsline.is_active
+                    +e.info
+                        +e.date 2016/09/29
+                        +e.comment サイトオープンしました
+                        +e.close
+                            a.ec-closeBtn--circle
+                                span.ec-closeBtn--circle__icon
+                                    .ec-icon
+                                        img(src='/moc/icon/angle-down-white.svg', alt='')
+                    +e.description 一人暮らしからオフィスなどさまざまなシーンで あなたの生活をサポートするグッズをご家庭へお届けします！
 
 Styleguide 8.1.2
 */

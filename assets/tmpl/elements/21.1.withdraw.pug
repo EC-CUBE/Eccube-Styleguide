@@ -19,8 +19,8 @@ mixin ec-withdrawConfirm
                     div(style="font-size:100px;text-align:center")
                         .ec-icon
                             img(src='/moc/icon/exclamation.svg', alt='')
-                    p.ec-reportHeading 退会手続きを実行してもよろしいでしょうか？
-                    p.ec-reportDescription 退会手続きが完了した時点で、現在保存されている購入履歴やお届け先等の情報は、すべて削除されますのでご注意ください。
+                    +e.P.__title 退会手続きを実行してもよろしいでしょうか？
+                    +e.P.__description 退会手続きが完了した時点で、現在保存されている購入履歴やお届け先等の情報は、すべて削除されますのでご注意ください。
             .ec-off4Grid
                 .ec-off4Grid__cell
                     +e.A.cancel.ec-blockBtn--cancel(href="/moc/user/withdraw") いいえ、退会しません
