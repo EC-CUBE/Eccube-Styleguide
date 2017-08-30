@@ -7,8 +7,6 @@
 
 SP版２列、PC版４列の特殊グリッドを構成します。
 
-ex [商品一覧 商品掲載部](http://demo3.ec-cube.net/products/list)
-
 Markup:
 include /assets/tmpl/elements/13.2.shelf.pug
 +b.ec-shelfRole
@@ -50,10 +48,10 @@ Styleguide 13.2.1
     margin-right: -16px;
   }
   & &__item{
-    margin-bottom: 30px;
+    margin-bottom: 36px;
     width: 50%;
     img{
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       width: 100%;
     }
     @include media_desktop(){
@@ -73,10 +71,16 @@ Styleguide 13.2.1
       padding: 0 16px;
     }
   }
+  & &__title {
+    margin-bottom: 7px;
+  }
+  & &__plice {
+    font-weight: bold;
+  }
 }
 
 /*
-商品一覧グリッド
+13.2.2 商品一覧グリッド（中央寄せ）
 
 商品一覧 で使用するグリッドコンポーネントです。
 
@@ -86,7 +90,7 @@ SP版２列、PC版４列の特殊グリッドを構成します。
 Markup:
 include /assets/tmpl/elements/13.2.shelf.pug
 +b.ec-shelfRole
-  +ec-shelfGrid
+  +ec-shelfGridCenter
 
 Styleguide 13.2.2
 
@@ -97,19 +101,19 @@ Styleguide 13.2.2
   margin-left: 0;
   margin-right: 0;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 0;
   list-style: none;
+  justify-content: center;
 
   @include media_desktop {
     margin-left: -16px;
     margin-right: -16px;
   }
   & &__item{
-    margin-bottom: 30px;
+    margin-bottom: 36px;
     width: 50%;
     img{
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       width: 100%;
     }
     @include media_desktop(){
@@ -128,5 +132,11 @@ Styleguide 13.2.2
     @include media_desktop(){
       padding: 0 16px;
     }
+  }
+  & &__title {
+    margin-bottom: 7px;
+  }
+  & &__plice {
+    font-weight: bold;
   }
 }

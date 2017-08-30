@@ -21,9 +21,11 @@ Styleguide 20.1
   height: 100vh;
   background-color: #f2f2f2;
   text-align: center;
+  box-sizing: border-box;
   & &__icon{
-    svg{
-      fill: #d4d4d5;
+    img {
+      width: 1em;
+      height: 1em;
     }
   }
   & &__title{

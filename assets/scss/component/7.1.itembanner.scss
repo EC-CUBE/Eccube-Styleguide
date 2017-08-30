@@ -16,8 +16,6 @@ Styleguide 7.1
 /*
 商品アイテム（商品紹介B）
 
-TODO リンク設定
-TODO レスポンシブ修正
 ３項目横並びの商品アイテムを表示します。
 必要に応じて商品詳細や、キャッチコピーなどを添えることが出来ます。
 
@@ -82,8 +80,6 @@ Styleguide 7.1.1
 /*
 商品アイテム（商品紹介C）
 
-TODO リンク設定
-TODO レスポンシブ修正
 ４項目横並びの商品アイテムを表示します。
 
 ex [トップページ　商品紹介部分](http://demo3.ec-cube.net/)
@@ -150,8 +146,6 @@ Styleguide 7.1.2
 /*
 商品アイテム（商品紹介D）
 
-TODO リンク設定
-TODO レスポンシブ修正
 ６項目横並びの商品アイテムを表示します。
 
 ex [トップページ　商品紹介部分](http://demo3.ec-cube.net/)
@@ -192,21 +186,3 @@ Styleguide 7.1.3
     width: 100%;
   }
 }
-
-
-/*
-商品アイテム（商品一覧）
-
-TODO リンク設定
-TODO レスポンシブ修正
-４項目横並びの商品アイテムを表示します。
-
-ex [トップページ　商品紹介部分](http://demo3.ec-cube.net/)
-
-Markup:
-include /assets/tmpl/elements/7.1.itembanner.pug
-+ec-shelf
-
-
-Styleguide 7.1.4
-*/

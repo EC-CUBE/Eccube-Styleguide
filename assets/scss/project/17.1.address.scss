@@ -7,6 +7,7 @@ ex [マイページ内 お届け先編集](http://demo3.ec-cube.net/mypage/deliv
 
 Markup:
 include /assets/tmpl/elements/17.1.address.pug
++ec-addressList
 +ec-addressRole
 
 sg-wrapper:
@@ -26,23 +27,7 @@ Styleguide 17.1
     padding-bottom:20px;
     border-bottom: 1px dotted #ccc;
   }
-
 }
-
-/*
-住所一覧リスト
-
-カート 注文詳細 に関する Project コンポーネントを定義します。
-
-ex [マイページ内 お届け先編集](http://demo3.ec-cube.net/mypage/delivery)
-
-Markup:
-include /assets/tmpl/elements/17.1.address.pug
-+ec-addressList
-
-Styleguide 17.1.1
-
-*/
 .ec-addressList{
   & &__item{
     display: table;
@@ -55,6 +40,10 @@ Styleguide 17.1.1
     vertical-align: middle;
     padding: 16px;
     text-align: center;
+    .ec-icon img {
+      width: 1em;
+      height: 1em;
+    }
   }
   & &__address{
     display: table-cell;
@@ -68,5 +57,4 @@ Styleguide 17.1.1
     top: 27px;
     right: 0;
   }
-
 }

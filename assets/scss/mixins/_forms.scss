@@ -103,7 +103,7 @@
     @include _form-control;
     border-radius: 3px;
   }
-  input:focus{
+  input:focus, textarea:focus{
     box-shadow: none;
     border-color: #3c8dbc;
   }

@@ -21,6 +21,9 @@ Styleguide 19.1
     @include media_desktop {
       text-align: left;
     }
+    p {
+      margin-bottom: 16px;
+    }
   }
   .ec-blockBtn--action {
     margin-bottom: 16px;

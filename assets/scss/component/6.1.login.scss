@@ -3,7 +3,7 @@
 /*
 ログイン
 
-ログイン
+主にログインフォームのスタイルを表示します。
 
 sg-wrapper:
 <div class="ec-role">
@@ -16,17 +16,20 @@ Styleguide 6.1
 /*
 ログインフォーム
 
-http://demo3.ec-cube.net/mypage
+ログインフォームを表示します。
+
+ex [ログイン画面](http://demo3.ec-cube.net/mypage/login)
 
 Markup:
 include /assets/tmpl/elements/6.3.login.pug
 +ec-login
 
+
 Styleguide 6.1.1
 */
 .ec-login{
   margin: 0 0 20px;
-  padding: 20px 13%;
+  padding: 30px 13% 20px;
   height: auto;
   background: #F3F4F4;
   box-sizing: border-box;
@@ -34,9 +37,16 @@ Styleguide 6.1.1
     margin: 0 16px;
     height: 430px;
   }
-  & &__icon{
-    font-size: 90px;
+  & &__icon {
     text-align: center;
+  }
+  .ec-icon{
+    margin-bottom: 10px;
+    img {
+      width: 90px;
+      height: 90px;
+      display: inline-block;
+    }
   }
   & &__input {
     margin-bottom: 40px;
@@ -71,7 +81,9 @@ Styleguide 6.1.1
 /*
 ゲスト購入
 
-http://demo3.ec-cube.net/mypage
+ゲスト購入ボタンとそのフォームを表示します。
+
+ex [ゲスト購入画面](http://demo3.ec-cube.net/shopping/login)
 
 Markup:
 include /assets/tmpl/elements/6.3.login.pug

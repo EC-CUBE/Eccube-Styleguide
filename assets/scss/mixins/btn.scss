@@ -68,6 +68,11 @@ $btn-border-radius-base: 0px;
 
   @include button-variant($color, $background, $border);
   // [converter] extracted a& to a.btn
+
+  .ec-icon img {
+    width: 1em;
+    vertical-align: text-bottom;
+  }
 }
 
 @mixin btn-default(){

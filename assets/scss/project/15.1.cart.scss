@@ -19,7 +19,6 @@ Styleguide 15.1
 */
 .ec-cartRole{
   @include container;
-
   &::before{
     display: none;
   }
@@ -79,14 +78,15 @@ Styleguide 15.1
 
 
 /*
-カート
+カート商品表示枠（テーブルヘッダ）
 
-カート内のアイテムを表示するテーブル枠です。
+カート内の商品をを表示するテーブル枠です。
 
-ex [カートページ　テーブル部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　テーブル部分(カート内に商品がある状態でアクセス)](http://demo3.ec-cube.net/cart)
 
 Markup:
-.ec-cartTable
+include /assets/tmpl/elements/15.1.cart.pug
++ec-cartTable
 
 sg-wrapper:
 <div class="ec-cartRole">
@@ -106,12 +106,13 @@ Styleguide 15.1.2
 
 
 /*
-カート商品表示枠
+カート商品表示枠（テーブルヘッダ）
 
-カート内のアイテムを表示するテーブルヘッダです。
+カート内の商品を表示するテーブルのヘッダです。
 スマホでは非表示となります。
 
-ex [カートページ　カートテーブルヘッダ部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　カートテーブルヘッダ部分(カート内に商品がある状態でアクセス)](http://demo3.ec-cube.net/cart)
+
 
 Markup:
 include /assets/tmpl/elements/15.1.cart.pug
@@ -153,6 +154,8 @@ Styleguide 15.1.3
 
 ex [カートページ　テーブル部分](http://demo3.ec-cube.net/cart)
 
+(カート内に商品がある状態でアクセス)
+
 Markup:
 include /assets/tmpl/elements/15.1.cart.pug
 .ec-cartTable
@@ -179,7 +182,7 @@ Styleguide 15.1.4
       width: 8.3333333%;
     }
     .ec-icon {
-      svg {
+      img {
         width: 1.5em;
         height: 1.5em;
         @include media_desktop {
@@ -265,22 +268,15 @@ Styleguide 15.1.4
       text-align: center;
       background: #fff;
 
-      .ec-cartRow__amountDownButton__icon {
-        display: block;
-        margin-top: -0.7em;
-        margin-left: -0.4em;
-        width: .8em;
-        height: .8em;
-        font-size: 20px;
-        position: absolute;
-        top: 28%;
-        left: 50%;
-        svg{
-          overflow: hidden;
-          fill: #525263;
-          display: inline-block;
-          width: 100%;
-          height: 100%;
+      .ec-cartRow__amountUpButton__icon {
+        img {
+          display: block;
+          margin-left: -0.4em;
+          width: .8em;
+          height: .8em;
+          position: absolute;
+          top: 28%;
+          left: 50%;
         }
       }
     }
@@ -301,21 +297,14 @@ Styleguide 15.1.4
       background: #fff;
 
       .ec-cartRow__amountDownButton__icon {
-        position: absolute;
-        top: 28%;
-        left: 50%;
-        margin-top: -0.7em;
-        margin-left: -0.4em;
-        display: block;
-        width: .8em;
-        height: .8em;
-        font-size: 20px;
-        svg{
-          overflow: hidden;
-          fill: #525263;
-          display: inline-block;
-          width: 100%;
-          height: 100%;
+        img {
+          display: block;
+          margin-left: -0.4em;
+          width: .8em;
+          height: .8em;
+          position: absolute;
+          top: 28%;
+          left: 50%;
         }
       }
     }
@@ -338,6 +327,8 @@ Styleguide 15.1.4
 カート内の商品に問題があることを示す警告メッセージです。
 
 ex [マイページ　カート](http://demo3.ec-cube.net/cart)
+
+(カート内に商品がある状態でアクセス)
 
 Markup:
 include /assets/tmpl/elements/15.1.cart.pug
@@ -383,6 +374,8 @@ Styleguide 15.1.5
 カートが空であることを示す警告メッセージです。
 
 ex [マイページ　カート](http://demo3.ec-cube.net/cart)
+
+(カート内に商品がある状態でアクセス)
 
 Markup:
 include /assets/tmpl/elements/15.1.cart.pug
