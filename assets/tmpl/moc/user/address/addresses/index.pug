@@ -3,16 +3,16 @@ extends /assets/tmpl/moc/guest/_layout.pug
 include /assets/tmpl/elements/9.1.mypage.pug
 
 block content
-    .ec-role
+    .ec-mypageRole
         .ec-pageHeader
             h1 マイページ/お届け先編集
         +ec-navlist
         +ec-welcomeMsg
-    .ec-role
+    .ec-mypageRole
         p
             span.ec-font-bold 4件
             | のお届け先があります。
-    .ec-role
+    .ec-mypageRole
         include /assets/tmpl/elements/17.1.address.pug
         .ec-off1Grid
             .ec-off1Grid__cell
