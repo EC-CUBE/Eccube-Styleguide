@@ -36,6 +36,7 @@ Styleguide 11.1.2
   .ec-pageHeader h1{
     @include media_desktop {
       margin: 10px 0 48px;
+      padding: 8px 0 18px;
     }
   }
 
