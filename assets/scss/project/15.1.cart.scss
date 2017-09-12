@@ -332,7 +332,38 @@ Styleguide 15.1.4
       display: table-cell;
     }
   }
+}
 
+/*
+カート内商品(商品が１の場合)
+
+商品が１の場合はカート商品を減らす「-」ボタンの無効化状態になります。
+
+ex [カートページ　テーブル部分](http://demo3.ec-cube.net/cart)
+
+(カート内に商品がある状態でアクセス)
+
+Markup:
+include /assets/tmpl/elements/15.1.cart.pug
+.ec-cartTable
+  +ec-cartRowOnly
+
+sg-wrapper:
+<div class="ec-cartRole">
+  <sg-wrapper-content/>
+</div>
+
+
+Styleguide 15.1.5
+*/
+
+.ec-cartRow{
+  & &__amountColumn{
+    .ec-cartRow__amountDownButtonDisabled {
+      @extend .ec-cartRow__amountDownButton;
+      cursor: default;
+    }
+  }
 }
 
 /*
@@ -350,7 +381,7 @@ include /assets/tmpl/elements/15.1.cart.pug
   .ec-cartRole__cart
     +ec-alert-warning
 
-Styleguide 15.1.5
+Styleguide 15.1.6
 */
 
 .ec-alert-warning {
@@ -397,5 +428,5 @@ include /assets/tmpl/elements/15.1.cart.pug
         .ec-off3Grid__cell
             +ec-alert-warningEnpty
 
-Styleguide 15.1.6
+Styleguide 15.1.7
 */

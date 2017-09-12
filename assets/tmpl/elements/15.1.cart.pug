@@ -107,7 +107,7 @@ mixin ec-cartRow
                 .ec-cartRow__name アンティークポット
                 .ec-cartRow__unitPrice ¥ 4,320
                 .ec-cartRow__sutbtotalSP 小計：¥ 4,320
-        - var amount = 1
+        - var amount = 3
         li.ec-cartRow__amountColumn
             .ec-cartRow__amount #{amount}
             .ec-cartRow__amountSP 数量：#{amount}
@@ -116,6 +116,36 @@ mixin ec-cartRow
                     a.ec-cartRow__amountDownButton(href="#")
                         span.ec-cartRow__amountDownButton__icon
                                 img(src='/moc/icon/minus-dark.svg', alt='reduce')
+                else
+                    a.ec-cartRow__amountDownButtonDisabled(href="#")
+                        span.ec-cartRow__amountDownButton__icon
+                            img(src='/moc/icon/minus.svg', alt='reduce')
+                a.ec-cartRow__amountUpButton(href="#")
+                    span.ec-cartRow__amountUpButton__icon
+                        img(src='/moc/icon/plus-dark.svg', alt='increase')
+        li.ec-cartRow__subtotalColumn
+            .ec-cartRow__sutbtotal ¥ 4,320
+
+mixin ec-cartRowOnly
+    ul.ec-cartRow
+        li.ec-cartRow__delColumn
+            a.ec-icon
+                img(src='/moc/icon/cross.svg', alt='delete')
+        li.ec-cartRow__contentColumn
+            .ec-cartRow__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701115551_559356b78ba67.jpeg")
+            .ec-cartRow__summary
+                .ec-cartRow__name アンティークポット
+                .ec-cartRow__unitPrice ¥ 4,320
+                .ec-cartRow__sutbtotalSP 小計：¥ 4,320
+        - var amount = 1
+        li.ec-cartRow__amountColumn
+            .ec-cartRow__amount #{amount}
+            .ec-cartRow__amountSP 数量：#{amount}
+            .ec-cartRow__amountUpDown
+                if amount >= 2
+                    a.ec-cartRow__amountDownButton(href="#")
+                        span.ec-cartRow__amountDownButton__icon
+                            img(src='/moc/icon/minus-dark.svg', alt='reduce')
                 else
                     a.ec-cartRow__amountDownButtonDisabled(href="#")
                         span.ec-cartRow__amountDownButton__icon
