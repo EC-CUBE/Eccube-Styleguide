@@ -1,9 +1,9 @@
 include ./7.3.cart.pug
 mixin ec-alert-warning
     +b.ec-alert-warning
+        +e.icon
+            img(src='/moc/icon/exclamation-white.svg')
         +e.text
-            +e.icon
-                img(src='/moc/icon/exclamation-white.svg')
             | 選択された商品(パーコレーター)は販売制限しております。
             br
             | 一度に販売制限数を超える購入はできません。
@@ -30,6 +30,31 @@ mixin ec-cartRole
                 +e.SPAN.totalAmount ￥1,296
             a(href="/moc/guest/cart2").ec-blockBtn--action レジに進む
             a(href="").ec-blockBtn--cancel お買い物を続ける
+
+mixin ec-cartRoleError
+    +b.ec-cartRole
+        +e.progress
+            +ec-progress
+        +e.error
+            +b.ec-alert-warning
+                +e.text
+                    +e.icon
+                        img(src='/moc/icon/exclamation-white.svg')
+                    | 選択された商品(パーコレーター)は販売制限しております。
+                    br
+                    | 一度に販売制限数を超える購入はできません。
+        +e.cart
+            +e.totalText
+                p 商品の合計金額は「
+                    span.ec-font-bold ¥ 1,296
+                    | 」です。
+            +ec-cartTable
+        +e.actions
+            +e.total 合計：
+                +e.SPAN.totalAmount ￥1,296
+            a(href="/moc/guest/cart2").ec-blockBtn--action レジに進む
+            a(href="").ec-blockBtn--cancel お買い物を続ける
+
 
 mixin ec-cartUserRole
     +b.ec-cartRole
