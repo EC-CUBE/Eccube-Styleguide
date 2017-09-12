@@ -1,4 +1,5 @@
 @import "../mixins/projects";
+@import "../mixins/media";
 
 /*
 注文履歴詳細
@@ -41,6 +42,14 @@ Styleguide 16.2.5
   & &__body{
     display: none;
   }
+  .ec-inlineBtn {
+    display: none;
+    @include media_desktop {
+      display: inline-block;
+    }
+
+  }
+
 }
 
 

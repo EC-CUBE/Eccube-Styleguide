@@ -387,6 +387,7 @@ Styleguide 7.3.8
 .ec-totalBox{
   background:#F3F3F3;
   padding: 16px;
+  margin-bottom: 16px;
   & &__spec{
     position: relative;
     margin-bottom:8px;
@@ -409,8 +410,8 @@ Styleguide 7.3.8
     }
   }
   & &__total{
-    padding: 8px 0;
     border-top: 1px dotted #ccc;
+    padding: 8px 0;
     text-align: right;
     font-size: 14px;
     font-weight:bold;
