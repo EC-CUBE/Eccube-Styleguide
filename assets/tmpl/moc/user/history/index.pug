@@ -4,20 +4,20 @@ include /assets/tmpl/elements/9.1.mypage.pug
 include /assets/tmpl/elements/16.1.history.pug
 
 block content
-    .ec-role
+    .ec-mypageRole
         .ec-pageHeader
             h1 マイページ/ご注文履歴詳細
 
         +ec-navlist
         +ec-welcomeMsg
-    .ec-role
-        p
+    .ec-mypageRole
+        p.ec-para-nomal
             strong ３件
             | の履歴があります。
-    +ec-historyRole
-    +ec-historyRole
-    +ec-historyRole
-    +ec-historyRole
+        +ec-historyRole
+        +ec-historyRole
+        +ec-historyRole
+        +ec-historyRole
 
 
 
