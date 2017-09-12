@@ -35,7 +35,7 @@ Styleguide 6.1.1
   box-sizing: border-box;
   @include media_desktop {
     margin: 0 16px;
-    height: 430px;
+    padding: 30px 13% 60px;
   }
   & &__icon {
     text-align: center;
@@ -70,11 +70,7 @@ Styleguide 6.1.1
   }
   .ec-errorMessage {
     color: $clrRed;
-  }
-}
-.ec-login.error {
-  @include media_desktop {
-    height: 500px;
+    margin-bottom: 20px;
   }
 }
 
@@ -101,7 +97,7 @@ Styleguide 6.1.2
   background: #F3F4F4;
 
   @include media_desktop {
-    height: 430px;
+    height: 100%;
     margin: 0 16px;
   }
   & &__inner{
