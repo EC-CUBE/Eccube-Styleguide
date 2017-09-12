@@ -203,3 +203,10 @@ mixin ec-orderAddAddress
         .ec-off4Grid__cell
           a.ec-blockBtn--action(href="/moc/guest/cart4/") 選択したお届け先に送る
           a.ec-blockBtn--cancel(href="/moc/guest/cart3/") 戻る
+
+mixin ec-alert-warning
+  +b.ec-alert-warning
+    +e.text
+      +e.icon
+        img(src='/moc/icon/exclamation-white.svg')
+      | 配送方法の異なる商品が含まれているため、お届け先は複数となります。

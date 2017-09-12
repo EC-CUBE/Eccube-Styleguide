@@ -1,0 +1,15 @@
+extends /assets/tmpl/moc/guest/_layout.pug
+
+include /assets/tmpl/elements/14.1.product.pug
+include /assets/tmpl/elements/15.1.cart.pug
+include /assets/tmpl/elements/10.1.alert.pug
+
+block content
+    .ec-role
+        .ec-pageHeader
+            h1 ショッピングカート
+    +ec-cartEmptyRole
+    .ec-role
+        .ec-off3Grid
+            .ec-off3Grid__cell
+                +ec-alert-warning
