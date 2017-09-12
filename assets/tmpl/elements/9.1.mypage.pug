@@ -22,11 +22,11 @@ mixin ec-favorite
     +b.ec-favoriteRole
         +e.header
             p
-                span.ec-font-bold 6件
+                span.ec-font-bold 2件
                 | のお気に入りがあります。
         +e.detail
             +e.UL.itemList
-                - for (var x = 0; x < 6; x++)
+                - for (var x = 0; x < 2; x++)
                     +e.LI.item
                         a.ec-closeBtn--circle(href="#")
                             .ec-icon
