@@ -43,6 +43,10 @@ Styleguide 3.1.1
       margin-bottom: 16px;
     }
   }
+  textarea {
+    height: auto;
+    min-height: 100px;
+  }
   p {
     line-height: 1.4;
   }
