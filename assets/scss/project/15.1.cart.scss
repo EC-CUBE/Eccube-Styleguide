@@ -30,6 +30,14 @@ Styleguide 15.1
     width: 100%;
     text-align: center;
   }
+  & &__error{
+    width: 100%;
+    text-align: center;
+    .ec-alert-warning {
+      max-width: 80%;
+      display: inline-block;
+    }
+  }
   & &__totalText{
     margin-bottom: 0;
     padding: 16px 0 6px;
@@ -355,12 +363,12 @@ Styleguide 15.1.5
 
   & &__icon {
     display: inline-block;
+    margin-right: 1rem;
     width: 20px;
     height: 20px;
     color: #fff;
     fill: #fff;
-    position: absolute;
-    left: -30px;
+    vertical-align: 2px;
   }
   & &__text {
     display: inline-block;
