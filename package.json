@@ -25,7 +25,7 @@
     "build:moc:icon": "cp -r assets/icon public/moc/icon"
   },
   "author": "",
-  "license": "ISC",
+  "license": "LGPL",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.12.10",

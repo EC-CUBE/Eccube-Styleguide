@@ -5,7 +5,7 @@
 		"framework",
 		"laravel"
 	],
-	"license": "MIT",
+	"license": "LGPL",
 	"type": "project",
 	"require": {
 		"guzzlehttp/guzzle": "^6.2"
