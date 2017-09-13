@@ -601,13 +601,14 @@ Styleguide 11.2.6
   background: transparent;
   transform: translateX(0);
   transition: all .3s;
-  @include fadeOut();
+  visibility:hidden;
 }
 .have_curtain .ec-overlayRole {
+  display: block;
   opacity: 1;
   background: rgba(0,0,0, 0.5);
   transform: translateX(-260px);
   transition: all .3s;
-  @include fadeIn();
+  visibility: visible;
 }
 

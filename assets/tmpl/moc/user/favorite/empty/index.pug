@@ -1,11 +1,12 @@
-extends /assets/tmpl/moc/user/_layout.pug
+extends /assets/tmpl/moc/guest/_layout.pug
 
 include /assets/tmpl/elements/9.1.mypage.pug
 
 block content
-    .ec-pageHeader
-        h1 マイページ/お気に入り一覧
-    +ec-navlist
-    +ec-welcomeMsg
-
-    +ec-favoriteEmpty
+    .ec-mypageRole
+        .ec-pageHeader
+            h1 マイページ/お気に入り一覧
+        +ec-navlist
+        +ec-welcomeMsg
+    .ec-mypageRole
+        +ec-favoriteEmpty
