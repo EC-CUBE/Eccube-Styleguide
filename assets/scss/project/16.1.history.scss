@@ -41,8 +41,16 @@ Styleguide 16.1
       border-top: none;
     }
 
-    .ec-imageGrid__content > p {
+    .ec-historyRole__detailTitle {
       margin-bottom: 8px;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .ec-historyRole__detailPrice {
+      margin-bottom: 8px;
+      font-size: 1.6rem;
+      font-weight: bold;
     }
 
     @include media_desktop {
@@ -50,38 +58,39 @@ Styleguide 16.1
       border-top: none;
     }
   }
-
 }
 
 /*
-注文履歴一覧 規格１のみ
+注文履歴一覧 規格
 
-マイページ 注文履歴部に関する Project コンポーネント(規格１のみ)を定義します。
+マイページ 注文履歴内アイテムの規格を定義します。
 
 ex [マイページ　注文履歴一覧](http://demo3.ec-cube.net/mypage)
 (要ログイン)
 
 Markup:
 include /assets/tmpl/elements/16.1.history.pug
-+ec-historyRole-one
++ec-historyRole-option
 
 Styleguide 16.1.1
 */
 
-/*
-注文履歴一覧 規格１, 規格２
-
-マイページ 注文履歴部に関する Project コンポーネント(規格１, 規格２)を定義します。
-
-ex [マイページ　注文履歴一覧](http://demo3.ec-cube.net/mypage)
-(要ログイン)
-
-Markup:
-include /assets/tmpl/elements/16.1.history.pug
-+ec-historyRole-two
-
-Styleguide 16.1.2
-*/
+.ec-historyRole{
+  & &__detail {
+    .ec-historyRole__detailOption {
+      display: inline-block;
+      margin-bottom: 8px;
+      margin-right: .5rem;
+      font-size: 1.6rem;
+    }
+    .ec-historyRole__detailOption::after {
+      display: inline-block;
+      padding-left: .5rem;
+      content: "/";
+      font-weight: bold;
+    }
+  }
+}
 
 /*
 注文履歴一覧ヘッダ
@@ -94,9 +103,11 @@ ex [マイページ　注文履歴一覧ヘッダ](http://demo3.ec-cube.net/mypa
 Markup:
 include /assets/tmpl/elements/16.1.history.pug
 +ec-historyHeader
+p hofe
 
-Styleguide 16.1.3
+Styleguide 16.1.2
 */
+
 
 .ec-historyListHeader{
   & &__date{

@@ -16,15 +16,8 @@ mixin ec-historyRole
                 .ec-imageGrid
                     .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
                     .ec-imageGrid__content
-                        p.ec-font-bold ホーローマグ
-                        p ¥ 1,728 x 1
-                .ec-imageGrid
-                    .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
-                    .ec-imageGrid__content
-                        p.ec-font-bold ホーローマグ
-                        p ¥ 1,728 x 1
-
-mixin ec-historyRole-one
+                        +e.P.detailTitle ホーローマグ
+                        +e.P.detailPrice ¥ 1,728 x 1
     +b.ec-historyRole
         +e.contents
             +e.header
@@ -42,17 +35,15 @@ mixin ec-historyRole-one
                 .ec-imageGrid
                     .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
                     .ec-imageGrid__content
-                        p.ec-font-bold ホーローマグ
-                        +e.P.option 大きさ: L
-                        p ¥ 1,728 x 1
+                        +e.P.detailTitle ホーローマグ
+                        +e.P.detailPrice ¥ 1,728 x 1
                 .ec-imageGrid
                     .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
                     .ec-imageGrid__content
-                        p.ec-font-bold ホーローマグ
-                        +e.P.option 大きさ: L
-                        p ¥ 1,728 x 1
+                        +e.P.detailTitle ホーローマグ
+                        +e.P.detailPrice ¥ 1,728 x 1
 
-mixin ec-historyRole-two
+mixin ec-historyRole-option
     +b.ec-historyRole
         +e.contents
             +e.header
@@ -70,15 +61,16 @@ mixin ec-historyRole-two
                 .ec-imageGrid
                     .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
                     .ec-imageGrid__content
-                        p.ec-font-bold ホーローマグ
-                        +e.P.option 大きさ: L / 色: ホワイト
-                        p ¥ 1,728 x 1
+                        +e.P.detailTitle  ホーローマグ
+                        +e.P.detailOption 大きさ: L
+                        +e.P.detailPrice ¥ 1,728 x 1
                 .ec-imageGrid
                     .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
                     .ec-imageGrid__content
-                        p.ec-font-bold ホーローマグ
-                        +e.P.option 大きさ: L / 色: ホワイト
-                        p ¥ 1,728 x 1
+                        +e.P.detailTitle  ホーローマグ
+                        +e.P.detailOption 大きさ: L
+                        +e.P.detailOption 色: ホワイト
+                        +e.P.detailPrice ¥ 1,728 x 1
 
 mixin ec-historyHeader
     .ec-historyListHeader
