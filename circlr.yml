@@ -1,0 +1,16 @@
+machine:
+  node:
+    version: 8.4.0
+  timezone: Asia/Tokyo
+
+deployment:
+  publish:
+    branch: dev
+    commands:
+      - npm run build:moc
+      - git config --global user.name "circleci"
+      - git config --global user.email "circleci@chatbox-inc.com"
+      - git rm .gitignore
+      - git add public
+      - git commit -m "[ci skip] build on circle ci"
+      - git push origin moc-preview -f
