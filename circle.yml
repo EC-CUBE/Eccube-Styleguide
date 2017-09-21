@@ -16,4 +16,5 @@ deployment:
       - git rm .gitignore
       - git add public
       - git commit -m "[ci skip] build on circle ci"
-      - git push origin moc-preview
+      - git subtree split --branch moc-preview --prefix public
+      - git push origin moc-preview -f
