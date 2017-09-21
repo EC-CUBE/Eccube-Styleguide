@@ -7,9 +7,8 @@ machine:
 
 deployment:
   publish:
-    branch: dev
+    branch: master
     commands:
-      - git checkout dev
       - npm run build
       - git config --global user.name "circleci"
       - git config --global user.email "circleci@chatbox-inc.com"
