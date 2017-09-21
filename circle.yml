@@ -1,6 +1,8 @@
 machine:
   node:
     version: 8.4.0
+  post:
+      - npm install -g npm@5
   timezone: Asia/Tokyo
 
 deployment:
