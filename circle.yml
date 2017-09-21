@@ -1,0 +1,20 @@
+machine:
+  node:
+    version: 8.4.0
+  post:
+      - npm install -g npm@5
+  timezone: Asia/Tokyo
+
+deployment:
+  publish:
+    branch: dev
+    commands:
+      - git checkout dev
+      - npm run build
+      - git config --global user.name "circleci"
+      - git config --global user.email "circleci@chatbox-inc.com"
+      - git rm .gitignore
+      - git add public
+      - git commit -m "[ci skip] build on circle ci"
+      - git subtree split --branch moc-preview --prefix public
+      - git push origin moc-preview -f
