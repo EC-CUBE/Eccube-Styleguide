@@ -9,10 +9,11 @@ deployment:
   publish:
     branch: dev
     commands:
-      - npm run build:moc
+      - npm run build
       - git config --global user.name "circleci"
       - git config --global user.email "circleci@chatbox-inc.com"
       - git rm .gitignore
+      - git checkout -b moc-preview
       - git add public
       - git commit -m "[ci skip] build on circle ci"
-      - git push origin moc-preview -f
+      - git push origin moc-preview
