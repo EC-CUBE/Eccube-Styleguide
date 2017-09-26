@@ -36,9 +36,15 @@ Styleguide 15.2
   }
   & &__summary{
     width: 100%;
+    .ec-inlineBtn {
+      display: inline-block;
+    }
     @include media_desktop {
       width: 33.33333%;
       padding: 0 16px;
+      .ec-inlineBtn {
+        display: none;
+      }
     }
   }
   .ec-borderedList {
@@ -295,4 +301,3 @@ Styleguide 15.2.6
     }
   }
 }
-

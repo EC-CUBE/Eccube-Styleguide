@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "clean": "rm -rf ./public",
     "start": "run-p dev:styleguide:*",
     "dev:styleguide:build": "run-s build:styleguide:*",
@@ -25,7 +25,7 @@
     "build:moc:icon": "cp -r assets/icon public/moc/icon"
   },
   "author": "",
-  "license": "ISC",
+  "license": "LGPL",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.12.10",

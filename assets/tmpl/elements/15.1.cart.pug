@@ -1,18 +1,18 @@
 include ./7.3.cart.pug
 mixin ec-alert-warning
     +b.ec-alert-warning
+        +e.icon
+            img(src='/moc/icon/exclamation-white.svg')
         +e.text
-            +e.icon
-                img(src='/moc/icon/exclamation-white.svg')
-            | 選択された商品(ガラステーブル)の在庫が不足しております。
+            | 選択された商品(パーコレーター)は販売制限しております。
             br
-            | 一度に在庫数を超える購入はできません。
+            | 一度に販売制限数を超える購入はできません。
 
 mixin ec-alert-warningEnpty
     +b.ec-alert-warning
+        +e.icon
+            img(src='/moc/icon/exclamation-white.svg')
         +e.text
-            +e.icon
-                img(src='/moc/icon/exclamation-white.svg')
             | 現在カート内に商品はございません。
 
 mixin ec-cartRole
@@ -30,6 +30,31 @@ mixin ec-cartRole
                 +e.SPAN.totalAmount ￥1,296
             a(href="/moc/guest/cart2").ec-blockBtn--action レジに進む
             a(href="").ec-blockBtn--cancel お買い物を続ける
+
+mixin ec-cartRoleError
+    +b.ec-cartRole
+        +e.progress
+            +ec-progress
+        +e.error
+            +b.ec-alert-warning
+                +e.icon
+                    img(src='/moc/icon/exclamation-white.svg')
+                +e.text
+                    | 選択された商品(パーコレーター)は販売制限しております。
+                    br
+                    | 一度に販売制限数を超える購入はできません。
+        +e.cart
+            +e.totalText
+                p 商品の合計金額は「
+                    span.ec-font-bold ¥ 1,296
+                    | 」です。
+            +ec-cartTable
+        +e.actions
+            +e.total 合計：
+                +e.SPAN.totalAmount ￥1,296
+            a(href="/moc/guest/cart2").ec-blockBtn--action レジに進む
+            a(href="").ec-blockBtn--cancel お買い物を続ける
+
 
 mixin ec-cartUserRole
     +b.ec-cartRole
@@ -82,15 +107,51 @@ mixin ec-cartRow
                 .ec-cartRow__name アンティークポット
                 .ec-cartRow__unitPrice ¥ 4,320
                 .ec-cartRow__sutbtotalSP 小計：¥ 4,320
+        - var amount = 3
         li.ec-cartRow__amountColumn
-            .ec-cartRow__amount 1
-            .ec-cartRow__amountSP 数量：1
+            .ec-cartRow__amount #{amount}
+            .ec-cartRow__amountSP 数量：#{amount}
             .ec-cartRow__amountUpDown
+                if amount >= 2
+                    a.ec-cartRow__amountDownButton(href="#")
+                        span.ec-cartRow__amountDownButton__icon
+                                img(src='/moc/icon/minus-dark.svg', alt='reduce')
+                else
+                    a.ec-cartRow__amountDownButtonDisabled(href="#")
+                        span.ec-cartRow__amountDownButton__icon
+                            img(src='/moc/icon/minus.svg', alt='reduce')
                 a.ec-cartRow__amountUpButton(href="#")
                     span.ec-cartRow__amountUpButton__icon
-                        img(src='/moc/icon/minus-dark.svg', alt='increase')
-                a.ec-cartRow__amountDownButton(href="#")
-                    span.ec-cartRow__amountDownButton__icon
-                        img(src='/moc/icon/plus-dark.svg', alt='reduce')
+                        img(src='/moc/icon/plus-dark.svg', alt='increase')
+        li.ec-cartRow__subtotalColumn
+            .ec-cartRow__sutbtotal ¥ 4,320
+
+mixin ec-cartRowOnly
+    ul.ec-cartRow
+        li.ec-cartRow__delColumn
+            a.ec-icon
+                img(src='/moc/icon/cross.svg', alt='delete')
+        li.ec-cartRow__contentColumn
+            .ec-cartRow__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701115551_559356b78ba67.jpeg")
+            .ec-cartRow__summary
+                .ec-cartRow__name アンティークポット
+                .ec-cartRow__unitPrice ¥ 4,320
+                .ec-cartRow__sutbtotalSP 小計：¥ 4,320
+        - var amount = 1
+        li.ec-cartRow__amountColumn
+            .ec-cartRow__amount #{amount}
+            .ec-cartRow__amountSP 数量：#{amount}
+            .ec-cartRow__amountUpDown
+                if amount >= 2
+                    a.ec-cartRow__amountDownButton(href="#")
+                        span.ec-cartRow__amountDownButton__icon
+                            img(src='/moc/icon/minus-dark.svg', alt='reduce')
+                else
+                    a.ec-cartRow__amountDownButtonDisabled(href="#")
+                        span.ec-cartRow__amountDownButton__icon
+                            img(src='/moc/icon/minus.svg', alt='reduce')
+                a.ec-cartRow__amountUpButton(href="#")
+                    span.ec-cartRow__amountUpButton__icon
+                        img(src='/moc/icon/plus-dark.svg', alt='increase')
         li.ec-cartRow__subtotalColumn
             .ec-cartRow__sutbtotal ¥ 4,320
