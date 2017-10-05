@@ -612,3 +612,26 @@ Styleguide 11.2.6
   visibility: visible;
 }
 
+/*
+ヘッダー：test
+
+test
+
+Markup:
+span.ec-itemAccordionParent test1
+ul.ec-itemNavAccordion
+  li.ec-itemNavAccordion__item
+    a(href='') test2
+    ul.ec-itemNavAccordion
+      li.ec-itemNavAccordion__item
+        a(href='') test3
+        ul.ec-itemNavAccordion
+          li.ec-itemNavAccordion__item
+            a(href='') test4
+
+Styleguide 11.2.7
+*/
+
+.ec-itemNavAccordion {
+  display: none;
+}
