@@ -7,14 +7,27 @@ mixin ec-itemNav
   +b.UL.ec-itemNav
     +e.LI.item: a(href="/moc/guest/search") 新入荷
     +e.LI.item
-      a(href="/moc/guest/search") キッチンツール
+      a(href="/moc/guest/search") 第１階層
       ul.ec-itemNavAccordion
         li.ec-itemNavAccordion__item
-          a(href="/moc/guest/search") キッチン小物
+          a(href="/moc/guest/search") 第２階層
         li.ec-itemNavAccordion__item
-          a(href="/moc/guest/search") 調理器具
-        li.ec-itemNavAccordion__item
-          a(href="/moc/guest/search") 食器
+          a(href="/moc/guest/search") 第２階層
+          ul.ec-itemNavAccordion
+            li.ec-itemNavAccordion__item
+              a(href="/moc/guest/search") 第3階層
+            li.ec-itemNavAccordion__item
+              a(href="/moc/guest/search") 第3階層
+            li.ec-itemNavAccordion__item
+              a(href="/moc/guest/search") 第3階層
+              ul.ec-itemNavAccordion
+                li.ec-itemNavAccordion__item
+                  a(href="/moc/guest/search") 第4階層
+                li.ec-itemNavAccordion__item
+                  a(href="/moc/guest/search") 第4階層
+                li.ec-itemNavAccordion__item
+                  a(href="/moc/guest/search") 第4階層
+
     +e.LI.item: a(href="/moc/guest/search") インテリア
     +e.LI.item: a(href="/moc/guest/search") 照明
     +e.LI.item: a(href="/moc/guest/search") 雑貨・小物
