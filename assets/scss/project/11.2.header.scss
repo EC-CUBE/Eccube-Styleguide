@@ -472,35 +472,23 @@ Styleguide 11.2.5
       padding: 16px;
       height: 55px;
     }
-    &:hover > .ec-itemNavAccordion {
-      overflow: visible;
-      height: 50px;
-      transition:all .2s ease-out;
-      .ec-itemNavAccordion__item {
-        height: 50px;
-        transition:all .2s ease-out;
-      }
-    }
+  }
+  .ec-itemNavAccordion__item:last-of-type {
+    border-bottom: 1px solid #E8E8E8;
   }
   .ec-itemNavAccordion {
     z-index: 1000;
     position: absolute;
     padding: 0;
-    height: 0;
-    overflow: hidden;
-    transition:all .2s ease-out;
     .ec-itemNavAccordion__item {
-      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #E8E8E8;
       list-style: none;
-      height: 0;
-      transition:all .2s ease-out;
       a {
         list-style: none;
-        border-top: 1px solid #E8E8E8;
-        border-bottom: 1px solid #E8E8E8;
         margin-top: 0;
         padding: 15px 10px;
-        min-width: 200px;
+        min-width: 160px;
+        max-width: 160px;
         width: 100%;
         text-align: left;
         background: #fff;
@@ -510,6 +498,15 @@ Styleguide 11.2.5
         }
       }
     }
+  }
+  //3階層目以降
+  .ec-itemNavAccordion > .ec-itemNavAccordion__item > .ec-itemNavAccordion {
+    top: 0px;
+    left: 160px;
+  }
+  //4階層目
+  .ec-itemNavAccordion > .ec-itemNavAccordion__item > .ec-itemNavAccordion > .ec-itemNavAccordion__item > .ec-itemNavAccordion {
+    color: blue;
   }
 }
 /*
@@ -610,28 +607,4 @@ Styleguide 11.2.6
   transform: translateX(-260px);
   transition: all .3s;
   visibility: visible;
-}
-
-/*
-ヘッダー：test
-
-test
-
-Markup:
-span.ec-itemAccordionParent test1
-ul.ec-itemNavAccordion
-  li.ec-itemNavAccordion__item
-    a(href='') test2
-    ul.ec-itemNavAccordion
-      li.ec-itemNavAccordion__item
-        a(href='') test3
-        ul.ec-itemNavAccordion
-          li.ec-itemNavAccordion__item
-            a(href='') test4
-
-Styleguide 11.2.7
-*/
-
-.ec-itemNavAccordion {
-  display: none;
 }
