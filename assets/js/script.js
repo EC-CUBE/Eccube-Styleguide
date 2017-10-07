@@ -92,3 +92,14 @@ $(function(){
         asNavFor: '.item_visual',//スライダー部分の要素を記述
     })
 });
+
+$(function() {
+    $('.ec-itemAccordionParent').hover(function() {
+        $(this).next('.ec-itemNavAccordion').slideToggle('fast');
+    });
+
+    $('.ec-itemNavAccordion').hover(function(e) {
+        $(this).children('.ec-itemNavAccordion').slideToggle('fast');
+        e.stopPropagation();
+    });
+});
