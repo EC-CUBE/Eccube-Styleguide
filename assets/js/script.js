@@ -94,12 +94,5 @@ $(function(){
 });
 
 $(function() {
-    $('.ec-itemAccordionParent').hover(function() {
-        $(this).next('.ec-itemNavAccordion').slideToggle('fast');
-    });
-
-    $('.ec-itemNavAccordion').hover(function(e) {
-        $(this).children('.ec-itemNavAccordion').slideToggle('fast');
-        e.stopPropagation();
-    });
+    $(".ec-itemNav ul a").click(function(){$(this).siblings().slideToggle();})
 });
