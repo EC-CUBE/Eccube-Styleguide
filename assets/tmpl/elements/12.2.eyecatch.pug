@@ -1,20 +1,13 @@
 mixin ec-eyecatchRole
     .ec-eyecatchRole
-        +b.ec-grid2
-            +e.cell
-                +b.ec-splitImg
-                    +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img01.jpg")
-                    +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img02.jpg")
-            +e.cell
-                .ec-eyecatchRole__intro
-                    p.ec-eyecatchRole__introTitle  新入荷商品特集
-                    p.ec-heading-bold この季節にぴったりな商品をご用意しました
-                    p.ec-font-size-4 さわやかな日差しが過ごしやすい季節。心地よいくらしのための、お部屋のアクセントになるおすすめのファブリックやグッズをご紹介します。
-                    p: a.ec-inlineBtn--primary 一覧を見る
-                            span.ec-icon
-                                img(src='/moc/icon/angle-right-white.svg')
-
-mixin ec-eyecatchTop
-    +b.ec-splitImg
-        +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img01.jpg")
-        +e.item: img(src="http://demo3.ec-cube.net/template/default/img/top/img02.jpg")
+        img.ec-eyecatchRole__image(src="/moc/image/img_about.jpg")
+        .ec-eyecatchRole__intro
+            p.ec-eyecatchRole__introEnTitle CUBE GELATO ICE
+            p.ec-eyecatchRole__introTitle  彩のジェラート"CUBE"をご堪能ください。
+            p.ec-eyecatchRole__introDescriptiron
+                | ジェラートとはイタリアン・アイスクリームのことで、
+                | 一般的なアイスクリームに比べて、乳脂肪分が低く果物を使っているのが特徴です。
+                | 当店では厳選した旬の果物のおいしさをそのままジェラートに仕上げました。
+                | 風味が濃厚でありながら、甘さ控えめでヘルシーなキューブジェラートをご堪能ください。
+                | さらにジェラートの製法を活かした、アイスキャンディ・アイスサンドも販売しております。
+            a.ec-blockBtn--top 商品一覧へ
