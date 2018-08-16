@@ -1,0 +1,17 @@
+mixin ec-newsRole
+    +b.ec-newsRole
+        .ec-secHeading
+            span.ec-secHeading__en NEWS
+            span.ec-secHeading__line
+            span.ec-secHeading__ja 新着情報
+        +e.__news
+            +e.__newsItme
+                +e.newsDate 2016/09/29
+                +e.newsComment サイトオープンしました
+                +e.newsClose
+                    a.ec-closeBtn--circle
+                        span.ec-closeBtn--circle__icon
+                            .ec-icon
+                                img(src='/moc/icon/angle-down-white.svg', alt='')
+                +e.newsDescription
+                    | 詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。

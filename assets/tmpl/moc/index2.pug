@@ -5,21 +5,17 @@ include /assets/tmpl/elements/8.1.info.pug
 include /assets/tmpl/elements/12.1.slider.pug
 include /assets/tmpl/elements/12.2.eyecatch.pug
 include /assets/tmpl/elements/12.5.topics.pug
+include /assets/tmpl/elements/12.6.newItem.pug
+include /assets/tmpl/elements/12.7.category.pug
+include /assets/tmpl/elements/12.8.news.pug
 
 block content
     +ec-sliderRole
     .ec-role
         +ec-eyecatchRole
         +ec-topicRole
-        +ec-displayB
-        +ec-displayC
+        +ec-newItemRole
+        +ec-categoryRole
     .ec-role
-        +b.ec-grid3
-           +e.cell3: +ec-news
-           +e.cell
-            +ec-banner
-    .ec-role
-        +ec-displayD
-        +ec-displayD
-
-
+        +ec-newsRole
+        +ec-news
