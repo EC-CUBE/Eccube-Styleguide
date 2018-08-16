@@ -1,0 +1,25 @@
+@import "../mixins/media";
+@import "../mixins/clearfix";
+
+/*
+カテゴリ（アイテム3列）
+
+トップページで使用されているカテゴリのスタイルです。
+
+ex [トップページ](http://demo3.ec-cube.net/)
+
+Markup:
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 12.6.1
+*/
+
+.ec-categoryRole {
+  & &__list {
+    display: flex;
+  }
+
+}

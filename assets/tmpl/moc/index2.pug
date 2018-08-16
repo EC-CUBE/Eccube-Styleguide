@@ -1,4 +1,4 @@
-extends /assets/tmpl/moc/guest/_layout
+extends /assets/tmpl/moc/guest/_layoutTop
 
 include /assets/tmpl/elements/7.1.itembanner.pug
 include /assets/tmpl/elements/8.1.info.pug
@@ -13,8 +13,9 @@ block content
     +ec-sliderRole
     .ec-role
         +ec-eyecatchRole
-        +ec-topicRole
+    +ec-topicRole
+    .ec-role
         +ec-newItemRole
-        +ec-categoryRole
+    +ec-categoryRole
     .ec-role
         +ec-newsRole

@@ -1,11 +1,14 @@
 mixin ec-topicRole
     +b.ec-topicRole
-        .ec-secHeading
-            span.ec-secHeading__en TOPICS
-            span.ec-secHeading__line
-            span.ec-secHeading__ja 特集
-        +e.__list
-            +e.__listItem
-                p hogehgoe
-            +e.__listItem
-                p hogehgoe
+        .ec-role
+            .ec-secHeading
+                span.ec-secHeading__en TOPICS
+                span.ec-secHeading__line
+                span.ec-secHeading__ja 特集
+            +e.__list
+                +e.__listItem
+                    img(src="/moc/image/img_bnr01.jpg")
+                    +e.P.__listItemTitle 濃厚なのにアイスよりヘルシー!! ジェラート特集
+                +e.__listItem
+                    img(src="/moc/image/img_bnr02.jpg")
+                    +e.P.__listItemTitle サクサク食感が魅力!! コーンアイス特集
