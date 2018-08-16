@@ -117,10 +117,10 @@ Styleguide 12.8.1
   }
   & &__newsDescription {
     max-height: 0;
-    transition: max-height 1s;
     font-size: 12px;
     line-height: 1.2;
     overflow: hidden;
+    transition: all .8s linear;
 
     @include media_desktop {
       font-size: 14px;
@@ -134,7 +134,7 @@ Styleguide 12.8.1
   &__newsItem.is_active &__newsDescription{
     margin: 0 0 10px;
     max-height: 100vh;
-    transition: max-height 1s;
+    transition: all .8s linear;
 
     @include media_desktop {
       margin: 20px 0;
