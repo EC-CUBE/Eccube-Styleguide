@@ -18,7 +18,11 @@ Styleguide 12.8.1
 */
 
 .ec-newsRole {
+  padding: 40px 0 0;
 
+  @include media_desktop {
+    padding: 60px 0 0;
+  }
 
   & &__news {
 

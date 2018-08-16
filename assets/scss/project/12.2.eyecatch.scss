@@ -20,6 +20,7 @@ Styleguide 12.2
 
   @include media_desktop {
     flex-wrap: nowrap;
+    padding-bottom: 0;
   }
 
   & &__image {
