@@ -7,11 +7,15 @@ mixin ec-newsRole
         +e.__news
             - for (var i = 0; i < 3; i++)
                 +e.__newsItem
-                    +e.newsDate 2016/09/29
-                    +e.newsColumn
-                        +e.newsTitle NEWSタイトルが入ります。NEWSタイトルが入ります。NEWSタイトルが入ります。NEWSタイトルが入ります。
-                        +e.newsClose
-                            +e.A.newsCloseBtn
-                                i.fas.fa-angle-down
+                    +e.__newsHeading
+                        +e.newsDate 2016/09/29
+                        +e.newsColumn
+                            +e.newsTitle NEWSタイトルが入ります。NEWSタイトルが入ります。NEWSタイトルが入ります。NEWSタイトルが入ります。
+                            +e.newsClose
+                                +e.A.newsCloseBtn
+                                    i.fas.fa-angle-down
                     +e.newsDescription
                         | 詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。
+                        br
+                        a(href="https://www.ec-cube.net/") https://www.ec-cube.net/
+            a.ec-inlineBtn--top more

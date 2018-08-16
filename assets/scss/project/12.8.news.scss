@@ -31,14 +31,31 @@ Styleguide 12.8.1
   }
   & &__newsItem {
     width: 100%;
+
     &:not(:last-of-type){
       border-bottom: 1px solid #ccc;
     }
 
+    &:last-of-type {
+      margin-bottom: 20px;
+
+      @include media_desktop {
+        margin-bottom: 10px;
+      }
+    }
+
+
     @include media_desktop {
-      display: flex;
+
       padding: 20px 0;
     }
+  }
+  & &__newsHeading {
+
+    @include media_desktop {
+      display: flex;
+    }
+
   }
   & &__newsDate {
     display: block;
@@ -62,8 +79,10 @@ Styleguide 12.8.1
       min-width: calc(100% - 120px);
     }
   }
+
   & &__newsTitle {
     display: inline-block;
+    margin-bottom: 10px;
     width: 90%;
     font-size: 12px;
     font-weight: bold;
@@ -71,6 +90,7 @@ Styleguide 12.8.1
     line-height: 1.2;
 
     @include media_desktop {
+      margin-bottom: 0;
       font-size: 14px;
       line-height: 1.8;
     }
@@ -96,7 +116,6 @@ Styleguide 12.8.1
     right: 5px;
   }
   & &__newsDescription {
-    margin: 10px 0;
     max-height: 0;
     transition: max-height 1s;
     font-size: 12px;
@@ -113,8 +132,13 @@ Styleguide 12.8.1
     }
   }
   &__newsItem.is_active &__newsDescription{
+    margin: 0 0 10px;
     max-height: 100vh;
     transition: max-height 1s;
+
+    @include media_desktop {
+      margin: 20px 0;
+    }
   }
   &__newsItem.is_active &__newsCloseBtn i {
     display: inline-block;
