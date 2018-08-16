@@ -26,6 +26,7 @@ Styleguide 12.8.1
 
     @include media_desktop {
       border: 16px solid #F8F8F8;
+      padding: 20px 30px;
     }
   }
   & &__newsItem {
@@ -33,15 +34,33 @@ Styleguide 12.8.1
     &:not(:last-of-type){
       border-bottom: 1px solid #ccc;
     }
+
+    @include media_desktop {
+      display: flex;
+      padding: 20px 0;
+    }
   }
   & &__newsDate {
     display: block;
-    margin-bottom: 5px;
+    margin:  15px 0 5px;
     font-size: 12px;
     color: black;
+
+    @include media_desktop {
+      display: inline-block;
+      margin: 0;
+      min-width: 120px;
+      font-size: 14px;
+    }
+
   }
   & &__newsColumn {
     display: flex;
+
+    @include media_desktop {
+      display: inline-flex;
+      min-width: calc(100% - 120px);
+    }
   }
   & &__newsTitle {
     display: inline-block;
@@ -51,9 +70,16 @@ Styleguide 12.8.1
     color: #7D7D7D;
     line-height: 1.2;
 
+    @include media_desktop {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
   }
   & &__newsClose {
     display: inline-block;
+    width: 10%;
+    position: relative;
 
   }
   & &__newsCloseBtn {
@@ -65,22 +91,30 @@ Styleguide 12.8.1
     color: white;
     text-align: center;
     background: black;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
   }
   & &__newsDescription {
     margin: 10px 0;
-    height: 0;
-    transition: all .2s ease-out;
+    max-height: 0;
+    transition: max-height 1s;
     font-size: 12px;
     line-height: 1.2;
     overflow: hidden;
+
+    @include media_desktop {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
     a {
       color: #0092C4;
-      text-decoration: none;
     }
   }
   &__newsItem.is_active &__newsDescription{
-    height: auto;
-    transition: all .2s ease-out;
+    max-height: 100vh;
+    transition: max-height 1s;
   }
   &__newsItem.is_active &__newsCloseBtn i {
     display: inline-block;
