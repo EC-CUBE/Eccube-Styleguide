@@ -1,0 +1,91 @@
+@import "../mixins/media";
+@import "../mixins/clearfix";
+
+/*
+見出し
+
+トップページで使用されている新着情報のスタイルです。
+
+ex [トップページ](http://demo3.ec-cube.net/)
+
+Markup:
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 12.8.1
+*/
+
+.ec-newsRole {
+
+
+  & &__news {
+
+    box-sizing: border-box;
+
+    @include media_desktop {
+      border: 16px solid #F8F8F8;
+    }
+  }
+  & &__newsItem {
+    width: 100%;
+    &:not(:last-of-type){
+      border-bottom: 1px solid #ccc;
+    }
+  }
+  & &__newsDate {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: black;
+  }
+  & &__newsColumn {
+    display: flex;
+  }
+  & &__newsTitle {
+    display: inline-block;
+    width: 90%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #7D7D7D;
+    line-height: 1.2;
+
+  }
+  & &__newsClose {
+    display: inline-block;
+
+  }
+  & &__newsCloseBtn {
+    display: inline-block;
+    margin-left: auto;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    text-align: center;
+    background: black;
+  }
+  & &__newsDescription {
+    margin: 10px 0;
+    height: 0;
+    transition: all .2s ease-out;
+    font-size: 12px;
+    line-height: 1.2;
+    overflow: hidden;
+    a {
+      color: #0092C4;
+      text-decoration: none;
+    }
+  }
+  &__newsItem.is_active &__newsDescription{
+    height: auto;
+    transition: all .2s ease-out;
+  }
+  &__newsItem.is_active &__newsCloseBtn i {
+    display: inline-block;
+    transform: rotateX(180deg) translateY(2px);
+
+  }
+
+}
