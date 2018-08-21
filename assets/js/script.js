@@ -31,6 +31,12 @@ $(function(){
 })
 
 $(function(){
+    $(".ec-newsRole__newsCloseBtn").on("click",function(){
+        $(this).parents(".ec-newsRole__newsItem").toggleClass("is_active")
+    })
+})
+
+$(function(){
     $(".ec-orderMail__link").on("click",function(){
         $(".ec-orderMail__body").slideToggle();
     })

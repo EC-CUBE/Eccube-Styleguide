@@ -22,7 +22,8 @@
     "build:moc:webpack": "webpack",
     "build:moc:sass": "gulp sass",
     "build:moc:pug": "gulp pug",
-    "build:moc:icon": "cp -r assets/icon public/moc/icon"
+    "build:moc:icon": "cp -r assets/icon public/moc/icon",
+    "build:moc:img": "cp -r assets/image public/moc/image"
   },
   "author": "",
   "license": "LGPL",

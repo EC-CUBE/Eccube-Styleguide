@@ -2,6 +2,8 @@ mixin ec-headerNaviRole
   +b.ec-headerNaviRole
     +e.search.is_inDrawer: +ec-headerSearch
     +e.nav.is_inDrawer: +ec-headerNav
+    +e.cart: +ec-headerCart
+      +e.navSP: +ec-headerNavSP
 
 mixin ec-headerSearch
   +b.ec-headerSearch
@@ -20,16 +22,16 @@ mixin ec-headerSearch
 mixin ec-headerNav
   +b.ec-headerNav
     +e.item
-      a(href="/moc/guest/register").ec-icon
-        img(src='/moc/icon/user.svg', alt='')
-        span 新規会員登録
+      a(href="/moc/guest/register")
+        +e.I.itemIcon.fas.fa-shopping-cart
+        +e.SPAN.link 新規登録
     +e.item
-      a(href="/moc/guest/login").ec-icon
-        img(src='/moc/icon/favorite.svg', alt='')
+      a(href="/moc/guest/login")
+        +e.I.itemIcon.fas.fa-heart
         span お気に入り
     +e.item
-      a(href="/moc/guest/login").ec-icon
-        img(src='/moc/icon/login.svg', alt='')
+      a(href="/moc/guest/login")
+        +e.I.itemIcon.fas.fa-lock
         span ログイン
 
 mixin ec-headerNavSP
@@ -59,3 +61,60 @@ mixin ec-headerUserNav
       a(href="/moc/guest/login").ec-icon
         img(src='/moc/icon/login.svg', alt='')
         span ログアウト
+
+
+mixin ec-headerCart
+  .ec-cartNavi
+    .ec-cartNavi__icon
+      img(src='/moc/icon/cart-dark.svg', alt='cart')
+    .ec-cartNavi__iconClose
+      img(src='/moc/icon/cross-dark.svg', alt='close')
+    .ec-cartNavi__badge 1
+    .ec-cartNavi__label
+      | 合計
+      .ec-cartNavi__price ¥1920
+  //.ec-cartNaviNull
+  //  .ec-cartNaviNull__message
+  //    p 現在カート内に
+  //      br
+  //      | 商品がございません。
+  +b.ec-cartNaviIsset
+    +e.cart
+      +e.cartImage
+        img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
+      +e.cartContent
+        +e.cartContentTitle ミニテーブル
+        +e.cartContentPrice ¥ 12,960
+          +e.cartContentTax 税込
+        +e.cartContentNumber 数量：1
+    +e.action
+      a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
+      a.ec-blockBtn.ec-cartNavi--cancel キャンセル
+
+mixin ec-headerCartNull
+  .ec-cartNavi
+    .ec-cartNavi__icon
+      img(src='/moc/icon/cart.svg', alt='cart')
+    .ec-cartNavi__iconClose
+      img(src='/moc/icon/cross.svg', alt='close')
+    .ec-cartNavi__badge 1
+    .ec-cartNavi__label
+      | 合計
+      .ec-cartNavi__price ¥1920
+  .ec-cartNaviNull
+    .ec-cartNaviNull__message
+      p 現在カート内に
+        br
+        | 商品がございません。
+  //+b.ec-cartNaviIsset
+  //  +e.cart
+  //    +e.cartImage
+  //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
+  //    +e.cartContent
+  //      +e.cartContentTitle ミニテーブル
+  //      +e.cartContentPrice ¥ 12,960
+  //        +e.cartContentTax 税込
+  //      +e.cartContentNumber 数量：1
+  //  +e.action
+  //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
+  //    a.ec-blockBtn キャンセル

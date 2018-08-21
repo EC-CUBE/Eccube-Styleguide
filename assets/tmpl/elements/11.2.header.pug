@@ -3,8 +3,6 @@ include ./11.3.headerNavi.pug
 mixin ec-headerRole
   +b.ec-headerRole
     +e.title: +ec-headerTitle
-    +e.cart: +ec-headerCart
-    +e.navSP: +ec-headerNavSP
 
 mixin ec-headerTitle
   +b.ec-headerTitle
@@ -12,60 +10,5 @@ mixin ec-headerTitle
       | このデモサイトは
       a(href="#") さくらのクラウド
       | で稼働しています。
-    +e.title: h1: a(href="/moc/") EC-CUBE3 STYLEGUIDE
+    +e.title: h1: a(href="/moc/") EC-CUBE4 DEMO SHOP
 
-mixin ec-headerCart
-  .ec-cartNavi
-    .ec-cartNavi__icon
-      img(src='/moc/icon/cart-dark.svg', alt='cart')
-    .ec-cartNavi__iconClose
-      img(src='/moc/icon/cross-dark.svg', alt='close')
-    .ec-cartNavi__badge 1
-    .ec-cartNavi__label
-      | 合計
-      .ec-cartNavi__price ¥1920
-  //.ec-cartNaviNull
-  //  .ec-cartNaviNull__message
-  //    p 現在カート内に
-  //      br
-  //      | 商品がございません。
-  +b.ec-cartNaviIsset
-    +e.cart
-      +e.cartImage
-        img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
-      +e.cartContent
-        +e.cartContentTitle ミニテーブル
-        +e.cartContentPrice ¥ 12,960
-          +e.cartContentTax 税込
-        +e.cartContentNumber 数量：1
-    +e.action
-      a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
-      a.ec-blockBtn.ec-cartNavi--cancel キャンセル
-
-mixin ec-headerCartNull
-  .ec-cartNavi
-    .ec-cartNavi__icon
-      img(src='/moc/icon/cart.svg', alt='cart')
-    .ec-cartNavi__iconClose
-      img(src='/moc/icon/cross.svg', alt='close')
-    .ec-cartNavi__badge 1
-    .ec-cartNavi__label
-      | 合計
-      .ec-cartNavi__price ¥1920
-  .ec-cartNaviNull
-    .ec-cartNaviNull__message
-      p 現在カート内に
-        br
-        | 商品がございません。
-  //+b.ec-cartNaviIsset
-  //  +e.cart
-  //    +e.cartImage
-  //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
-  //    +e.cartContent
-  //      +e.cartContentTitle ミニテーブル
-  //      +e.cartContentPrice ¥ 12,960
-  //        +e.cartContentTax 税込
-  //      +e.cartContentNumber 数量：1
-  //  +e.action
-  //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
-  //    a.ec-blockBtn キャンセル
