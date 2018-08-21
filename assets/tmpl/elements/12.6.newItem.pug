@@ -6,15 +6,19 @@ mixin ec-newItemRole
                     span.ec-secHeading__en NEW ITEM
                     span.ec-secHeading__line
                     span.ec-secHeading__ja 新着商品
+                    a(href="/moc/guest/search/") more
             +e.__listItem
-                img(src="/moc/image/img_item01_01.jpg")
-                +e.P.__listItemTitle 彩のジェラート"CUBE"
-                +e.P.__listItemPrice ￥1,200(税込)
+                a(href="/moc/guest/item/")
+                    img(src="/moc/image/img_item01_01.jpg")
+                    +e.P.__listItemTitle 彩のジェラート"CUBE"
+                    +e.P.__listItemPrice ￥1,200(税込)
             +e.__listItem
-                img(src="/moc/image/img_item01_02.jpg")
-                +e.P.__listItemTitle チェリーアイスサンド
-                +e.P.__listItemPrice ￥800(税込)
+                a(href="/moc/guest/item/")
+                    img(src="/moc/image/img_item01_02.jpg")
+                    +e.P.__listItemTitle チェリーアイスサンド
+                    +e.P.__listItemPrice ￥800(税込)
             +e.__listItem
-                img(src="/moc/image/img_item01_03.jpg")
-                +e.P.__listItemTitle タイトル
-                +e.P.__listItemPrice ￥600(税込)
+                a(href="/moc/guest/item/")
+                    img(src="/moc/image/img_item01_03.jpg")
+                    +e.P.__listItemTitle タイトル
+                    +e.P.__listItemPrice ￥600(税込)
