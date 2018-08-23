@@ -483,6 +483,7 @@ Styleguide 11.2.5
 }
 .ec-itemNav__nav li a {
   display: block;
+  border-bottom: 1px solid #E8E8E8;
   margin: 0;
   padding: 16px;
   height: 55px;
@@ -529,17 +530,17 @@ Styleguide 11.2.5
   }
 }
 .ec-itemNav__nav li ul li a {
+  border-bottom: 1px solid #E8E8E8;
   padding: 16px;
   font-size: 16px;
   font-weight: bold;
-  color: #525263;
+  color: white;
   text-align: left;
-  background: #fff;
-  border-bottom: 1px solid #E8E8E8;
+  background: black;
 }
 
 .ec-itemNav__nav > li:hover > a {  background: #fafafa; }
-.ec-itemNav__nav > li:hover li:hover > a {  background: #fafafa; }
+.ec-itemNav__nav > li:hover li:hover > a {  background: #333; }
 
 
 .ec-itemNav__nav > li:hover > ul > li {
@@ -557,9 +558,12 @@ Styleguide 11.2.5
 
 .ec-itemNav__nav li ul li ul:before {
   @include media_desktop {
-    content: ">";
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 12px;
+    color: white;
     position: absolute;
-    top: 13px;
+    top: 19px;
     right: auto;
     left: -20px;
   }
@@ -572,9 +576,9 @@ Styleguide 11.2.5
   }
 }
 
-.ec-itemNav__nav li ul li ul li a {  background: #fff }
+.ec-itemNav__nav li ul li ul li a {  background: black }
 
-.ec-itemNav__nav li:hover ul li ul li a:hover {  background: #fafafa; }
+.ec-itemNav__nav li:hover ul li ul li a:hover {  background: #333; }
 
 
 /*
