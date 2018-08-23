@@ -1,51 +1,59 @@
 mixin ec-headerNaviRole
   +b.ec-headerNaviRole
-    +e.search.is_inDrawer: +ec-headerSearch
-    +e.nav.is_inDrawer: +ec-headerNav
-    +e.cart: +ec-headerCart
+    +e.left
+      +e.search: +ec-headerSearch
       +e.navSP: +ec-headerNavSP
+    +e.right
+      +e.nav: +ec-headerNav
+      +e.cart: +ec-headerCart
 
 mixin ec-headerSearch
-  +b.ec-headerSearch
-    +e.category
-      .ec-select
-        select
-          option 全ての商品
-          option キッチンツール
-    +e.keyword
-      .ec-input
-        input(type="search" placeholder="キーワードを入力")
-        +e.BUTTON.keywordBtn(type="submit")
-          .ec-icon
-            img(src='/moc/icon/search-dark.svg', alt='')
+  .ec-headerSearch
+    .input-group
+      .input-group-btn
+        button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          | すべて
+          span.caret
+        ul.dropdown-menu
+          li
+            a(href='#') メニュー1
+          li.divider(role='separator')
+          li
+            a(href='#') メニュー1
+      input.form-control(type='text', aria-label='キーワードを入力')
+      a.ec-headerSearch__btn: i.fas.fa-search
+
+  //+b.ec-headerSearch
+  //  +e.category
+  //    .ec-select
+  //      select
+  //        option 全ての商品
+  //        option キッチンツール
+  //  +e.keyword
+  //    .ec-input
+  //      input(type="search" placeholder="キーワードを入力")
+  //      +e.BUTTON.keywordBtn(type="submit")
+  //        .ec-icon
+  //          img(src='/moc/icon/search-dark.svg', alt='')
 
 mixin ec-headerNav
   +b.ec-headerNav
     +e.item
       a(href="/moc/guest/register")
-        +e.I.itemIcon.fas.fa-shopping-cart
-        +e.SPAN.link 新規登録
+        +e.I.itemIcon.fas.fa-user
+        +e.SPAN.itemLink 新規登録
     +e.item
       a(href="/moc/guest/login")
         +e.I.itemIcon.fas.fa-heart
-        span お気に入り
+        +e.SPAN.itemLink お気に入り
     +e.item
       a(href="/moc/guest/login")
         +e.I.itemIcon.fas.fa-lock
-        span ログイン
+        +e.SPAN.itemLink ログイン
 
 mixin ec-headerNavSP
-  +b.ec-headerNavSP
-    +e.item
-      .ec-cartNaviSP
-        a(href="/moc/guest/cart1").ec-cartNaviSP__icon.ec-icon--colored
-          img(src='/moc/icon/cart-dark.svg', alt='')
-        .ec-cartNaviSP__badge 1
-    +e.item
-      +e.A.itemMenu()
-        span
-        span
-        span
+  .ec-headerNavSP
+    i.fas.fa-bars
 
 mixin ec-headerUserNav
   +b.ec-headerUserNav
@@ -64,32 +72,29 @@ mixin ec-headerUserNav
 
 
 mixin ec-headerCart
-  .ec-cartNavi
-    .ec-cartNavi__icon
-      img(src='/moc/icon/cart-dark.svg', alt='cart')
-    .ec-cartNavi__iconClose
-      img(src='/moc/icon/cross-dark.svg', alt='close')
-    .ec-cartNavi__badge 1
-    .ec-cartNavi__label
-      | 合計
-      .ec-cartNavi__price ¥1920
-  //.ec-cartNaviNull
-  //  .ec-cartNaviNull__message
-  //    p 現在カート内に
-  //      br
-  //      | 商品がございません。
-  +b.ec-cartNaviIsset
-    +e.cart
-      +e.cartImage
-        img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
-      +e.cartContent
-        +e.cartContentTitle ミニテーブル
-        +e.cartContentPrice ¥ 12,960
-          +e.cartContentTax 税込
-        +e.cartContentNumber 数量：1
-    +e.action
-      a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
-      a.ec-blockBtn.ec-cartNavi--cancel キャンセル
+  .ec-cartNaviWrap
+    +b.ec-cartNavi
+      +e.I.icon.fas.fa-shopping-cart
+        +e.SPAN.badge 1
+      .ec-cartNavi__label
+        .ec-cartNavi__price ¥1920
+    //.ec-cartNaviNull
+    //  .ec-cartNaviNull__message
+    //    p 現在カート内に
+    //      br
+    //      | 商品がございません。
+    +b.ec-cartNaviIsset
+      +e.cart
+        +e.cartImage
+          img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
+        +e.cartContent
+          +e.cartContentTitle ミニテーブル
+          +e.cartContentPrice ¥ 12,960
+            +e.cartContentTax 税込
+          +e.cartContentNumber 数量：1
+      +e.action
+        a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
+        a.ec-blockBtn.ec-cartNavi--cancel キャンセル
 
 mixin ec-headerCartNull
   .ec-cartNavi

@@ -15,12 +15,12 @@ $(function(){
 
 $(function(){
     $(".ec-cartNavi").on("click",function(){
-        $(".ec-headerRole__cart").toggleClass("is_active")
+        $(".ec-cartNavi").toggleClass("is-active")
     })
 })
 $(function(){
-    $(".ec-cartNavi--cancel").on("click",function(){
-        $(".ec-headerRole__cart").toggleClass("is_active")
+    $(".ec-cartNavi").on("click",function(){
+        $(".ec-cartNaviIsset").toggleClass("is-active")
     })
 })
 

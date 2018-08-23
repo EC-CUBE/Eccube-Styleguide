@@ -1,0 +1,50 @@
+include /assets/tmpl/elements/11.4.categoryNavi.pug
+
+mixin ec-drawerRole
+    .ec-drawerRole
+        .ec-drawerRoleClose
+            i.fas.fa-times
+        .ec-headerSearchArea
+            .ec-headerSearch
+                .ec-select
+                    select
+                        option
+                            | すべてのカテゴリ
+                            i.fas.fa-sort-down
+                        option 北海道
+                        option 青森県
+                        option 岩手県
+                        option ...
+                a.ec-headerSearch__down: i.fas.fa-sort-down
+                .ec-input
+                    input(type='text' placeholder="キーワードを入力")
+                    a.ec-headerSearch__btn: i.fas.fa-search
+
+
+        .ec-headerCategoryArea
+            .ec-headerCategoryArea__heading
+                 p カテゴリ一覧
+            +ec-itemNav
+
+        .ec-headerLinkArea
+            .ec-headerLink__list
+              a(href="/moc/guest/cart1/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-shopping-cart
+                span カートを見る
+              a(href="/moc/guest/login/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-lock
+                span ログイン
+              a(href="/moc/user/favorite/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-heart
+                span お気に入り
+              a(href="/moc/guest/register/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-user
+                span 新規会員登録
+              a(href="/moc/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-home
+                span ホームに戻る
