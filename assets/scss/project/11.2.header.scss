@@ -111,6 +111,7 @@ Styleguide 11.2
   @include container;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top : 15px;
   padding-bottom: 40px;
 
@@ -123,6 +124,7 @@ Styleguide 11.2
     display: none;
     @include media_desktop(){
       display: inline-block;
+      margin-top: 10px;
       @include reset_link;
     }
   }
@@ -364,71 +366,118 @@ sg-wrapper:
 Styleguide 11.2.4
 */
 .ec-headerSearch{
-  @include clearfix;
-  & &__category {
-    float: none;
-    @include media_desktop {
-      float: left;
-      width: 43%;
-    }
-    .ec-select {
-      margin-bottom: 6px;
-    }
-    select{
-      width: auto;
-      max-width: 100%;
-      height: 50px;
-      border: 1px solid #ccc;
-      font-size: 1.6rem;
-      padding: 0.5em 1em;
-      border-radius: 5px;
-      box-shadow: none;
-      box-sizing: border-box;
-      -webkit-appearance: menulist;
-      appearance: menulist;
-      @include media_desktop {
-        max-width: 180px;
+
+  .input-group {
+    border: none;
+    border-radius: 9999px;
+    background: #F8F8F8;
+    position: relative;
+  }
+  .input-group-btn {
+    border-bottom-left-radius: 9999px;
+    border-top-left-radius: 9999px;
+     background: black;
+
+    .btn-default {
+      border: 1px solid black ;
+      border-bottom-left-radius: 9999px;
+      border-top-left-radius: 9999px;
+      max-width: 130px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: white;
+      background: black;
+      overflow: hidden;
+
+      &:focus {
+        color: #fff;
+        background-color: black;
+        border-color: black;
       }
     }
   }
-  & &__keyword{
-    float: none;
-    height: 50px;
-    padding: 0 40px 0 10px;
-    border-bottom: 1px solid #ccc;
-    position: relative;
-    color: $clrDarkGray;
-    @include media_desktop {
-      float: right;
-      width: 57%;
-    }
-    input[type="search"]{
-      height: 50px;
-      width: 100%;
-      font-size: 1.6rem;
-      border: 0 none;
-      padding: 0.5em 0;
-      box-shadow: none;
-      background: none;
-      box-sizing: border-box;
-    }
-    .ec-icon {
-      width: 25px;
-      height: 25px;
-    }
+  .form-control {
+    border: none;
+    background: transparent;
+    box-shadow: none;
   }
-  & &__keywordBtn{
-    border: 0;
-    background: none;
+
+  & &__btn {
+    display: inline-block;
+    color: black;
+    cursor: pointer;
     position: absolute;
-    right: 0;
-    top: 6px;
-    display: block;
-    font-size: 25px;
-    overflow: hidden;
-    white-space: nowrap;
-    z-index: 1;
+    top: 5px;
+    right: 20px;
+    z-index: 10;
   }
+
+
+  //@include clearfix;
+  //& &__category {
+  //  float: none;
+  //  @include media_desktop {
+  //    float: left;
+  //    width: 43%;
+  //  }
+  //  .ec-select {
+  //    margin-bottom: 6px;
+  //  }
+  //  select{
+  //    width: auto;
+  //    max-width: 100%;
+  //    height: 50px;
+  //    border: 1px solid #ccc;
+  //    font-size: 1.6rem;
+  //    padding: 0.5em 1em;
+  //    border-radius: 5px;
+  //    box-shadow: none;
+  //    box-sizing: border-box;
+  //    -webkit-appearance: menulist;
+  //    appearance: menulist;
+  //    @include media_desktop {
+  //      max-width: 180px;
+  //    }
+  //  }
+  //}
+  //& &__keyword{
+  //  float: none;
+  //  height: 50px;
+  //  padding: 0 40px 0 10px;
+  //  border-bottom: 1px solid #ccc;
+  //  position: relative;
+  //  color: $clrDarkGray;
+  //  @include media_desktop {
+  //    float: right;
+  //    width: 57%;
+  //  }
+  //  input[type="search"]{
+  //    height: 50px;
+  //    width: 100%;
+  //    font-size: 1.6rem;
+  //    border: 0 none;
+  //    padding: 0.5em 0;
+  //    box-shadow: none;
+  //    background: none;
+  //    box-sizing: border-box;
+  //  }
+  //  .ec-icon {
+  //    width: 25px;
+  //    height: 25px;
+  //  }
+  //}
+  //& &__keywordBtn{
+  //  border: 0;
+  //  background: none;
+  //  position: absolute;
+  //  right: 0;
+  //  top: 6px;
+  //  display: block;
+  //  font-size: 25px;
+  //  overflow: hidden;
+  //  white-space: nowrap;
+  //  z-index: 1;
+  //}
 }
 
 
