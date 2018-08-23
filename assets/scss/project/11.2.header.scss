@@ -138,6 +138,7 @@ Styleguide 11.2
     width: calc(100% / 3 * 2);
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
 
   & &__nav{
@@ -644,11 +645,9 @@ Styleguide 11.2.6
       padding-left: 10px;
       height: 60px;
       border-bottom: 1px solid #e8e8e8;
-      line-height: 50px;
       font-size: 30px;
       @include media_desktop {
         padding:0 10px;
-        height: 50px;
       }
     }
 
@@ -658,11 +657,9 @@ Styleguide 11.2.6
       display: block;
       text-align: left;
       border-bottom: 1px solid #e8e8e8;
-      line-height: 50px;
       font-weight: bold;
       a {
         padding:0 10px;
-        height: 50px;
       }
     }
     .ec-itemNavAccordion {

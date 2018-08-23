@@ -66,14 +66,10 @@ mixin ec-headerUserNav
 
 
 mixin ec-headerCart
-  .ec-cartNavi
-    .ec-cartNavi__icon
-      img(src='/moc/icon/cart-dark.svg', alt='cart')
-    .ec-cartNavi__iconClose
-      img(src='/moc/icon/cross-dark.svg', alt='close')
-    .ec-cartNavi__badge 1
+  +b.ec-cartNavi
+    +e.I.icon.fas.fa-shopping-cart
+      +e.SPAN.badge 1
     .ec-cartNavi__label
-      | 合計
       .ec-cartNavi__price ¥1920
   //.ec-cartNaviNull
   //  .ec-cartNaviNull__message
