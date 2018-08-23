@@ -321,11 +321,11 @@ Styleguide 11.2.3
   }
   & &__itemIcon{
     display: inline-block;
-    margin-right: 7px;
+    margin-right: 20px;
     font-size: 18px;
     color: black;
     @include media_desktop {
-      margin-right: 20px;
+      margin-right: 7px;
       font-size: 20px;
     }
   }
