@@ -25,16 +25,16 @@ mixin ec-headerNav
   +b.ec-headerNav
     +e.item
       a(href="/moc/guest/register")
-        +e.I.itemIcon.fas.fa-shopping-cart
-        +e.SPAN.link 新規登録
+        +e.I.itemIcon.fas.fa-user
+        +e.SPAN.itemLink 新規登録
     +e.item
       a(href="/moc/guest/login")
         +e.I.itemIcon.fas.fa-heart
-        span お気に入り
+        +e.SPAN.itemLink お気に入り
     +e.item
       a(href="/moc/guest/login")
         +e.I.itemIcon.fas.fa-lock
-        span ログイン
+        +e.SPAN.itemLink ログイン
 
 mixin ec-headerNavSP
   +b.ec-headerNavSP

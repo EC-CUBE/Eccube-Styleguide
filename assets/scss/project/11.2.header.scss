@@ -318,25 +318,26 @@ Styleguide 11.2.3
     display: inline-block;
     font-size: 28px;
     line-height: 50px;
-
-    @include media_desktop {
-      margin-left: 10px;
-    }
-    @include reset_link;
-    span{
-      font-size: 14px;
-    }
   }
   & &__itemIcon{
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 7px;
     font-size: 18px;
     color: black;
+    @include media_desktop {
+      margin-right: 20px;
+      font-size: 20px;
+    }
   }
   & &__itemLink{
-    display: inline-block;
+    display: none;
+    margin-right: 15px;
     font-size: 14px;
+    vertical-align: middle;
     color: black;
+    @include media_desktop {
+      display: inline-block;
+    }
   }
 }
 
