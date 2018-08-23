@@ -404,11 +404,14 @@ Styleguide 11.2.4
 
   & &__btn {
     display: inline-block;
+    width: 40px;
     color: black;
     cursor: pointer;
+    text-align: center;
+    background: #F8F8F8;
     position: absolute;
     top: 5px;
-    right: 20px;
+    right: 0;
     z-index: 10;
   }
 
