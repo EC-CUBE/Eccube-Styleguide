@@ -673,21 +673,94 @@ Styleguide 11.2.6
       right: 3px;
     }
   }
-
-  .ec-itemNav{
-    .ec-itemNav__item{
-      display: block;
-      text-align: left;
-      border-bottom: 1px solid #e8e8e8;
+  .ec-headerCategoryArea{
+    .ec-headerCategoryArea__heading {
+      border-top: 1px solid #CCCCCC;
+      border-bottom: 1px solid #CCCCCC;
+      padding: 1em 10px;
+      font-size: 16px;
       font-weight: bold;
-      a {
-        padding:0 10px;
+      color: black;
+    }
+    // ここから
+
+
+    .ec-itemNav__nav li  {
+      position: relative;
+    }
+    .ec-itemNav__nav li a {
+      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      color: black;
+      font-weight: normal;
+      background: #f8f8f8;
+    }
+
+    .ec-itemNav__nav li ul li {
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      transition: .3s;
+    }
+
+    .ec-itemNav__nav li ul li a {
+      border-bottom: 1px solid #E8E8E8;
+      padding: 16px;
+      padding-left: 20px;
+      font-size: 16px;
+      font-weight: normal;
+      color: black;
+      text-align: left;
+      background: white;
+    }
+
+    .ec-itemNav__nav > li:hover > a {
+      background: #f8f8f8;
+    }
+
+    .ec-itemNav__nav > li:hover li:hover > a {
+      background: white;
+    }
+
+    .ec-itemNav__nav > li:hover > ul > li {
+      @include media_desktop {
+        overflow: visible;
+        height: 55px;
+
       }
     }
-    .ec-itemNavAccordion {
-      display: none;
+
+    .ec-itemNav__nav li ul li ul:before {
+      @include media_desktop {
+        content: "\f054";
+        font-family: FontAwesome;
+        font-size: 12px;
+        color: black;
+        position: absolute;
+        top: 19px;
+        right: auto;
+        left: 0;
+      }
     }
+
+    .ec-itemNav__nav li ul li ul li a {
+      padding-left: 40px;
+      color: black;
+      background: white;
+    }
+
+    .ec-itemNav__nav li:hover ul li ul li a:hover {
+      background: white;
+    }
+
+    .ec-itemNav__nav li ul li ul li ul li a{
+      padding-left: 60px;
+      font-weight: normal;
+    }
+
   }
+
+
 
 }
 
@@ -697,11 +770,6 @@ Styleguide 11.2.6
   @include media_desktop() {
     display: none;
   }
-}
-
-.ec-drawerRole {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .ec-overlayRole {

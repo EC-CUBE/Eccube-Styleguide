@@ -1,3 +1,4 @@
+include /assets/tmpl/elements/11.4.categoryNavi.pug
 
 mixin ec-drawerRole
     .ec-drawerRole
@@ -16,3 +17,9 @@ mixin ec-drawerRole
                 .ec-input
                     input(type='text' placeholder="キーワードを入力")
                     a.ec-headerSearch__btn: i.fas.fa-search
+
+
+        .ec-headerCategoryArea
+            .ec-headerCategoryArea__heading
+                 p カテゴリ一覧
+            +ec-itemNav
