@@ -23,3 +23,26 @@ mixin ec-drawerRole
             .ec-headerCategoryArea__heading
                  p カテゴリ一覧
             +ec-itemNav
+
+        .ec-headerLinkArea
+            .ec-headerLink__list
+              a(href="/moc/guest/cart1/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-shopping-cart
+                span カートを見る
+              a(href="/moc/guest/login/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-lock
+                span ログイン
+              a(href="/moc/user/favorite/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-heart
+                span お気に入り
+              a(href="/moc/guest/register/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-user
+                span 新規会員登録
+              a(href="/moc/").ec-headerLink__item
+                .ec-headerLink__icon
+                    i.fas.fa-home
+                span ホームに戻る

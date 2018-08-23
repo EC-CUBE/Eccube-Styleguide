@@ -609,7 +609,7 @@ Styleguide 11.2.6
 .ec-drawerRole {
   overflow-y: scroll;
   display: block;
-  background: #F8F8F8;
+  background: black;
   width: 260px;
   height: 100vh;
   position: fixed;
@@ -623,6 +623,7 @@ Styleguide 11.2.6
   .ec-headerSearchArea {
     padding: 20px 10px;
     width: 100%;
+    background: #F8F8F8;
   }
 
   .ec-headerSearch {
@@ -681,13 +682,10 @@ Styleguide 11.2.6
       font-size: 16px;
       font-weight: bold;
       color: black;
+      background: #F8F8F8;
     }
-    // ここから
 
 
-    .ec-itemNav__nav li  {
-      position: relative;
-    }
     .ec-itemNav__nav li a {
       border-bottom: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
@@ -696,21 +694,10 @@ Styleguide 11.2.6
       background: #f8f8f8;
     }
 
-    .ec-itemNav__nav li ul li {
-      overflow: hidden;
-      width: 100%;
-      height: auto;
-      transition: .3s;
-    }
-
     .ec-itemNav__nav li ul li a {
-      border-bottom: 1px solid #E8E8E8;
-      padding: 16px;
+      border-bottom: 1px solid #ccc;
       padding-left: 20px;
-      font-size: 16px;
       font-weight: normal;
-      color: black;
-      text-align: left;
       background: white;
     }
 
@@ -720,27 +707,6 @@ Styleguide 11.2.6
 
     .ec-itemNav__nav > li:hover li:hover > a {
       background: white;
-    }
-
-    .ec-itemNav__nav > li:hover > ul > li {
-      @include media_desktop {
-        overflow: visible;
-        height: 55px;
-
-      }
-    }
-
-    .ec-itemNav__nav li ul li ul:before {
-      @include media_desktop {
-        content: "\f054";
-        font-family: FontAwesome;
-        font-size: 12px;
-        color: black;
-        position: absolute;
-        top: 19px;
-        right: auto;
-        left: 0;
-      }
     }
 
     .ec-itemNav__nav li ul li ul li a {
@@ -757,10 +723,32 @@ Styleguide 11.2.6
       padding-left: 60px;
       font-weight: normal;
     }
+  }
+  .ec-headerLinkArea {
+    background: black;
+
+    .ec-headerLink__list {
+      border-top: 1px solid #ccc;
+
+    }
+
+    .ec-headerLink__item {
+      display: block;
+      border-bottom: 1px solid #ccc;
+      padding: 15px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+    .ec-headerLink__icon {
+      display: inline-block;
+      width: 28px;
+      font-size: 17px;
+    }
+
+
 
   }
-
-
 
 }
 
