@@ -160,7 +160,7 @@ Styleguide 11.2
 }
 
 .ec-headerNavSP {
-  display: none;
+  display: block;
   //display: inline-block;
   border-radius: 50%;
   box-sizing: border-box;
@@ -183,6 +183,9 @@ Styleguide 11.2
   @include media_desktop {
     display: none;
   }
+}
+.ec-headerNavSP.is-active {
+  display: none;
 }
 
 /*
@@ -607,8 +610,8 @@ Styleguide 11.2.6
 */
 
 .ec-drawerRole {
+  display: none;
   overflow-y: scroll;
-  display: block;
   background: black;
   width: 260px;
   height: 100vh;
@@ -620,6 +623,29 @@ Styleguide 11.2.6
   @include media_desktop() {
     display: none;
   }
+
+  .ec-drawerRoleClose {
+    display: inline-block;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    background: white;
+    position: fixed;
+    top: 10px;
+    left: 270px;
+    z-index: 1000;
+
+    .fas {
+      vertical-align: top;
+    }
+
+  }
+
   .ec-headerSearchArea {
     padding: 20px 10px;
     width: 100%;
@@ -753,6 +779,7 @@ Styleguide 11.2.6
 }
 
 .ec-drawerRole.is-active {
+  display: block;
   z-index: 100000;
   transition: z-index 0ms 300ms;
   @include media_desktop() {
