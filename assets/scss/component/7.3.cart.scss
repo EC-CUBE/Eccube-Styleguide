@@ -127,6 +127,11 @@ sg-wrapper:
 
 Styleguide 7.3.5
 */
+.ec-cartNaviWrap{
+  @include media_desktop {
+    position: relative;
+  }
+}
 .ec-cartNavi{
   display: inline-block;
   padding: 10px 0 0;
@@ -151,6 +156,7 @@ Styleguide 7.3.5
     font-size: 20px;
     @include fadeIn(inline-block,200ms);
     position: relative;
+
   }
   & &__badge{
     display: inline-block;
@@ -187,51 +193,23 @@ Styleguide 7.3.5
     }
   }
 }
-.is_active {
-  .ec-cartNavi__icon{
-    @include fadeOut;
+.ec-cartNavi.is-active {
+
+  .ec-cartNavi__icon {
+    &:before {
+      content: "\f00d";
+      font-family: FontAwesome;
+    }
   }
   .ec-cartNavi__badge{
     display: none;
-  }
-  .ec-cartNavi__iconClose {
-    @include fadeIn(inline-block,200ms);
-  }
-}
-
-.ec-cartNaviNull {
-  display: none;
-  min-width: 256px;
-  text-align: center;
-  background: #f3f3f3;
-  box-sizing: border-box;
-  padding: 16px;
-  z-index: 3;
-  position: absolute;
-  @include fadeOut;
-  & &__message {
-    border: 1px solid #D9D9D9;
-    padding: 16px 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #F99;
-    p {
-      margin: 0;
+    @include media_desktop {
+      display: none;
     }
+
   }
 }
 
-.is_active {
-  .ec-cartNaviNull {
-    @include fadeIn;
-    display: block;
-  }
-  .ec-cartNaviIsset {
-    @include fadeIn;
-    display: block;
-  }
-}
 
 /*
 カートナビゲーションのポップアップ(商品詳細)
@@ -270,15 +248,36 @@ Styleguide 7.3.6
 */
 .ec-cartNaviIsset {
   display: none;
-  min-width: 256px;
-  max-width:256px;
+  width: 100%;
   text-align: center;
-  background: #f3f3f3;
+  background: #f8f8f8;
   box-sizing: border-box;
   padding: 16px;
   z-index: 3;
   position: absolute;
-  @include fadeOut;
+  right: 0;
+
+  @include media_desktop {
+    margin-top: 10px;
+    min-width: 256px;
+    max-width:256px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8.5px 10px 8.5px;
+      border-color: transparent transparent #f8f8f8 transparent;
+      position: absolute;
+      top: -9px;
+
+    }
+  }
+
+
+
   & &__cart {
     @include clearfix;
     border-bottom: 1px solid #E8E8E8;
@@ -320,6 +319,10 @@ Styleguide 7.3.6
   & &__cartContentNumber {
     font-size: 14px;
   }
+}
+
+.ec-cartNaviIsset.is-active {
+  display: block;
 }
 
 
@@ -370,6 +373,56 @@ sg-wrapper:
 
 Styleguide 7.3.7
 */
+
+
+.ec-cartNaviNull {
+  display: none;
+  width: 100%;
+  text-align: center;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  padding: 16px;
+  z-index: 3;
+  position: absolute;
+  right: 0;
+
+  @include media_desktop {
+    margin-top: 10px;
+    min-width: 256px;
+    max-width:256px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8.5px 10px 8.5px;
+      border-color: transparent transparent #f8f8f8 transparent;
+      position: absolute;
+      top: -9px;
+
+    }
+  }
+
+  & &__message {
+    border: 1px solid #D9D9D9;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #F99;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.ec-cartNaviNull.is-active {
+  display: block;
+}
+
+
 
 /*
 総計
