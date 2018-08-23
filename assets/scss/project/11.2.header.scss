@@ -95,16 +95,6 @@ Styleguide 11.2
   & &__title{
     width: 100%;
   }
-  & &__cart{
-    display: none;
-    position: absolute;
-    top:15px;
-    right: 0;
-    @include media_desktop(){
-      display: block;
-      @include reset_link;
-    }
-  }
   & &__navSP{
     display: block;
     position: absolute;
@@ -121,22 +111,43 @@ Styleguide 11.2
   @include container;
   display: flex;
   justify-content: space-between;
+  padding-top : 15px;
+  padding-bottom: 40px;
+
+  & &__left{
+    width: calc(100% / 3);
+
+  }
 
   & &__search{
-
-    @include media_desktop(){
-      display: inline-block;
-      @include reset_link;
-    }
-  }
-  & &__nav{
     display: none;
     @include media_desktop(){
       display: inline-block;
       @include reset_link;
     }
   }
+  & &__navSP{
+    display: block;
+    @include media_desktop(){
+      display: none;
+      @include reset_link;
+    }
+  }
 
+  & &__right{
+    width: calc(100% / 3 * 2);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  & &__nav{
+    display: inline-block;
+    @include reset_link;
+  }
+  & &__cart{
+    display: inline-block;
+    @include reset_link;
+  }
 }
 .ec-headerNavSP {
   margin-right: 10px;
@@ -144,14 +155,12 @@ Styleguide 11.2
   height: auto;
   vertical-align: top;
   text-align: right;
+
   & &__item{
     display: inline-block;
     margin-right: 10px;
     width: auto;
     text-align: center;
-  }
-  & &__item:nth-of-type(2){
-    margin-left: 5px;
   }
   .ec-cartNaviSP{
     display: inline-block;
@@ -576,7 +585,7 @@ Styleguide 11.2.5
   }
 }
 
-.ec-itemNav__nav li ul li ul li a {  background: black }
+.ec-itemNav__nav li ul li ul li a {  background: #7D7D7D }
 
 .ec-itemNav__nav li:hover ul li ul li a:hover {  background: #333; }
 

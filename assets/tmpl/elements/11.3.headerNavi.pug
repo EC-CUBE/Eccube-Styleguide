@@ -1,9 +1,11 @@
 mixin ec-headerNaviRole
   +b.ec-headerNaviRole
-    +e.search.is_inDrawer: +ec-headerSearch
-    +e.nav.is_inDrawer: +ec-headerNav
-    +e.cart: +ec-headerCart
+    +e.left
+      +e.search: +ec-headerSearch
       +e.navSP: +ec-headerNavSP
+    +e.right
+      +e.nav: +ec-headerNav
+      +e.cart: +ec-headerCart
 
 mixin ec-headerSearch
   +b.ec-headerSearch
@@ -36,11 +38,11 @@ mixin ec-headerNav
 
 mixin ec-headerNavSP
   +b.ec-headerNavSP
-    +e.item
-      .ec-cartNaviSP
-        a(href="/moc/guest/cart1").ec-cartNaviSP__icon.ec-icon--colored
-          img(src='/moc/icon/cart-dark.svg', alt='')
-        .ec-cartNaviSP__badge 1
+    //+e.item
+    //  .ec-cartNaviSP
+    //    a(href="/moc/guest/cart1").ec-cartNaviSP__icon.ec-icon--colored
+    //      img(src='/moc/icon/cart-dark.svg', alt='')
+    //    .ec-cartNaviSP__badge 1
     +e.item
       +e.A.itemMenu()
         span
