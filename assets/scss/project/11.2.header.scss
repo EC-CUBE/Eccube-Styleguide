@@ -2,6 +2,7 @@
 @import "../mixins/projects";
 @import "../mixins/clearfix";
 @import "../mixins/animation";
+
 /*
 ヘッダー
 
@@ -21,7 +22,7 @@ include /assets/tmpl/elements/11.4.categoryNavi.pug
 
 Styleguide 11.2
 */
-.ec-layoutRole{
+.ec-layoutRole {
   width: 100%;
   transition: transform 0.3s;
   background: #fff;
@@ -29,7 +30,7 @@ Styleguide 11.2
     padding: 0;
   }
 
-  & &__contents{
+  & &__contents {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
@@ -38,40 +39,41 @@ Styleguide 11.2
     flex-wrap: nowrap;
 
   }
-  & &__main{
+  & &__main {
     width: 100%;
   }
-  & &__mainWithColumn{
+  & &__mainWithColumn {
     width: 100%;
-    @include media_desktop(){
+    @include media_desktop() {
       width: 75%;
     }
   }
-  & &__mainBetweenColumn{
+  & &__mainBetweenColumn {
     width: 100%;
-    @include media_desktop(){
+    @include media_desktop() {
       width: 50%;
     }
   }
   & &__left,
-  & &__right{
+  & &__right {
     display: none;
-    @include media_desktop(){
+    @include media_desktop() {
       display: block;
       width: 25%;
     }
   }
 }
 
-.ec-layoutRole.is_active{
+.ec-layoutRole.is_active {
   transform: translateX(-260px);
   transition: transform 0.3s;
   z-index: 10;
-  @include media_desktop(){
+  @include media_desktop() {
     transform: translateX(0px);
   }
 }
-.ec-headerRole{
+
+.ec-headerRole {
   @include container;
   padding-top: 15px;
   position: relative;
@@ -81,7 +83,7 @@ Styleguide 11.2
   @include media_desktop {
     @include clearfix;
   }
-  &::before{
+  &::before {
     display: none;
   }
   display: flex;
@@ -92,13 +94,13 @@ Styleguide 11.2
     width: 100%;
     @include clearfix;
   }
-  & &__title{
+  & &__title {
     width: 100%;
   }
-  & &__navSP{
+  & &__navSP {
     display: block;
     position: absolute;
-    top:15px;
+    top: 15px;
     width: 27%;
     right: 0;
     text-align: right;
@@ -107,57 +109,59 @@ Styleguide 11.2
     }
   }
 }
-.ec-headerNaviRole{
+
+.ec-headerNaviRole {
   @include container;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top : 15px;
-
+  padding-top: 15px;
 
   @include media_desktop {
     padding-bottom: 40px;
   }
 
-  & &__left{
+  & &__left {
     width: calc(100% / 3);
 
   }
 
-  & &__search{
+  & &__search {
     display: none;
-    @include media_desktop(){
+    @include media_desktop() {
       display: inline-block;
       margin-top: 10px;
       @include reset_link;
     }
   }
-  & &__navSP{
+  & &__navSP {
     display: block;
-    @include media_desktop(){
+    @include media_desktop() {
       display: none;
       @include reset_link;
     }
   }
 
-  & &__right{
+  & &__right {
     width: calc(100% / 3 * 2);
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
 
-  & &__nav{
+  & &__nav {
     display: inline-block;
     @include reset_link;
   }
-  & &__cart{
+  & &__cart {
     display: inline-block;
     @include reset_link;
   }
 }
+
 .ec-headerNavSP {
-  display: inline-block;
+  display: none;
+  //display: inline-block;
   border-radius: 50%;
   box-sizing: border-box;
   padding: 10px;
@@ -192,7 +196,7 @@ include /assets/tmpl/elements/11.2.header.pug
 
 Styleguide 11.2.1
 */
-.ec-headerTitle{
+.ec-headerTitle {
   @include commonStyle();
   & &__title {
     text-align: center;
@@ -200,13 +204,13 @@ Styleguide 11.2.1
       margin: 0;
       padding: 0;
     }
-    a{
+    a {
       display: inline-block;
       margin-bottom: 30px;
       text-decoration: none;
       font-size: 20px;
 
-      @include media_desktop(){
+      @include media_desktop() {
         font-size: 40px;
       }
       font-weight: bold;
@@ -220,7 +224,7 @@ Styleguide 11.2.1
   & &__subtitle {
     font-size: 10px;
     text-align: center;
-    @include media_desktop(){
+    @include media_desktop() {
       font-size: 16px;
       margin-bottom: 10px;
     }
@@ -253,14 +257,14 @@ sg-wrapper:
 
 Styleguide 11.2.3
 */
-.ec-headerNav{
+.ec-headerNav {
   text-align: right;
-  & &__item{
+  & &__item {
     margin-left: 0;
     display: inline-block;
     font-size: 28px;
   }
-  & &__itemIcon{
+  & &__itemIcon {
     display: inline-block;
     margin-right: 20px;
     font-size: 18px;
@@ -270,7 +274,7 @@ Styleguide 11.2.3
       font-size: 20px;
     }
   }
-  & &__itemLink{
+  & &__itemLink {
     display: none;
     margin-right: 15px;
     font-size: 14px;
@@ -281,7 +285,6 @@ Styleguide 11.2.3
     }
   }
 }
-
 
 /*
 ヘッダー：検索ボックス
@@ -303,7 +306,7 @@ sg-wrapper:
 
 Styleguide 11.2.4
 */
-.ec-headerSearch{
+.ec-headerSearch {
 
   .input-group {
     border: none;
@@ -314,10 +317,10 @@ Styleguide 11.2.4
   .input-group-btn {
     border-bottom-left-radius: 9999px;
     border-top-left-radius: 9999px;
-     background: black;
+    background: black;
 
     .btn-default {
-      border: 1px solid black ;
+      border: 1px solid black;
       border-bottom-left-radius: 9999px;
       border-top-left-radius: 9999px;
       max-width: 130px;
@@ -352,7 +355,6 @@ Styleguide 11.2.4
     right: 0;
     z-index: 10;
   }
-
 
   //@include clearfix;
   //& &__category {
@@ -421,7 +423,6 @@ Styleguide 11.2.4
   //}
 }
 
-
 /*
 ヘッダー：カテゴリナビ
 
@@ -439,10 +440,10 @@ sg-wrapper:
 
 Styleguide 11.2.5
 */
-.ec-cateoryNaviRole{
+.ec-cateoryNaviRole {
   @include container;
   display: none;
-  @include media_desktop(){
+  @include media_desktop() {
     display: block;
     width: 100%;
     @include reset_link;
@@ -454,8 +455,9 @@ Styleguide 11.2.5
   padding: 0;
   width: 100%;
   height: 100%;
-  text-align:center;
+  text-align: center;
 }
+
 .ec-itemNav__nav {
   display: block;
   margin: 0 auto;
@@ -464,7 +466,7 @@ Styleguide 11.2.5
   height: auto;
   list-style-type: none;
   text-align: center;
-  vertical-align:bottom;
+  vertical-align: bottom;
   @include media_desktop {
     display: inline-block;
   }
@@ -482,6 +484,7 @@ Styleguide 11.2.5
     width: auto;
   }
 }
+
 .ec-itemNav__nav li a {
   display: block;
   border-bottom: 1px solid #E8E8E8;
@@ -530,6 +533,7 @@ Styleguide 11.2.5
     height: 0;
   }
 }
+
 .ec-itemNav__nav li ul li a {
   border-bottom: 1px solid #E8E8E8;
   padding: 16px;
@@ -540,9 +544,13 @@ Styleguide 11.2.5
   background: black;
 }
 
-.ec-itemNav__nav > li:hover > a {  background: #fafafa; }
-.ec-itemNav__nav > li:hover li:hover > a {  background: #333; }
+.ec-itemNav__nav > li:hover > a {
+  background: #fafafa;
+}
 
+.ec-itemNav__nav > li:hover li:hover > a {
+  background: #333;
+}
 
 .ec-itemNav__nav > li:hover > ul > li {
   @include media_desktop {
@@ -577,10 +585,13 @@ Styleguide 11.2.5
   }
 }
 
-.ec-itemNav__nav li ul li ul li a {  background: #7D7D7D }
+.ec-itemNav__nav li ul li ul li a {
+  background: #7D7D7D
+}
 
-.ec-itemNav__nav li:hover ul li ul li a:hover {  background: #333; }
-
+.ec-itemNav__nav li:hover ul li ul li a:hover {
+  background: #333;
+}
 
 /*
 ヘッダー：SPヘッダー
@@ -595,53 +606,74 @@ ex [トップページ](http://demo3.ec-cube.net/)画面サイズが768px以下�
 Styleguide 11.2.6
 */
 
-.ec-drawerRole{
-  overflow-y:scroll;
+.ec-drawerRole {
+  overflow-y: scroll;
   display: block;
-  background: #F6F6F6;
-  position: fixed;
-  top:0;
+  background: #F8F8F8;
   width: 260px;
-  height:100vh;
-  right:0;
-  z-index: -1;
-  transition: z-index 0ms 1ms;
-  @include media_desktop(){
-    display: none;
-  }
-}
-
-.ec-drawerRole.is_active{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
-  transition: z-index 0ms 300ms;
-  @include media_desktop(){
+  transition: z-index 0ms 1ms;
+  @include media_desktop() {
     display: none;
   }
-}
-
-.ec-drawerRole{
-   .ec-headerSearch{
-    padding: 16px 8px 26px;
-    background: #EBEBEB;
-    color: #636378;
-    select{
-      width: 100% !important;
-    }
+  .ec-headerSearchArea {
+    padding: 20px 10px;
+    width: 100%;
   }
-   .ec-headerNav{
-    .ec-headerNav__item{
-      text-align: left;
-      display: block;
-      padding-left: 10px;
-      height: 60px;
-      border-bottom: 1px solid #e8e8e8;
-      font-size: 30px;
-      @include media_desktop {
-        padding:0 10px;
+
+  .ec-headerSearch {
+    border-radius: 6px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    .ec-select{
+      border: none;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      margin-bottom: 0;
+      width: 100%;
+      background: black;
+      select {
+        border: none;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        width: 100%;
+        color: white;
+        background: black;
       }
     }
-
+    .ec-input {
+      margin-bottom: 0;
+      input {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+    }
+    .ec-headerSearch__down {
+      box-sizing: border-box;
+      color: white;
+      position: absolute;
+      top: 4px;
+      right: 18px;
+    }
+    .ec-headerSearch__btn {
+      box-sizing: border-box;
+      padding: 9px 0;
+      color: black;
+      background: white;
+      position: absolute;
+      top: auto;
+        bottom: 1px;
+      right: 3px;
+    }
   }
+
   .ec-itemNav{
     .ec-itemNav__item{
       display: block;
@@ -656,8 +688,23 @@ Styleguide 11.2.6
       display: none;
     }
   }
+
 }
-.ec-overlayRole{
+
+.ec-drawerRole.is-active {
+  z-index: 100000;
+  transition: z-index 0ms 300ms;
+  @include media_desktop() {
+    display: none;
+  }
+}
+
+.ec-drawerRole {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ec-overlayRole {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -667,12 +714,13 @@ Styleguide 11.2.6
   background: transparent;
   transform: translateX(0);
   transition: all .3s;
-  visibility:hidden;
+  visibility: hidden;
 }
+
 .have_curtain .ec-overlayRole {
   display: block;
   opacity: 1;
-  background: rgba(0,0,0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   transform: translateX(-260px);
   transition: all .3s;
   visibility: visible;

@@ -1,0 +1,18 @@
+
+mixin ec-drawerRole
+    .ec-drawerRole
+        .ec-headerSearchArea
+            .ec-headerSearch
+                .ec-select
+                    select
+                        option
+                            | すべてのカテゴリ
+                            i.fas.fa-sort-down
+                        option 北海道
+                        option 青森県
+                        option 岩手県
+                        option ...
+                a.ec-headerSearch__down: i.fas.fa-sort-down
+                .ec-input
+                    input(type='text' placeholder="キーワードを入力")
+                    a.ec-headerSearch__btn: i.fas.fa-search
