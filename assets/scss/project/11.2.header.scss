@@ -653,13 +653,6 @@ Styleguide 11.2.6
         border-bottom-right-radius: 6px;
       }
     }
-    .ec-headerSearch__down {
-      box-sizing: border-box;
-      color: white;
-      position: absolute;
-      top: 4px;
-      right: 18px;
-    }
     .ec-headerSearch__btn {
       box-sizing: border-box;
       padding: 9px 0;
@@ -787,6 +780,10 @@ Styleguide 11.2.6
 .ec-drawerRoleClose.is_active  {
   display: inline-block;
   transition: all .3s;
+
+  @include media_desktop {
+    display: none;
+  }
 }
 
 .ec-overlayRole {
@@ -811,6 +808,10 @@ Styleguide 11.2.6
   opacity: 1;
   background: rgba(0, 0, 0, 0.5);
   visibility: visible;
+
+  @include media_desktop {
+    display: none;
+  }
 }
 
 /*
