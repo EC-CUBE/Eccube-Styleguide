@@ -64,14 +64,6 @@ Styleguide 11.2
   }
 }
 
-.ec-layoutRole.is_active {
-  transform: translateX(-260px);
-  transition: transform 0.3s;
-  z-index: 10;
-  @include media_desktop() {
-    transform: translateX(0px);
-  }
-}
 
 .ec-headerRole {
   @include container;
@@ -610,11 +602,11 @@ Styleguide 11.2.6
 */
 
 .ec-drawerRole {
-  display: none;
   overflow-y: scroll;
   background: black;
   width: 260px;
   height: 100vh;
+  transform: translateX(-300px);
   position: fixed;
   top: 0;
   left: 0;
@@ -624,27 +616,6 @@ Styleguide 11.2.6
     display: none;
   }
 
-  .ec-drawerRoleClose {
-    display: inline-block;
-    border-radius: 50%;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    text-align: center;
-    color: black;
-    background: white;
-    position: fixed;
-    top: 10px;
-    left: 270px;
-    z-index: 1000;
-
-    .fas {
-      vertical-align: top;
-    }
-
-  }
 
   .ec-headerSearchArea {
     padding: 20px 10px;
@@ -778,13 +749,44 @@ Styleguide 11.2.6
 
 }
 
-.ec-drawerRole.is-active {
+.ec-drawerRoleClose {
+  display: none;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  background: white;
+  position: fixed;
+  top: 10px;
+  left: 270px;
+  z-index: 1000;
+
+  .fas {
+    vertical-align: top;
+  }
+  @include media_desktop {
+    display: none;
+  }
+
+}
+
+.ec-drawerRole.is_active {
   display: block;
+  transform: translateX(0);
+  transition: all .3s;
   z-index: 100000;
-  transition: z-index 0ms 300ms;
+
   @include media_desktop() {
     display: none;
   }
+}
+.ec-drawerRoleClose.is_active  {
+  display: inline-block;
+  transition: all .3s;
 }
 
 .ec-overlayRole {
@@ -798,14 +800,16 @@ Styleguide 11.2.6
   transform: translateX(0);
   transition: all .3s;
   visibility: hidden;
+
+  @include media_desktop {
+    display: none;
+  }
 }
 
 .have_curtain .ec-overlayRole {
   display: block;
   opacity: 1;
   background: rgba(0, 0, 0, 0.5);
-  transform: translateX(-260px);
-  transition: all .3s;
   visibility: visible;
 }
 

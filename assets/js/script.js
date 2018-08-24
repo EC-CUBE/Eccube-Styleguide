@@ -1,7 +1,8 @@
 $(function(){
-    $(".ec-headerNavSP__itemMenu").on("click",function(){
+    $(".ec-headerNavSP").on("click",function(){
         $(".ec-layoutRole").toggleClass("is_active")
         $(".ec-drawerRole").toggleClass("is_active")
+        $(".ec-drawerRoleClose").toggleClass("is_active")
         $("body").toggleClass("have_curtain")
     })
 })
@@ -10,6 +11,15 @@ $(function(){
         $("body").removeClass("have_curtain")
         $(".ec-layoutRole").removeClass("is_active")
         $(".ec-drawerRole").removeClass("is_active")
+        $(".ec-drawerRoleClose").removeClass("is_active")
+    })
+})
+$(function(){
+    $(".ec-drawerRoleClose").on("click",function(){
+        $("body").removeClass("have_curtain")
+        $(".ec-layoutRole").removeClass("is_active")
+        $(".ec-drawerRole").removeClass("is_active")
+        $(".ec-drawerRoleClose").removeClass("is_active")
     })
 })
 
