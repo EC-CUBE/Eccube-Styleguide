@@ -8,7 +8,6 @@
 
 ex [トップページ](http://demo3.ec-cube.net/)
 
-Markup:
 sg-wrapper:
 <div class="ec-role">
   <sg-wrapper-content/>
@@ -39,7 +38,7 @@ Styleguide 12.3.1
 Markup:
 .ec-blockBtn--top 商品一覧へ
 
-Styleguide 2.1.2
+Styleguide 12.3.2
 */
 .ec-blockBtn--top{
   @include _btn(white, black, black);
