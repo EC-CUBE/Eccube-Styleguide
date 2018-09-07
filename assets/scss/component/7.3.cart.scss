@@ -134,7 +134,7 @@ Styleguide 7.3.5
 }
 .ec-cartNavi{
   display: inline-block;
-  padding: 10px 0 0 20px;
+  padding: 10px 0 0;
   width: auto;
   color: black;
   background: transparent;
@@ -144,8 +144,7 @@ Styleguide 7.3.5
     border-radius: 99999px;
     box-sizing: border-box;
     padding: 12px 17px 10px;
-    width: auto;
-    min-width: 140px;
+    width: 140px;
     height: 44px;
     white-space: nowrap;
     cursor: pointer;
@@ -178,8 +177,8 @@ Styleguide 7.3.5
     @include media_desktop {
       display: inline-block;
       min-width: 17px;
-      position: relative;
-      left: 0;
+      position: absolute;
+      left: 120%;
       top: 0;
     }
   }
@@ -190,7 +189,7 @@ Styleguide 7.3.5
       display: inline-block;
       font-size: 14px;
       font-weight: normal;
-      vertical-align: middle;
+      vertical-align: top;
     }
   }
 }
@@ -199,6 +198,7 @@ Styleguide 7.3.5
   .ec-cartNavi__icon {
     &:before {
       content: "\f00d";
+      font-family: FontAwesome;
     }
   }
   .ec-cartNavi__badge{
@@ -253,7 +253,7 @@ Styleguide 7.3.6
   background: #f8f8f8;
   box-sizing: border-box;
   padding: 16px;
-  z-index: 20;
+  z-index: 3;
   position: absolute;
   right: 0;
 

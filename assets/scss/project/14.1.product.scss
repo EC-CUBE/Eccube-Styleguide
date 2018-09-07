@@ -1,5 +1,4 @@
 @import "../mixins/media";
-
 /*
 商品詳細
 
@@ -14,7 +13,7 @@ include /assets/tmpl/elements/14.1.product.pug
 
 Styleguide 14.1
 */
-.ec-productRole {
+.ec-productRole{
   @include container;
   & &__img {
     margin-right: 0;
@@ -33,7 +32,7 @@ Styleguide 14.1
   & &__title {
     .ec-headingTitle {
       font-size: 20px;
-      @include media_desktop {
+      @include media_desktop{
         font-size: 32px;
       }
     }
@@ -41,7 +40,7 @@ Styleguide 14.1
   & &__tags {
     margin-top: 16px;
     padding: 0;
-    padding-bottom: 16px;
+    padding-bottom:16px;
     border-bottom: 1px dotted #ccc;
   }
   & &__tag {
@@ -54,14 +53,14 @@ Styleguide 14.1
     border-radius: 3px;
     background-color: #F5F7F8;
   }
-  & &__priceRegular {
+  & &__priceRegular{
     padding-top: 14px
   }
   & &__priceRegularTax {
     margin-left: 5px;
     font-size: 12px;
   }
-  & &__price {
+  & &__price{
     color: #DE5D50;
     font-size: 28px;
     padding: 0;
@@ -71,23 +70,23 @@ Styleguide 14.1
       border-bottom: 1px dotted #ccc;
     }
   }
-  & &__code {
+  & &__code{
     padding: 14px 0;
     border-bottom: 1px dotted #ccc;
   }
-  & &__category {
+  & &__category{
     padding: 14px 0;
     border-bottom: 1px dotted #ccc;
-    a {
-      color: #33A8D0;
+    a{
+      color:#33A8D0;
     }
-    ul {
+    ul{
       list-style: none;
-      padding: 0;
+      padding:0;
       margin: 0;
     }
   }
-  & &__actions {
+  & &__actions{
     padding: 14px 0;
     .ec-select {
       select {
@@ -101,7 +100,7 @@ Styleguide 14.1
       }
     }
   }
-  & &__btn {
+  & &__btn{
     width: 100%;
     margin-bottom: 10px;
     @include media_desktop {
@@ -115,3 +114,9 @@ Styleguide 14.1
   }
 
 }
+
+
+
+
+
+
