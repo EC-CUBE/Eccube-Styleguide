@@ -3,13 +3,7 @@
 
 トップページで使用されている見出しのスタイルです。
 
-ex [トップページ](http://demo3.ec-cube.net/)
-
-Markup:
-sg-wrapper:
-<div class="ec-role">
-  <sg-wrapper-content/>
-</div>
+ex [トップページ](http://demo4.ec-cube.net/)
 
 Styleguide 12.4
 */
@@ -22,7 +16,7 @@ Styleguide 12.4
 Markup:
 .ec-secHeading
   span.ec-secHeading__en TOPIC
-  span.ec-secHeading__line |
+  span.ec-secHeading__line
   span.ec-secHeading__ja 特集
 
 Styleguide 12.4.1
@@ -58,7 +52,7 @@ Styleguide 12.4.1
 Markup:
 .ec-secHeading--tandem
   span.ec-secHeading__en TOPIC
-  span.ec-secHeading__line |
+  span.ec-secHeading__line
   span.ec-secHeading__ja 特集
 
 Styleguide 12.4.2
