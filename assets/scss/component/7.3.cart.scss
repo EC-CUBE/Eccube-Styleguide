@@ -22,7 +22,7 @@ Styleguide 7.3
 
 ul 要素を用いたリスト要素としてマークアップします。
 
-ex [カートページ　ヘッダ部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　ヘッダ部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 include /assets/tmpl/elements/7.3.cart.pug
@@ -113,7 +113,7 @@ Styleguide 7.3.1
 
 カートナビゲーションを表示します。　カートに追加された商品の個数も表示します。
 
-ex [カートページ　ナビゲーション部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　ナビゲーション部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 include /assets/tmpl/elements/11.2.header.pug
@@ -216,7 +216,7 @@ Styleguide 7.3.5
 
 カートナビゲーションのポップアップを表示します。カートに追加された商品の詳細が表示されます。
 
-ex [カートページ　ナビゲーション部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　ナビゲーション部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 div(style="height:350px;")
@@ -229,9 +229,8 @@ div(style="height:350px;")
         img(src='/moc/icon/cross-dark.svg', alt='close')
       .ec-cartNavi__badge 1
       .ec-cartNavi__label
-        | 合計
         .ec-cartNavi__price ¥1920
-    +b.ec-cartNaviIsset
+    +b.ec-cartNaviIsset.is-active
       +e.cart
         +e.cartImage
           img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
@@ -332,7 +331,7 @@ Styleguide 7.3.6
 
 カートナビゲーションのポップアップを表示します。商品が登録されていない場合の表示です。
 
-ex [カートページ　ナビゲーション部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　ナビゲーション部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 div(style="height:170px;")
@@ -347,7 +346,7 @@ div(style="height:170px;")
       .ec-cartNavi__label
         | 合計
         .ec-cartNavi__price ¥1920
-    .ec-cartNaviNull
+    .ec-cartNaviNull.is-active
       .ec-cartNaviNull__message
         p 現在カート内に
           br
@@ -429,7 +428,7 @@ Styleguide 7.3.7
 
 会計時の合計金額、総計を表示します。
 
-ex [カートページ　統計部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　統計部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 include /assets/tmpl/elements/7.3.cart.pug
