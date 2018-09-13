@@ -12,6 +12,10 @@ Markup:
 include /assets/tmpl/elements/12.6.newItem.pug
 +ec-newItemRole
 
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
 Styleguide 12.6
 */
 

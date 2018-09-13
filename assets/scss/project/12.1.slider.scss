@@ -10,6 +10,10 @@ Markup:
 include /assets/tmpl/elements/12.1.slider.pug
 +ec-sliderRole
 
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
 Styleguide 12.1
 */
 .ec-sliderRole{

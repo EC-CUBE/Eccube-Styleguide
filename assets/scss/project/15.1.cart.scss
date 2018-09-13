@@ -60,6 +60,7 @@ Styleguide 15.1
   & &__actions{
     text-align: right;
     width: 100%;
+    margin-bottom: 20px;
     @include media_desktop {
       width:  20%;
       margin-right: 10%;
