@@ -18,11 +18,11 @@ Styleguide 8.1
 
 新着情報の掲載をします。
 
-ex [トップページ　新着情報部分](http://demo3.ec-cube.net/)
+ex [トップページ　新着情報部分](http://demo4.ec-cube.net/)
 
 Markup:
-include /assets/tmpl/elements/8.1.info.pug
-+ec-news
+include /assets/tmpl/elements/12.8.news.pug
++ec-newsRole
 
 Styleguide 8.1.1
 */
@@ -57,24 +57,29 @@ Styleguide 8.1.1
 
 折りたたみ項目を掲載します。
 
-ex [トップページ　折りたたみ項目部分](http://demo3.ec-cube.net/)
+ex [トップページ　折りたたみ項目部分](http://demo4.ec-cube.net/)
 
 Markup:
-include /assets/tmpl/elements/8.1.info.pug
-+b.ec-news
-        +e.title 新着情報
-        +e.UL.items
-            +e.LI.item
-                +b.ec-newsline.is_active
-                    +e.info
-                        +e.date 2016/09/29
-                        +e.comment サイトオープンしました
-                        +e.close
-                            a.ec-closeBtn--circle
-                                span.ec-closeBtn--circle__icon
-                                    .ec-icon
-                                        img(src='/moc/icon/angle-down-white.svg', alt='')
-                    +e.description 一人暮らしからオフィスなどさまざまなシーンで あなたの生活をサポートするグッズをご家庭へお届けします！
++b.ec-newsRole
+  .ec-secHeading
+      span.ec-secHeading__en NEWS
+      span.ec-secHeading__line
+      span.ec-secHeading__ja 新着情報
+  +e.__news
+      - for (var i = 0; i < 3; i++)
+          +e.__newsItem.is_active
+              +e.__newsHeading
+                  +e.newsDate 2016/09/29
+                  +e.newsColumn
+                      +e.newsTitle NEWSタイトルが入ります。NEWSタイトルが入ります。NEWSタイトルが入ります。NEWSタイトルが入ります。
+                      +e.newsClose
+                          +e.A.newsCloseBtn
+                              i.fas.fa-angle-down
+              +e.newsDescription
+                  | 詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。詳細テキストが入ります。
+                  br
+                  a(href="https://www.ec-cube.net/") https://www.ec-cube.net/
+      a.ec-inlineBtn--top more
 
 Styleguide 8.1.2
 */

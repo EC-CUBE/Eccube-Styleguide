@@ -4,11 +4,15 @@
 
 トップページ スライド部に関する Project コンポーネントを定義します。
 
-ex [トップページ](http://demo3.ec-cube.net/)
+ex [トップページ](http://demo4.ec-cube.net/)
 
 Markup:
 include /assets/tmpl/elements/12.1.slider.pug
 +ec-sliderRole
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
 
 Styleguide 12.1
 */

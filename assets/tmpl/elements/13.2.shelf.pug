@@ -1,15 +1,67 @@
+//mixin ec-shelfGrid
+//    +b.UL.ec-shelfGrid
+//        -for (var x = 0; x < 20; x++)
+//        +e.LI.item: a(href="/moc/guest/item")
+//            img(src="http://demo3.ec-cube.net/upload/save_image/0701121841_55935c114e715.jpeg")
+//            +e.P.title クラフトノート
+//            +e.P.plice ¥ 1,296
+//
+//mixin ec-shelfGridCenter
+//    +b.UL.ec-shelfGridCenter
+//        -for (var x = 0; x < 20; x++)
+//        +e.LI.item: a(href="/moc/guest/item")
+//            img(src="http://demo3.ec-cube.net/upload/save_image/0701121841_55935c114e715.jpeg")
+//            +e.P.title クラフトノート
+//            +e.P.plice ¥ 1,296
+
 mixin ec-shelfGrid
     +b.UL.ec-shelfGrid
         -for (var x = 0; x < 20; x++)
-            +e.LI.item: a(href="/moc/guest/item")
-                img(src="http://demo3.ec-cube.net/upload/save_image/0701121841_55935c114e715.jpeg")
-                +e.P.title クラフトノート
-                +e.P.plice ¥ 1,296
+            +e.LI.item
+                a(href="/moc/guest/item")
+                    img(src="https://demo4.ec-cube.net/html/upload/save_image/0903163326_5b8ce3c697fad.jpg")
+                    +e.P.title さくさく♪クッキーアイス
+                    +e.P.plice ¥ 1,620
+                    ul.ec-productRole.ec-productRole__tags
+                        li.ec-productRole__tag.tag_1 新商品
+                        li.ec-productRole__tag.tag_2 おすすめ商品
+                        li.ec-productRole__tag.tag_3 限定商品
+                form
+                    .ec-productRole__actions
+                        .ec-select
+                            select
+                                option(value="0") 選択してください
+                                option(value="1") チョコミント
+                                option(value="2") ストロベリー
+                                option(value="3") バニラ
+                        .ec-numberInput
+                            span 数量
+                            input.quantity.form-control(type="number" name="quantity" value="1")
+                        .ec-productRole__btn
+                            button.ec-blockBtn--action.add-cart カートに入れる
 
 mixin ec-shelfGridCenter
     +b.UL.ec-shelfGridCenter
         -for (var x = 0; x < 20; x++)
-            +e.LI.item: a(href="/moc/guest/item")
-                img(src="http://demo3.ec-cube.net/upload/save_image/0701121841_55935c114e715.jpeg")
-                +e.P.title クラフトノート
-                +e.P.plice ¥ 1,296
+            +e.LI.item
+                a(href="/moc/guest/item")
+                    img(src="https://demo4.ec-cube.net/html/upload/save_image/0903163326_5b8ce3c697fad.jpg")
+                    +e.P.title さくさく♪クッキーアイス
+                    +e.P.plice ¥ 1,620
+                    ul.ec-productRole.ec-productRole__tags
+                        li.ec-productRole__tag.tag_1 新商品
+                        li.ec-productRole__tag.tag_2 おすすめ商品
+                        li.ec-productRole__tag.tag_3 限定商品
+                form
+                    .ec-productRole__actions
+                        .ec-select
+                            select
+                                option(value="0") 選択してください
+                                option(value="1") チョコミント
+                                option(value="2") ストロベリー
+                                option(value="3") バニラ
+                        .ec-numberInput
+                            span 数量
+                            input.quantity.form-control(type="number" name="quantity" value="1")
+                        .ec-productRole__btn
+                            button.ec-blockBtn--action.add-cart カートに入れる

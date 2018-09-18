@@ -71,25 +71,73 @@ mixin ec-headerUserNav
         span ログアウト
 
 
+//mixin ec-headerCart
+//  .ec-cartNaviWrap
+//    +b.ec-cartNavi
+//      +e.I.icon.fas.fa-shopping-cart
+//        +e.SPAN.badge 1
+//      .ec-cartNavi__label
+//        .ec-cartNavi__price ¥1920
+//    //.ec-cartNaviNull
+//    //  .ec-cartNaviNull__message
+//    //    p 現在カート内に
+//    //      br
+//    //      | 商品がございません。
+//    +b.ec-cartNaviIsset
+//      +e.cart
+//        +e.cartImage
+//          img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
+//        +e.cartContent
+//          +e.cartContentTitle ミニテーブル
+//          +e.cartContentPrice ¥ 12,960
+//            +e.cartContentTax 税込
+//          +e.cartContentNumber 数量：1
+//      +e.action
+//        a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
+//        a.ec-blockBtn.ec-cartNavi--cancel キャンセル
+
+//mixin ec-headerCartNull
+//  .ec-cartNavi
+//    .ec-cartNavi__icon
+//      img(src='/moc/icon/cart.svg', alt='cart')
+//    .ec-cartNavi__iconClose
+//      img(src='/moc/icon/cross.svg', alt='close')
+//    .ec-cartNavi__badge 1
+//    .ec-cartNavi__label
+//      | 合計
+//      .ec-cartNavi__price ¥1920
+//  .ec-cartNaviNull
+//    .ec-cartNaviNull__message
+//      p 現在カート内に
+//        br
+//        | 商品がございません。
+//  //+b.ec-cartNaviIsset
+//  //  +e.cart
+//  //    +e.cartImage
+//  //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
+//  //    +e.cartContent
+//  //      +e.cartContentTitle ミニテーブル
+//  //      +e.cartContentPrice ¥ 12,960
+//  //        +e.cartContentTax 税込
+//  //      +e.cartContentNumber 数量：1
+//  //  +e.action
+//  //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
+//  //    a.ec-blockBtn キャンセル
+
 mixin ec-headerCart
   .ec-cartNaviWrap
     +b.ec-cartNavi
       +e.I.icon.fas.fa-shopping-cart
         +e.SPAN.badge 1
       .ec-cartNavi__label
-        .ec-cartNavi__price ¥1920
-    //.ec-cartNaviNull
-    //  .ec-cartNaviNull__message
-    //    p 現在カート内に
-    //      br
-    //      | 商品がございません。
+        .ec-cartNavi__price ¥1,620
     +b.ec-cartNaviIsset
       +e.cart
         +e.cartImage
-          img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
+          img(src='https://demo4.ec-cube.net/html/upload/save_image/0903163326_5b8ce3c697fad.jpg')
         +e.cartContent
-          +e.cartContentTitle ミニテーブル
-          +e.cartContentPrice ¥ 12,960
+          +e.cartContentTitle さくさく♪クッキーアイス
+          +e.cartContentPrice ¥ 1,620
             +e.cartContentTax 税込
           +e.cartContentNumber 数量：1
       +e.action
@@ -97,29 +145,14 @@ mixin ec-headerCart
         a.ec-blockBtn.ec-cartNavi--cancel キャンセル
 
 mixin ec-headerCartNull
-  .ec-cartNavi
-    .ec-cartNavi__icon
-      img(src='/moc/icon/cart.svg', alt='cart')
-    .ec-cartNavi__iconClose
-      img(src='/moc/icon/cross.svg', alt='close')
-    .ec-cartNavi__badge 1
-    .ec-cartNavi__label
-      | 合計
-      .ec-cartNavi__price ¥1920
-  .ec-cartNaviNull
-    .ec-cartNaviNull__message
-      p 現在カート内に
-        br
-        | 商品がございません。
-  //+b.ec-cartNaviIsset
-  //  +e.cart
-  //    +e.cartImage
-  //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
-  //    +e.cartContent
-  //      +e.cartContentTitle ミニテーブル
-  //      +e.cartContentPrice ¥ 12,960
-  //        +e.cartContentTax 税込
-  //      +e.cartContentNumber 数量：1
-  //  +e.action
-  //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
-  //    a.ec-blockBtn キャンセル
+  .ec-cartNaviWrap
+    +b.ec-cartNavi
+      +e.I.icon.fas.fa-shopping-cart
+        +e.SPAN.badge 0
+      .ec-cartNavi__label
+        .ec-cartNavi__price ¥0
+    .ec-cartNaviNull
+      .ec-cartNaviNull__message
+        p 現在カート内に
+          br
+          | 商品がございません。

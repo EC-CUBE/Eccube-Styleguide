@@ -6,15 +6,13 @@
 
 トップページで使用されているトピックのスタイルです。
 
-ex [トップページ](http://demo3.ec-cube.net/)
+ex [トップページ](http://demo4.ec-cube.net/)
 
 Markup:
-sg-wrapper:
-<div class="ec-role">
-  <sg-wrapper-content/>
-</div>
+include /assets/tmpl/elements/12.5.topics.pug
++ec-topicRole
 
-Styleguide 12.5.1
+Styleguide 12.5
 */
 
 .ec-topicRole {

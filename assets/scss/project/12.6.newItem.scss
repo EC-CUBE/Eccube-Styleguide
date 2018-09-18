@@ -6,15 +6,17 @@
 
 トップページで使用されているアイテムリストのスタイルです。
 
-ex [トップページ](http://demo3.ec-cube.net/)
+ex [トップページ](http://demo4.ec-cube.net/)
 
 Markup:
+include /assets/tmpl/elements/12.6.newItem.pug
++ec-newItemRole
+
 sg-wrapper:
 <div class="ec-role">
   <sg-wrapper-content/>
-</div>
 
-Styleguide 12.6.1
+Styleguide 12.6
 */
 
 .ec-newItemRole {
