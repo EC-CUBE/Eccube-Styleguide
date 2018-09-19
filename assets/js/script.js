@@ -1,7 +1,8 @@
 $(function(){
-    $(".ec-headerNavSP__itemMenu").on("click",function(){
+    $(".ec-headerNavSP").on("click",function(){
         $(".ec-layoutRole").toggleClass("is_active")
         $(".ec-drawerRole").toggleClass("is_active")
+        $(".ec-drawerRoleClose").toggleClass("is_active")
         $("body").toggleClass("have_curtain")
     })
 })
@@ -10,23 +11,38 @@ $(function(){
         $("body").removeClass("have_curtain")
         $(".ec-layoutRole").removeClass("is_active")
         $(".ec-drawerRole").removeClass("is_active")
+        $(".ec-drawerRoleClose").removeClass("is_active")
+    })
+})
+$(function(){
+    $(".ec-drawerRoleClose").on("click",function(){
+        $("body").removeClass("have_curtain")
+        $(".ec-layoutRole").removeClass("is_active")
+        $(".ec-drawerRole").removeClass("is_active")
+        $(".ec-drawerRoleClose").removeClass("is_active")
     })
 })
 
 $(function(){
     $(".ec-cartNavi").on("click",function(){
-        $(".ec-headerRole__cart").toggleClass("is_active")
+        $(".ec-cartNavi").toggleClass("is-active")
     })
 })
 $(function(){
-    $(".ec-cartNavi--cancel").on("click",function(){
-        $(".ec-headerRole__cart").toggleClass("is_active")
+    $(".ec-cartNavi").on("click",function(){
+        $(".ec-cartNaviIsset").toggleClass("is-active")
     })
 })
 
 $(function(){
     $(".ec-newsline__close").on("click",function(){
         $(this).parents(".ec-newsline").toggleClass("is_active")
+    })
+})
+
+$(function(){
+    $(".ec-newsRole__newsCloseBtn").on("click",function(){
+        $(this).parents(".ec-newsRole__newsItem").toggleClass("is_active")
     })
 })
 

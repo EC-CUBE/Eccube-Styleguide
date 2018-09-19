@@ -2,6 +2,7 @@ include /node_modules/bemto.pug/bemto.pug
 include /assets/tmpl/elements/11.2.header.pug
 include /assets/tmpl/elements/11.3.headerNavi.pug
 include /assets/tmpl/elements/11.4.categoryNavi.pug
+include /assets/tmpl/elements/11.5.drawerRole.pug
 include /assets/tmpl/elements/11.8.footer.pug
 
 doctype html
@@ -11,6 +12,7 @@ html(lang="ja")
         meta(name="viewport", content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no")
         title= pageTitle
         link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
         link(rel="stylesheet", href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
         link(rel="stylesheet", href="/assets/css/style.css")
         style
@@ -18,8 +20,8 @@ html(lang="ja")
     body
         +b.ec-layoutRole
             +e.header
-                +ec-headerRole
                 +ec-headerNaviRole
+                +ec-headerRole
                 +ec-cateoryNaviRole
             +e.contentTop
                 block pageHeader
@@ -32,7 +34,7 @@ html(lang="ja")
             +e.footer
                 +ec-footerRole
         .ec-overlayRole
-        .ec-drawerRole
+        +ec-drawerRole
         .ec-blockTopBtn
         script(src="https://code.jquery.com/jquery-2.2.4.min.js")
         script(src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")

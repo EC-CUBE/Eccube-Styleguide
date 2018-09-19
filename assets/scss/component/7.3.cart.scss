@@ -22,7 +22,7 @@ Styleguide 7.3
 
 ul 要素を用いたリスト要素としてマークアップします。
 
-ex [カートページ　ヘッダ部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　ヘッダ部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 include /assets/tmpl/elements/7.3.cart.pug
@@ -113,7 +113,7 @@ Styleguide 7.3.1
 
 カートナビゲーションを表示します。　カートに追加された商品の個数も表示します。
 
-ex [カートページ　ナビゲーション部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　ナビゲーション部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 include /assets/tmpl/elements/11.2.header.pug
@@ -127,139 +127,113 @@ sg-wrapper:
 
 Styleguide 7.3.5
 */
-.ec-cartNavi{
-  border: 1px solid #D9D9D9;
-  width: 256px;
-  position: relative;
-  display: block;
-  height: 44px;
-  overflow: hidden;
-  white-space: nowrap;
-  z-index: 3;
-  cursor: pointer;
-  & &__icon {
-    width: 30px;
-    height: 30px;
+.ec-cartNaviWrap{
+  @include media_desktop {
     position: relative;
-    top: 8px;
-    left: 8px;
-    @include fadeIn(inline-block,200ms);
   }
-  & &__iconClose {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    @include fadeOut(200ms);
+}
+.ec-cartNavi{
+  display: inline-block;
+  padding: 10px 0 0;
+  width: auto;
+  color: black;
+  background: transparent;
+  @include media_desktop {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 99999px;
+    box-sizing: border-box;
+    padding: 12px 17px 10px;
+    width: 140px;
+    height: 44px;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #F8F8F8;
+  }
+
+  & &__icon {
+    display: inline-block;
+    font-size: 20px;
+    @include fadeIn(inline-block,200ms);
+    position: relative;
+
   }
   & &__badge{
-    position: absolute;
-    left: 45px;
-    top: 13px;
     display: inline-block;
-    min-width: 10px;
-    padding: 3px 7px;
+    border-radius: 99999px;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 17px;
     font-size: 10px;
-    font-weight: 700;
-    line-height: 1;
+    line-height: 0.7;
+    vertical-align: top;
     color: #fff;
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
-    vertical-align: baseline;
     background-color: #DE5D50;
-    border-radius: 10px;
-    @include fadeIn(inline-block);
-  }
-  & &__label{
-    font-size: 12px;
     position: absolute;
-    right:0;
-    top:0;
-    height: 44px;
-    line-height: 44px;
-    vertical-align: middle;
-    margin-right: 16px;
+    left: 60%;
+    top: -10px;
+    @include media_desktop {
+      display: inline-block;
+      min-width: 17px;
+      position: absolute;
+      left: 120%;
+      top: 0;
+    }
   }
   & &__price{
-    display: inline-block;
-    font-size: 16px;
-  }
-}
-.is_active {
-  .ec-cartNavi__icon{
-    @include fadeOut;
-  }
-  .ec-cartNavi__badge{
     display: none;
-  }
-  .ec-cartNavi__iconClose {
 
-    @include fadeIn(inline-block,200ms);
-  }
-}
-
-.ec-cartNaviNull {
-  display: none;
-  min-width: 256px;
-  text-align: center;
-  background: #f3f3f3;
-  box-sizing: border-box;
-  padding: 16px;
-  z-index: 3;
-  position: absolute;
-  @include fadeOut;
-  & &__message {
-    border: 1px solid #D9D9D9;
-    padding: 16px 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #F99;
-    p {
-      margin: 0;
+    @include media_desktop {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: normal;
+      vertical-align: top;
     }
   }
 }
+.ec-cartNavi.is-active {
 
-.is_active {
-  .ec-cartNaviNull {
-    @include fadeIn;
-    display: block;
+  .ec-cartNavi__icon {
+    &:before {
+      content: "\f00d";
+      font-family: FontAwesome;
+    }
   }
-  .ec-cartNaviIsset {
-    @include fadeIn;
-    display: block;
+  .ec-cartNavi__badge{
+    display: none;
+    @include media_desktop {
+      display: none;
+    }
+
   }
 }
+
 
 /*
 カートナビゲーションのポップアップ(商品詳細)
 
 カートナビゲーションのポップアップを表示します。カートに追加された商品の詳細が表示されます。
 
-ex [カートページ　ナビゲーション部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　ナビゲーション部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 div(style="height:350px;")
   // 上記のdivはスタイルガイド都合上、高さをもたせるため設置(mocでは不要)
-  .is_active
-    .ec-cartNavi
-      .ec-cartNavi__icon
-        img(src='/moc/icon/cart-dark.svg', alt='close')
-      .ec-cartNavi__iconClose
-        img(src='/moc/icon/cross-dark.svg', alt='close')
-      .ec-cartNavi__badge 1
+  .ec-cartNaviWrap
+    +b.ec-cartNavi
+      +e.I.icon.fas.fa-shopping-cart
+        +e.SPAN.badge 1
       .ec-cartNavi__label
-        | 合計
-        .ec-cartNavi__price ¥1920
-    +b.ec-cartNaviIsset
+        .ec-cartNavi__price ¥1,620
+    +b.ec-cartNaviIsset.is-active
       +e.cart
         +e.cartImage
-          img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
+          img(src='https://demo4.ec-cube.net/html/upload/save_image/0903163326_5b8ce3c697fad.jpg')
         +e.cartContent
-          +e.cartContentTitle ミニテーブル
-          +e.cartContentPrice ¥ 12,960
+          +e.cartContentTitle さくさく♪クッキーアイス
+          +e.cartContentPrice ¥ 1,620
             +e.cartContentTax 税込
           +e.cartContentNumber 数量：1
       +e.action
@@ -270,15 +244,36 @@ Styleguide 7.3.6
 */
 .ec-cartNaviIsset {
   display: none;
-  min-width: 256px;
-  max-width:256px;
+  width: 100%;
   text-align: center;
-  background: #f3f3f3;
+  background: #f8f8f8;
   box-sizing: border-box;
   padding: 16px;
   z-index: 3;
   position: absolute;
-  @include fadeOut;
+  right: 0;
+
+  @include media_desktop {
+    margin-top: 10px;
+    min-width: 256px;
+    max-width:256px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8.5px 10px 8.5px;
+      border-color: transparent transparent #f8f8f8 transparent;
+      position: absolute;
+      top: -9px;
+
+    }
+  }
+
+
+
   & &__cart {
     @include clearfix;
     border-bottom: 1px solid #E8E8E8;
@@ -322,6 +317,10 @@ Styleguide 7.3.6
   }
 }
 
+.ec-cartNaviIsset.is-active {
+  display: block;
+}
+
 
 
 /*
@@ -329,38 +328,22 @@ Styleguide 7.3.6
 
 カートナビゲーションのポップアップを表示します。商品が登録されていない場合の表示です。
 
-ex [カートページ　ナビゲーション部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　ナビゲーション部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 div(style="height:170px;")
   // 上記のdivはスタイルガイド都合上、高さをもたせるため設置(mocでは不要)
-  .is_active
-    .ec-cartNavi
-      .ec-cartNavi__icon
-        img(src='/moc/icon/cart-dark.svg', alt='cart')
-      .ec-cartNavi__iconClose
-        img(src='/moc/icon/cross-dark.svg', alt='close')
-      .ec-cartNavi__badge 1
+  .ec-cartNaviWrap
+    +b.ec-cartNavi
+      +e.I.icon.fas.fa-shopping-cart
+        +e.SPAN.badge 0
       .ec-cartNavi__label
-        | 合計
-        .ec-cartNavi__price ¥1920
-    .ec-cartNaviNull
+        .ec-cartNavi__price ¥0
+    .ec-cartNaviNull.is-active
       .ec-cartNaviNull__message
         p 現在カート内に
           br
           | 商品がございません。
-    //+b.ec-cartNaviIsset
-    //  +e.cart
-    //    +e.cartImage
-    //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
-    //    +e.cartContent
-    //      +e.cartContentTitle ミニテーブル
-    //      +e.cartContentPrice ¥ 12,960
-    //        +e.cartContentTax 税込
-    //      +e.cartContentNumber 数量：1
-    //  +e.action
-    //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
-    //    a.ec-blockBtn キャンセル
 
 sg-wrapper:
 <div class="ec-role">
@@ -371,12 +354,62 @@ sg-wrapper:
 Styleguide 7.3.7
 */
 
+
+.ec-cartNaviNull {
+  display: none;
+  width: 100%;
+  text-align: center;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  padding: 16px;
+  z-index: 3;
+  position: absolute;
+  right: 0;
+
+  @include media_desktop {
+    margin-top: 10px;
+    min-width: 256px;
+    max-width:256px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8.5px 10px 8.5px;
+      border-color: transparent transparent #f8f8f8 transparent;
+      position: absolute;
+      top: -9px;
+
+    }
+  }
+
+  & &__message {
+    border: 1px solid #D9D9D9;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #F99;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.ec-cartNaviNull.is-active {
+  display: block;
+}
+
+
+
 /*
 総計
 
 会計時の合計金額、総計を表示します。
 
-ex [カートページ　統計部分](http://demo3.ec-cube.net/cart)
+ex [カートページ　統計部分](http://demo4.ec-cube.net/cart)
 
 Markup:
 include /assets/tmpl/elements/7.3.cart.pug
