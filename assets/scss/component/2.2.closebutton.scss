@@ -19,6 +19,8 @@ Styleguide 2.2
 ex [ログイン画面　☓ボタン部分](http://demo4.ec-cube.net/mypage/login)
 
 Markup:
+link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+i.fas.fa-times
 a.ec-closeBtn
   .ec-icon
     img(src='/moc/icon/cross.svg', alt='close')
