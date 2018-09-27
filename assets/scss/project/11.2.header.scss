@@ -595,7 +595,6 @@ SP時のみ出現するヘッダーに関係するコンポーネントです。
 ex [トップページ](http://demo4.ec-cube.net/)画面サイズが768px以下に該当。<br>
 <br>
 `.ec-drawerRole`：SPのドロワー内の要素をwrapするコンポーネントです。<br>
-`.ec-headerSearch`、`.ec-headerNav`、`.ec-itemNav`は`.ec-drawerRole`の子要素にある場合、ドロワーに適したスタイルに変化します。<br><br>
 `.ec-overlayRole`：SPのドロワー出現時にz-indexがドロワー以下の要素に半透明の黒背景をかぶせるコンポーネントです。<br>
 
 Styleguide 11.2.6
@@ -812,28 +811,4 @@ Styleguide 11.2.6
   @include media_desktop {
     display: none;
   }
-}
-
-/*
-ヘッダー：test
-
-test
-
-Markup:
-span.ec-itemAccordionParent test1
-ul.ec-itemNavAccordion
-  li.ec-itemNavAccordion__item
-    a(href='') test2
-    ul.ec-itemNavAccordion
-      li.ec-itemNavAccordion__item
-        a(href='') test3
-        ul.ec-itemNavAccordion
-          li.ec-itemNavAccordion__item
-            a(href='') test4
-
-Styleguide 11.2.7
-*/
-
-.ec-itemNavAccordion {
-  display: none;
 }
