@@ -135,7 +135,7 @@ Styleguide 7.3.5
 }
 .ec-cartNavi{
   display: inline-block;
-  padding: 10px 0 0;
+  padding: 10px 0 0 20px;
   width: auto;
   color: black;
   background: transparent;
@@ -145,7 +145,8 @@ Styleguide 7.3.5
     border-radius: 99999px;
     box-sizing: border-box;
     padding: 12px 17px 10px;
-    width: 140px;
+    width: auto;
+    min-width: 140px;
     height: 44px;
     white-space: nowrap;
     cursor: pointer;
@@ -178,8 +179,8 @@ Styleguide 7.3.5
     @include media_desktop {
       display: inline-block;
       min-width: 17px;
-      position: absolute;
-      left: 120%;
+      position: relative;
+      left: 0;
       top: 0;
     }
   }
@@ -190,7 +191,7 @@ Styleguide 7.3.5
       display: inline-block;
       font-size: 14px;
       font-weight: normal;
-      vertical-align: top;
+      vertical-align: middle;
     }
   }
 }
@@ -199,7 +200,8 @@ Styleguide 7.3.5
   .ec-cartNavi__icon {
     &:before {
       content: "\f00d";
-      font-family: FontAwesome;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
     }
   }
   .ec-cartNavi__badge{
@@ -243,7 +245,6 @@ div(style="height:350px;")
         a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
         a.ec-blockBtn.ec-cartNavi--cancel キャンセル
 
-
 Styleguide 7.3.6
 */
 .ec-cartNaviIsset {
@@ -253,7 +254,7 @@ Styleguide 7.3.6
   background: #f8f8f8;
   box-sizing: border-box;
   padding: 16px;
-  z-index: 3;
+  z-index: 20;
   position: absolute;
   right: 0;
 
