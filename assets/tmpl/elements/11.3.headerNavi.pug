@@ -9,19 +9,31 @@ mixin ec-headerNaviRole
 
 mixin ec-headerSearch
   .ec-headerSearch
-    .input-group
-      .input-group-btn
-        button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-          | すべて
-          span.caret
-        ul.dropdown-menu
-          li
-            a(href='#') メニュー1
-          li.divider(role='separator')
-          li
-            a(href='#') メニュー1
-      input.form-control(type='text', aria-label='キーワードを入力')
-      a.ec-headerSearch__btn: i.fas.fa-search
+    form.searchform(method='get', action='/products/list')
+      .ec-headerSearch__category
+        .ec-select.ec-select_search
+          select.category_id(name='category_id')
+            option(value='') 全ての商品
+            option(value='6') 新作
+            option(value='12') アイス
+            option(value='21')  アイスクッキー
+            option(value='20')  アイスバー
+            option(value='2') ジェラート
+            option(value='11') 詰め合わせ
+            option(value='16') スイーツ
+            option(value='19')  生チョコ
+            option(value='18')  マカロン
+            option(value='10') シリーズ
+            option(value='26')  MiNi
+            option(value='27')  オーガニック
+            option(value='28')  大人のスイーツ
+            option(value='24')  定番
+      .ec-headerSearch__keyword
+        .ec-input
+          input.search-name(type='search', name='name', maxlength='50', placeholder='キーワードを入力')
+          button.ec-headerSearch__keywordBtn(type='submit')
+            .ec-icon
+              img(src='/moc/icon/search-dark.svg', alt='')
 
   //+b.ec-headerSearch
   //  +e.category
