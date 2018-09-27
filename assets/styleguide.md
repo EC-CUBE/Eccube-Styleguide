@@ -15,9 +15,6 @@ Styleguide On Heorku
 
 [http://eccube3-styleguide.herokuapp.com/](http://eccube3-styleguide.herokuapp.com/)
 
-HTML Moc On Heroku 
-
-[http://eccube3-styleguide.herokuapp.com/moc/](http://eccube3-styleguide.herokuapp.com/moc/)
 
 ## コンポーネント設計について
 

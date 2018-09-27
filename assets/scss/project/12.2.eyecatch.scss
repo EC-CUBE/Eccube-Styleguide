@@ -16,11 +16,10 @@ Styleguide 12.2
 .ec-eyecatchRole {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 
   @include media_desktop {
     flex-wrap: nowrap;
-    padding-bottom: 0;
   }
 
   & &__image {
@@ -30,7 +29,6 @@ Styleguide 12.2
     height: 100%;
 
     @include media_desktop {
-      margin-bottom: 0;
       width: 45%;
       order: 2;
     }

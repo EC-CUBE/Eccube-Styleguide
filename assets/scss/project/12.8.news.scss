@@ -2,13 +2,14 @@
 @import "../mixins/clearfix";
 
 /*
-見出し
+新着情報
 
 トップページで使用されている新着情報のスタイルです。
 
 ex [トップページ](http://demo4.ec-cube.net/)
 
 Markup:
+link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
 include /assets/tmpl/elements/12.8.news.pug
 +ec-newsRole
 
@@ -28,7 +29,7 @@ Styleguide 12.8
 
     @include media_desktop {
       border: 16px solid #F8F8F8;
-      padding: 20px 30px 30px;
+      padding: 20px 30px;
     }
   }
   & &__newsItem {
@@ -42,7 +43,7 @@ Styleguide 12.8
       margin-bottom: 20px;
 
       @include media_desktop {
-        margin-bottom: 10px;
+        margin-bottom: 0;
       }
     }
 
@@ -53,6 +54,7 @@ Styleguide 12.8
     }
   }
   & &__newsHeading {
+    cursor: pointer;
 
     @include media_desktop {
       display: flex;
@@ -86,14 +88,13 @@ Styleguide 12.8
     display: inline-block;
     margin-bottom: 10px;
     width: 90%;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     color: #7D7D7D;
-    line-height: 1.2;
+    line-height: 1.6;
 
     @include media_desktop {
       margin-bottom: 0;
-      font-size: 14px;
       line-height: 1.8;
     }
 
@@ -118,14 +119,14 @@ Styleguide 12.8
     right: 5px;
   }
   & &__newsDescription {
-    max-height: 0;
-    font-size: 12px;
-    line-height: 1.2;
+    display: none;
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.4;
     overflow: hidden;
-    transition: all .8s linear;
 
     @include media_desktop {
-      font-size: 14px;
+      margin: 20px 0 0;
       line-height: 1.8;
     }
 
@@ -135,11 +136,9 @@ Styleguide 12.8
   }
   &__newsItem.is_active &__newsDescription{
     margin: 0 0 10px;
-    max-height: 100vh;
-    transition: all .8s linear;
 
     @include media_desktop {
-      margin: 20px 0;
+      margin: 20px 0 0;
     }
   }
   &__newsItem.is_active &__newsCloseBtn i {
