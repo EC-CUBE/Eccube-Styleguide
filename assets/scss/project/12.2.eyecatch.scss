@@ -29,6 +29,7 @@ Styleguide 12.2
     height: 100%;
 
     @include media_desktop {
+      width: 45%;
       order: 2;
     }
   }
