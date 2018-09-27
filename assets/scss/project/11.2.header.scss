@@ -11,6 +11,7 @@
 ex [トップページ　ヘッダー](http://demo4.ec-cube.net/)
 
 Markup:
+link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
 include /assets/tmpl/elements/11.2.header.pug
 include /assets/tmpl/elements/11.3.headerNavi.pug
 include /assets/tmpl/elements/11.4.categoryNavi.pug
@@ -240,6 +241,7 @@ Styleguide 11.2.1
 `.ec-headerNaviRole`>`.ec-headerNaviRole__nav`内に記述すると２カラム上の右側に配置することができます。
 
 Markup:
+link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
 include /assets/tmpl/elements/11.3.headerNavi.pug
 +ec-headerNav
 
@@ -301,122 +303,123 @@ sg-wrapper:
 
 Styleguide 11.2.4
 */
-.ec-headerSearch {
 
-  .input-group {
-    border: none;
-    border-radius: 9999px;
-    background: #F8F8F8;
-    position: relative;
-  }
-  .input-group-btn {
-    border-bottom-left-radius: 9999px;
-    border-top-left-radius: 9999px;
-    background: black;
-
-    .btn-default {
-      border: 1px solid black;
-      border-bottom-left-radius: 9999px;
-      border-top-left-radius: 9999px;
-      max-width: 130px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      color: white;
-      background: black;
+.ec-headerSearch{
+  @include clearfix;
+  & &__category {
+    float: none;
+    @include media_desktop {
+      float: left;
+      width: 43%;
+    }
+    .ec-select {
       overflow: hidden;
+      width: 100%;
+      margin: 0;
+      text-align: center;
 
-      &:focus {
+      select {
+        width: 100%;
+        cursor: pointer;
+        padding: 8px 24px 8px 8px;
+        text-indent: 0.01px;
+        text-overflow: ellipsis;
+        border: none;
+        outline: none;
+        background: transparent;
+        background-image: none;
+        box-shadow: none;
+        appearance: none;
         color: #fff;
-        background-color: black;
-        border-color: black;
+
+        @include media_desktop {
+          max-width: 165px;
+          height: 36px;
+        }
+
+        option {
+          color: #000;
+        }
+
+        &::-ms-expand {
+          display: none;
+        }
+      }
+
+      &.ec-select_search {
+        position: relative;
+        border: 0;
+        background: #000;
+        color: #fff;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+        @include media_desktop {
+          border-top-right-radius: inherit;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+        }
+
+        &::before {
+          position: absolute;
+          top: 0.8em;
+          right: 0.4em;
+          width: 0;
+          height: 0;
+          padding: 0;
+          content: '';
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 6px solid #fff;
+          pointer-events: none;
+        }
       }
     }
   }
-  .form-control {
-    border: none;
-    background: transparent;
-    box-shadow: none;
-  }
+  & &__keyword{
+    position: relative;
+    color: $clrDarkGray;
+    border: 1px solid #ccc;
+    background-color: #f6f6f6;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 
-  & &__btn {
-    display: inline-block;
-    width: 40px;
-    color: black;
-    cursor: pointer;
-    text-align: center;
-    background: #F8F8F8;
+    @include media_desktop {
+      float: right;
+      width: 57%;
+      border-bottom-left-radius: inherit;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+    input[type="search"]{
+      width: 100%;
+      height: 34px;
+      font-size: 1.2rem;
+      border: 0 none;
+      padding: 0.5em 50px 0.5em 1em;
+      box-shadow: none;
+      background: none;
+      box-sizing: border-box;
+      margin-bottom: 0;
+    }
+    .ec-icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  & &__keywordBtn{
+    border: 0;
+    background: none;
     position: absolute;
-    top: 5px;
-    right: 0;
-    z-index: 10;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-55%);
+    display: block;
+    white-space: nowrap;
+    z-index: 1;
   }
-
-  //@include clearfix;
-  //& &__category {
-  //  float: none;
-  //  @include media_desktop {
-  //    float: left;
-  //    width: 43%;
-  //  }
-  //  .ec-select {
-  //    margin-bottom: 6px;
-  //  }
-  //  select{
-  //    width: auto;
-  //    max-width: 100%;
-  //    height: 50px;
-  //    border: 1px solid #ccc;
-  //    font-size: 1.6rem;
-  //    padding: 0.5em 1em;
-  //    border-radius: 5px;
-  //    box-shadow: none;
-  //    box-sizing: border-box;
-  //    -webkit-appearance: menulist;
-  //    appearance: menulist;
-  //    @include media_desktop {
-  //      max-width: 180px;
-  //    }
-  //  }
-  //}
-  //& &__keyword{
-  //  float: none;
-  //  height: 50px;
-  //  padding: 0 40px 0 10px;
-  //  border-bottom: 1px solid #ccc;
-  //  position: relative;
-  //  color: $clrDarkGray;
-  //  @include media_desktop {
-  //    float: right;
-  //    width: 57%;
-  //  }
-  //  input[type="search"]{
-  //    height: 50px;
-  //    width: 100%;
-  //    font-size: 1.6rem;
-  //    border: 0 none;
-  //    padding: 0.5em 0;
-  //    box-shadow: none;
-  //    background: none;
-  //    box-sizing: border-box;
-  //  }
-  //  .ec-icon {
-  //    width: 25px;
-  //    height: 25px;
-  //  }
-  //}
-  //& &__keywordBtn{
-  //  border: 0;
-  //  background: none;
-  //  position: absolute;
-  //  right: 0;
-  //  top: 6px;
-  //  display: block;
-  //  font-size: 25px;
-  //  overflow: hidden;
-  //  white-space: nowrap;
-  //  z-index: 1;
-  //}
 }
+
 
 /*
 ヘッダー：カテゴリナビ
