@@ -60,7 +60,6 @@ Styleguide 15.1
   & &__actions{
     text-align: right;
     width: 100%;
-    margin-bottom: 20px;
     @include media_desktop {
       width:  20%;
       margin-right: 10%;
@@ -204,24 +203,31 @@ Styleguide 15.1.4
   & &__contentColumn{
     border-bottom: 1px dotted #ccc;
     padding: 10px 0;
-    display: table-cell;
+    display: table;
+    @include media_desktop {
+      display: table-cell;
+    }
   }
   & &__img{
-    display: inline-block;
+    display: table-cell;
     width: 40%;
-    vertical-align: top;
+    vertical-align: middle;
+    padding-right: 10px;
     @include media_desktop {
+      display: inline-block;
       min-width: 80px;
       max-width: 100px;
+      padding-right: 0;
     }
   }
   & &__summary{
-    display: inline-block;
+    display: table-cell;
     margin-left: 5px;
     font-weight: bold;
-    vertical-align: top;
+    vertical-align: middle;
     width: 46%;
     @include media_desktop {
+      display: inline-block;
       margin-left: 20px;
       vertical-align: middle;
     }
@@ -258,6 +264,14 @@ Styleguide 15.1.4
       margin-bottom: 10px;
       @include media_desktop {
         display: none;
+      }
+    }
+
+    .ec-cartRow__amountUpDown {
+      display: flex;
+      justify-content: center;
+      @include media_desktop {
+        display: block;
       }
     }
 
