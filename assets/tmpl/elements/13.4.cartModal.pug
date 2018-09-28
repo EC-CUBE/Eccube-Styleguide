@@ -1,0 +1,14 @@
+mixin ec-modal
+    .ec-modal
+        input#ec-modal-checkbox.checkbox(type='checkbox')
+        .ec-modal-overlay
+            label.ec-modal-overlay-close(for='ec-modal-checkbox')
+            .ec-modal-wrap
+                label.ec-modal-close(for='ec-modal-checkbox')
+                    span.ec-icon
+                        img(src='/html/template/default/assets/icon/cross-dark.svg', alt='')
+                #ec-modal-header.text-center カートに追加しました。
+                .ec-modal-box
+                    .ec-role
+                        label.ec-inlineBtn--cancel(for='ec-modal-checkbox') お買い物を続ける
+                        a.ec-inlineBtn--action(href='https://demo4.ec-cube.net/cart') カートへ進む

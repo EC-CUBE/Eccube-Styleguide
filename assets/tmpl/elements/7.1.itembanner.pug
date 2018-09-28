@@ -1,3 +1,5 @@
+include 12.6.newItem.pug
+
 mixin ec-displayB
         +b.ec-displayB
             each item in ["","",""]
@@ -57,3 +59,6 @@ mixin ec-shelf
                         img(src="http://demo3.ec-cube.net/upload/save_image/0701122303_55935d17278d6.jpeg")
                     .ec-shelf__title ミニサボテン
                     .ec-shelf__price ¥ 876
+
+mixin ec-item
+    +ec-newItemRole

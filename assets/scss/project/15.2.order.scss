@@ -6,7 +6,7 @@
 
 カート内 注文内容確認に関する Project コンポーネントを定義します。
 
-ex [マイページ　注文詳細](http://demo3.ec-cube.net/shopping)
+ex [マイページ　注文詳細](http://demo4.ec-cube.net/shopping)
 
 Markup:
 include /assets/tmpl/elements/15.2.order.pug
@@ -62,7 +62,7 @@ Styleguide 15.2
 
 マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
 
-ex [マイページ　オーダ情報](http://demo3.ec-cube.net/mypage)
+ex [マイページ　オーダ情報](http://demo4.ec-cube.net/mypage)
 (要ログイン → 詳細を見るボタン押下)
 
 Markup:
@@ -84,7 +84,7 @@ Styleguide 15.2.1
 
 マイページ 注文詳細部に関する Project コンポーネントを定義します。
 
-ex [マイページ　オーダ情報(要ログイン → 詳細を見るボタン押下)](http://demo3.ec-cube.net/mypage)
+ex [マイページ　オーダ情報(要ログイン → 詳細を見るボタン押下)](http://demo4.ec-cube.net/mypage)
 
 Markup:
 include /assets/tmpl/elements/15.2.order.pug
@@ -115,7 +115,7 @@ Styleguide 15.2.2
 
 マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
 
-ex [マイページ　配送情報(要ログイン → 詳細を見るボタン押下)](http://demo3.ec-cube.net/mypage)
+ex [マイページ　配送情報(要ログイン → 詳細を見るボタン押下)](http://demo4.ec-cube.net/mypage)
 
 Markup:
 include /assets/tmpl/elements/15.2.order.pug
@@ -141,7 +141,7 @@ Styleguide 15.2.3
     @include borderTop;
   }
   & &__address{
-    margin: 10px 0px 18px ;
+    margin: 10px 0 18px ;
     p{
       margin:0;
     }
@@ -157,7 +157,7 @@ Styleguide 15.2.3
 
 マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
 
-ex [マイページ　支払情報(要ログイン → 詳細を見るボタン押下)](http://demo3.ec-cube.net/mypage)
+ex [マイページ　支払情報(要ログイン → 詳細を見るボタン押下)](http://demo4.ec-cube.net/mypage)
 
 Markup:
 .ec-orderRole
@@ -178,7 +178,7 @@ Styleguide 15.2.4
 
 マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
 
-ex [マイページ　お問い合わせ(要ログイン → 詳細を見るボタン押下)](http://demo3.ec-cube.net/mypage)
+ex [マイページ　お問い合わせ(要ログイン → 詳細を見るボタン押下)](http://demo4.ec-cube.net/mypage)
 
 Markup:
 .ec-orderRole
@@ -208,7 +208,7 @@ Styleguide 15.2.5
 
 お届け先の複数指定に関するコンポーネントを定義します。
 
-ex [マイページ　お届け先の複数指定](http://demo3.ec-cube.net/shopping/shipping_multiple)
+ex [マイページ　お届け先の複数指定](http://demo4.ec-cube.net/shopping/shipping_multiple)
 (商品購入画面 → 「お届け先を追加する」を押下)
 
 Markup:
@@ -267,7 +267,7 @@ Styleguide 15.2.6
 
   }
   & &__select {
-
+    margin-bottom: 5px;
   }
   & &__selectAddress {
     display: inline-block;
@@ -299,5 +299,8 @@ Styleguide 15.2.6
     .ec-blockBtn--action {
       margin-bottom: 8px;
     }
+  }
+  & &__new {
+    margin-bottom: 20px;
   }
 }

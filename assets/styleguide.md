@@ -1,11 +1,11 @@
-# EC-CUBE 3 Style Guide
+# EC-CUBE 4 Style Guide
 
 [See Moc Page](/moc)
 
 
-EC-CUBE3デモサイト
+EC-CUBE4デモサイト
 
-[http://demo3.ec-cube.net/](http://demo3.ec-cube.net/)
+[http://demo4.ec-cube.net/](http://demo4.ec-cube.net/)
 
 開発リポジトリ　
 
@@ -15,9 +15,6 @@ Styleguide On Heorku
 
 [http://eccube3-styleguide.herokuapp.com/](http://eccube3-styleguide.herokuapp.com/)
 
-HTML Moc On Heroku 
-
-[http://eccube3-styleguide.herokuapp.com/moc/](http://eccube3-styleguide.herokuapp.com/moc/)
 
 ## コンポーネント設計について
 

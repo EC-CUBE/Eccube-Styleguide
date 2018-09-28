@@ -6,7 +6,7 @@
 
 マイページ 注文履歴部に関する Project コンポーネントを定義します。
 
-ex [マイページ　注文履歴一覧](http://demo3.ec-cube.net/mypage)
+ex [マイページ　注文履歴一覧](http://demo4.ec-cube.net/mypage)
 (要ログイン)
 
 Markup:
@@ -65,7 +65,7 @@ Styleguide 16.1
 
 マイページ 注文履歴内アイテムの規格を定義します。
 
-ex [マイページ　注文履歴一覧](http://demo3.ec-cube.net/mypage)
+ex [マイページ　注文履歴一覧](http://demo4.ec-cube.net/mypage)
 (要ログイン)
 
 Markup:
@@ -97,13 +97,12 @@ Styleguide 16.1.1
 
 注文履歴一覧で使用するヘッダのコンポーネントを定義します。
 
-ex [マイページ　注文履歴一覧ヘッダ](http://demo3.ec-cube.net/mypage)
+ex [マイページ　注文履歴一覧ヘッダ](http://demo4.ec-cube.net/mypage)
 (要ログイン)
 
 Markup:
 include /assets/tmpl/elements/16.1.history.pug
 +ec-historyHeader
-p hofe
 
 Styleguide 16.1.2
 */

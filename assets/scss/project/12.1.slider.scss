@@ -3,12 +3,19 @@
 トップページ
 
 トップページ スライド部に関する Project コンポーネントを定義します。
+スライドは[slick](http://kenwheeler.github.io/slick/)を使用し実装しています。
 
-ex [トップページ](http://demo3.ec-cube.net/)
+ex [トップページ](http://demo4.ec-cube.net/)
 
 Markup:
-include /assets/tmpl/elements/12.1.slider.pug
-+ec-sliderRole
+.ec-sliderRole
+  .main_visual
+      .item
+          img(src='/moc/image/img_hero_pc01.jpg')
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
 
 Styleguide 12.1
 */
@@ -31,14 +38,18 @@ Styleguide 12.1
     display: none;
     @include media_desktop {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
+      flex-wrap: wrap;
       margin-bottom: 0;
     }
 
   }
   .slideThumb{
     margin-bottom: 25px;
+    width: 33%;
     opacity: .8;
+    cursor: pointer;
+
     &:focus {
       outline: none;
     }

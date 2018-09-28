@@ -17,6 +17,7 @@ const styelguideConfig = {
     overviewPath: './assets/styleguide.md',
     extraHead: [
         '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">',
+        '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">',
         `<style>
             :root{font-size: 10px}
             .sg.sg-wrapper,.sg.sg-top-nav-menu{

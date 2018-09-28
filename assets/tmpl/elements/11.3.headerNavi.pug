@@ -1,49 +1,58 @@
 mixin ec-headerNaviRole
   +b.ec-headerNaviRole
-    +e.search.is_inDrawer: +ec-headerSearch
-    +e.nav.is_inDrawer: +ec-headerNav
+    +e.left
+      +e.search: +ec-headerSearch
+      +e.navSP: +ec-headerNavSP
+    +e.right
+      +e.nav: +ec-headerNav
+      +e.cart: +ec-headerCart
 
 mixin ec-headerSearch
-  +b.ec-headerSearch
-    +e.category
-      .ec-select
-        select
-          option 全ての商品
-          option キッチンツール
-    +e.keyword
-      .ec-input
-        input(type="search" placeholder="キーワードを入力")
-        +e.BUTTON.keywordBtn(type="submit")
-          .ec-icon
-            img(src='/moc/icon/search-dark.svg', alt='')
+  .ec-headerSearch
+    form.searchform(method='get', action='/products/list')
+      .ec-headerSearch__category
+        .ec-select.ec-select_search
+          select.category_id(name='category_id')
+            option(value='') 全ての商品
+            option(value='6') 新作
+            option(value='12') アイス
+            option(value='21')  アイスクッキー
+            option(value='20')  アイスバー
+            option(value='2') ジェラート
+            option(value='11') 詰め合わせ
+            option(value='16') スイーツ
+            option(value='19')  生チョコ
+            option(value='18')  マカロン
+            option(value='10') シリーズ
+            option(value='26')  MiNi
+            option(value='27')  オーガニック
+            option(value='28')  大人のスイーツ
+            option(value='24')  定番
+      .ec-headerSearch__keyword
+        .ec-input
+          input.search-name(type='search', name='name', maxlength='50', placeholder='キーワードを入力')
+          button.ec-headerSearch__keywordBtn(type='submit')
+            .ec-icon
+              img(src='/moc/icon/search-dark.svg', alt='')
 
 mixin ec-headerNav
   +b.ec-headerNav
     +e.item
-      a(href="/moc/guest/register").ec-icon
-        img(src='/moc/icon/user.svg', alt='')
-        span 新規会員登録
+      a(href="/moc/guest/register")
+        +e.I.itemIcon.fas.fa-user
+        +e.SPAN.itemLink 新規登録
     +e.item
-      a(href="/moc/guest/login").ec-icon
-        img(src='/moc/icon/favorite.svg', alt='')
-        span お気に入り
+      a(href="/moc/guest/login")
+        +e.I.itemIcon.fas.fa-heart
+        +e.SPAN.itemLink お気に入り
     +e.item
-      a(href="/moc/guest/login").ec-icon
-        img(src='/moc/icon/login.svg', alt='')
-        span ログイン
+      a(href="/moc/guest/login")
+        +e.I.itemIcon.fas.fa-lock
+        +e.SPAN.itemLink ログイン
 
 mixin ec-headerNavSP
-  +b.ec-headerNavSP
-    +e.item
-      .ec-cartNaviSP
-        a(href="/moc/guest/cart1").ec-cartNaviSP__icon.ec-icon--colored
-          img(src='/moc/icon/cart-dark.svg', alt='')
-        .ec-cartNaviSP__badge 1
-    +e.item
-      +e.A.itemMenu()
-        span
-        span
-        span
+  .ec-headerNavSP
+    i.fas.fa-bars
 
 mixin ec-headerUserNav
   +b.ec-headerUserNav
@@ -59,3 +68,90 @@ mixin ec-headerUserNav
       a(href="/moc/guest/login").ec-icon
         img(src='/moc/icon/login.svg', alt='')
         span ログアウト
+
+
+//mixin ec-headerCart
+//  .ec-cartNaviWrap
+//    +b.ec-cartNavi
+//      +e.I.icon.fas.fa-shopping-cart
+//        +e.SPAN.badge 1
+//      .ec-cartNavi__label
+//        .ec-cartNavi__price ¥1920
+//    //.ec-cartNaviNull
+//    //  .ec-cartNaviNull__message
+//    //    p 現在カート内に
+//    //      br
+//    //      | 商品がございません。
+//    +b.ec-cartNaviIsset
+//      +e.cart
+//        +e.cartImage
+//          img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
+//        +e.cartContent
+//          +e.cartContentTitle ミニテーブル
+//          +e.cartContentPrice ¥ 12,960
+//            +e.cartContentTax 税込
+//          +e.cartContentNumber 数量：1
+//      +e.action
+//        a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
+//        a.ec-blockBtn.ec-cartNavi--cancel キャンセル
+
+//mixin ec-headerCartNull
+//  .ec-cartNavi
+//    .ec-cartNavi__icon
+//      img(src='/moc/icon/cart.svg', alt='cart')
+//    .ec-cartNavi__iconClose
+//      img(src='/moc/icon/cross.svg', alt='close')
+//    .ec-cartNavi__badge 1
+//    .ec-cartNavi__label
+//      | 合計
+//      .ec-cartNavi__price ¥1920
+//  .ec-cartNaviNull
+//    .ec-cartNaviNull__message
+//      p 現在カート内に
+//        br
+//        | 商品がございません。
+//  //+b.ec-cartNaviIsset
+//  //  +e.cart
+//  //    +e.cartImage
+//  //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')
+//  //    +e.cartContent
+//  //      +e.cartContentTitle ミニテーブル
+//  //      +e.cartContentPrice ¥ 12,960
+//  //        +e.cartContentTax 税込
+//  //      +e.cartContentNumber 数量：1
+//  //  +e.action
+//  //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
+//  //    a.ec-blockBtn キャンセル
+
+mixin ec-headerCart
+  .ec-cartNaviWrap
+    +b.ec-cartNavi
+      +e.I.icon.fas.fa-shopping-cart
+        +e.SPAN.badge 1
+      .ec-cartNavi__label
+        .ec-cartNavi__price ¥1,620
+    +b.ec-cartNaviIsset
+      +e.cart
+        +e.cartImage
+          img(src='https://demo4.ec-cube.net/html/upload/save_image/0903163326_5b8ce3c697fad.jpg')
+        +e.cartContent
+          +e.cartContentTitle さくさく♪クッキーアイス
+          +e.cartContentPrice ¥ 1,620
+            +e.cartContentTax 税込
+          +e.cartContentNumber 数量：1
+      +e.action
+        a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
+        a.ec-blockBtn.ec-cartNavi--cancel キャンセル
+
+mixin ec-headerCartNull
+  .ec-cartNaviWrap
+    +b.ec-cartNavi
+      +e.I.icon.fas.fa-shopping-cart
+        +e.SPAN.badge 0
+      .ec-cartNavi__label
+        .ec-cartNavi__price ¥0
+    .ec-cartNaviNull
+      .ec-cartNaviNull__message
+        p 現在カート内に
+          br
+          | 商品がございません。
