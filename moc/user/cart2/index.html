@@ -1,0 +1,580 @@
+
+<!--mixin ec-headerCart-->
+<!--  .ec-cartNaviWrap-->
+<!--    +b.ec-cartNavi-->
+<!--      +e.I.icon.fas.fa-shopping-cart-->
+<!--        +e.SPAN.badge 1-->
+<!--      .ec-cartNavi__label-->
+<!--        .ec-cartNavi__price ¥1920-->
+<!--    //.ec-cartNaviNull-->
+<!--    //  .ec-cartNaviNull__message-->
+<!--    //    p 現在カート内に-->
+<!--    //      br-->
+<!--    //      | 商品がございません。-->
+<!--    +b.ec-cartNaviIsset-->
+<!--      +e.cart-->
+<!--        +e.cartImage-->
+<!--          img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')-->
+<!--        +e.cartContent-->
+<!--          +e.cartContentTitle ミニテーブル-->
+<!--          +e.cartContentPrice ¥ 12,960-->
+<!--            +e.cartContentTax 税込-->
+<!--          +e.cartContentNumber 数量：1-->
+<!--      +e.action-->
+<!--        a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む-->
+<!--        a.ec-blockBtn.ec-cartNavi--cancel キャンセル-->
+<!--mixin ec-headerCartNull-->
+<!--  .ec-cartNavi-->
+<!--    .ec-cartNavi__icon-->
+<!--      img(src='/moc/icon/cart.svg', alt='cart')-->
+<!--    .ec-cartNavi__iconClose-->
+<!--      img(src='/moc/icon/cross.svg', alt='close')-->
+<!--    .ec-cartNavi__badge 1-->
+<!--    .ec-cartNavi__label-->
+<!--      | 合計-->
+<!--      .ec-cartNavi__price ¥1920-->
+<!--  .ec-cartNaviNull-->
+<!--    .ec-cartNaviNull__message-->
+<!--      p 現在カート内に-->
+<!--        br-->
+<!--        | 商品がございません。-->
+<!--  //+b.ec-cartNaviIsset-->
+<!--  //  +e.cart-->
+<!--  //    +e.cartImage-->
+<!--  //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')-->
+<!--  //    +e.cartContent-->
+<!--  //      +e.cartContentTitle ミニテーブル-->
+<!--  //      +e.cartContentPrice ¥ 12,960-->
+<!--  //        +e.cartContentTax 税込-->
+<!--  //      +e.cartContentNumber 数量：1-->
+<!--  //  +e.action-->
+<!--  //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む-->
+<!--  //    a.ec-blockBtn キャンセル-->
+<!--mixin ec-headerCart-->
+<!--  .ec-cartNaviWrap-->
+<!--    +b.ec-cartNavi-->
+<!--      +e.I.icon.fas.fa-shopping-cart-->
+<!--        +e.SPAN.badge 1-->
+<!--      .ec-cartNavi__label-->
+<!--        .ec-cartNavi__price ¥1920-->
+<!--    //.ec-cartNaviNull-->
+<!--    //  .ec-cartNaviNull__message-->
+<!--    //    p 現在カート内に-->
+<!--    //      br-->
+<!--    //      | 商品がございません。-->
+<!--    +b.ec-cartNaviIsset-->
+<!--      +e.cart-->
+<!--        +e.cartImage-->
+<!--          img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')-->
+<!--        +e.cartContent-->
+<!--          +e.cartContentTitle ミニテーブル-->
+<!--          +e.cartContentPrice ¥ 12,960-->
+<!--            +e.cartContentTax 税込-->
+<!--          +e.cartContentNumber 数量：1-->
+<!--      +e.action-->
+<!--        a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む-->
+<!--        a.ec-blockBtn.ec-cartNavi--cancel キャンセル-->
+<!--mixin ec-headerCartNull-->
+<!--  .ec-cartNavi-->
+<!--    .ec-cartNavi__icon-->
+<!--      img(src='/moc/icon/cart.svg', alt='cart')-->
+<!--    .ec-cartNavi__iconClose-->
+<!--      img(src='/moc/icon/cross.svg', alt='close')-->
+<!--    .ec-cartNavi__badge 1-->
+<!--    .ec-cartNavi__label-->
+<!--      | 合計-->
+<!--      .ec-cartNavi__price ¥1920-->
+<!--  .ec-cartNaviNull-->
+<!--    .ec-cartNaviNull__message-->
+<!--      p 現在カート内に-->
+<!--        br-->
+<!--        | 商品がございません。-->
+<!--  //+b.ec-cartNaviIsset-->
+<!--  //  +e.cart-->
+<!--  //    +e.cartImage-->
+<!--  //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')-->
+<!--  //    +e.cartContent-->
+<!--  //      +e.cartContentTitle ミニテーブル-->
+<!--  //      +e.cartContentPrice ¥ 12,960-->
+<!--  //        +e.cartContentTax 税込-->
+<!--  //      +e.cartContentNumber 数量：1-->
+<!--  //  +e.action-->
+<!--  //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む-->
+<!--  //    a.ec-blockBtn キャンセル--><!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -45px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1;
+}
+
+.slick-dots li button:before {
+    content: " ";
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    opacity: .25;
+    background-color: black;
+    border-radius: 50%;
+
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    background-color: black;
+}
+
+.slick-dots li button.thumbnail img {
+    width: 0;
+    height: 0;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="ec-layoutRole">
+      <div class="ec-layoutRole__header">
+        <div class="ec-headerNaviRole">
+          <div class="ec-headerNaviRole__left">
+            <div class="ec-headerNaviRole__search">
+              <div class="ec-headerSearch">
+                <form class="searchform" method="get" action="/products/list">
+                  <div class="ec-headerSearch__category">
+                    <div class="ec-select ec-select_search">
+                      <select class="category_id" name="category_id">
+                        <option value="">全ての商品</option>
+                        <option value="6">新作</option>
+                        <option value="12">アイス</option>
+                        <option value="21"> アイスクッキー</option>
+                        <option value="20"> アイスバー</option>
+                        <option value="2">ジェラート</option>
+                        <option value="11">詰め合わせ</option>
+                        <option value="16">スイーツ</option>
+                        <option value="19"> 生チョコ</option>
+                        <option value="18"> マカロン</option>
+                        <option value="10">シリーズ</option>
+                        <option value="26"> MiNi</option>
+                        <option value="27"> オーガニック</option>
+                        <option value="28"> 大人のスイーツ</option>
+                        <option value="24"> 定番</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ec-headerSearch__keyword">
+                    <div class="ec-input">
+                      <input class="search-name" type="search" name="name" maxlength="50" placeholder="キーワードを入力">
+                      <button class="ec-headerSearch__keywordBtn" type="submit">
+                        <div class="ec-icon"><img src="/moc/icon/search-dark.svg" alt=""></div>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="ec-headerNaviRole__navSP">
+              <div class="ec-headerNavSP"><i class="fas fa-bars"></i></div>
+            </div>
+          </div>
+          <div class="ec-headerNaviRole__right">
+            <div class="ec-headerNaviRole__nav">
+              <div class="ec-headerNav">
+                <div class="ec-headerNav__item"><a href="/moc/guest/register"><i class="ec-headerNav__itemIcon fas fa-user"></i><span class="ec-headerNav__itemLink">新規登録</span></a>
+                </div>
+                <div class="ec-headerNav__item"><a href="/moc/guest/login"><i class="ec-headerNav__itemIcon fas fa-heart"></i><span class="ec-headerNav__itemLink">お気に入り</span></a>
+                </div>
+                <div class="ec-headerNav__item"><a href="/moc/guest/login"><i class="ec-headerNav__itemIcon fas fa-lock"></i><span class="ec-headerNav__itemLink">ログイン</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="ec-headerNaviRole__cart">
+              <div class="ec-cartNaviWrap">
+                <div class="ec-cartNavi"><i class="ec-cartNavi__icon fas fa-shopping-cart"><span class="ec-cartNavi__badge">1</span></i>
+                  <div class="ec-cartNavi__label">
+                    <div class="ec-cartNavi__price">¥1,620</div>
+                  </div>
+                </div>
+                <div class="ec-cartNaviIsset">
+                  <div class="ec-cartNaviIsset__cart">
+                    <div class="ec-cartNaviIsset__cartImage"><img src="https://demo4.ec-cube.net/html/upload/save_image/0903163326_5b8ce3c697fad.jpg">
+                    </div>
+                    <div class="ec-cartNaviIsset__cartContent">
+                      <div class="ec-cartNaviIsset__cartContentTitle">さくさく♪クッキーアイス
+                      </div>
+                      <div class="ec-cartNaviIsset__cartContentPrice">¥ 1,620
+                        <div class="ec-cartNaviIsset__cartContentTax">税込
+                        </div>
+                      </div>
+                      <div class="ec-cartNaviIsset__cartContentNumber">数量：1
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ec-cartNaviIsset__action"><a class="ec-blockBtn--action" href="/moc/guest/cart1">カートへ進む</a><a class="ec-blockBtn ec-cartNavi--cancel">キャンセル</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ec-headerRole">
+          <div class="ec-headerRole__title">
+            <div class="ec-headerTitle">
+              <div class="ec-headerTitle__title">
+                <h1><a href="/moc/">EC-CUBE4 DEMO SHOP</a></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ec-cateoryNaviRole">
+          <div class="ec-itemNav">
+            <ul class="ec-itemNav__nav">
+              <li><a href="#">新商品</a>
+                <ul>
+                  <li><a href="#">ジェラート</a>
+                    <ul>
+                      <li><a href="#">彩のジェラート</a>
+                        <ul>
+                          <li><a href="#">CUBE</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#">アイスサンド</a>
+                    <ul>
+                      <li><a href="#">フルーツ</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">カテゴリ1-3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">ジェラート</a></li>
+              <li><a href="#">アイスサンド</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="ec-layoutRole__contentTop">
+      </div>
+      <div class="ec-layoutRole__contents">
+        <div class="ec-layoutRole__main">
+          <div class="ec-role">
+            <div class="ec-pageHeader">
+              <h1>ご注文内容のご確認へ</h1>
+            </div>
+          </div>
+          <div class="ec-cartRole">
+            <div class="ec-cartRole__progress">
+              <ul class="ec-progress">
+                <li class="ec-progress__item is-complete">
+                  <div class="ec-progress__number">1
+                  </div>
+                  <div class="ec-progress__label">カートの商品
+                  </div>
+                </li>
+                <li class="ec-progress__item">
+                  <div class="ec-progress__number">2
+                  </div>
+                  <div class="ec-progress__label">ご注文内容確認
+                  </div>
+                </li>
+                <li class="ec-progress__item">
+                  <div class="ec-progress__number">3
+                  </div>
+                  <div class="ec-progress__label">完了
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="ec-orderRole">
+            <div class="ec-orderRole__detail">
+              <div class="ec-orderOrder">
+                <ul class="ec-borderedList">
+                  <li>
+                    <div class="ec-imageGrid">
+                      <div class="ec-imageGrid__img"><img src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg"></div>
+                      <div class="ec-imageGrid__content">
+                        <p>ホーローマグ</p>
+                        <p>¥ 1,728 x 1<span class="ec-imageGrid__contentTotal">小計：¥ 9,180</span></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="ec-imageGrid">
+                      <div class="ec-imageGrid__img"><img src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg"></div>
+                      <div class="ec-imageGrid__content">
+                        <p>ホーローマグ</p>
+                        <p>¥ 1,728 x 1<span class="ec-imageGrid__contentTotal">小計：¥ 9,180</span></p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="ec-inlineBtn">数量を変更または削除する</div>
+              </div>
+              <div class="ec-orderAccount">
+                <div class="ec-rectHeading">
+                  <h2>お客様情報</h2>
+                </div>
+                <div class="ec-orderAccount__change"><a class="ec-inlineBtn">変更</a>
+                </div>
+                <div class="ec-orderAccount__account">
+                  <p>球部 太郎 様</p>
+                  <p>〒123-1234　東京都千代田区神田神保町1-3-5</p>
+                  <p>000-0000-0000</p>
+                </div>
+                <div class="ec-orderAccount__account">
+                  <p>eccube-sample@sample.com</p>
+                  <p>ECCUBE株式会社</p>
+                </div>
+              </div>
+              <div class="ec-orderDelivery">
+                <div class="ec-rectHeading">
+                  <h2>配送情報</h2>
+                </div>
+                <div class="ec-orderDelivery__title">お届け先
+                  <div class="ec-orderDelivery__change"><a class="ec-inlineBtn">変更</a></div>
+                </div>
+                <div class="ec-orderDelivery__item">
+                  <ul class="ec-borderedList">
+                    <li>
+                      <div class="ec-imageGrid">
+                        <div class="ec-imageGrid__img"><img src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg"></div>
+                        <div class="ec-imageGrid__content">
+                          <p>ホーローマグ</p>
+                          <p>¥ 1,728 x 1<span>小計：¥ 9,180</span></p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ec-imageGrid">
+                        <div class="ec-imageGrid__img"><img src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg"></div>
+                        <div class="ec-imageGrid__content">
+                          <p>ホーローマグ</p>
+                          <p>¥ 1,728 x 1<span>小計：¥ 9,180</span></p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ec-orderDelivery__address">
+                  <p>球部 太郎  (キューブ タロウ) 様</p>
+                  <p>〒123-1234 東京都千代田区神田神保町1-3-5</p>
+                  <p>000-0000-0000</p>
+                </div>
+                <div class="ec-orderDelivery__actions">
+                  <div class="ec-selects">
+                    <div class="ec-select">
+                      <label>配送方法</label>
+                      <select>
+                        <option>サンプル業者</option>
+                      </select>
+                    </div>
+                    <div class="ec-select ec-select__delivery">
+                      <label>配送方法</label>
+                      <select>
+                        <option>指定なし</option>
+                      </select>
+                    </div>
+                    <div class="ec-select ec-select__time">
+                      <label>お届け時間</label>
+                      <select>
+                        <option>指定なし</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="ec-orderDelivery__edit"><a class="ec-inlineBtn" href="/moc/guest/cart4/add_address/">お届け先を追加する</a></div>
+              </div>
+              <div class="ec-orderPayment">
+                <div class="ec-rectHeading">
+                  <h2>お支払方法</h2>
+                </div>
+                <div class="ec-blockRadio">
+                  <label>
+                    <input type="radio"><span>郵便振替</span>
+                  </label>
+                  <label>
+                    <input type="radio"><span>現金書留</span>
+                  </label>
+                  <label>
+                    <input type="radio"><span>銀行振込</span>
+                  </label>
+                  <label>
+                    <input type="radio"><span>代金引換</span>
+                  </label>
+                </div>
+              </div>
+              <div class="ec-orderConfirm">
+                <div class="ec-rectHeading">
+                  <h2>お問い合わせ</h2>
+                </div>
+                <div class="ec-input">
+                  <textarea rows="6" placeholder="お問い合わせ事項がございましたら、こちらにご入力ください。(3000文字まで)"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="ec-orderRole__summary">
+                <div class="ec-totalBox">
+                  <dl class="ec-totalBox__spec">
+                    <dt>小計</dt>
+                    <dd class="ec-totalBox__specTotal">¥ 9,720</dd>
+                  </dl>
+                  <dl class="ec-totalBox__spec">
+                    <dt>手数料</dt>
+                    <dd>¥ 0</dd>
+                  </dl>
+                  <dl class="ec-totalBox__spec">
+                    <dt>送料</dt>
+                    <dd>¥ 1,000</dd>
+                  </dl>
+                  <div class="ec-totalBox__total">合計<span class="ec-totalBox__price">¥ 10,720</span><span class="ec-totalBox__taxLabel">税込</span></div>
+                  <div class="ec-totalBox__btn"><a class="ec-blockBtn--action" href="/moc/guest/cart5/">注文する</a></div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ec-layoutRole__contentBottom">
+      </div>
+      <div class="ec-layoutRole__footer">
+        <div class="ec-footerRole">
+          <div class="ec-footerRole__inner">
+            <ul class="ec-footerNavi">
+              <li class="ec-footerNavi__link"><a href="/moc/guest/about">当サイトについて</a>
+              </li>
+              <li class="ec-footerNavi__link"><a href="/moc/guest/privacy">プライバシーポリシー</a>
+              </li>
+              <li class="ec-footerNavi__link"><a href="/moc/guest/tradelaw">特定商取引法に基づく表記</a>
+              </li>
+              <li class="ec-footerNavi__link"><a href="/moc/guest/contact">お問い合わせ</a>
+              </li>
+            </ul>
+            <div class="ec-footerTitle">
+              <div class="ec-footerTitle__logo"><a href="/moc/sitemap.html">EC-CUBE4 DEMO SHOP</a>
+              </div>
+              <div class="ec-footerTitle__copyright">copyright (c) EC-CUBE DEMO SHOP all rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ec-overlayRole"></div>
+    <div class="ec-drawerRoleClose"><i class="fas fa-times"></i></div>
+    <div class="ec-drawerRole">
+      <div class="ec-headerSearchArea">
+        <div class="ec-headerSearch">
+          <div class="ec-select">
+            <select>
+              <option>すべてのカテゴリ<i class="fas fa-sort-down"></i></option>
+              <option>北海道</option>
+              <option>青森県</option>
+              <option>岩手県</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="ec-input">
+            <input type="text" placeholder="キーワードを入力"><a class="ec-headerSearch__btn"><i class="fas fa-search"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="ec-headerCategoryArea">
+        <div class="ec-headerCategoryArea__heading">
+          <p>カテゴリ一覧</p>
+        </div>
+        <div class="ec-itemNav">
+          <ul class="ec-itemNav__nav">
+            <li><a href="#">新商品</a>
+              <ul>
+                <li><a href="#">ジェラート</a>
+                  <ul>
+                    <li><a href="#">彩のジェラート</a>
+                      <ul>
+                        <li><a href="#">CUBE</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">アイスサンド</a>
+                  <ul>
+                    <li><a href="#">フルーツ</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">カテゴリ1-3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">ジェラート</a></li>
+            <li><a href="#">アイスサンド</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ec-headerLinkArea">
+        <div class="ec-headerLink__list"><a class="ec-headerLink__item" href="/moc/guest/cart1/">
+            <div class="ec-headerLink__icon"><i class="fas fa-shopping-cart"></i></div><span>カートを見る</span></a><a class="ec-headerLink__item" href="/moc/guest/login/">
+            <div class="ec-headerLink__icon"><i class="fas fa-lock"></i></div><span>ログイン</span></a><a class="ec-headerLink__item" href="/moc/user/favorite/">
+            <div class="ec-headerLink__icon"><i class="fas fa-heart"></i></div><span>お気に入り</span></a><a class="ec-headerLink__item" href="/moc/guest/register/">
+            <div class="ec-headerLink__icon"><i class="fas fa-user"></i></div><span>新規会員登録</span></a><a class="ec-headerLink__item" href="/moc/">
+            <div class="ec-headerLink__icon"><i class="fas fa-home"></i></div><span>ホームに戻る</span></a></div>
+      </div>
+    </div>
+    <div class="ec-blockTopBtn"></div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

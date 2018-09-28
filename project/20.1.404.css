@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
+
+.bg-load-overlay {
+  background: rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483647;
+  opacity: 1; }
+
+/*
+404ページ
+
+404 エラー画面で使用するページコンポーネントです。
+
+ex [404エラー画面](http://demo4.ec-cube.net/404)
+
+Markup:
+include /assets/tmpl/elements/20.1.404.pug
++ec-404Role
+
+Styleguide 20.1
+
+*/
+.ec-404Role {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: #f2f2f2;
+  text-align: center;
+  box-sizing: border-box; }
+  .ec-404Role textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-404Role img {
+    max-width: 100%; }
+  .ec-404Role html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-404Role *,
+  .ec-404Role *::before,
+  .ec-404Role *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-404Role img {
+    width: 100%; }
+  .ec-404Role .ec-404Role__icon img {
+    width: 1em;
+    height: 1em; }
+  .ec-404Role .ec-404Role__title {
+    font-weight: bold;
+    font-size: 25px; }

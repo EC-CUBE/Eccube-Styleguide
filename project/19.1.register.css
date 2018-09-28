@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+会員登録
+
+新規会員登録 に関する Project コンポーネントを定義します。
+
+ex [新規会員登録画面　会員登録](http://demo4.ec-cube.net/entry)
+
+Markup:
+include /assets/tmpl/elements/19.1.register.pug
++ec-registerRole
+
+Styleguide 19.1
+
+*/
+.ec-registerRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px; }
+  .ec-registerRole:after {
+    content: " ";
+    display: table; }
+  .ec-registerRole:after {
+    clear: both; }
+  .ec-registerRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-registerRole img {
+    max-width: 100%; }
+  .ec-registerRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-registerRole *,
+  .ec-registerRole *::before,
+  .ec-registerRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-registerRole img {
+    width: 100%; }
+  .ec-registerRole .ec-registerRole__actions {
+    padding-top: 20px;
+    text-align: center; }
+    @media only screen and (min-width: 768px) {
+      .ec-registerRole .ec-registerRole__actions {
+        text-align: left; } }
+    .ec-registerRole .ec-registerRole__actions p {
+      margin-bottom: 16px; }
+  .ec-registerRole .ec-blockBtn--action {
+    margin-bottom: 16px; }
+
+.ec-registerCompleteRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px; }
+  .ec-registerCompleteRole:after {
+    content: " ";
+    display: table; }
+  .ec-registerCompleteRole:after {
+    clear: both; }
+  .ec-registerCompleteRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-registerCompleteRole img {
+    max-width: 100%; }
+  .ec-registerCompleteRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-registerCompleteRole *,
+  .ec-registerCompleteRole *::before,
+  .ec-registerCompleteRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-registerCompleteRole img {
+    width: 100%; }

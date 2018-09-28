@@ -1,0 +1,407 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+フォーム部品(テキスト)
+
+テキストや数値の入力項目に関する要素を定義します。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+
+Styleguide 3.1
+*/
+/*
+フォーム
+
+`.ec-input` 要素は全ての入力項目に関する標準的なコンポーネントクラスです。
+
+
+ex [会員情報編集画面　フォーム部分](http://demo4.ec-cube.net/mypage/change)
+
+Markup:
+p.ec-input
+  input(type="number")
+p.ec-input
+  textarea(rows="6")
+
+Styleguide 3.1.1
+*/
+.ec-input input[type="search"], .ec-halfInput input[type="search"], .ec-numberInput input[type="search"], .ec-zipInput input[type="search"], .ec-telInput input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.ec-input input[type="radio"], .ec-halfInput input[type="radio"], .ec-numberInput input[type="radio"], .ec-zipInput input[type="radio"], .ec-telInput input[type="radio"],
+.ec-input input[type="checkbox"],
+.ec-halfInput input[type="checkbox"],
+.ec-numberInput input[type="checkbox"],
+.ec-zipInput input[type="checkbox"],
+.ec-telInput input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal; }
+
+.ec-input input[type="file"], .ec-halfInput input[type="file"], .ec-numberInput input[type="file"], .ec-zipInput input[type="file"], .ec-telInput input[type="file"] {
+  display: block; }
+
+.ec-input input[type="range"], .ec-halfInput input[type="range"], .ec-numberInput input[type="range"], .ec-zipInput input[type="range"], .ec-telInput input[type="range"] {
+  display: block;
+  width: 100%; }
+
+.ec-input select[multiple], .ec-halfInput select[multiple], .ec-numberInput select[multiple], .ec-zipInput select[multiple], .ec-telInput select[multiple],
+.ec-input select[size],
+.ec-halfInput select[size],
+.ec-numberInput select[size],
+.ec-zipInput select[size],
+.ec-telInput select[size] {
+  height: auto; }
+
+.ec-input input[type="file"]:focus, .ec-halfInput input[type="file"]:focus, .ec-numberInput input[type="file"]:focus, .ec-zipInput input[type="file"]:focus, .ec-telInput input[type="file"]:focus,
+.ec-input input[type="radio"]:focus,
+.ec-halfInput input[type="radio"]:focus,
+.ec-numberInput input[type="radio"]:focus,
+.ec-zipInput input[type="radio"]:focus,
+.ec-telInput input[type="radio"]:focus,
+.ec-input input[type="checkbox"]:focus,
+.ec-halfInput input[type="checkbox"]:focus,
+.ec-numberInput input[type="checkbox"]:focus,
+.ec-zipInput input[type="checkbox"]:focus,
+.ec-telInput input[type="checkbox"]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
+.ec-input input, .ec-halfInput input, .ec-numberInput input, .ec-zipInput input, .ec-telInput input {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border-radius: 3px; }
+  .ec-input input:focus, .ec-halfInput input:focus, .ec-numberInput input:focus, .ec-zipInput input:focus, .ec-telInput input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+  .ec-input input::-moz-placeholder, .ec-halfInput input::-moz-placeholder, .ec-numberInput input::-moz-placeholder, .ec-zipInput input::-moz-placeholder, .ec-telInput input::-moz-placeholder {
+    color: #999;
+    opacity: 1; }
+  .ec-input input:-ms-input-placeholder, .ec-halfInput input:-ms-input-placeholder, .ec-numberInput input:-ms-input-placeholder, .ec-zipInput input:-ms-input-placeholder, .ec-telInput input:-ms-input-placeholder {
+    color: #999; }
+  .ec-input input::-webkit-input-placeholder, .ec-halfInput input::-webkit-input-placeholder, .ec-numberInput input::-webkit-input-placeholder, .ec-zipInput input::-webkit-input-placeholder, .ec-telInput input::-webkit-input-placeholder {
+    color: #999; }
+  .ec-input input::-ms-expand, .ec-halfInput input::-ms-expand, .ec-numberInput input::-ms-expand, .ec-zipInput input::-ms-expand, .ec-telInput input::-ms-expand {
+    border: 0;
+    background-color: transparent; }
+  .ec-input input[disabled], .ec-halfInput input[disabled], .ec-numberInput input[disabled], .ec-zipInput input[disabled], .ec-telInput input[disabled], .ec-input input[readonly], .ec-halfInput input[readonly], .ec-numberInput input[readonly], .ec-zipInput input[readonly], .ec-telInput input[readonly],
+  fieldset[disabled] .ec-input input,
+  fieldset[disabled] .ec-halfInput input,
+  fieldset[disabled] .ec-numberInput input,
+  fieldset[disabled] .ec-zipInput input,
+  fieldset[disabled] .ec-telInput input {
+    background-color: #eeeeee;
+    opacity: 1; }
+  .ec-input input[disabled], .ec-halfInput input[disabled], .ec-numberInput input[disabled], .ec-zipInput input[disabled], .ec-telInput input[disabled],
+  fieldset[disabled] .ec-input input,
+  fieldset[disabled] .ec-halfInput input,
+  fieldset[disabled] .ec-numberInput input,
+  fieldset[disabled] .ec-zipInput input,
+  fieldset[disabled] .ec-telInput input {
+    cursor: not-allowed; }
+
+.ec-input select, .ec-halfInput select, .ec-numberInput select, .ec-zipInput select, .ec-telInput select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border-radius: 3px; }
+  .ec-input select:focus, .ec-halfInput select:focus, .ec-numberInput select:focus, .ec-zipInput select:focus, .ec-telInput select:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+  .ec-input select::-moz-placeholder, .ec-halfInput select::-moz-placeholder, .ec-numberInput select::-moz-placeholder, .ec-zipInput select::-moz-placeholder, .ec-telInput select::-moz-placeholder {
+    color: #999;
+    opacity: 1; }
+  .ec-input select:-ms-input-placeholder, .ec-halfInput select:-ms-input-placeholder, .ec-numberInput select:-ms-input-placeholder, .ec-zipInput select:-ms-input-placeholder, .ec-telInput select:-ms-input-placeholder {
+    color: #999; }
+  .ec-input select::-webkit-input-placeholder, .ec-halfInput select::-webkit-input-placeholder, .ec-numberInput select::-webkit-input-placeholder, .ec-zipInput select::-webkit-input-placeholder, .ec-telInput select::-webkit-input-placeholder {
+    color: #999; }
+  .ec-input select::-ms-expand, .ec-halfInput select::-ms-expand, .ec-numberInput select::-ms-expand, .ec-zipInput select::-ms-expand, .ec-telInput select::-ms-expand {
+    border: 0;
+    background-color: transparent; }
+  .ec-input select[disabled], .ec-halfInput select[disabled], .ec-numberInput select[disabled], .ec-zipInput select[disabled], .ec-telInput select[disabled], .ec-input select[readonly], .ec-halfInput select[readonly], .ec-numberInput select[readonly], .ec-zipInput select[readonly], .ec-telInput select[readonly],
+  fieldset[disabled] .ec-input select,
+  fieldset[disabled] .ec-halfInput select,
+  fieldset[disabled] .ec-numberInput select,
+  fieldset[disabled] .ec-zipInput select,
+  fieldset[disabled] .ec-telInput select {
+    background-color: #eeeeee;
+    opacity: 1; }
+  .ec-input select[disabled], .ec-halfInput select[disabled], .ec-numberInput select[disabled], .ec-zipInput select[disabled], .ec-telInput select[disabled],
+  fieldset[disabled] .ec-input select,
+  fieldset[disabled] .ec-halfInput select,
+  fieldset[disabled] .ec-numberInput select,
+  fieldset[disabled] .ec-zipInput select,
+  fieldset[disabled] .ec-telInput select {
+    cursor: not-allowed; }
+
+.ec-input textarea, .ec-halfInput textarea, .ec-numberInput textarea, .ec-zipInput textarea, .ec-telInput textarea {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border-radius: 3px; }
+  .ec-input textarea:focus, .ec-halfInput textarea:focus, .ec-numberInput textarea:focus, .ec-zipInput textarea:focus, .ec-telInput textarea:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+  .ec-input textarea::-moz-placeholder, .ec-halfInput textarea::-moz-placeholder, .ec-numberInput textarea::-moz-placeholder, .ec-zipInput textarea::-moz-placeholder, .ec-telInput textarea::-moz-placeholder {
+    color: #999;
+    opacity: 1; }
+  .ec-input textarea:-ms-input-placeholder, .ec-halfInput textarea:-ms-input-placeholder, .ec-numberInput textarea:-ms-input-placeholder, .ec-zipInput textarea:-ms-input-placeholder, .ec-telInput textarea:-ms-input-placeholder {
+    color: #999; }
+  .ec-input textarea::-webkit-input-placeholder, .ec-halfInput textarea::-webkit-input-placeholder, .ec-numberInput textarea::-webkit-input-placeholder, .ec-zipInput textarea::-webkit-input-placeholder, .ec-telInput textarea::-webkit-input-placeholder {
+    color: #999; }
+  .ec-input textarea::-ms-expand, .ec-halfInput textarea::-ms-expand, .ec-numberInput textarea::-ms-expand, .ec-zipInput textarea::-ms-expand, .ec-telInput textarea::-ms-expand {
+    border: 0;
+    background-color: transparent; }
+  .ec-input textarea[disabled], .ec-halfInput textarea[disabled], .ec-numberInput textarea[disabled], .ec-zipInput textarea[disabled], .ec-telInput textarea[disabled], .ec-input textarea[readonly], .ec-halfInput textarea[readonly], .ec-numberInput textarea[readonly], .ec-zipInput textarea[readonly], .ec-telInput textarea[readonly],
+  fieldset[disabled] .ec-input textarea,
+  fieldset[disabled] .ec-halfInput textarea,
+  fieldset[disabled] .ec-numberInput textarea,
+  fieldset[disabled] .ec-zipInput textarea,
+  fieldset[disabled] .ec-telInput textarea {
+    background-color: #eeeeee;
+    opacity: 1; }
+  .ec-input textarea[disabled], .ec-halfInput textarea[disabled], .ec-numberInput textarea[disabled], .ec-zipInput textarea[disabled], .ec-telInput textarea[disabled],
+  fieldset[disabled] .ec-input textarea,
+  fieldset[disabled] .ec-halfInput textarea,
+  fieldset[disabled] .ec-numberInput textarea,
+  fieldset[disabled] .ec-zipInput textarea,
+  fieldset[disabled] .ec-telInput textarea {
+    cursor: not-allowed; }
+
+.ec-input input:focus, .ec-halfInput input:focus, .ec-numberInput input:focus, .ec-zipInput input:focus, .ec-telInput input:focus, .ec-input textarea:focus, .ec-halfInput textarea:focus, .ec-numberInput textarea:focus, .ec-zipInput textarea:focus, .ec-telInput textarea:focus {
+  box-shadow: none;
+  border-color: #3c8dbc; }
+
+.ec-input input, .ec-halfInput input, .ec-numberInput input, .ec-zipInput input, .ec-telInput input {
+  height: 40px;
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 768px) {
+    .ec-input input, .ec-halfInput input, .ec-numberInput input, .ec-zipInput input, .ec-telInput input {
+      margin-bottom: 16px; } }
+
+.ec-input textarea, .ec-halfInput textarea, .ec-numberInput textarea, .ec-zipInput textarea, .ec-telInput textarea {
+  height: auto;
+  min-height: 100px; }
+
+.ec-input p, .ec-halfInput p, .ec-numberInput p, .ec-zipInput p, .ec-telInput p {
+  line-height: 1.4; }
+
+.ec-input .ec-errorMessage, .ec-halfInput .ec-errorMessage, .ec-numberInput .ec-errorMessage, .ec-zipInput .ec-errorMessage, .ec-telInput .ec-errorMessage {
+  margin-bottom: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #DE5D50; }
+
+.error.ec-input input, .error.ec-halfInput input, .error.ec-numberInput input, .error.ec-zipInput input, .error.ec-telInput input, .error.ec-input select, .error.ec-halfInput select, .error.ec-numberInput select, .error.ec-zipInput select, .error.ec-telInput select {
+  margin-bottom: 5px;
+  border-color: #CF3F34;
+  background: #FDF1F0; }
+
+.ec-checkbox .ec-errorMessage {
+  margin-bottom: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #DE5D50; }
+
+.error.ec-checkbox input, .error.ec-checkbox label {
+  border-color: #CF3F34;
+  background: #FDF1F0; }
+
+/*
+フォーム（text２つ）
+
+姓名など2つ入力させたい入力項目で使用します。
+
+入力フォームを半分で用意したいときにも利用可能です。
+
+ex [会員情報編集画面　フォーム部分](http://demo4.ec-cube.net/mypage/change)
+
+Markup:
+p.ec-halfInput
+  input(type="text")
+  input(type="text")
+p.ec-halfInput
+  input(type="text")
+
+Styleguide 3.1.2
+*/
+.ec-halfInput input[type='text'] {
+  display: inline-block;
+  width: 47%;
+  margin-left: 2%; }
+  @media only screen and (min-width: 768px) {
+    .ec-halfInput input[type='text'] {
+      margin-left: 15px;
+      width: 45%; } }
+
+.ec-halfInput input[type='text']:first-child {
+  margin-left: 0; }
+
+/*
+数量ボタン
+
+数量を表示するための小さなコンポーネントです。
+
+数値表示に最適化するため、数字は右端揃えで表示されます。
+
+ex [商品詳細画面　数量ボタン部分](http://demo4.ec-cube.net/products/detail/2)
+
+Markup:
+.ec-numberInput
+  span 数量
+  input(type="number",value="0")
+
+Styleguide 3.1.3
+*/
+.ec-numberInput input[type='number'] {
+  display: inline-block;
+  width: auto;
+  max-width: 100px;
+  text-align: right; }
+
+/*
+郵便番号フォーム
+
+数量を表示するための小さなコンポーネントです。
+
+内部に input 要素を配置してコーディングします。
+
+ex [会員情報編集画面　郵便番号部分](http://demo4.ec-cube.net/mypage/change)
+
+Markup:
+.ec-zipInput
+  span 〒
+  input(type="text")
+.ec-zipInputHelp
+  a(href="http://www.post.japanpost.jp/zipcode/" target="_blank")
+    .ec-zipInputHelp__icon
+      .ec-icon
+        img(src='/moc/icon/question-white.svg', alt='')
+    span 郵便番号検索
+.ec-zipAuto
+  a.ec-inlineBtn 郵便番号から自動入力
+
+Styleguide 3.1.4
+*/
+.ec-zipInput {
+  display: inline-block; }
+  .ec-zipInput input {
+    display: inline-block;
+    text-align: left;
+    width: auto;
+    max-width: 8em;
+    font-size: 16px; }
+  .ec-zipInput span {
+    display: inline-block;
+    padding: 0 5px 0 3px;
+    margin-left: 5px; }
+
+.ec-zipInputHelp {
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 16px;
+  vertical-align: baseline;
+  line-height: 0; }
+  .ec-zipInputHelp .ec-zipInputHelp__icon {
+    display: inline-block;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    background: #525263;
+    border-radius: 50%;
+    font-size: 13px;
+    position: relative;
+    top: -6px; }
+    .ec-zipInputHelp .ec-zipInputHelp__icon .ec-icon img {
+      width: 1em;
+      height: 1em;
+      position: relative;
+      left: 3px;
+      top: 3px; }
+  .ec-zipInputHelp span {
+    margin-left: 8px;
+    display: inline-block;
+    color: #0092C4;
+    vertical-align: 3px; }
+
+.ec-zipAuto {
+  margin-bottom: 16px; }
+  .ec-zipAuto .ec-inlineBtn {
+    font-weight: normal; }
+
+/*
+電話番号ボタン
+
+数量を表示するための小さなコンポーネントです。
+
+内部に input 要素を配置してコーディングします。
+
+ex [会員情報編集画面　電話番号部分](http://demo4.ec-cube.net/mypage/change)
+
+Markup:
+.ec-telInput
+  input(type="text")
+
+Styleguide 3.1.5
+*/
+.ec-telInput input {
+  max-width: 10em;
+  text-align: left; }

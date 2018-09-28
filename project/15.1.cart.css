@@ -1,0 +1,448 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/**
+ * ECCUBE 固有のスタイルユーティリティ
+ */
+/*
+カート
+
+カート 注文詳細 に関する Project コンポーネントを定義します。
+
+ex [カートページ](http://demo4.ec-cube.net/shopping)
+
+(カート内に商品がある状態でアクセス)
+
+Markup:
+include /assets/tmpl/elements/15.1.cart.pug
++ec-cartRole
+
+Styleguide 15.1
+
+*/
+.ec-cartRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; }
+  .ec-cartRole:after {
+    content: " ";
+    display: table; }
+  .ec-cartRole:after {
+    clear: both; }
+  .ec-cartRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-cartRole img {
+    max-width: 100%; }
+  .ec-cartRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-cartRole *,
+  .ec-cartRole *::before,
+  .ec-cartRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-cartRole img {
+    width: 100%; }
+  .ec-cartRole::before {
+    display: none; }
+  .ec-cartRole .ec-cartRole__progress {
+    width: 100%;
+    text-align: center; }
+  .ec-cartRole .ec-cartRole__error {
+    width: 100%;
+    text-align: center; }
+    .ec-cartRole .ec-cartRole__error .ec-alert-warning {
+      max-width: 80%;
+      display: inline-block; }
+  .ec-cartRole .ec-cartRole__totalText {
+    margin-bottom: 0;
+    padding: 16px 0 6px;
+    width: 100%;
+    text-align: center;
+    font-weight: normal; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRole .ec-cartRole__totalText {
+        margin-bottom: 30px;
+        padding: 0; } }
+  .ec-cartRole .ec-cartRole__cart {
+    margin: 0;
+    width: 100%; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRole .ec-cartRole__cart {
+        margin: 0 10%; } }
+  .ec-cartRole .ec-cartRole__actions {
+    text-align: right;
+    width: 100%; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRole .ec-cartRole__actions {
+        width: 20%;
+        margin-right: 10%; } }
+  .ec-cartRole .ec-cartRole__total {
+    padding: 15px 0 30px;
+    font-weight: bold;
+    font-size: 16px; }
+  .ec-cartRole .ec-cartRole__totalAmount {
+    margin-left: 30px;
+    color: #de5d50;
+    font-size: 16px; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRole .ec-cartRole__totalAmount {
+        font-size: 24px; } }
+  .ec-cartRole .ec-blockBtn--action {
+    margin-bottom: 10px; }
+
+/*
+カート商品表示枠（テーブルヘッダ）
+
+カート内の商品をを表示するテーブル枠です。
+
+ex [カートページ　テーブル部分(カート内に商品がある状態でアクセス)](http://demo4.ec-cube.net/cart)
+
+Markup:
+include /assets/tmpl/elements/15.1.cart.pug
++ec-cartTable
+
+sg-wrapper:
+<div class="ec-cartRole">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 15.1.2
+*/
+.ec-cartTable {
+  display: table;
+  border-top: 1px dotted #ccc;
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .ec-cartTable {
+      border-top: none; } }
+
+/*
+カート商品表示枠（テーブルヘッダ）
+
+カート内の商品を表示するテーブルのヘッダです。
+スマホでは非表示となります。
+
+ex [カートページ　カートテーブルヘッダ部分(カート内に商品がある状態でアクセス)](http://demo4.ec-cube.net/cart)
+
+
+Markup:
+include /assets/tmpl/elements/15.1.cart.pug
+.ec-cartTable
+  +ec-cartHeader
+
+sg-wrapper:
+<div class="ec-cartRole">
+  <sg-wrapper-content/>
+</div>
+
+
+Styleguide 15.1.3
+*/
+.ec-cartHeader {
+  display: none;
+  width: 100%;
+  background: #F4F3F0; }
+  @media only screen and (min-width: 768px) {
+    .ec-cartHeader {
+      display: table-row; } }
+  .ec-cartHeader .ec-cartHeader__label {
+    display: table-cell;
+    padding: 16px;
+    text-align: center;
+    background: #F4F3F0;
+    overflow-x: hidden;
+    font-weight: bold; }
+
+.ec-cartCompleteRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px; }
+  .ec-cartCompleteRole:after {
+    content: " ";
+    display: table; }
+  .ec-cartCompleteRole:after {
+    clear: both; }
+  .ec-cartCompleteRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-cartCompleteRole img {
+    max-width: 100%; }
+  .ec-cartCompleteRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-cartCompleteRole *,
+  .ec-cartCompleteRole *::before,
+  .ec-cartCompleteRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-cartCompleteRole img {
+    width: 100%; }
+
+/*
+カート内商品
+
+カート内のアイテムを表示するテーブル行です。
+スマホでは非表示となります。
+
+ex [カートページ　テーブル部分](http://demo4.ec-cube.net/cart)
+
+(カート内に商品がある状態でアクセス)
+
+Markup:
+include /assets/tmpl/elements/15.1.cart.pug
+.ec-cartTable
+  +ec-cartRow
+
+sg-wrapper:
+<div class="ec-cartRole">
+  <sg-wrapper-content/>
+</div>
+
+
+Styleguide 15.1.4
+*/
+.ec-cartRow {
+  display: table-row; }
+  .ec-cartRow .ec-cartRow__delColumn {
+    border-bottom: 1px dotted #ccc;
+    text-align: center;
+    display: table-cell;
+    width: 14%;
+    vertical-align: middle; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRow .ec-cartRow__delColumn {
+        width: 8.3333333%; } }
+    .ec-cartRow .ec-cartRow__delColumn .ec-icon img {
+      width: 1.5em;
+      height: 1.5em; }
+      @media only screen and (min-width: 768px) {
+        .ec-cartRow .ec-cartRow__delColumn .ec-icon img {
+          width: 1em;
+          height: 1em; } }
+  .ec-cartRow .ec-cartRow__contentColumn {
+    border-bottom: 1px dotted #ccc;
+    padding: 10px 0;
+    display: table; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRow .ec-cartRow__contentColumn {
+        display: table-cell; } }
+  .ec-cartRow .ec-cartRow__img {
+    display: table-cell;
+    width: 40%;
+    vertical-align: middle;
+    padding-right: 10px; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRow .ec-cartRow__img {
+        display: inline-block;
+        min-width: 80px;
+        max-width: 100px;
+        padding-right: 0; } }
+  .ec-cartRow .ec-cartRow__summary {
+    display: table-cell;
+    margin-left: 5px;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 46%; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRow .ec-cartRow__summary {
+        display: inline-block;
+        margin-left: 20px;
+        vertical-align: middle; } }
+    .ec-cartRow .ec-cartRow__summary .ec-cartRow__name {
+      margin-bottom: 5px; }
+    .ec-cartRow .ec-cartRow__summary .ec-cartRow__sutbtotalSP {
+      display: block;
+      font-weight: normal; }
+      @media only screen and (min-width: 768px) {
+        .ec-cartRow .ec-cartRow__summary .ec-cartRow__sutbtotalSP {
+          display: none; } }
+  .ec-cartRow .ec-cartRow__amountColumn {
+    display: table-cell;
+    border-bottom: 1px dotted #ccc;
+    vertical-align: middle;
+    text-align: center;
+    width: 20%; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRow .ec-cartRow__amountColumn {
+        width: 16.66666667%; } }
+    .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amount {
+      display: none;
+      margin-bottom: 10px; }
+      @media only screen and (min-width: 768px) {
+        .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amount {
+          display: block; } }
+    .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountSP {
+      display: block;
+      margin-bottom: 10px; }
+      @media only screen and (min-width: 768px) {
+        .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountSP {
+          display: none; } }
+    .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountUpDown {
+      display: flex;
+      justify-content: center; }
+      @media only screen and (min-width: 768px) {
+        .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountUpDown {
+          display: block; } }
+    .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountUpButton {
+      margin: 0 2px;
+      display: inline-block;
+      border: 2px solid #c9c9c9;
+      border-radius: 50%;
+      width: 30px;
+      min-width: 30px;
+      max-width: 30px;
+      height: 30px;
+      cursor: pointer;
+      line-height: 40px;
+      vertical-align: middle;
+      position: relative;
+      text-align: center;
+      background: #fff; }
+      .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountUpButton .ec-cartRow__amountUpButton__icon img {
+        display: block;
+        margin-left: -0.4em;
+        width: .8em;
+        height: .8em;
+        position: absolute;
+        top: 28%;
+        left: 50%; }
+    .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountDownButton, .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountDownButtonDisabled {
+      margin: 0 2px;
+      display: inline-block;
+      border: 2px solid #c9c9c9;
+      border-radius: 50%;
+      width: 30px;
+      min-width: 30px;
+      max-width: 30px;
+      height: 30px;
+      cursor: pointer;
+      line-height: 40px;
+      vertical-align: middle;
+      position: relative;
+      text-align: center;
+      background: #fff; }
+      .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountDownButton .ec-cartRow__amountDownButton__icon img, .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountDownButtonDisabled .ec-cartRow__amountDownButton__icon img {
+        display: block;
+        margin-left: -0.4em;
+        width: .8em;
+        height: .8em;
+        position: absolute;
+        top: 28%;
+        left: 50%; }
+    .ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountDownButtonDisabled {
+      cursor: default; }
+  .ec-cartRow .ec-cartRow__subtotalColumn {
+    display: none;
+    border-bottom: 1px dotted #ccc;
+    text-align: right;
+    width: 16.66666667%; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartRow .ec-cartRow__subtotalColumn {
+        display: table-cell; } }
+
+/*
+カート内商品(商品が１の場合)
+
+商品が１の場合はカート商品を減らす「-」ボタンの無効化状態になります。
+
+ex [カートページ　テーブル部分](http://demo4.ec-cube.net/cart)
+
+(カート内に商品がある状態でアクセス)
+
+Markup:
+include /assets/tmpl/elements/15.1.cart.pug
+.ec-cartTable
+  +ec-cartRowOnly
+
+sg-wrapper:
+<div class="ec-cartRole">
+  <sg-wrapper-content/>
+</div>
+
+
+Styleguide 15.1.5
+*/
+.ec-cartRow .ec-cartRow__amountColumn .ec-cartRow__amountDownButtonDisabled {
+  cursor: default; }
+
+/*
+アラート
+
+カート内の商品に問題があることを示す警告メッセージです。
+
+ex [マイページ　カート](http://demo4.ec-cube.net/cart)
+
+(カート内に商品がある状態でアクセス)
+
+Markup:
+include /assets/tmpl/elements/15.1.cart.pug
+.ec-cartRole
+  .ec-cartRole__cart
+    +ec-alert-warning
+
+Styleguide 15.1.6
+*/
+.ec-alert-warning {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: #F99;
+  margin-bottom: 20px; }
+  .ec-alert-warning .ec-alert-warning__icon {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    fill: #fff;
+    vertical-align: top; }
+  .ec-alert-warning .ec-alert-warning__text {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    position: relative; }
+
+/*
+アラート(空)
+
+カートが空であることを示す警告メッセージです。
+
+ex [マイページ　カート](http://demo4.ec-cube.net/cart)
+
+(カート内に商品がある状態でアクセス)
+
+Markup:
+include /assets/tmpl/elements/15.1.cart.pug
+.ec-off3Grid
+        .ec-off3Grid__cell
+            +ec-alert-warningEnpty
+
+Styleguide 15.1.7
+*/

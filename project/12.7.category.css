@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+カテゴリ（アイテム3列）
+
+トップページで使用されているカテゴリのスタイルです。
+
+ex [トップページ](http://demo4.ec-cube.net/)
+
+Markup:
+include /assets/tmpl/elements/12.7.category.pug
++ec-categoryRole
+
+Styleguide 12.7
+*/
+.ec-categoryRole {
+  padding: 40px 0;
+  color: black;
+  background: #F8F8F8; }
+  @media only screen and (min-width: 768px) {
+    .ec-categoryRole {
+      padding: 60px 0; } }
+  .ec-categoryRole .ec-categoryRole__list {
+    display: flex;
+    flex-wrap: wrap; }
+    @media only screen and (min-width: 768px) {
+      .ec-categoryRole .ec-categoryRole__list {
+        flex-wrap: nowrap; } }
+  .ec-categoryRole .ec-categoryRole__listItem {
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto; }
+    @media only screen and (min-width: 768px) {
+      .ec-categoryRole .ec-categoryRole__listItem {
+        width: calc(100% / 3); }
+        .ec-categoryRole .ec-categoryRole__listItem:not(:last-of-type) {
+          margin-right: 30px; } }

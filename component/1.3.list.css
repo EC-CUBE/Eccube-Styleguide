@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+リスト
+
+シンプルなリストを構成するためのスタイル群です。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 1.3
+*/
+/*
+水平定義リスト
+
+シンプルな定義リストのスタイルを定義します。
+
+dl要素を用いてコーディングします。
+
+ex [当サイトについて　水平定義リスト部分](http://demo4.ec-cube.net/help/about)
+
+Markup:
+dl.ec-definitions
+    dt 店名
+    dd EC-CUBE3 DEMO SHOP
+dl.ec-definitions
+    dt 会社名
+    dd EC-CUBE3
+dl.ec-definitions--soft
+    dt 所在地
+    dd 〒 550-0001
+
+Styleguide 1.3.1
+*/
+.ec-definitions, .ec-definitions--soft {
+  margin: 5px 0;
+  display: block; }
+  .ec-definitions dt, .ec-definitions--soft dt, .ec-definitions dd, .ec-definitions--soft dd {
+    display: inline-block;
+    margin: 0; }
+  .ec-definitions dt, .ec-definitions--soft dt {
+    font-weight: bold; }
+
+.ec-definitions--soft dt {
+  font-weight: normal; }
+
+/*
+下線つき定義リスト
+
+線が添えられた定義リストのスタイルを定義します。
+
+dl要素を用いてコーディングします。
+
+ex [当サイトについて　下線つき定義リスト](http://demo4.ec-cube.net/help/about)
+
+Markup:
+.ec-borderedDefs
+  dl
+    dt 店名
+    dd EC-CUBE3 DEMO SHOP
+  dl
+    dt 会社名
+    dd EC-CUBE3
+  dl
+    dt 所在地
+    dd 〒550 - 0001
+
+Styleguide 1.3.2
+*/
+.ec-borderedDefs {
+  width: 100%;
+  border-top: 1px dotted #ccc;
+  margin-bottom: 16px; }
+  .ec-borderedDefs dl {
+    display: flex;
+    border-bottom: 1px dotted #ccc;
+    margin: 0;
+    padding: 10px 0 0;
+    flex-wrap: wrap; }
+    @media only screen and (min-width: 768px) {
+      .ec-borderedDefs dl {
+        flex-wrap: nowrap;
+        padding: 15px 0 4px; } }
+  .ec-borderedDefs dt, .ec-borderedDefs dd {
+    padding: 0; }
+  .ec-borderedDefs dt {
+    font-weight: normal;
+    width: 100%;
+    padding-top: 0; }
+    @media only screen and (min-width: 768px) {
+      .ec-borderedDefs dt {
+        padding-top: 14px;
+        width: 30%; } }
+  .ec-borderedDefs dd {
+    padding: 0;
+    width: 100%;
+    line-height: 2.5; }
+    @media only screen and (min-width: 768px) {
+      .ec-borderedDefs dd {
+        width: 70%;
+        line-height: 3; } }
+  .ec-borderedDefs p {
+    line-height: 1.4; }
+
+.ec-list-chilled {
+  display: table-row;
+  border: 0 none;
+  padding: 8px 0; }
+  .ec-list-chilled dt, .ec-list-chilled dd {
+    display: table-cell;
+    border-bottom: 1px dotted #ccc;
+    padding: 0; }
+    @media only screen and (min-width: 768px) {
+      .ec-list-chilled dt, .ec-list-chilled dd {
+        padding: 16px 0; } }
+  .ec-list-chilled dt {
+    width: 30%; }
+  .ec-list-chilled dd {
+    padding: 0; }
+    @media only screen and (min-width: 768px) {
+      .ec-list-chilled dd {
+        padding: 16px; } }
+
+/*
+ボーダーリスト
+
+線が添えられたリストを表示します。
+
+ex [当サイトについて　ボーダーリスト](http://demo4.ec-cube.net/help/about)
+
+Markup:
+ul.ec-borderedList
+  li: p lorem
+  li: p lorem
+  li: p lorem
+
+
+Styleguide 1.3.3
+*/
+.ec-borderedList {
+  width: 100%;
+  border-top: 0;
+  list-style: none;
+  padding: 0; }
+  @media only screen and (min-width: 768px) {
+    .ec-borderedList {
+      border-top: 1px dotted #ccc; } }
+  .ec-borderedList li {
+    border-bottom: 1px dotted #ccc; }
+
+.ec-list-chilled {
+  display: table-row;
+  border: 0 none;
+  padding: 8px 0; }
+  .ec-list-chilled dt, .ec-list-chilled dd {
+    display: table-cell;
+    border-bottom: 1px dotted #ccc;
+    padding: 16px 0; }
+  .ec-list-chilled dt {
+    width: 30%; }
+  .ec-list-chilled dd {
+    padding: 16px; }

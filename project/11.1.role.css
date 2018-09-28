@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+標準セクション
+
+通常のコンテナブロックです。
+
+ex [商品詳細ページ　コンテナ](http://demo4.ec-cube.net/products/detail/3)
+
+Markup:
+include /assets/tmpl/elements/11.1.role.pug
++ec-roleRole
+
+Styleguide 11.1
+*/
+.ec-role {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px; }
+  .ec-role:after {
+    content: " ";
+    display: table; }
+  .ec-role:after {
+    clear: both; }
+  .ec-role textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-role img {
+    max-width: 100%; }
+  .ec-role html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-role *,
+  .ec-role *::before,
+  .ec-role *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-role img {
+    width: 100%; }
+
+/*
+マイページセクション
+
+マイページ専用のコンテナブロックです。
+
+ex [マイページ　コンテナ](http://demo4.ec-cube.net/mypage)
+
+Markup:
+include /assets/tmpl/elements/11.1.role.pug
++ec-mypageRole
+
+Styleguide 11.1.2
+*/
+.ec-mypageRole {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%; }
+  .ec-mypageRole:after {
+    content: " ";
+    display: table; }
+  .ec-mypageRole:after {
+    clear: both; }
+  .ec-mypageRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-mypageRole img {
+    max-width: 100%; }
+  .ec-mypageRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-mypageRole *,
+  .ec-mypageRole *::before,
+  .ec-mypageRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-mypageRole img {
+    width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .ec-mypageRole {
+      padding-left: 26px;
+      padding-right: 26px; } }
+  @media only screen and (min-width: 768px) {
+    .ec-mypageRole .ec-pageHeader h1 {
+      margin: 10px 0 48px;
+      padding: 8px 0 18px; } }

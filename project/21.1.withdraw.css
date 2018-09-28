@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+退会手続き
+
+退会手続きで使用するページコンポーネントです。
+
+ex [退会手続き](http://demo4.ec-cube.net/mypage/withdraw)
+
+Markup:
+include /assets/tmpl/elements/21.1.withdraw.pug
++ec-withdrawRole
+
+Styleguide 21.1
+
+*/
+.ec-withdrawRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px;
+  text-align: center;
+  padding: 0 16px; }
+  .ec-withdrawRole:after {
+    content: " ";
+    display: table; }
+  .ec-withdrawRole:after {
+    clear: both; }
+  .ec-withdrawRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-withdrawRole img {
+    max-width: 100%; }
+  .ec-withdrawRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-withdrawRole *,
+  .ec-withdrawRole *::before,
+  .ec-withdrawRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-withdrawRole img {
+    width: 100%; }
+  .ec-withdrawRole .ec-withdrawRole__title {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 24px; }
+  .ec-withdrawRole .ec-withdrawRole__description {
+    margin-bottom: 32px;
+    font-size: 16px; }
+  .ec-withdrawRole .ec-icon img {
+    width: 100px;
+    height: 100px; }
+
+/*
+退会手続き実行確認
+
+退会手続き実行確認で使用するページコンポーネントです。
+
+ex [退会手続き　退会手続きへボタン→押下](http://demo4.ec-cube.net/mypage/withdraw)
+
+Markup:
+include /assets/tmpl/elements/21.1.withdraw.pug
++ec-withdrawConfirm
+
+Styleguide 21.1.2
+
+*/
+.ec-withdrawConfirmRole .ec-withdrawConfirmRole__cancel {
+  margin-bottom: 20px; }
+
+.ec-withdrawConfirmRole .ec-withdrawConfirmRole__title {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 24px; }
+
+.ec-withdrawConfirmRole .ec-withdrawConfirmRole__description {
+  margin-bottom: 32px;
+  font-size: 16px; }
+
+.ec-withdrawConfirmRole .ec-icon img {
+  width: 100px;
+  height: 100px; }

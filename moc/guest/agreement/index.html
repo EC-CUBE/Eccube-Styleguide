@@ -1,0 +1,441 @@
+
+<!--mixin ec-headerCart-->
+<!--  .ec-cartNaviWrap-->
+<!--    +b.ec-cartNavi-->
+<!--      +e.I.icon.fas.fa-shopping-cart-->
+<!--        +e.SPAN.badge 1-->
+<!--      .ec-cartNavi__label-->
+<!--        .ec-cartNavi__price ¥1920-->
+<!--    //.ec-cartNaviNull-->
+<!--    //  .ec-cartNaviNull__message-->
+<!--    //    p 現在カート内に-->
+<!--    //      br-->
+<!--    //      | 商品がございません。-->
+<!--    +b.ec-cartNaviIsset-->
+<!--      +e.cart-->
+<!--        +e.cartImage-->
+<!--          img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')-->
+<!--        +e.cartContent-->
+<!--          +e.cartContentTitle ミニテーブル-->
+<!--          +e.cartContentPrice ¥ 12,960-->
+<!--            +e.cartContentTax 税込-->
+<!--          +e.cartContentNumber 数量：1-->
+<!--      +e.action-->
+<!--        a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む-->
+<!--        a.ec-blockBtn.ec-cartNavi--cancel キャンセル-->
+<!--mixin ec-headerCartNull-->
+<!--  .ec-cartNavi-->
+<!--    .ec-cartNavi__icon-->
+<!--      img(src='/moc/icon/cart.svg', alt='cart')-->
+<!--    .ec-cartNavi__iconClose-->
+<!--      img(src='/moc/icon/cross.svg', alt='close')-->
+<!--    .ec-cartNavi__badge 1-->
+<!--    .ec-cartNavi__label-->
+<!--      | 合計-->
+<!--      .ec-cartNavi__price ¥1920-->
+<!--  .ec-cartNaviNull-->
+<!--    .ec-cartNaviNull__message-->
+<!--      p 現在カート内に-->
+<!--        br-->
+<!--        | 商品がございません。-->
+<!--  //+b.ec-cartNaviIsset-->
+<!--  //  +e.cart-->
+<!--  //    +e.cartImage-->
+<!--  //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')-->
+<!--  //    +e.cartContent-->
+<!--  //      +e.cartContentTitle ミニテーブル-->
+<!--  //      +e.cartContentPrice ¥ 12,960-->
+<!--  //        +e.cartContentTax 税込-->
+<!--  //      +e.cartContentNumber 数量：1-->
+<!--  //  +e.action-->
+<!--  //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む-->
+<!--  //    a.ec-blockBtn キャンセル-->
+<!--mixin ec-headerCart-->
+<!--  .ec-cartNaviWrap-->
+<!--    +b.ec-cartNavi-->
+<!--      +e.I.icon.fas.fa-shopping-cart-->
+<!--        +e.SPAN.badge 1-->
+<!--      .ec-cartNavi__label-->
+<!--        .ec-cartNavi__price ¥1920-->
+<!--    //.ec-cartNaviNull-->
+<!--    //  .ec-cartNaviNull__message-->
+<!--    //    p 現在カート内に-->
+<!--    //      br-->
+<!--    //      | 商品がございません。-->
+<!--    +b.ec-cartNaviIsset-->
+<!--      +e.cart-->
+<!--        +e.cartImage-->
+<!--          img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')-->
+<!--        +e.cartContent-->
+<!--          +e.cartContentTitle ミニテーブル-->
+<!--          +e.cartContentPrice ¥ 12,960-->
+<!--            +e.cartContentTax 税込-->
+<!--          +e.cartContentNumber 数量：1-->
+<!--      +e.action-->
+<!--        a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む-->
+<!--        a.ec-blockBtn.ec-cartNavi--cancel キャンセル-->
+<!--mixin ec-headerCartNull-->
+<!--  .ec-cartNavi-->
+<!--    .ec-cartNavi__icon-->
+<!--      img(src='/moc/icon/cart.svg', alt='cart')-->
+<!--    .ec-cartNavi__iconClose-->
+<!--      img(src='/moc/icon/cross.svg', alt='close')-->
+<!--    .ec-cartNavi__badge 1-->
+<!--    .ec-cartNavi__label-->
+<!--      | 合計-->
+<!--      .ec-cartNavi__price ¥1920-->
+<!--  .ec-cartNaviNull-->
+<!--    .ec-cartNaviNull__message-->
+<!--      p 現在カート内に-->
+<!--        br-->
+<!--        | 商品がございません。-->
+<!--  //+b.ec-cartNaviIsset-->
+<!--  //  +e.cart-->
+<!--  //    +e.cartImage-->
+<!--  //      img(src='http://demo3.ec-cube.net/upload/save_image/0701104933_5593472d8d179.jpeg')-->
+<!--  //    +e.cartContent-->
+<!--  //      +e.cartContentTitle ミニテーブル-->
+<!--  //      +e.cartContentPrice ¥ 12,960-->
+<!--  //        +e.cartContentTax 税込-->
+<!--  //      +e.cartContentNumber 数量：1-->
+<!--  //  +e.action-->
+<!--  //    a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む-->
+<!--  //    a.ec-blockBtn キャンセル--><!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -45px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1;
+}
+
+.slick-dots li button:before {
+    content: " ";
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    opacity: .25;
+    background-color: black;
+    border-radius: 50%;
+
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    background-color: black;
+}
+
+.slick-dots li button.thumbnail img {
+    width: 0;
+    height: 0;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="ec-layoutRole">
+      <div class="ec-layoutRole__header">
+        <div class="ec-headerNaviRole">
+          <div class="ec-headerNaviRole__left">
+            <div class="ec-headerNaviRole__search">
+              <div class="ec-headerSearch">
+                <form class="searchform" method="get" action="/products/list">
+                  <div class="ec-headerSearch__category">
+                    <div class="ec-select ec-select_search">
+                      <select class="category_id" name="category_id">
+                        <option value="">全ての商品</option>
+                        <option value="6">新作</option>
+                        <option value="12">アイス</option>
+                        <option value="21"> アイスクッキー</option>
+                        <option value="20"> アイスバー</option>
+                        <option value="2">ジェラート</option>
+                        <option value="11">詰め合わせ</option>
+                        <option value="16">スイーツ</option>
+                        <option value="19"> 生チョコ</option>
+                        <option value="18"> マカロン</option>
+                        <option value="10">シリーズ</option>
+                        <option value="26"> MiNi</option>
+                        <option value="27"> オーガニック</option>
+                        <option value="28"> 大人のスイーツ</option>
+                        <option value="24"> 定番</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="ec-headerSearch__keyword">
+                    <div class="ec-input">
+                      <input class="search-name" type="search" name="name" maxlength="50" placeholder="キーワードを入力">
+                      <button class="ec-headerSearch__keywordBtn" type="submit">
+                        <div class="ec-icon"><img src="/moc/icon/search-dark.svg" alt=""></div>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="ec-headerNaviRole__navSP">
+              <div class="ec-headerNavSP"><i class="fas fa-bars"></i></div>
+            </div>
+          </div>
+          <div class="ec-headerNaviRole__right">
+            <div class="ec-headerNaviRole__nav">
+              <div class="ec-headerNav">
+                <div class="ec-headerNav__item"><a href="/moc/guest/register"><i class="ec-headerNav__itemIcon fas fa-user"></i><span class="ec-headerNav__itemLink">新規登録</span></a>
+                </div>
+                <div class="ec-headerNav__item"><a href="/moc/guest/login"><i class="ec-headerNav__itemIcon fas fa-heart"></i><span class="ec-headerNav__itemLink">お気に入り</span></a>
+                </div>
+                <div class="ec-headerNav__item"><a href="/moc/guest/login"><i class="ec-headerNav__itemIcon fas fa-lock"></i><span class="ec-headerNav__itemLink">ログイン</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="ec-headerNaviRole__cart">
+              <div class="ec-cartNaviWrap">
+                <div class="ec-cartNavi"><i class="ec-cartNavi__icon fas fa-shopping-cart"><span class="ec-cartNavi__badge">1</span></i>
+                  <div class="ec-cartNavi__label">
+                    <div class="ec-cartNavi__price">¥1,620</div>
+                  </div>
+                </div>
+                <div class="ec-cartNaviIsset">
+                  <div class="ec-cartNaviIsset__cart">
+                    <div class="ec-cartNaviIsset__cartImage"><img src="https://demo4.ec-cube.net/html/upload/save_image/0903163326_5b8ce3c697fad.jpg">
+                    </div>
+                    <div class="ec-cartNaviIsset__cartContent">
+                      <div class="ec-cartNaviIsset__cartContentTitle">さくさく♪クッキーアイス
+                      </div>
+                      <div class="ec-cartNaviIsset__cartContentPrice">¥ 1,620
+                        <div class="ec-cartNaviIsset__cartContentTax">税込
+                        </div>
+                      </div>
+                      <div class="ec-cartNaviIsset__cartContentNumber">数量：1
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ec-cartNaviIsset__action"><a class="ec-blockBtn--action" href="/moc/guest/cart1">カートへ進む</a><a class="ec-blockBtn ec-cartNavi--cancel">キャンセル</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ec-headerRole">
+          <div class="ec-headerRole__title">
+            <div class="ec-headerTitle">
+              <div class="ec-headerTitle__title">
+                <h1><a href="/moc/">EC-CUBE4 DEMO SHOP</a></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ec-cateoryNaviRole">
+          <div class="ec-itemNav">
+            <ul class="ec-itemNav__nav">
+              <li><a href="#">新商品</a>
+                <ul>
+                  <li><a href="#">ジェラート</a>
+                    <ul>
+                      <li><a href="#">彩のジェラート</a>
+                        <ul>
+                          <li><a href="#">CUBE</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#">アイスサンド</a>
+                    <ul>
+                      <li><a href="#">フルーツ</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">カテゴリ1-3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">ジェラート</a></li>
+              <li><a href="#">アイスサンド</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="ec-layoutRole__contentTop">
+      </div>
+      <div class="ec-layoutRole__contents">
+        <div class="ec-layoutRole__main">
+          <div class="ec-role">
+            <div class="ec-pageHeader">
+              <h1>利用規約</h1>
+            </div>
+            <div class="ec-off1Grid">
+              <div class="ec-off1Grid__cell">
+                <div class="ec-heading">第1条 (会員)</div>
+                <div class="ec-heading">1. 「会員」とは、当社が定める手続に従い本規約に同意の上、入会の申し込みを行う個人をいいます。<br>2. 「会員情報」とは、会員が当社に開示した会員の属性に関する情報および会員の取引に関する履歴等の情報をいいます。<br>3. 本規約は、全ての会員に適用され、登録手続時および登録後にお守りいただく規約です。</div>
+                <div class="ec-heading">第2条 (登録)</div>
+                <div class="ec-heading">1. 会員資格<br>本規約に同意の上、所定の入会申込みをされたお客様は、所定の登録手続完了後に会員としての資格を有します。会員登録手続は、会員となるご本人が行ってください。代理による登録は一切認められません。なお、過去に会員資格が取り消された方やその他当社が相応しくないと判断した方からの会員申込はお断りする場合があります。</div>
+                <div class="ec-heading">2. 会員情報の入力<br>会員登録手続の際には、入力上の注意をよく読み、所定の入力フォームに必要事項を正確に入力してください。会員情報の登録において、特殊記号・旧漢字・ローマ数字などはご使用になれません。これらの文字が登録された場合は当社にて変更致します。</div>
+                <div class="ec-heading">3. パスワードの管理<br>(1)パスワードは会員本人のみが利用できるものとし、第三者に譲渡・貸与できないものとします。<br>(2)パスワードは、他人に知られることがないよう定期的に変更する等、会員本人が責任をもって管理してください。<br>(3)パスワードを用いて当社に対して行われた意思表示は、会員本人の意思表示とみなし、そのために生じる支払等は全て会員の責任となります。</div>
+                <div class="ec-heading">第3条 (変更)</div>
+                <div class="ec-heading">1. 会員は、氏名、住所など当社に届け出た事項に変更があった場合には、速やかに当社に連絡するものとします。<br>2. 変更登録がなされなかったことにより生じた損害について、当社は一切責任を負いません。また、変更登録がなされた場合でも、変更登録前にすでに手続がなされた取引は、変更登録前の情報に基づいて行われますのでご注意ください。</div>
+                <div class="ec-heading">第4条 (退会)</div>
+                <div class="ec-heading">会員が退会を希望する場合には、会員本人が退会手続きを行ってください。所定の退会手続の終了後に、退会となります。</div>
+                <div class="ec-heading">第5条 (会員資格の喪失及び賠償義務)</div>
+                <div class="ec-heading">1. 会員が、会員資格取得申込の際に虚偽の申告をしたとき、通信販売による代金支払債務を怠ったとき、その他当社が会員として不適当と認める事由があるときは、当社は、会員資格を取り消すことができることとします。</div>
+                <div class="ec-heading">2. 会員が、以下の各号に定める行為をしたときは、これにより当社が被った損害を賠償する責任を負います。<br>(1)会員番号、パスワードを不正に使用すること<br>(2)当ホームページにアクセスして情報を改ざんしたり、当ホームページに有害なコンピュータープログラムを送信するなどして、当社の営業を妨害すること<br>(3)当社が扱う商品の知的所有権を侵害する行為をすること<br>(4)その他、この利用規約に反する行為をすること</div>
+                <div class="ec-heading">第6条 (会員情報の取扱い)</div>
+                <div class="ec-heading">1. 当社は、原則として会員情報を会員の事前の同意なく第三者に対して開示することはありません。ただし、次の各号の場合には、会員の事前の同意なく、当社は会員情報その他のお客様情報を開示できるものとします。<br>(1)法令に基づき開示を求められた場合<br>(2)当社の権利、利益、名誉等を保護するために必要であると当社が判断した場合<br>2. 会員情報につきましては、当社の「個人情報保護への取組み」に従い、当社が管理します。当社は、会員情報を、会員へのサービス提供、サービス内容の向上、サービスの利用促進、およびサービスの健全かつ円滑な運営の確保を図る目的のために、当社おいて利用することができるものとします。<br>3. 当社は、会員に対して、メールマガジンその他の方法による情報提供(広告を含みます)を行うことができるものとします。会員が情報提供を希望しない場合は、当社所定の方法に従い、その旨を通知して頂ければ、情報提供を停止します。ただし、本サービス運営に必要な情報提供につきましては、会員の希望により停止をすることはできません。</div>
+                <div class="ec-heading">第7条 (禁止事項)</div>
+                <div class="ec-heading">本サービスの利用に際して、会員に対し次の各号の行為を行うことを禁止します。<br>1. 法令または本規約、本サービスご利用上のご注意、本サービスでのお買い物上のご注意その他の本規約等に違反すること<br>2. 当社、およびその他の第三者の権利、利益、名誉等を損ねること<br>3. 青少年の心身に悪影響を及ぼす恐れがある行為、その他公序良俗に反する行為を行うこと<br>4. 他の利用者その他の第三者に迷惑となる行為や不快感を抱かせる行為を行うこと<br>5. 虚偽の情報を入力すること<br>6. 有害なコンピュータープログラム、メール等を送信または書き込むこと<br>7. 当社のサーバーその他のコンピューターに不正にアクセスすること<br>8. パスワードを第三者に貸与・譲渡すること、または第三者と共用すること<br>9. その他当社が不適切と判断すること</div>
+                <div class="ec-heading">第8条 (サービスの中断・停止等)</div>
+                <div class="ec-heading">1. 当社は、本サービスの稼動状態を良好に保つために、次の各号の一に該当する場合、予告なしに、本サービスの提供全てあるいは一部を停止することがあります。<br>(1)システムの定期保守および緊急保守のために必要な場合<br>(2)システムに負荷が集中した場合<br>(3)火災、停電、第三者による妨害行為などによりシステムの運用が困難になった場合<br>(4)その他、止むを得ずシステムの停止が必要と当社が判断した場合</div>
+                <div class="ec-heading">第9条 (サービスの変更・廃止)</div>
+                <div class="ec-heading">当社は、その判断によりサービスの全部または一部を事前の通知なく、適宜変更・廃止できるものとします。</div>
+                <div class="ec-heading">第10条 (免責)</div>
+                <div class="ec-heading">1. 通信回線やコンピューターなどの障害によるシステムの中断・遅滞・中止・データの消失、データへの不正アクセスにより生じた損害、その他当社のサービスに関して会員に生じた損害について、当社は一切責任を負わないものとします。<br>2. 当社は、当社のウェブページ・サーバー・ドメインなどから送られるメール・コンテンツに、コンピューター・ウィルスなどの有害なものが含まれていないことを保証いたしません。<br>3. 会員が本規約等に違反したことによって生じた損害については、当社は一切責任を負いません。</div>
+                <div class="ec-heading">第11条 (本規約の改定)</div>
+                <div class="ec-heading">当社は、本規約を任意に改定できるものとし、また、当社において本規約を補充する規約(以下「補充規約」といいます)を定めることができます。本規約の改定または補充は、改定後の本規約または補充規約を当社所定のサイトに掲示したときにその効力を生じるものとします。この場合、会員は、改定後の規約および補充規約に従うものと致します。</div>
+                <div class="ec-heading">第12条 (準拠法、管轄裁判所)</div>
+                <div class="ec-heading">本規約に関して紛争が生じた場合、当社本店所在地を管轄する地方裁判所を第一審の専属的合意管轄裁判所とします。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ec-layoutRole__contentBottom">
+      </div>
+      <div class="ec-layoutRole__footer">
+        <div class="ec-footerRole">
+          <div class="ec-footerRole__inner">
+            <ul class="ec-footerNavi">
+              <li class="ec-footerNavi__link"><a href="/moc/guest/about">当サイトについて</a>
+              </li>
+              <li class="ec-footerNavi__link"><a href="/moc/guest/privacy">プライバシーポリシー</a>
+              </li>
+              <li class="ec-footerNavi__link"><a href="/moc/guest/tradelaw">特定商取引法に基づく表記</a>
+              </li>
+              <li class="ec-footerNavi__link"><a href="/moc/guest/contact">お問い合わせ</a>
+              </li>
+            </ul>
+            <div class="ec-footerTitle">
+              <div class="ec-footerTitle__logo"><a href="/moc/sitemap.html">EC-CUBE4 DEMO SHOP</a>
+              </div>
+              <div class="ec-footerTitle__copyright">copyright (c) EC-CUBE DEMO SHOP all rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ec-overlayRole"></div>
+    <div class="ec-drawerRoleClose"><i class="fas fa-times"></i></div>
+    <div class="ec-drawerRole">
+      <div class="ec-headerSearchArea">
+        <div class="ec-headerSearch">
+          <div class="ec-select">
+            <select>
+              <option>すべてのカテゴリ<i class="fas fa-sort-down"></i></option>
+              <option>北海道</option>
+              <option>青森県</option>
+              <option>岩手県</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="ec-input">
+            <input type="text" placeholder="キーワードを入力"><a class="ec-headerSearch__btn"><i class="fas fa-search"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="ec-headerCategoryArea">
+        <div class="ec-headerCategoryArea__heading">
+          <p>カテゴリ一覧</p>
+        </div>
+        <div class="ec-itemNav">
+          <ul class="ec-itemNav__nav">
+            <li><a href="#">新商品</a>
+              <ul>
+                <li><a href="#">ジェラート</a>
+                  <ul>
+                    <li><a href="#">彩のジェラート</a>
+                      <ul>
+                        <li><a href="#">CUBE</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">アイスサンド</a>
+                  <ul>
+                    <li><a href="#">フルーツ</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">カテゴリ1-3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">ジェラート</a></li>
+            <li><a href="#">アイスサンド</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ec-headerLinkArea">
+        <div class="ec-headerLink__list"><a class="ec-headerLink__item" href="/moc/guest/cart1/">
+            <div class="ec-headerLink__icon"><i class="fas fa-shopping-cart"></i></div><span>カートを見る</span></a><a class="ec-headerLink__item" href="/moc/guest/login/">
+            <div class="ec-headerLink__icon"><i class="fas fa-lock"></i></div><span>ログイン</span></a><a class="ec-headerLink__item" href="/moc/user/favorite/">
+            <div class="ec-headerLink__icon"><i class="fas fa-heart"></i></div><span>お気に入り</span></a><a class="ec-headerLink__item" href="/moc/guest/register/">
+            <div class="ec-headerLink__icon"><i class="fas fa-user"></i></div><span>新規会員登録</span></a><a class="ec-headerLink__item" href="/moc/">
+            <div class="ec-headerLink__icon"><i class="fas fa-home"></i></div><span>ホームに戻る</span></a></div>
+      </div>
+    </div>
+    <div class="ec-blockTopBtn"></div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+@import "../mixins/media";
+/*
+トップページ
+
+トップページ スライド部に関する Project コンポーネントを定義します。
+スライドは[slick](http://kenwheeler.github.io/slick/)を使用し実装しています。
+
+ex [トップページ](http://demo4.ec-cube.net/)
+
+Markup:
+.ec-sliderRole
+  .main_visual
+      .item
+          img(src='/moc/image/img_hero_pc01.jpg')
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+Styleguide 12.1
+*/
+.ec-sliderRole{
+  @include container;
+  margin-bottom: 24px;
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+}
+.ec-sliderItemRole{
+  @include container;
+  margin-bottom: 24px;
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+  .item_nav {
+    display: none;
+    @include media_desktop {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+
+  }
+  .slideThumb{
+    margin-bottom: 25px;
+    width: 33%;
+    opacity: .8;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    img {
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+お問い合わせ
+
+お問い合わせ に関する Project コンポーネントを定義します。
+
+ex [お問い合わせ](http://demo4.ec-cube.net/contact)
+
+Markup:
+include /assets/tmpl/elements/19.2.contact.pug
++ec-contactRole
+
+Styleguide 19.2
+
+*/
+.ec-contactRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px; }
+  .ec-contactRole:after {
+    content: " ";
+    display: table; }
+  .ec-contactRole:after {
+    clear: both; }
+  .ec-contactRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-contactRole img {
+    max-width: 100%; }
+  .ec-contactRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-contactRole *,
+  .ec-contactRole *::before,
+  .ec-contactRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-contactRole img {
+    width: 100%; }
+  .ec-contactRole .ec-contactRole__actions {
+    padding-top: 20px; }
+  .ec-contactRole p {
+    margin: 16px 0; }
+
+.ec-contactConfirmRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px; }
+  .ec-contactConfirmRole:after {
+    content: " ";
+    display: table; }
+  .ec-contactConfirmRole:after {
+    clear: both; }
+  .ec-contactConfirmRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-contactConfirmRole img {
+    max-width: 100%; }
+  .ec-contactConfirmRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-contactConfirmRole *,
+  .ec-contactConfirmRole *::before,
+  .ec-contactConfirmRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-contactConfirmRole img {
+    width: 100%; }
+  .ec-contactConfirmRole .ec-contactConfirmRole__actions {
+    padding-top: 20px; }
+  .ec-contactConfirmRole .ec-blockBtn--action {
+    margin-bottom: 16px; }
+
+.ec-contactCompleteRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px; }
+  .ec-contactCompleteRole:after {
+    content: " ";
+    display: table; }
+  .ec-contactCompleteRole:after {
+    clear: both; }
+  .ec-contactCompleteRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-contactCompleteRole img {
+    max-width: 100%; }
+  .ec-contactCompleteRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-contactCompleteRole *,
+  .ec-contactCompleteRole *::before,
+  .ec-contactCompleteRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-contactCompleteRole img {
+    width: 100%; }

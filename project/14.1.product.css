@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+商品詳細
+
+商品詳細ページに関する Project コンポーネントを定義します。
+
+ex [商品詳細ページ](http://demo4.ec-cube.net/products/detail/18)
+
+
+Markup:
+include /assets/tmpl/elements/14.1.product.pug
++ec-productSimpleRole
+
+Styleguide 14.1
+*/
+.ec-productRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px; }
+  .ec-productRole:after {
+    content: " ";
+    display: table; }
+  .ec-productRole:after {
+    clear: both; }
+  .ec-productRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-productRole img {
+    max-width: 100%; }
+  .ec-productRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-productRole *,
+  .ec-productRole *::before,
+  .ec-productRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-productRole img {
+    width: 100%; }
+  .ec-productRole .ec-productRole__img {
+    margin-right: 0;
+    margin-bottom: 20px; }
+    @media only screen and (min-width: 768px) {
+      .ec-productRole .ec-productRole__img {
+        margin-right: 16px;
+        margin-bottom: 0; } }
+  .ec-productRole .ec-productRole__profile {
+    margin-left: 0; }
+    @media only screen and (min-width: 768px) {
+      .ec-productRole .ec-productRole__profile {
+        margin-left: 16px; } }
+  .ec-productRole .ec-productRole__title .ec-headingTitle {
+    font-size: 20px; }
+    @media only screen and (min-width: 768px) {
+      .ec-productRole .ec-productRole__title .ec-headingTitle {
+        font-size: 32px; } }
+  .ec-productRole .ec-productRole__tags {
+    margin-top: 16px;
+    padding: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px dotted #ccc; }
+  .ec-productRole .ec-productRole__tag {
+    display: inline-block;
+    padding: 2px 5px;
+    list-style: none;
+    font-size: 80%;
+    color: #525263;
+    border: solid 1px #D7DADD;
+    border-radius: 3px;
+    background-color: #F5F7F8; }
+  .ec-productRole .ec-productRole__priceRegular {
+    padding-top: 14px; }
+  .ec-productRole .ec-productRole__priceRegularTax {
+    margin-left: 5px;
+    font-size: 12px; }
+  .ec-productRole .ec-productRole__price {
+    color: #DE5D50;
+    font-size: 28px;
+    padding: 0;
+    border-bottom: 0; }
+    @media only screen and (min-width: 768px) {
+      .ec-productRole .ec-productRole__price {
+        padding: 14px 0;
+        border-bottom: 1px dotted #ccc; } }
+  .ec-productRole .ec-productRole__code {
+    padding: 14px 0;
+    border-bottom: 1px dotted #ccc; }
+  .ec-productRole .ec-productRole__category {
+    padding: 14px 0;
+    border-bottom: 1px dotted #ccc; }
+    .ec-productRole .ec-productRole__category a {
+      color: #33A8D0; }
+    .ec-productRole .ec-productRole__category ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+  .ec-productRole .ec-productRole__actions {
+    padding: 14px 0; }
+    .ec-productRole .ec-productRole__actions .ec-select select {
+      height: 40px;
+      max-width: 100%;
+      min-width: 100%; }
+      @media only screen and (min-width: 768px) {
+        .ec-productRole .ec-productRole__actions .ec-select select {
+          min-width: 350px;
+          max-width: 350px; } }
+  .ec-productRole .ec-productRole__btn {
+    width: 100%;
+    margin-bottom: 10px; }
+    @media only screen and (min-width: 768px) {
+      .ec-productRole .ec-productRole__btn {
+        width: 60%;
+        margin-bottom: 16px;
+        min-width: 350px; } }
+  .ec-productRole .ec-productRole__description {
+    margin-bottom: 16px; }

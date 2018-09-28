@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+会員情報編集完了
+
+会員情報編集完了で使用するページコンポーネントです。
+
+ex [会員情報編集完了](http://demo4.ec-cube.net/mypage/change_complete)
+
+Markup:
+include /assets/tmpl/elements/22.1.editComplete.pug
++ec-userEditCompleteRole
+
+Styleguide 22.1
+
+*/
+.ec-userEditCompleteRole {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 1130px;
+  text-align: center;
+  padding: 0 16px; }
+  .ec-userEditCompleteRole:after {
+    content: " ";
+    display: table; }
+  .ec-userEditCompleteRole:after {
+    clear: both; }
+  .ec-userEditCompleteRole textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-userEditCompleteRole img {
+    max-width: 100%; }
+  .ec-userEditCompleteRole html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-userEditCompleteRole *,
+  .ec-userEditCompleteRole *::before,
+  .ec-userEditCompleteRole *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-userEditCompleteRole img {
+    width: 100%; }
+  .ec-userEditCompleteRole .ec-userEditCompleteRole__title {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 24px; }
+    @media only screen and (min-width: 768px) {
+      .ec-userEditCompleteRole .ec-userEditCompleteRole__title {
+        font-size: 32px; } }
+  .ec-userEditCompleteRole .ec-userEditCompleteRole__description {
+    margin-bottom: 32px;
+    font-size: 16px; }

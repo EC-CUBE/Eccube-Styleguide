@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/**
+ * ECCUBE 固有のスタイルユーティリティ
+ */
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+マイページ
+
+マイページで利用するためのスタイルガイド群です。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+
+Styleguide 9.1
+*/
+/*
+マイページ
+
+マイページで表示するメニューリストです。
+
+ul を利用したリスト要素で記述します。
+
+ex [マイページ　メニューリスト部分](http://demo4.ec-cube.net/mypage)
+
+Markup:
+include /assets/tmpl/elements/9.1.mypage.pug
++ec-navlist
+
+Styleguide 9.1.1
+*/
+.ec-navlistRole .ec-navlistRole__navlist {
+  display: flex;
+  flex-wrap: wrap;
+  border-color: #D0D0D0;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  margin-bottom: 32px;
+  padding: 0;
+  list-style: none; }
+  .ec-navlistRole .ec-navlistRole__navlist a {
+    color: inherit;
+    text-decoration: none; }
+  .ec-navlistRole .ec-navlistRole__navlist a:hover {
+    text-decoration: none; }
+  @media only screen and (min-width: 768px) {
+    .ec-navlistRole .ec-navlistRole__navlist {
+      flex-wrap: nowrap; } }
+
+.ec-navlistRole .ec-navlistRole__item {
+  width: 50%;
+  border-color: #D0D0D0;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  text-align: center;
+  font-weight: bold; }
+  .ec-navlistRole .ec-navlistRole__item a {
+    padding: 16px;
+    width: 100%;
+    display: inline-block; }
+    .ec-navlistRole .ec-navlistRole__item a:hover {
+      background: #f5f7f8; }
+
+.ec-navlistRole .active a {
+  color: #DE5D50; }
+
+/*
+マイページ（お気に入り機能無効）
+
+マイページで表示するメニューリストです。
+
+ul を利用したリスト要素で記述します。
+
+ex [マイページ　メニューリスト部分](http://demo4.ec-cube.net/mypage)
+
+Markup:
+include /assets/tmpl/elements/9.1.mypage.pug
++ec-navlist_noFavorite
+
+Styleguide 9.1.2
+*/
+/*
+Welcome メッセージ
+
+マイページで表示するログイン名の表示コンポーネントです。
+
+ex [マイページ　メニューリスト下部分](http://demo4.ec-cube.net/mypage)
+
+Markup:
+include /assets/tmpl/elements/9.1.mypage.pug
++ec-welcomeMsg
+
+Styleguide 9.1.3
+*/
+.ec-welcomeMsg {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #525263;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  margin: 1em 0;
+  padding-bottom: 32px;
+  text-align: center;
+  border-bottom: 1px dotted #ccc; }
+  .ec-welcomeMsg:after {
+    content: " ";
+    display: table; }
+  .ec-welcomeMsg:after {
+    clear: both; }
+  .ec-welcomeMsg textarea {
+    /* for chrome fontsize bug */
+    font-family: sans-serif; }
+  .ec-welcomeMsg img {
+    max-width: 100%; }
+  .ec-welcomeMsg html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .ec-welcomeMsg *,
+  .ec-welcomeMsg *::before,
+  .ec-welcomeMsg *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+  .ec-welcomeMsg img {
+    width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .ec-welcomeMsg {
+      padding-left: 26px;
+      padding-right: 26px; } }
+
+/*
+お気に入り一覧
+
+お気に入り一覧で表示するアイテムの表示コンポーネントです。
+
+ex [マイページ　お気に入り一覧](http://demo4.ec-cube.net/mypage/favorite)
+
+Markup:
+include /assets/tmpl/elements/9.1.mypage.pug
++ec-favorite
+
+Styleguide 9.1.4
+*/
+.ec-favoriteRole .ec-favoriteRole__header {
+  margin-bottom: 16px; }
+
+.ec-favoriteRole .ec-favoriteRole__itemList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none; }
+  .ec-favoriteRole .ec-favoriteRole__itemList a {
+    color: inherit;
+    text-decoration: none; }
+  .ec-favoriteRole .ec-favoriteRole__itemList a:hover {
+    text-decoration: none; }
+
+.ec-favoriteRole .ec-favoriteRole__item {
+  margin-bottom: 8px;
+  width: 47.5%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px; }
+  .ec-favoriteRole .ec-favoriteRole__item-image {
+    height: 150px;
+    margin-bottom: 10px;
+    text-align: center; }
+    @media only screen and (min-width: 768px) {
+      .ec-favoriteRole .ec-favoriteRole__item-image {
+        height: 250px; } }
+  .ec-favoriteRole .ec-favoriteRole__item img {
+    width: auto;
+    max-height: 100%; }
+  @media only screen and (min-width: 768px) {
+    .ec-favoriteRole .ec-favoriteRole__item {
+      width: 25%; } }
+  .ec-favoriteRole .ec-favoriteRole__item .ec-closeBtn--circle {
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+    .ec-favoriteRole .ec-favoriteRole__item .ec-closeBtn--circle .ec-icon img {
+      width: 1em;
+      height: 1em; }
+
+.ec-favoriteRole .ec-favoriteRole__itemThumb {
+  display: block;
+  height: auto;
+  margin-bottom: 8px; }
+
+.ec-favoriteRole .ec-favoriteRole__itemTitle {
+  margin-bottom: 2px; }
+
+.ec-favoriteRole .ec-favoriteRole__itemPrice {
+  font-weight: bold;
+  margin-bottom: 0; }

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+カテゴリ（アイテム4列 スマホの時は2列）
+
+トップページで使用されているアイテムリストのスタイルです。
+
+ex [トップページ](http://demo4.ec-cube.net/)
+
+Markup:
+include /assets/tmpl/elements/12.6.newItem.pug
++ec-newItemRole
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+Styleguide 12.6
+*/
+.ec-newItemRole {
+  padding: 40px 0; }
+  @media only screen and (min-width: 768px) {
+    .ec-newItemRole {
+      padding: 60px 0; } }
+  .ec-newItemRole .ec-newItemRole__list {
+    display: flex;
+    flex-wrap: wrap; }
+    @media only screen and (min-width: 768px) {
+      .ec-newItemRole .ec-newItemRole__list {
+        flex-wrap: nowrap; } }
+  .ec-newItemRole .ec-newItemRole__listItem {
+    margin-bottom: 4%;
+    width: 48%;
+    height: auto; }
+    @media only screen and (min-width: 768px) {
+      .ec-newItemRole .ec-newItemRole__listItem {
+        margin-bottom: 15px;
+        width: calc(100% / 4); }
+        .ec-newItemRole .ec-newItemRole__listItem:not(:last-of-type) {
+          margin-right: 30px; } }
+    .ec-newItemRole .ec-newItemRole__listItem:nth-child(odd) {
+      margin-right: 4%; }
+      @media only screen and (min-width: 768px) {
+        .ec-newItemRole .ec-newItemRole__listItem:nth-child(odd) {
+          margin-right: 30px; } }
+  .ec-newItemRole .ec-newItemRole__listItemHeading {
+    margin-top: calc(45% - 20px); }
+  .ec-newItemRole .ec-newItemRole__listItemTitle {
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: black; }
+    @media only screen and (min-width: 768px) {
+      .ec-newItemRole .ec-newItemRole__listItemTitle {
+        margin: 20px 0 10px; } }
+  .ec-newItemRole .ec-newItemRole__listItemPrice {
+    font-size: 12px;
+    color: black; }

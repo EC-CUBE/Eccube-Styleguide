@@ -1,0 +1,460 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
+
+.bg-load-overlay {
+  background: rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483647;
+  opacity: 1; }
+
+/**
+ * ECCUBE 固有のスタイルユーティリティ
+ */
+/*
+カート
+
+ショッピングカートに関するスタイルです。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+
+Styleguide 7.3
+*/
+/*
+カートヘッダ
+
+購入完了までの手順や、現在の状態を表示します。
+
+ul 要素を用いたリスト要素としてマークアップします。
+
+ex [カートページ　ヘッダ部分](http://demo4.ec-cube.net/cart)
+
+Markup:
+include /assets/tmpl/elements/7.3.cart.pug
++ec-progress
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 7.3.1
+*/
+.ec-progress {
+  margin: 0 auto;
+  padding: 8px 0 16px;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 600px;
+  list-style: none; }
+  @media only screen and (min-width: 768px) {
+    .ec-progress {
+      margin-bottom: 30px;
+      padding: 0; } }
+  .ec-progress .ec-progress__item {
+    display: table-cell;
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 10; }
+    .ec-progress .ec-progress__item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #525263;
+      width: 100%;
+      height: 0.25em;
+      top: 1.25em;
+      left: 50%;
+      margin-left: 1.5em\9;
+      z-index: -1; }
+    .ec-progress .ec-progress__item:last-child:after {
+      display: none; }
+  .ec-progress .ec-progress__number {
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    background: #525263;
+    color: #fff;
+    top: 0;
+    left: 18px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%; }
+    @media only screen and (min-width: 768px) {
+      .ec-progress .ec-progress__number {
+        line-height: 42px;
+        width: 42px;
+        height: 42px;
+        font-size: 20px; } }
+  .ec-progress .ec-progress__label {
+    font-size: 12px; }
+  .ec-progress .is-complete .ec-progress__number {
+    background: #5CB1B1; }
+  .ec-progress .is-complete .ec-progress__label {
+    color: #5CB1B1; }
+
+/*
+カートナビゲーション
+
+カートナビゲーションを表示します。　カートに追加された商品の個数も表示します。
+
+ex [カートページ　ナビゲーション部分](http://demo4.ec-cube.net/cart)
+
+Markup:
+link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+.ec-cartNaviWrap(style="width: 180px;")
+  // 上記のstyleはスタイルガイドでのプレビューの都合上、付与しています。
+  +b.ec-cartNavi
+    +e.I.icon.fas.fa-shopping-cart
+      +e.SPAN.badge 1
+    .ec-cartNavi__label
+      .ec-cartNavi__price ¥1,620
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
+
+
+Styleguide 7.3.5
+*/
+@media only screen and (min-width: 768px) {
+  .ec-cartNaviWrap {
+    position: relative; } }
+
+.ec-cartNavi {
+  display: inline-block;
+  padding: 10px 0 0 20px;
+  width: auto;
+  color: black;
+  background: transparent; }
+  @media only screen and (min-width: 768px) {
+    .ec-cartNavi {
+      display: flex;
+      justify-content: space-between;
+      border-radius: 99999px;
+      box-sizing: border-box;
+      padding: 12px 17px 10px;
+      width: auto;
+      min-width: 140px;
+      height: 44px;
+      white-space: nowrap;
+      cursor: pointer;
+      background: #F8F8F8; } }
+  .ec-cartNavi .ec-cartNavi__icon {
+    display: inline-block;
+    font-size: 20px;
+    display: inline-block;
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 200ms linear 0s;
+    position: relative; }
+  .ec-cartNavi .ec-cartNavi__badge {
+    display: inline-block;
+    border-radius: 99999px;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 17px;
+    font-size: 10px;
+    line-height: 0.7;
+    vertical-align: top;
+    color: #fff;
+    text-align: left;
+    white-space: nowrap;
+    background-color: #DE5D50;
+    position: absolute;
+    left: 60%;
+    top: -10px; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartNavi .ec-cartNavi__badge {
+        display: inline-block;
+        min-width: 17px;
+        position: relative;
+        left: 0;
+        top: 0; } }
+  .ec-cartNavi .ec-cartNavi__price {
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      .ec-cartNavi .ec-cartNavi__price {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: normal;
+        vertical-align: middle; } }
+
+.ec-cartNavi.is-active .ec-cartNavi__icon:before {
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900; }
+
+.ec-cartNavi.is-active .ec-cartNavi__badge {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .ec-cartNavi.is-active .ec-cartNavi__badge {
+      display: none; } }
+
+/*
+カートナビゲーションのポップアップ(商品詳細)
+
+カートナビゲーションのポップアップを表示します。カートに追加された商品の詳細が表示されます。
+
+ex [カートページ　ナビゲーション部分](http://demo4.ec-cube.net/cart)
+
+Markup:
+link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+div(style="height:350px;")
+  // 上記のdivはスタイルガイドでのプレビューの都合上、高さをもたせるため設置しています
+  .ec-cartNaviWrap(style="width: 180px;")
+    // 上記のstyleはスタイルガイドでのプレビューの都合上、付与しています。
+    +b.ec-cartNavi
+      +e.I.icon.fas.fa-shopping-cart
+        +e.SPAN.badge 1
+      .ec-cartNavi__label
+        .ec-cartNavi__price ¥1,620
+    +b.ec-cartNaviIsset.is-active
+      +e.cart
+        +e.cartImage
+          img(src='https://demo4.ec-cube.net/html/upload/save_image/0903163326_5b8ce3c697fad.jpg')
+        +e.cartContent
+          +e.cartContentTitle さくさく♪クッキーアイス
+          +e.cartContentPrice ¥ 1,620
+            +e.cartContentTax 税込
+          +e.cartContentNumber 数量：1
+      +e.action
+        a.ec-blockBtn--action(href="/moc/guest/cart1") カートへ進む
+        a.ec-blockBtn.ec-cartNavi--cancel キャンセル
+
+Styleguide 7.3.6
+*/
+.ec-cartNaviIsset {
+  display: none;
+  width: 100%;
+  text-align: center;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  padding: 16px;
+  z-index: 20;
+  position: absolute;
+  right: 0; }
+  @media only screen and (min-width: 768px) {
+    .ec-cartNaviIsset {
+      margin-top: 10px;
+      min-width: 256px;
+      max-width: 256px; }
+      .ec-cartNaviIsset::before {
+        display: inline-block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 8.5px 10px 8.5px;
+        border-color: transparent transparent #f8f8f8 transparent;
+        position: absolute;
+        top: -9px; } }
+  .ec-cartNaviIsset .ec-cartNaviIsset__cart {
+    border-bottom: 1px solid #E8E8E8;
+    margin-bottom: 16px;
+    padding-bottom: 32px; }
+    .ec-cartNaviIsset .ec-cartNaviIsset__cart:after {
+      content: " ";
+      display: table; }
+    .ec-cartNaviIsset .ec-cartNaviIsset__cart:after {
+      clear: both; }
+  .ec-cartNaviIsset .ec-cartNaviIsset__cartImage {
+    float: left;
+    width: 45%; }
+    .ec-cartNaviIsset .ec-cartNaviIsset__cartImage img {
+      width: 100%; }
+  .ec-cartNaviIsset .ec-cartNaviIsset__cartContent {
+    float: right;
+    width: 55%;
+    padding-left: 16px;
+    text-align: left;
+    box-sizing: border-box; }
+  .ec-cartNaviIsset .ec-cartNaviIsset__action .ec-blockBtn--action {
+    color: #fff;
+    margin-bottom: 8px; }
+  .ec-cartNaviIsset .ec-cartNaviIsset__cartContentTitle {
+    margin-bottom: 8px; }
+  .ec-cartNaviIsset .ec-cartNaviIsset__cartContentPrice {
+    font-weight: bold; }
+  .ec-cartNaviIsset .ec-cartNaviIsset__cartContentTax {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 2px; }
+  .ec-cartNaviIsset .ec-cartNaviIsset__cartContentNumber {
+    font-size: 14px; }
+
+.ec-cartNaviIsset.is-active {
+  display: block; }
+
+/*
+カートナビゲーションのポップアップ(商品なし)
+
+カートナビゲーションのポップアップを表示します。商品が登録されていない場合の表示です。
+
+ex [カートページ　ナビゲーション部分](http://demo4.ec-cube.net/cart)
+
+Markup:
+link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+div(style="height:350px;")
+  // 上記のdivはスタイルガイドでのプレビューの都合上、高さをもたせるため設置しています
+  .ec-cartNaviWrap(style="width: 180px;")
+    // 上記のstyleはスタイルガイドでのプレビューの都合上、付与しています。
+    +b.ec-cartNavi
+      +e.I.icon.fas.fa-shopping-cart
+        +e.SPAN.badge 0
+      .ec-cartNavi__label
+        .ec-cartNavi__price ¥0
+    .ec-cartNaviNull.is-active
+      .ec-cartNaviNull__message
+        p 現在カート内に
+          br
+          | 商品がございません。
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+</div>
+
+
+Styleguide 7.3.7
+*/
+.ec-cartNaviNull {
+  display: none;
+  width: 100%;
+  text-align: center;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  padding: 16px;
+  z-index: 3;
+  position: absolute;
+  right: 0; }
+  @media only screen and (min-width: 768px) {
+    .ec-cartNaviNull {
+      margin-top: 10px;
+      min-width: 256px;
+      max-width: 256px; }
+      .ec-cartNaviNull::before {
+        display: inline-block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 8.5px 10px 8.5px;
+        border-color: transparent transparent #f8f8f8 transparent;
+        position: absolute;
+        top: -9px; } }
+  .ec-cartNaviNull .ec-cartNaviNull__message {
+    border: 1px solid #D9D9D9;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #F99; }
+    .ec-cartNaviNull .ec-cartNaviNull__message p {
+      margin: 0; }
+
+.ec-cartNaviNull.is-active {
+  display: block; }
+
+/*
+総計
+
+会計時の合計金額、総計を表示します。
+
+ex [カートページ　統計部分](http://demo4.ec-cube.net/cart)
+
+Markup:
+include /assets/tmpl/elements/7.3.cart.pug
++ec-totalBox
+
+Styleguide 7.3.8
+*/
+.ec-totalBox {
+  background: #F3F3F3;
+  padding: 16px;
+  margin-bottom: 16px; }
+  .ec-totalBox .ec-totalBox__spec {
+    position: relative;
+    margin-bottom: 8px; }
+    .ec-totalBox .ec-totalBox__spec dt {
+      font-weight: normal;
+      position: relative;
+      top: 0;
+      left: 0;
+      text-align: left; }
+    .ec-totalBox .ec-totalBox__spec dd {
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: right; }
+    .ec-totalBox .ec-totalBox__spec .ec-totalBox .ec-totalBox__spec__specTotal {
+      color: #DE5D50; }
+  .ec-totalBox .ec-totalBox__total {
+    border-top: 1px dotted #ccc;
+    padding: 8px 0;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold; }
+  .ec-totalBox .ec-totalBox__price {
+    margin-left: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #DE5D50; }
+    @media only screen and (min-width: 768px) {
+      .ec-totalBox .ec-totalBox__price {
+        font-size: 24px; } }
+  .ec-totalBox .ec-totalBox__taxLabel {
+    margin-left: 8px;
+    color: #DE5D50;
+    font-size: 12px; }
+    @media only screen and (min-width: 768px) {
+      .ec-totalBox .ec-totalBox__taxLabel {
+        font-size: 14px; } }
+  .ec-totalBox .ec-totalBox__btn {
+    color: #fff; }
+    .ec-totalBox .ec-totalBox__btn a {
+      color: inherit;
+      text-decoration: none; }
+    .ec-totalBox .ec-totalBox__btn a:hover {
+      text-decoration: none; }
+    .ec-totalBox .ec-totalBox__btn .ec-blockBtn--action {
+      font-size: 16px;
+      font-weight: bold; }

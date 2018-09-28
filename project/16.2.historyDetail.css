@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/**
+ * ECCUBE 固有のスタイルユーティリティ
+ */
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+注文履歴詳細
+
+マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
+
+ex [マイページ　注文詳細](http://demo4.ec-cube.net/mypage)
+(要ログイン → 詳細を見るボタン押下)
+
+Markup:
+include /assets/tmpl/elements/16.2.historyDetail.pug
++ec-historyDetailRole
+
+Styleguide 16.2
+*/
+/*
+注文履歴詳細 メール履歴
+
+マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
+
+ex [マイページ　メール履歴](http://demo4.ec-cube.net/mypage)
+(要ログイン → 詳細を見るボタン押下)
+
+Markup:
+include /assets/tmpl/elements/16.2.historyDetail.pug
++ec-historyDetailMail
+
+Styleguide 16.2.5
+*/
+.ec-orderMails .ec-orderMails__item {
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ccc; }
+
+.ec-orderMails .ec-orderMails__time {
+  margin: 0; }
+
+.ec-orderMails .ec-orderMails__body {
+  display: none; }
+
+/*
+注文履歴詳細 メール履歴個別
+
+マイページ 注文履歴詳細部に関する Project コンポーネントを定義します。
+
+ex [マイページ　メール履歴個別](http://demo4.ec-cube.net/mypage)
+(要ログイン → 詳細を見るボタン押下)
+
+Markup:
+include /assets/tmpl/elements/16.2.historyDetail.pug
++ec-historyDetailMailHistory
+
+Styleguide 16.2.6
+*/
+.ec-orderMail {
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 16px; }
+  .ec-orderMail .ec-orderMail__time {
+    margin: 0; }
+  .ec-orderMail .ec-orderMail__body {
+    display: none; }
+  .ec-orderMail .ec-orderMail__time {
+    margin-bottom: 4px; }
+  .ec-orderMail .ec-orderMail__link {
+    margin-bottom: 4px; }
+    .ec-orderMail .ec-orderMail__link a {
+      color: #0092C4;
+      text-decoration: none;
+      cursor: pointer; }
+    .ec-orderMail .ec-orderMail__link a:hover {
+      color: #33A8D0; }
+  .ec-orderMail .ec-orderMail__close a {
+    color: #0092C4;
+    text-decoration: none;
+    cursor: pointer; }
+  .ec-orderMail .ec-orderMail__close a:hover {
+    color: #33A8D0; }

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+アイキャッチ
+
+トップページ アイキャッチ部に関する Project コンポーネントを定義します。
+
+ex [トップページスライダー直下 アイキャッチ部](http://demo4.ec-cube.net/)
+
+Markup:
+include /assets/tmpl/elements/12.2.eyecatch.pug
++ec-eyecatchRole
+
+Styleguide 12.2
+*/
+.ec-eyecatchRole {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px; }
+  @media only screen and (min-width: 768px) {
+    .ec-eyecatchRole {
+      flex-wrap: nowrap; } }
+  .ec-eyecatchRole .ec-eyecatchRole__image {
+    display: block;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 100%; }
+    @media only screen and (min-width: 768px) {
+      .ec-eyecatchRole .ec-eyecatchRole__image {
+        width: 45%;
+        order: 2; } }
+  .ec-eyecatchRole .ec-eyecatchRole__intro {
+    color: black; }
+    @media only screen and (min-width: 768px) {
+      .ec-eyecatchRole .ec-eyecatchRole__intro {
+        padding-right: 5%;
+        order: 1; } }
+  .ec-eyecatchRole .ec-eyecatchRole__introEnTitle {
+    margin-bottom: .8em;
+    font-size: 16px;
+    font-weight: normal; }
+    @media only screen and (min-width: 768px) {
+      .ec-eyecatchRole .ec-eyecatchRole__introEnTitle {
+        margin-top: 45px; } }
+  .ec-eyecatchRole .ec-eyecatchRole__introTitle {
+    margin-bottom: .8em;
+    font-size: 24px;
+    font-weight: bold; }
+    @media only screen and (min-width: 768px) {
+      .ec-eyecatchRole .ec-eyecatchRole__introTitle {
+        margin-bottom: 1em;
+        font-size: 26px; } }
+  .ec-eyecatchRole .ec-eyecatchRole__introDescriptiron {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 2; }
+    @media only screen and (min-width: 768px) {
+      .ec-eyecatchRole .ec-eyecatchRole__introDescriptiron {
+        margin-bottom: 30px; } }

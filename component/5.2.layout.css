@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/**
+ * ECCUBE 固有のスタイルユーティリティ
+ */
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+レイアウト
+
+様々なレイアウトを変更する為のスタイル群です。
+
+Styleguide 5.2
+*/
+/*
+画像レイアウト
+
+画像とテキストを水平に並べるレイアウトです。
+
+画像は20%で表示されます。
+
+ex [注文履歴 ログイン後→注文履歴ボタンを押下](http://demo4.ec-cube.net/mypage)
+
+Markup:
+.ec-imageGrid
+  .ec-imageGrid__img: img(src="http://demo3.ec-cube.net/upload/save_image/0701113537_559351f959620.jpeg")
+  .ec-imageGrid__content
+    p.ec-font-bold ホーローマグ
+    p ¥ 1,728 x 1
+
+sg-wrapper:
+<div class="ec-role">
+  <sg-wrapper-content/>
+
+
+Styleguide 5.2.1
+*/
+.ec-imageGrid {
+  display: table;
+  border-top: 1px dotted #ccc;
+  width: 100%; }
+  .ec-imageGrid .ec-imageGrid__img {
+    display: table-cell;
+    padding: 10px;
+    width: 100px; }
+    @media only screen and (min-width: 768px) {
+      .ec-imageGrid .ec-imageGrid__img {
+        padding: 10px;
+        width: 130px; } }
+    .ec-imageGrid .ec-imageGrid__img img {
+      width: 100%; }
+  .ec-imageGrid .ec-imageGrid__content {
+    vertical-align: middle;
+    display: table-cell; }
+    .ec-imageGrid .ec-imageGrid__content span {
+      margin-left: 10px; }
+    .ec-imageGrid .ec-imageGrid__content p {
+      margin-bottom: 0; }

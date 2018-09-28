@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/**
+メディアクエリ
+SP フォーストで記述する。
+Twitter Bootstrap デフォルト準拠
+ */
+/*
+検索ラベル
+
+商品一覧 ヘッダー部 に関する Project コンポーネントを定義します。
+
+ex [商品一覧 ヘッダー部](http://demo4.ec-cube.net/products/list)
+
+Markup:
+include /assets/tmpl/elements/13.1.searchnav.pug
++ec-searchnavRole__topicpath
++ec-searchnavRole__info
+
+Styleguide 13.1
+
+*/
+.ec-searchnavRole {
+  margin-bottom: 0;
+  padding: 0; }
+  @media only screen and (min-width: 768px) {
+    .ec-searchnavRole {
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #525263;
+      -webkit-text-size-adjust: 100%;
+      width: 100%;
+      max-width: 1130px; }
+      .ec-searchnavRole:after {
+        content: " ";
+        display: table; }
+      .ec-searchnavRole:after {
+        clear: both; }
+      .ec-searchnavRole textarea {
+        /* for chrome fontsize bug */
+        font-family: sans-serif; }
+      .ec-searchnavRole img {
+        max-width: 100%; }
+      .ec-searchnavRole html {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+      .ec-searchnavRole *,
+      .ec-searchnavRole *::before,
+      .ec-searchnavRole *::after {
+        -webkit-box-sizing: inherit;
+        -moz-box-sizing: inherit;
+        box-sizing: inherit; }
+      .ec-searchnavRole img {
+        width: 100%; } }
+  .ec-searchnavRole .ec-searchnavRole__infos {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #525263;
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    max-width: 1130px;
+    display: flex;
+    border-top: 0;
+    margin-bottom: 16px;
+    padding-top: 5px;
+    flex-direction: column; }
+    .ec-searchnavRole .ec-searchnavRole__infos:after {
+      content: " ";
+      display: table; }
+    .ec-searchnavRole .ec-searchnavRole__infos:after {
+      clear: both; }
+    .ec-searchnavRole .ec-searchnavRole__infos textarea {
+      /* for chrome fontsize bug */
+      font-family: sans-serif; }
+    .ec-searchnavRole .ec-searchnavRole__infos img {
+      max-width: 100%; }
+    .ec-searchnavRole .ec-searchnavRole__infos html {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    .ec-searchnavRole .ec-searchnavRole__infos *,
+    .ec-searchnavRole .ec-searchnavRole__infos *::before,
+    .ec-searchnavRole .ec-searchnavRole__infos *::after {
+      -webkit-box-sizing: inherit;
+      -moz-box-sizing: inherit;
+      box-sizing: inherit; }
+    .ec-searchnavRole .ec-searchnavRole__infos img {
+      width: 100%; }
+    @media only screen and (min-width: 768px) {
+      .ec-searchnavRole .ec-searchnavRole__infos {
+        padding-left: 0;
+        padding-right: 0;
+        border-top: 1px solid #ccc;
+        padding-top: 16px;
+        flex-direction: row; } }
+  .ec-searchnavRole .ec-searchnavRole__counter {
+    margin-bottom: 16px;
+    width: 100%; }
+    @media only screen and (min-width: 768px) {
+      .ec-searchnavRole .ec-searchnavRole__counter {
+        margin-bottom: 0;
+        width: 50%; } }
+  .ec-searchnavRole .ec-searchnavRole__actions {
+    text-align: right;
+    width: 100%; }
+    @media only screen and (min-width: 768px) {
+      .ec-searchnavRole .ec-searchnavRole__actions {
+        width: 50%; } }
