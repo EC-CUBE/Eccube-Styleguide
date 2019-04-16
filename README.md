@@ -1,8 +1,8 @@
-# EC-CUBE 3 スタイルガイド制作
+# EC-CUBE 4 スタイルガイド制作
 
-EC-CUBE3デモサイト
+EC-CUBE4デモサイト
 
-[http://demo3.ec-cube.net/](http://demo3.ec-cube.net/)
+[http://demo4.ec-cube.net/](http://demo4.ec-cube.net/)
 
 開発リポジトリ　
 
