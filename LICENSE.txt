@@ -1810,7 +1810,7 @@
       </tr>
       <tr>
         <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code blob-code-inner js-file-line">株式会社ロックオンが独自に設定するクローズドソースライセンスの下で</td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">株式会社イーシーキューブが独自に設定するクローズドソースライセンスの下で</td>
       </tr>
       <tr>
         <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
@@ -1822,7 +1822,7 @@
       </tr>
       <tr>
         <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
-        <td id="LC31" class="blob-code blob-code-inner js-file-line">コミットと同時に、あなたの著作権財産権を株式会社ロックオンに移転し、</td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">コミットと同時に、あなたの著作権財産権を株式会社イーシーキューブに移転し、</td>
       </tr>
       <tr>
         <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
@@ -1830,7 +1830,7 @@
       </tr>
       <tr>
         <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
-        <td id="LC33" class="blob-code blob-code-inner js-file-line">株式会社ロックオンは、コミット部分の著作権移転後も、GPLライセンスによりあなたに認められることとなるすべての権利を保障します。</td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line">株式会社イーシーキューブは、コミット部分の著作権移転後も、GPLライセンスによりあなたに認められることとなるすべての権利を保障します。</td>
       </tr>
       <tr>
         <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
