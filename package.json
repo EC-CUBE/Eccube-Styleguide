@@ -28,7 +28,7 @@
   "author": "",
   "license": "LGPL",
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.1",
     "browser-sync": "^2.12.10",
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.5.0",
