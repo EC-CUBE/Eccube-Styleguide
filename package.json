@@ -29,7 +29,7 @@
   "license": "LGPL",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "browser-sync": "^2.12.10",
+    "browser-sync": "^2.29.1",
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-notify": "^3.0.0",
